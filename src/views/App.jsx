@@ -8,7 +8,6 @@ function App() {
 	return (
 		<div className="App">
 			<BrowserRouter>
-				<Menu />
 				<Conteudo />
 			</BrowserRouter>
 		</div>
