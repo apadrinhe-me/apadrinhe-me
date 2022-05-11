@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "../../componets/layout/Menu";
 
-export default () => {
+const conexoes =  () => {
     return(
         <>
         <Menu />
@@ -11,3 +11,5 @@ export default () => {
         </>
     );
 }
+
+export default conexoes;

@@ -1,9 +1,11 @@
 import React from "react";
 
-export default () => {
+ const cadastro = () => {
     return(
         <div className="cadastro">
             <h1>Cadastro</h1>
         </div>
     );
 }
+
+export default cadastro;

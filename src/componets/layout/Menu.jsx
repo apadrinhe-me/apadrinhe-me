@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../media/logo/logo.svg"
 import "./Menu.css";
 
-export default () => {
+const Menu = () => {
     return (
         <article className="Menu">
             <header className="header_main">
@@ -48,3 +48,5 @@ export default () => {
         </article>
     );
 }
+
+export default Menu;
