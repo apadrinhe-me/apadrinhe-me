@@ -5,8 +5,8 @@ import "./Menu.css";
 
 const Menu = () => {
     return (
-        <article className="Menu">
-            <header className="header_main">
+        <div className="Menu">
+            <nav className="header_main">
                 <div className="container_max">
 
 
@@ -41,11 +41,8 @@ const Menu = () => {
 
                     </div>
                 </div>
-            </header>
-
-
-
-        </article>
+            </nav>
+        </div>
     );
 }
 

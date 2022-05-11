@@ -1,3 +1,4 @@
+import "./login.css"
 import React from "react";
 
 const login = () => {

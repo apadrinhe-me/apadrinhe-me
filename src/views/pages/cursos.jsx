@@ -1,3 +1,4 @@
+import "./cursos.css";
 import React from "react";
 import Menu from "../../componets/layout/Menu";
 
