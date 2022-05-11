@@ -1,34 +1,157 @@
 .Menu {
-    height: 56px;
+    width: 100%;
+    height: 60px;
+}
+
+.header_main {
+    position: fixed;
+    z-index: 10000;
+    box-shadow: 0px 5px 10px #00000035;
+    /* border-bottom: 1px solid #3b435a; */
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    background-color: #0a1431;
+    font-size: 16px;
+}
+
+/* Divisão de espaço com containers, esquerdo, meio e direito. */
+
+.container_max {
+    height: 60px;
+    width: 1500px;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.container_middle {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    max-width: 750px;
+    background-color: transparent;
+}
+
+.container_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 360px;
+    height: 60px;
     padding: 0px 20px;
-    background-color: white;
+    background-color: transparent;
 }
 
-.Menu .nav {
-    justify-self: center;
+.container_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 360px;
+    height: 60px;
+    padding: 0px 20px;
+    background-color: transparent;
+}
+
+
+/* Estilos barra de navegação */
+
+.nav {
+    height: 60px;
+    width: 100%;
+    padding: 0px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background-color: transparent;
+    gap: 75px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilos opções do usuário */
+
+.account_control {
+    height: 60px;
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 20px;
 }
 
-.Menu .nav li a {
+.account_control li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
-.Menu .user_options {
+/* Botão de perfil do usuário */
+
+.user-profile_btn {
+    text-decoration: none;
+    color: white;
+}
+
+.user-profile_btn div {
+    height: 40px;
     display: flex;
     align-items: center;
-    list-style: none;
-    gap: 20px;
+    background-image: linear-gradient(to bottom right, #3b435a, #3b435a50, #3b435a);
+    border: 2px solid #3b435a;
+    border-radius: 50em;
 }
 
-.Menu .user_options li a {
-    text-decoration: none;
-    color: black;
+.user-profile_btn img {
+    height: 30px;
+    margin-left: 5px;
+    object-fit: cover;
+    border-radius: 50em;
+}
+
+.user-profile_btn p {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0px 10px;
+    max-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Botão de cadastro */
+
+.sign-up_btn {
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 50em;
+    box-shadow: 0px 5px 10px #00000035;
+    background-image: linear-gradient(to bottom right, #7630d9, #d92588);
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+/* Estilo barra de pesquisa */
+
+.search_bar {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    margin-left: 20px;
+    border-radius: 50em;
+    color: #ffffff;
+    background-color: #3b435a;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: #9da1ad;
+    opacity: 1;
 }
