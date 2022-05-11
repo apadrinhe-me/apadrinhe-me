@@ -79,14 +79,14 @@
 
 /* Estilos opções do usuário */
 
-.account_control {
+.login_control {
     height: 60px;
     display: flex;
     align-items: center;
     list-style: none;
 }
 
-.account_control li a {
+.login_control li a {
     text-decoration: none;
     color: white;
 }

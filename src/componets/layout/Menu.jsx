@@ -29,14 +29,16 @@ export default () => {
 
                             <div>
                                 <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEMFO6yMCYjaQ/profile-displayphoto-shrink_200_200/0/1639491349201?e=1657756800&v=beta&t=V730pyqkTDzfhiWDYOPdleupWPRpv1WFUbm3AQh8fnY" />
-                                <p>Aliniiiieeee</p>
+                                <p>Alini</p>
                             </div>
 
                         </Link>
-                        <ul className="account_control">
+
+                        <ul className="login_control">
                             <li><Link to="/login">Login</Link></li>
                             <li><Link className="sign-up_btn" to="/cadastro">Cadastro</Link></li>
                         </ul>
+
                     </div>
                 </div>
             </header>
