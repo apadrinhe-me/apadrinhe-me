@@ -10,7 +10,7 @@ import Login from "../../views/pages/login";
 import Moments from "../../views/pages/moments";
 import Perfil from "../../views/pages/perfil";
 
-export default () => {
+const Conteudo = () => {
     return(
         <div className="Conteudo">
             <Routes>
@@ -25,3 +25,5 @@ export default () => {
         </div>
     );
 }
+
+export default Conteudo

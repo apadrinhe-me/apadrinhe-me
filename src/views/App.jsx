@@ -4,7 +4,7 @@ import Conteudo from "../componets/layout/Conteudo";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 
-function App() {
+const App = () => {
 	return (
 		<div className="App">
 			<BrowserRouter>

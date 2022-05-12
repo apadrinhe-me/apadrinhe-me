@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import Logo from "../../media/logo/logo.svg"
 import "./Menu.css";
 
-export default () => {
+const Menu = () => {
     return (
-        <article className="Menu">
-            <header className="header_main">
+        <div className="Menu">
+            <nav className="header_main">
                 <div className="container_max">
 
 
@@ -41,10 +41,9 @@ export default () => {
 
                     </div>
                 </div>
-            </header>
-
-
-
-        </article>
+            </nav>
+        </div>
     );
 }
+
+export default Menu;
