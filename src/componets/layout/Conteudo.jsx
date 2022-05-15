@@ -2,13 +2,13 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 //importando as páginas do projeto
-import Cadastro from "../../views/pages/cadastro";
-import Conexoes from "../../views/pages/conexoes";
-import Cursos from "../../views/pages/cursos";
-import Home from "../../views/pages/home";
-import Login from "../../views/pages/login";
-import Moments from "../../views/pages/moments";
-import Perfil from "../../views/pages/perfil";
+import Cadastro from "../../views/pages/Cadastro";
+import Conexoes from "../../views/pages/Conexoes";
+import Cursos from "../../views/pages/Cursos";
+import Home from "../../views/pages/Home";
+import Login from "../../views/pages/Login";
+import Moments from "../../views/pages/Moments";
+import Perfil from "../../views/pages/Perfil";
 
 const Conteudo = () => {
     return(

@@ -1,16 +1,16 @@
-import "./home.css"
+import "./Home.css"
 import React from "react";
 import Menu from "../../componets/layout/Menu";
 
-const home =  () => {
+const Home =  () => {
     return(
         <>
             <Menu />
-            <div className="home">
+            <div className="Home">
                 <h1>Home</h1>
             </div>
         </>
     );
 }
 
-export default home;
+export default Home;
