@@ -1,0 +1,36 @@
+.Home{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.infinity-post-scroll{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    flex: 2;
+}
+
+.spotlights{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    flex: 1;
+}
+
+@media (max-width: 575.98px) {
+    .Home{
+        flex-direction: column;
+    }
+
+    .infinity-post-scroll{
+        order: 2;
+    }
+
+    .spotlights{
+        order: 1;
+    }
+}

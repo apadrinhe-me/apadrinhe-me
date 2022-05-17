@@ -1,12 +1,12 @@
 import "./cadastro.css";
 import React from "react";
 
- const cadastro = () => {
+ const Cadastro = () => {
     return(
-        <div className="cadastro">
+        <div className="Cadastro">
             <h1>Cadastro</h1>
         </div>
     );
 }
 
-export default cadastro;
+export default Cadastro;

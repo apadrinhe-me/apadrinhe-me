@@ -7,7 +7,7 @@ const perfil = () => {
     return (
         <>
 
-<Menu/>
+            <Menu />
             <main className="perfil">
                 <div className="perfilContainer">
 
@@ -42,7 +42,7 @@ const perfil = () => {
                                 <li>Mapa de carreira</li>
                                 <li className="perfilConfig">...<img src="" alt="" /></li>
                             </ul>
-                        
+
                         </div>
 
 

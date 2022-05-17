@@ -2,15 +2,15 @@ import "./conexoes.css";
 import React from "react";
 import Menu from "../../componets/layout/Menu";
 
-const conexoes =  () => {
+const Conexoes =  () => {
     return(
         <>
         <Menu />
-        <div className="conexoes">
+        <div className="Conexoes">
             <h1>Conexões</h1>
         </div>
         </>
     );
 }
 
-export default conexoes;
+export default Conexoes;

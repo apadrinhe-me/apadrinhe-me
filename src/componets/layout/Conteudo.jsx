@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 //importando as páginas do projeto
-import Cadastro from "../../views/pages/cadastro";
+import Cadastro from "../../views/pages/Cadastro";
 import Conexoes from "../../views/pages/conexoes";
 import Cursos from "../../views/pages/cursos";
 import Home from "../../views/pages/home";

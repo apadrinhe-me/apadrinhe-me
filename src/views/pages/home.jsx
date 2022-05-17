@@ -1,16 +1,23 @@
 import "./home.css"
 import React from "react";
 import Menu from "../../componets/layout/Menu";
+import If from "../../componets/funcional/If";
 
-const home =  () => {
+const Home =  () => {
     return(
         <>
             <Menu />
-            <div className="home">
-                <h1>Home</h1>
+            <div className="Home">
+                <div className="infinity-post-scroll">
+                    <div>Post 1</div>
+                </div>
+
+                <div className="spotlights">
+                    destaques
+                </div>
             </div>
         </>
     );
 }
 
-export default home;
+export default Home;

@@ -1,12 +1,12 @@
 import "./login.css"
 import React from "react";
 
-const login = () => {
+const Login = () => {
     return(
-        <div className="login">
+        <div className="Login">
             <h1>Cadastro</h1>
         </div>
     );
 }
 
-export default login;
+export default Login;
