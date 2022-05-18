@@ -1,0 +1,30 @@
+.Post{
+    display: flex;
+    flex-direction: column;
+    background: #282828;
+    border-radius: 10px;
+}
+
+.Post .post-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+}
+
+.Post .post-header .header-prof-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.Post .post-header .header-prof-info .fullname{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.Post .post-header .header-prof-info .aspiration, .Post .post-header .header-prof-info .postDate{
+    color: #969696;
+    font-size: 14px;
+}

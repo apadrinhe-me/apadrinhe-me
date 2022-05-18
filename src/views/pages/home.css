@@ -3,14 +3,13 @@
     flex-direction: row;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
 
 }
 
 .infinity-post-scroll{
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     flex: 2;
 }
 
