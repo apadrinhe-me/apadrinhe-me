@@ -4,32 +4,42 @@
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
-
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .infinity-post-scroll{
     display: flex;
     flex-direction: column;
-    flex: 2;
+    flex-basis: 700px;
+}
+
+.new-post{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    margin-bottom: 30px;
 }
 
 .spotlights{
     display: flex;
     flex-direction: column;
     border: 1px solid red;
-    flex: 1;
+    flex-basis: 400px;
 }
 
 @media (max-width: 575.98px) {
     .Home{
         flex-direction: column;
-    }
-
-    .infinity-post-scroll{
-        order: 2;
+        align-items: center;
     }
 
     .spotlights{
-        order: 1;
+        flex-basis: 0;
+        margin-bottom: 20px;
+    }
+
+    .infinity-post-scroll{
+        flex-basis: 0;
     }
 }

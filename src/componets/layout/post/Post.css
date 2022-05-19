@@ -28,3 +28,67 @@
     color: #969696;
     font-size: 14px;
 }
+
+.Post .post-description{
+    padding: 0 15px 15px 15px;
+    font-size: 15px;
+}
+
+.Post .post-media{
+    background: black;
+    padding: 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.Post .post-media .post-img{
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+.Post .post-engagement{
+    display: flex;
+    flex-direction: row;
+    color: #969696;
+    font-size: 12px;
+    padding:15px;
+    gap: 10px;
+    border-bottom: 1px solid #4b4b4b;
+}
+
+.Post .post-actionBtns{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.Post .btn{
+    border: none;
+    background: #191919;
+    color: #969696;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.Post .btn:hover{
+    cursor: pointer;
+}
+
+.Post .btn-ico{
+    height: 17px;
+}
+
+.Post .btn-apadrinhar{
+    margin-left: auto;
+    background: #FF00FF;
+    color: white;
+}
