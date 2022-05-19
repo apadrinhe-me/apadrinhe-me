@@ -1,4 +1,4 @@
-import "./cadastro.css";
+import "./Cadastro.css";
 import React from "react";
 
  const Cadastro = () => {

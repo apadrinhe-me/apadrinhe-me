@@ -1,4 +1,4 @@
-import "./perfil.css";
+import "./Perfil.css";
 import React from "react";
 import logo from "../../media/logo/logo.svg"
 

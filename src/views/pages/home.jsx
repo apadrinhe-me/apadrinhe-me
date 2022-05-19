@@ -1,4 +1,4 @@
-import "./home.css"
+import "./Home.css"
 import React from "react";
 import Menu from "../../componets/layout/Menu";
 import Post from "../../componets/layout/post/Post";
