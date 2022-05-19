@@ -1,6 +1,7 @@
 import "./perfil.css";
 import React from "react";
 import logo from "../../media/logo/logo.svg"
+
 import Menu from "../../componets/layout/Menu";
 
 const perfil = () => {
@@ -40,6 +41,7 @@ const perfil = () => {
                                 <li>Publicações</li>
                                 <li>Moments</li>
                                 <li>Mapa de carreira</li>
+                                
                                 <li className="perfilConfig">...<img src="" alt="" /></li>
                             </ul>
 
