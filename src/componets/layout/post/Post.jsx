@@ -18,7 +18,7 @@ const Post = props => {
         <div className="Post">
             <div className="post-header">
                 <div className="header-prof-picture">
-                    <ProfPicture src={props.profPicture} scale="80px"/>
+                    <ProfPicture src={props.profPicture} scale={80}/>
                 </div>
                 <div className="header-prof-info">
                     <span className="fullname">{props.fullname}</span>

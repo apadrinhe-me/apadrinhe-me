@@ -2,6 +2,7 @@ import "./Home.css"
 import React, {useState} from "react";
 import Menu from "../../componets/layout/Menu";
 import Post from "../../componets/layout/post/Post";
+import NewPost from "../../componets/layout/newPost/NewPost";
 import If from "../../componets/funcional/If";
 
 const Home = () => {
@@ -25,8 +26,8 @@ const Home = () => {
                 <If test={viewport === 'desktop'}>
                     <div className="infinity-post-scroll">
                         <div className="new-post">
-                            a
-                        </div>
+                           <NewPost profPicture="natan_proa.jpg" />
+                        </div> 
 
                         <Post 
                         profPicture="natan_proa.jpg" 
@@ -47,7 +48,7 @@ const Home = () => {
 
                 <If test={viewport === 'mobile'}>
                     <div className="new-post">
-                        a
+                        <NewPost profPicture="natan_proa.jpg" />
                     </div>
                     <div className="spotlights">
                         destaques

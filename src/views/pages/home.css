@@ -6,6 +6,8 @@
     margin: 20px auto;
     align-items: flex-start;
     justify-content: center;
+    gap: 15px;
+    padding: 0 10px;
 }
 
 .infinity-post-scroll{
@@ -17,14 +19,13 @@
 .new-post{
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     margin-bottom: 30px;
+    flex: 1;
 }
 
 .spotlights{
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     flex-basis: 400px;
 }
 
@@ -32,6 +33,7 @@
     .Home{
         flex-direction: column;
         align-items: center;
+        padding: 0;
     }
 
     .spotlights{
@@ -39,7 +41,7 @@
         margin-bottom: 20px;
     }
 
-    .infinity-post-scroll{
-        flex-basis: 0;
+    .new-post{
+        width: 100%;
     }
 }
