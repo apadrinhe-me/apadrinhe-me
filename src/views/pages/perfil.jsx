@@ -1,4 +1,4 @@
-import "./Perfil.css";
+import "./perfil.css";
 import React from "react";
 import logo from "../../media/logo/logo.svg"
 
@@ -37,13 +37,20 @@ const perfil = () => {
                         </div>
 
                         <div className="perfilPubMomMap structureCenter">
-                            <ul>
-                                <li>Publicações</li>
-                                <li>Moments</li>
-                                <li>Mapa de carreira</li>
-                                
-                                <li className="perfilConfig">...<img src="" alt="" /></li>
-                            </ul>
+                          
+                               
+                               <ul>
+                                   <li>Publicações</li>
+                                   <li>Moments</li>
+                                   <li>Mapa de carreira</li>
+                                   <li>Cursos Favoritos</li>
+                               
+                               </ul>
+                               <ul>
+                                   <li className="perfilConfig">...<img src="" alt="" /></li>
+                               
+                               </ul>
+                           
 
                         </div>
 
