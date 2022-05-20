@@ -10,6 +10,14 @@
 
 }
 
+body{
+    background-color: #050a19;
+}
+
+.border{
+    border: 1px solid red;
+}
+
 /*
 Breakpoints responsivos do bootstrap
 

@@ -1,0 +1,148 @@
+.perfilContainer {
+    background-color: #191919;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.perfilHeader {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px;
+    background-color: #282828;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.perfilCapa {
+    max-height: 350px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.perfilCapa img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
+    
+}
+
+.perfilNomeInteracao {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.418);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.perfilFoto {
+    display: flex;
+    margin-top: -100px;
+    width: 170px;
+    height: 170px;
+}
+
+.buttonsChatConecApad {
+    display: flex;
+    margin-left: auto;
+    gap: 10px;
+}
+
+.buttonsConecApad{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: flex-end;
+}
+
+.buttonsConecApad button {
+    display: flex;
+    border: 0;
+    width: 120px;
+    padding: 4px 20px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.buttonsChat-box{
+    align-self: flex-end;
+}
+
+.buttonConectar {
+    background-color: #0079FF;
+}
+
+.buttonApadrinhar {
+    background-color: #FF00FF;
+}
+
+.perfilPubMomMap{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.perfilPubMomMap ul.perfilPubMomMap {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style-type: none;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.perfilPubMomMap ul.perfilPubMomMap li {
+    background-color: #1e1e1e;
+    padding: 12px 12px;
+    border-radius: 100px;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.perfilConfig{
+    margin-left: auto;
+}
+
+@media (max-width: 767.98px) { 
+    .perfilFoto {
+        display: flex;
+        margin-top: -70px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .userName h2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .perfilHeader{
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .perfilFoto {
+        display: flex;
+        margin-top: -50px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .userName h2{
+        font-size: 18px;
+    }
+}
