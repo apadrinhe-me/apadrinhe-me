@@ -1,4 +1,4 @@
-import "./perfil.css";
+import "./Perfil.css";
 import React from "react";
 import Menu from "../../componets/layout/Menu";
 import NavPerfil from "../../componets/layout/navPerfil/NavPerfil";

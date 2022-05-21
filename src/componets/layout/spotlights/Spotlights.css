@@ -1,0 +1,25 @@
+.Spotlights{
+    display: flex;
+    flex-direction: column;
+}
+
+.Spotlights .spotlight-profiles{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.Spotlights .spotlight-title{
+    font-size: 18px;
+    font-weight: 700;
+    color: #969696;
+}
+
+.Spotlights .spotlight-courses{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}

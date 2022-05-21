@@ -1,0 +1,31 @@
+.SpotlightProfile{
+    display: flex;
+    flex-direction: row;
+    background: #2a324b;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 17px;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.SpotlightProfile:hover{
+    cursor: pointer;
+    background: #363b4f;
+}
+
+.SpotlightProfile .profile-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.SpotlightProfile .name{
+    font-weight: 600;
+}
+
+.SpotlightProfile .description{
+    font-size: 13px;
+    gap: 10px;
+}

@@ -1,4 +1,4 @@
-import "./moments.css";
+import "./Moments.css";
 import React from "react";
 import Menu from "../../componets/layout/Menu";
 

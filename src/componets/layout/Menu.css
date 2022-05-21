@@ -18,9 +18,9 @@
 
 /* Divisão de espaço com containers, esquerdo, meio e direito. */
 
-.container_max {
+.Menu .container_max {
     height: 60px;
-    width: 1500px;
+    width: 100%;
     max-width: 1500px;
     display: flex;
     flex-direction: row;
@@ -29,7 +29,7 @@
     background-color: transparent;
 }
 
-.container_middle {
+.Menu .container_middle {
     display: flex;
     align-items: center;
     height: 60px;
@@ -37,7 +37,7 @@
     background-color: transparent;
 }
 
-.container_left {
+.Menu .container_left {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,9 +47,9 @@
     background-color: transparent;
 }
 
-.container_right {
+.Menu .container_right, .Menu .container_right_expand {
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
     align-items: center;
     max-width: 360px;
     height: 60px;
@@ -60,7 +60,7 @@
 
 /* Estilos barra de navegação */
 
-.nav {
+.Menu .nav {
     height: 60px;
     width: 100%;
     display: flex;
@@ -70,14 +70,18 @@
     background-color: transparent;
 }
 
-.nav li {
+.Menu .nav li {
     border-radius: 50em;
 }
 
-.nav li:hover {
+.Menu .nav li:hover {
     animation: anim 0.2s;
     box-shadow: 0px 5px 10px #00000035;
     background-image: linear-gradient(to bottom right, #3b435a, #3b435a50);
+}
+
+.Menu .nav_icon{
+    width: 24px;
 }
 
 @keyframes anim {
@@ -101,7 +105,7 @@
     }
 }
 
-.nav li a {
+.Menu .nav li a {
     text-decoration: none;
     color: white;
     width: 180px;
@@ -114,26 +118,26 @@
 
 /* Estilos opções do usuário */
 
-.login_control {
+.Menu .login_control {
     height: 60px;
     display: flex;
     align-items: center;
     list-style: none;
 }
 
-.login_control li a {
+.Menu .login_control li a {
     text-decoration: none;
     color: white;
 }
 
 /* Botão de perfil do usuário */
 
-.user-profile_btn {
+.Menu .user-profile_btn {
     text-decoration: none;
     color: white;
 }
 
-.user-profile_btn div {
+.Menu .user-profile_btn div {
     height: 40px;
     display: flex;
     align-items: center;
@@ -142,14 +146,14 @@
     border-radius: 50em;
 }
 
-.user-profile_btn img {
+.Menu .user-profile_btn img {
     height: 30px;
     margin-left: 5px;
     object-fit: cover;
     border-radius: 50em;
 }
 
-.user-profile_btn p {
+.Menu .user-profile_btn p {
     font-size: 15px;
     font-weight: 600;
     margin: 0px 10px;
@@ -161,7 +165,7 @@
 
 /* Botão de cadastro */
 
-.sign-up_btn {
+.Menu .sign-up_btn {
     margin-left: 20px;
     padding: 10px 20px;
     border-radius: 50em;
@@ -171,9 +175,52 @@
     transition: 0.2s;
 }
 
+/*Botões de notificação e chat*/
+.Menu .btn-icon{
+    height: 25px;
+}
+
+.btn-action{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #4B4B4B;
+    border: none;
+}
+
+.btn-action:hover{
+    cursor: pointer;
+    background: #7e7e7e;
+}
+
+/*Dropdown menu*/
+.Menu .menu-expand-ico{
+    height: 20px;
+}
+
+.Menu .dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.Menu .dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 40px;
+    padding-top: 5px;
+}
+
+.Menu .dropdown:hover .dropdown-content, .Menu .dropdown-content:hover .dropdown-content{
+    display: block;
+}
+
 /* Estilo barra de pesquisa */
 
-.search_bar {
+.Menu .search_bar {
     border: 0;
     outline: 0;
     width: 100%;
@@ -186,7 +233,61 @@
     font-size: 16px;
 }
 
-::placeholder {
+.Menu ::placeholder {
     color: #9da1ad;
     opacity: 1;
+}
+
+@media (max-width: 1399.98px) {
+    .Menu .nav li a{
+        width: 140px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .Menu .nav li a{
+        width: 130px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .Menu .search_bar{
+        display: none;
+    }
+    .Menu .nav li a{
+        width: 70px;
+    }
+
+    .Menu .container_right.logged{
+        display: none;
+    }
+
+    .sign-up_btn{
+        display: none;
+    }
+
+    .sing-in_btn{
+        padding: 10px 20px;
+        border-radius: 50em;
+        box-shadow: 0px 5px 10px #00000035;
+        background-image: linear-gradient(to bottom right, #7630d9, #d92588);
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 992px){
+    .Menu .container_right_expand{
+        display: none;
+    }
+}
+
+/*Esconder itens do menu principal pois jáa vai mostra no Menu Mobile*/
+@media (max-width: 575.98px) {
+    .Menu .container_middle, .Menu .user-profile_btn, .Menu .login_control{
+        display: none;
+    }
+
+    .Menu .search_bar{
+        display: block;
+    }
 }
