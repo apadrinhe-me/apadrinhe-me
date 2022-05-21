@@ -2,7 +2,7 @@
     background-color: #191919;
     display: flex;
     justify-content: center;
-    width: 100vw;
+
 }
 
 .perfilHeader {
@@ -27,7 +27,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 0 0 20px 20px;
-    
+
 }
 
 .perfilNomeInteracao {
@@ -55,7 +55,7 @@
     gap: 10px;
 }
 
-.buttonsConecApad{
+.buttonsConecApad {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -71,7 +71,7 @@
     color: #fff;
 }
 
-.buttonsChat-box{
+.buttonsChat-box {
     align-self: flex-end;
 }
 
@@ -83,40 +83,51 @@
     background-color: #FF00FF;
 }
 
-.perfilPubMomMap{
+.perfilPubMomMapCfa {
     display: flex;
     flex-direction: row;
     align-self: flex-start;
     width: 100%;
+    margin-bottom: 10px;
 }
 
-.perfilPubMomMap ul.perfilPubMomMap {
+.perfilPubMomMapCfa ul.perfilPubMomMapCfa {
     display: flex;
     flex-direction: row;
     gap: 10px;
     list-style-type: none;
     flex-wrap: wrap;
     flex: 1;
+    
 }
 
-.perfilPubMomMap ul.perfilPubMomMap li {
+.perfilPubMomMapCfa button {
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.perfilPubMomMapCfa ul.perfilPubMomMapCfa li {
     background-color: #1e1e1e;
-    padding: 12px 12px;
+    padding: 12px 25px;
     border-radius: 100px;
+    
 }
 
-.header-content{
+.header-content {
     display: flex;
     flex-direction: column;
     width: 80%;
     max-width: 1200px;
 }
 
-.perfilConfig{
+.perfilConfig {
     margin-left: auto;
 }
 
-@media (max-width: 767.98px) { 
+
+
+@media (max-width: 767.98px) {
     .perfilFoto {
         display: flex;
         margin-top: -70px;
@@ -124,13 +135,13 @@
         height: 120px;
     }
 
-    .userName h2{
+    .userName h2 {
         font-size: 20px;
     }
 }
 
-@media (max-width: 575.98px) { 
-    .perfilHeader{
+@media (max-width: 575.98px) {
+    .perfilHeader {
         margin: 0;
         border-radius: 0;
     }
@@ -142,7 +153,7 @@
         height: 80px;
     }
 
-    .userName h2{
+    .userName h2 {
         font-size: 18px;
     }
 }

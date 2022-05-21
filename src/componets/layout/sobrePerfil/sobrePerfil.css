@@ -1,0 +1,24 @@
+.sobrePerfil {
+    max-width: 900px;
+    border: none;
+    background: #191919;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.sobrePerfil h2 {
+    line-height: 40px;
+}
+
+.iconeCurriculo {
+    max-width: 40px;
+    margin-right: 10px;
+}
+
+.sobrePerfil li {
+    margin: 12px 0;
+}
+
+.sobrePerfil ul li {
+    display: flex;
+}

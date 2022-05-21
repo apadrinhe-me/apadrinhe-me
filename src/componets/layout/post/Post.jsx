@@ -18,7 +18,7 @@ const Post = props => {
         <div className="Post">
             <div className="post-header">
                 <div className="header-prof-picture">
-                    <ProfPicture src={props.profPicture} scale={80}/>
+                    <ProfPicture src={props.profPicture} scale={80} />
                 </div>
                 <div className="header-prof-info">
                     <span className="fullname">{props.fullname}</span>
@@ -30,7 +30,7 @@ const Post = props => {
                 {props.postDescription}
             </div>
             <div className="post-media">
-                <img src={require(`../../../media/post_media/${props.postMedia}`)} alt="Imagem do post" className="post-img"/>
+                <img src={require(`../../../media/post_media/${props.postMedia}`)} alt="Imagem do post" className="post-img" />
             </div>
             <div className="post-engagement">
                 <span className="likes">{props.qntLikes} likes</span> <span className="separatos">-</span>
@@ -38,10 +38,10 @@ const Post = props => {
                 <span className="shared">{props.qntShares} compartilhamentos</span>
             </div>
             <div className="post-actionBtns">
-                <button className="btn btn-like"> <img src={likeIcoStroke} alt="icone de like" className="btn-ico"/> Curtir</button>
-                <button className="btn btn-comment"><img src={commentIcoStroke} alt="icone de like" className="btn-ico"/> Comentar</button>
-                <button className="btn btn-share"><img src={shareIco} alt="icone de like" className="btn-ico"/> Compartilhar</button>
-                <button className="btn btn-apadrinhar"><img src={rocketIco} alt="icone de like" className="btn-ico"/>  Apadrinhar</button>
+                <button className="btn btn-like"> <img src={likeIcoStroke} alt="icone de like" className="btn-ico" /> Curtir</button>
+                <button className="btn btn-comment"><img src={commentIcoStroke} alt="icone de like" className="btn-ico" /> Comentar</button>
+                <button className="btn btn-share"><img src={shareIco} alt="icone de like" className="btn-ico" /> Compartilhar</button>
+                <button className="btn btn-apadrinhar"><img src={rocketIco} alt="icone de like" className="btn-ico" />  Apadrinhar</button>
             </div>
         </div>
     );

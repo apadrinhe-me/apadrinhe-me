@@ -1,0 +1,19 @@
+.perfilSobrePost ul li {
+    list-style: none;
+}
+
+.perfilSobrePost {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80%;
+    max-width: 1200px;
+    gap: 20px;
+    margin: 10px auto;
+}
+
+@media (max-width: 910px) {
+    .perfilSobrePost {
+        flex-direction: column-reverse;
+
+    }
+}

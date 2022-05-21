@@ -14,10 +14,10 @@ const NavPerfil = props => {
                             <img src="https://www.proa.org.br/wp-content/uploads/2021/09/Captura-de-Tela-2021-09-27-as-16.08.50.png"></img>
                         </div>
 
-                        <div className="perfilNomeInteracao border">
+                        <div className="perfilNomeInteracao ">
 
                             <div className="perfilFoto">
-                                <ProfPicture src="natan_proa.jpg" scale={"100%"}/>
+                                <ProfPicture src="natan_proa.jpg" scale={"100%"} />
                             </div>
 
                             <div className="userName">
@@ -28,7 +28,7 @@ const NavPerfil = props => {
                                 <div className="buttonsChat-box">
                                     <button className="buttonChat">chat</button>
                                 </div>
-                                
+
                                 <div className="buttonsConecApad">
                                     <button className="buttonConectar">Conectar</button>
                                     <button className="buttonApadrinhar">Apadrinhar</button>
@@ -37,11 +37,12 @@ const NavPerfil = props => {
 
                         </div>
 
-                        <div className="perfilPubMomMap">
-                            <ul className="perfilPubMomMap">
-                                <li>Publicações</li>
-                                <li>Moments</li>
-                                <li>Mapa de carreira</li>
+                        <div className="perfilPubMomMapCfa">
+                            <ul className="perfilPubMomMapCfa">
+                                <li><button>Publicações</button></li>
+                                <li><button>Moments</button></li>
+                                <li><button>Mapa de carreira</button></li>
+                                <li><button>cursos favoritos</button></li>
                                 <li className="perfilConfig">...<img src="" alt="" /></li>
                             </ul>
                         </div>
