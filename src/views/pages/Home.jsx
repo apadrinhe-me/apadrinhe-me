@@ -1,8 +1,11 @@
+import "./Home.css";
 import React, {useState} from "react";
 import Menu from "../../componets/layout/Menu";
 import Post from "../../componets/layout/post/Post";
 import NewPost from "../../componets/layout/newPost/NewPost";
+import Spotlights from "../../componets/layout/spotlights/Spotlights";
 import If from "../../componets/funcional/If";
+import MenuMobile from "../../componets/layout/MenuMobile";
 
 const Home = () => {
     let mobileView = window.innerWidth <= 576 ? true : false;
@@ -20,7 +23,7 @@ const Home = () => {
 
     return(
         <>
-            <Menu />
+            <Menu atual="Home" logged={true}/>
             <div className="Home">
                 <If test={viewport === 'desktop'}>
                     <div className="infinity-post-scroll">
@@ -41,7 +44,7 @@ const Home = () => {
                     </div>
 
                     <div className="spotlights">
-                        destaques
+                        <Spotlights />
                     </div>
                 </If>
 
@@ -49,9 +52,13 @@ const Home = () => {
                     <div className="new-post">
                         <NewPost profPicture="natan_proa.jpg" />
                     </div>
+
+                    <h2>Destaques</h2>
                     <div className="spotlights">
-                        destaques
+                        <Spotlights />
                     </div>
+
+                    <h2>Postagens</h2>
                     <div className="infinity-post-scroll">
                         <Post 
                             profPicture="natan_proa.jpg" 
@@ -66,6 +73,7 @@ const Home = () => {
                     </div>
                 </If>
             </div>
+            <MenuMobile atual="Home" logged={true} />
         </>
     );
 }

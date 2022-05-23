@@ -1,16 +1,16 @@
-import "./cursos.css";
+import "./Moments.css";
 import React from "react";
 import Menu from "../../componets/layout/Menu";
 
-const Cursos =  () => {
+const Moments =  () => {
     return(
         <>
             <Menu />
-            <div className="Cursos">
-                <h1>Cursos</h1>
+            <div className="Moments">
+                <h1>Moments</h1>
             </div>
         </>
     );
 }
 
-export default Cursos;
+export default Moments;
