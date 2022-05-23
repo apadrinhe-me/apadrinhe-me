@@ -15,14 +15,14 @@
     color: #dcdcdc;
 }
 
-.conection-sugestions{
+.ForYou .conection-sugestions{
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 25px;
 }
 
-.HotTopics{
+.ForYou .HotTopics{
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -30,12 +30,12 @@
     flex-wrap: wrap;
 }
 
-hr{
+.ForYou hr{
     border: 1px solid #2c2c2c;
     margin: 10px 0;
 }
 
-.copyright-div{
+.ForYou .copyright-div{
     display: flex;
     flex-direction: column;
     font-size: 13px;
@@ -43,7 +43,7 @@ hr{
     gap: 2px;
 }
 
-.links{
+.ForYou .links{
     display: flex;
     flex-direction: row;
     gap: 10px;

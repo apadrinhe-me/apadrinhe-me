@@ -17,6 +17,8 @@
 
 .Moments .for-you{
     flex-basis: 500px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
 }
 
 .Moments .moments-feed{
@@ -29,12 +31,12 @@
     overflow: auto;
     gap: 20px;
     height: calc(100vh - 80px);
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 @media (max-width: 575.98px) {
     .Moments{
-        height: calc(100vh - 140px);
+        height: calc(100vh - 80px);
     }
 
     .Moments .for-you{
@@ -45,5 +47,17 @@
         flex: 1;
         padding: 0;
         border-radius: 0;
+    }
+
+    .Moments .container{
+        margin: 0 auto;
+    }
+
+    .menu-margin{
+        margin-top: 80px;
+    }
+
+    .Moments .moments-feed{
+        overflow-y: auto;
     }
 }

@@ -7,6 +7,8 @@
     text-decoration: none;
     color: white;
     transition: background .2s;
+    overflow: hidden;
+    width: 100%;
 }
 
 .ConectionSugestion:hover{
@@ -30,6 +32,10 @@
 .profile-username{
     font-size: 16px;
     font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 .profile-name{
@@ -38,8 +44,29 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
 }
 
 .verified-icon{
     height: 16px;
+}
+
+@media(max-width: 690px){
+    .profile-username{
+        font-size: 16px;
+        font-weight: 700;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 70%;
+    }
+    
+    .profile-name{
+        font-size: 14px;
+        color: #a8a8a8;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 70%;
+    }
 }

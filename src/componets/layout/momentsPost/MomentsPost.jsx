@@ -1,5 +1,5 @@
 import "./MomentsPost.css";
-import React from "react";
+import React, {useState} from "react";
 import ProfPicture from "../profPicture/ProfPicture";
 
 //import dos ícones
@@ -9,6 +9,26 @@ import shareIco from "../../../media/icons/item_share_icon_stroke.svg";
 import saveIco from "../../../media/icons/item_save_icon_fill.svg";
 
 const MomentsPost = props => {
+    function nextPost() {
+        try {
+            document.querySelector(`#moments-${props.id + 1}`).scrollIntoView({
+                behavior: 'smooth'
+            });
+        } catch (error) {
+            alert('Não há mais vídeos por enquanto :( \n volte mais tarde');
+        }
+    }
+
+    function prevPost() {
+        try {
+            document.querySelector(`#moments-${props.id - 1}`).scrollIntoView({
+                behavior: 'smooth'
+            });
+        } catch (error) {
+            alert('Esse era o primeiro vídeo');
+        }
+    }
+
     return(
         <div className="MomentsPost" id={`moments-${props.id}`}>
             <div className="user-info">
@@ -39,6 +59,16 @@ const MomentsPost = props => {
                 </div>
 
                 <div className="moments-interactions">
+                    <div className="btn-div prev-next-btns">
+                        <button onClick={e => {
+                            prevPost();
+                        }}>&uarr;</button>
+
+                        <button onClick={e => {
+                            nextPost();
+                        }}>&darr;</button>
+                    </div>
+
                     <div className="btn-div">
                         <button><img src={likeIco} alt="Botão de like" className="btn-icon"/></button>
                         <span>1.2k</span>

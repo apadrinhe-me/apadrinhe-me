@@ -16,7 +16,7 @@ const Moments =  () => {
                     </aside>
                     <main className="moments-feed">
                         <MomentsPost id={1}/>
-                        <MomentsPost id={1}/>
+                        <MomentsPost id={2}/>
                     </main>
                 </div>
             </div>
