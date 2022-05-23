@@ -1,1 +1,49 @@
+.Moments{
+    width: 100%;
+    height: calc(100vh - 80px);
+}
 
+.Moments .container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1500px;
+    margin: 20px auto;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+}
+
+.Moments .for-you{
+    flex-basis: 500px;
+}
+
+.Moments .moments-feed{
+    flex-basis: 1000px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #282828;
+    border-radius: 15px;
+    overflow: auto;
+    gap: 20px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+@media (max-width: 575.98px) {
+    .Moments{
+        height: calc(100vh - 140px);
+    }
+
+    .Moments .for-you{
+        display: none;
+    }
+
+    .Moments .moments-feed{
+        flex: 1;
+        padding: 0;
+        border-radius: 0;
+    }
+}

@@ -78,10 +78,13 @@
     align-items: center;
     gap: 10px;
     font-size: 14px;
+    transition: background .2s;
 }
 
 .Post .btn:hover {
     cursor: pointer;
+    background: #2c2c2c;
+    transition: background .2s;
 }
 
 .Post .btn-ico {
@@ -92,4 +95,10 @@
     margin-left: auto;
     background: #FF00FF;
     color: white;
+    transition: background .2s;
+}
+
+.Post .btn-apadrinhar:hover{
+    background: #b700b7;
+    transition: background .2s;
 }
