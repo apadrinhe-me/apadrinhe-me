@@ -1,0 +1,45 @@
+.ConectionSugestion{
+    display: flex;
+    flex-direction: row;
+    background: #282828;
+    border-radius: 25px;
+    gap: 15px;
+    text-decoration: none;
+    color: white;
+    transition: background .2s;
+}
+
+.ConectionSugestion:hover{
+    cursor: pointer;
+    background: #4d4d4d;
+    transition: background .2s;
+}
+
+.profile-picture{
+    display: flex;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    padding: 5px;
+}
+
+.profile-username{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.profile-name{
+    font-size: 14px;
+    color: #a8a8a8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.verified-icon{
+    height: 16px;
+}

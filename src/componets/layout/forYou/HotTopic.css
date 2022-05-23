@@ -1,0 +1,14 @@
+.HotTopic{
+    display: inline;
+    padding: 3px 8px;
+    font-size: 15px;
+    color: #191919;
+    background: linear-gradient(90deg, #fab32b, #F2E38D);
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.HotTopic:hover{
+    cursor: pointer;
+    color: #b63900;
+}

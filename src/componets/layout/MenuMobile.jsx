@@ -17,8 +17,6 @@ import IconLogin from "../../media/icons/item_login_fill.png";
 const MenuMobile = props => {
     return (
         <>
-            <div className="MenuMobile-margin"></div>
-
             <nav className="MenuMobile">
                 <ul className="nav">
                     <li><Link to="/"><img className="nav_icon" src={props.atual === "Home" ? HomeIconFill : HomeIconStroke} alt="Ícone da página moments" className="nav_icon"/>{/*<svg aria-label="Home" className="_8-yf5 " fill="#fff" height="25" role="img" viewBox="0 0 28 28"><path xmlns="http://www.w3.org/2000/svg" d="M27.8,15.24c-.4,1.03-1.31,1.66-2.39,1.66h-.67v8.28c0,1.56-1.22,2.82-2.71,2.82h-5.68v-8.19c0-.27-.21-.49-.47-.49h-3.77c-.26,0-.47,.21-.47,.49v8.19H5.96c-1.49,0-2.71-1.26-2.71-2.82v-8.28h-.67c-1.07,0-1.99-.64-2.39-1.66-.4-1.03-.18-2.15,.59-2.92L12.2,.76c1.01-1.02,2.59-1.02,3.6,0l11.42,11.56c.77,.77,.99,1.89,.59,2.92Z" /></svg>*/}</Link></li>

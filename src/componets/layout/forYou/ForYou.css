@@ -1,0 +1,50 @@
+.ForYou{
+    padding: 10px;
+}
+
+.ForYou .page-title{
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.ForYou .page-subtitle{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #dcdcdc;
+}
+
+.conection-sugestions{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.HotTopics{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 7px;
+    flex-wrap: wrap;
+}
+
+hr{
+    border: 1px solid #2c2c2c;
+    margin: 10px 0;
+}
+
+.copyright-div{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #969696;
+    gap: 2px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
