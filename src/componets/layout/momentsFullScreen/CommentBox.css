@@ -1,0 +1,38 @@
+.CommentBox{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.CommentBox .CommentTextArea{
+    border: 1px solid transparent;
+    background: #969696;
+    color: #262626;
+    padding: 10px;
+    border-radius: 20px;
+    resize: none;
+    flex: 4;
+}
+
+.CommentBox .CommentTextArea:focus{
+    outline: none;
+    border: 1px solid white;
+}
+
+.CommentBox .submitComment{
+    flex: 1;
+    border: none;
+    background: #FF00FF;
+    border-radius: 20px;
+    font-weight: 600;
+    color: white;
+    font-size: 15px;
+    transition: background .2s;
+    padding: 0 10px;
+}
+
+.CommentBox .submitComment:hover{
+    background: #b700b7;
+    transition: background .2s;
+    cursor: pointer;
+}

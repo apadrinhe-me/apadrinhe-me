@@ -1,0 +1,94 @@
+.Comment{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: start;
+}
+
+.Comment .comment-info{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.Comment .text-primary{
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.Comment .text-secondary{
+    padding: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+.Comment .comment-buttons{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.Comment .comment-date{
+    font-size: 13px;
+    color: #858585;
+    margin-right: 10px;
+}
+
+.Comment .btn-like, .Comment .btn-reply{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+}
+
+.Comment .btn-like:hover{
+    cursor: pointer;
+    color: #0079FF;
+}
+
+.Comment .btn-reply{
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px;
+    transition: .2s;
+}
+
+.Comment .btn-reply:hover{
+    cursor: pointer;
+    background: white;
+    color: black;
+    transition: .2s;
+}
+
+.Comment .btn-like img, .Comment .btn-reply img{
+    height: 16px;
+}
+
+.Comment .more-options{
+    align-self: start;
+    display: flex;
+    margin-left: auto;
+}
+
+.Comment .btn-options{
+    border: none;
+    background: #3D3D3D;
+    border-radius: 20px;
+    font-weight: 600;
+    color: white;
+    padding: 7px 20px;
+    font-size: 18px;
+    transition: background .2s;
+}
+
+.Comment .btn-options:hover{
+    background: #2f2f2f;
+    transition: background .2s;
+    cursor: pointer;
+}
