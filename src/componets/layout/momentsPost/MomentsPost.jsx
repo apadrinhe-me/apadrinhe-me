@@ -1,5 +1,5 @@
 import "./MomentsPost.css";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import ProfPicture from "../profPicture/ProfPicture";
 
 //import dos ícones
@@ -28,6 +28,12 @@ const MomentsPost = props => {
             alert('Esse era o primeiro vídeo');
         }
     }
+
+    useEffect(() => {
+        document.querySelector("#btn-comment-"+props.id).addEventListener('click', () => {
+            props.setFullscreen(props.id)
+        })
+    })
 
     return(
         <div className="MomentsPost" id={`moments-${props.id}`}>
@@ -74,15 +80,15 @@ const MomentsPost = props => {
                         <span>1.2k</span>
                     </div>
                     <div className="btn-div">
-                        <button><img src={commentIco} alt="Botão de like" className="btn-icon"/></button>
+                        <button><img src={commentIco} alt="Botão de Comentário" className="btn-icon" id={"btn-comment-"+props.id}/></button>
                         <span>1.2k</span>
                     </div>
                     <div className="btn-div">
-                        <button><img src={shareIco} alt="Botão de like" className="btn-icon"/></button>
+                        <button><img src={shareIco} alt="Botão de compartilhamento" className="btn-icon"/></button>
                         <span>1.2k</span>
                     </div>
                     <div className="btn-div">
-                        <button><img src={saveIco} alt="Botão de like" className="btn-icon"/></button>
+                        <button><img src={saveIco} alt="Botão de salvar" className="btn-icon"/></button>
                     </div>
                 </div>
             </div>

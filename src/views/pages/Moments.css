@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100%;
     max-width: 1500px;
     margin: 20px auto;
     align-items: flex-start;
@@ -31,7 +32,43 @@
     overflow: auto;
     gap: 20px;
     height: calc(100vh - 80px);
-    overflow-y: hidden;
+    overflow-y: auto;
+}
+
+.Moments .moments-feed::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 10px;
+}
+
+/* Track */
+.Moments .moments-feed::-webkit-scrollbar-track {
+    background: #adadad;
+    border-radius: 10px;
+}
+
+/* Handle */
+.Moments .moments-feed::-webkit-scrollbar-thumb {
+    background: #484848;
+    border-radius: 10px;
+}
+
+/*Modo tela cheia*/
+.full-screen-post{
+    display: none;
+}
+
+.Moments .for-you.fulscreenmode{
+    display: none;
+}
+
+.Moments .moments-feed.fulscreenmode{
+    display: none;
+}
+
+.Moments .full-screen-post.fulscreenmode{
+    display: flex;
+    flex: 1;
+    height: 90%;
 }
 
 @media (max-width: 575.98px) {
@@ -59,5 +96,18 @@
 
     .Moments .moments-feed{
         overflow-y: auto;
+    }
+
+    /*Modo tela cheia -> não existe*/
+    .Moments .full-screen-post{
+        display: none !important;
+    }
+
+    .Moments .moments-feed.fulscreenmode{
+        display: flex;
+    }
+
+    .full-screen-post.fulscreenmode{
+        display: none;
     }
 }
