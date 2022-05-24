@@ -1,4 +1,4 @@
-import "./perfil.css";
+import "./Perfil.css";
 
 import React, { useState } from "react";
 import Menu from "../../componets/layout/Menu";
