@@ -31,7 +31,7 @@ const NavPerfil = props => {
 
                                 <div className="buttonsConecApad">
                                     <button className="buttonConectar">Conectar</button>
-                                    <button className="buttonApadrinhar">Apadrinhar</button>
+                                    <button className="buttonApadrinhar" onClick={() => props.setButtonPopup(true)}>Apadrinhar</button>
                                 </div>
                             </div>
 

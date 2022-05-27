@@ -51,21 +51,27 @@
     overflow-x: hidden;
 }
 
-/* Track */
-.ApadPopup .popup-inner::-webkit-scrollbar-track {
-    background: #adadad;
-    border-radius: 10px;
+.ApadPopup .popup-inner::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+    border-radius: 20px;
 }
 
-/* Handle */
+.ApadPopup .popup-inner::-webkit-scrollbar-track {
+    background: #727272;        /* color of the tracking area */
+    width: 7px;
+    border-radius: 20px;
+}
+
 .ApadPopup .popup-inner::-webkit-scrollbar-thumb {
-    background: #484848;
-    border-radius: 10px;
+    background-color: #ff337e;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
 }
 
 .ApadPopup .popup-inner .close-btn{
-    align-self: flex-end;
-    margin-top: -20px;
+    position: absolute;
+    top: 15px;
+    left: auto;
+    right: 15px;
     width: 25px;
     height: 25px;
     display: flex;

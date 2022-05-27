@@ -43,6 +43,7 @@
 
 .OthersCard .card-btn button:hover{
     cursor: pointer;
+    font-weight: 800;
 }
 
 .OthersCard h3{

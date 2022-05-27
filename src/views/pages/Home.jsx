@@ -15,6 +15,12 @@ const Home = () => {
     const[viewport, setviewport] = useState(window.innerWidth < 576 ? 'mobile' : 'desktop')
     const[buttonPopup, setButtonPopup] = useState(false);
 
+    if (buttonPopup){
+        document.querySelector('body').style.overflowY = 'hidden';
+    } else {
+        document.querySelector('body').style.overflowY = 'auto';
+    }
+
     window.addEventListener("resize", () => {
         if(window.innerWidth < 576){
             setviewport('mobile')
