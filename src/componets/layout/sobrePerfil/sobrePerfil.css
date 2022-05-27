@@ -6,6 +6,10 @@
     padding: 20px 10px;
 }
 
+.sobrePerfil div:not(:last-child){
+    margin-bottom: 20px;
+}
+
 .sobrePerfil h2 {
     line-height: 40px;
 }
@@ -22,3 +26,4 @@
 .sobrePerfil ul li {
     display: flex;
 }
+

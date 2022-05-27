@@ -41,7 +41,7 @@ const Post = props => {
                 <button className="btn btn-like"> <img src={likeIcoStroke} alt="icone de like" className="btn-ico" /> Curtir</button>
                 <button className="btn btn-comment"><img src={commentIcoStroke} alt="icone de like" className="btn-ico" /> Comentar</button>
                 <button className="btn btn-share"><img src={shareIco} alt="icone de like" className="btn-ico" /> Compartilhar</button>
-                <button className="btn btn-apadrinhar" onClick={() => props.setButtonPopup(true)}><img src={rocketIco} alt="icone de like" className="btn-ico" />  Apadrinhar</button>
+                <button className="btn btn-apadrinhar" onClick={() => props.setButtonPopup(true)}><img src={rocketIco} alt="icone de like" className="btn-ico" /> Apadrinhar</button>
             </div>
         </div>
     );

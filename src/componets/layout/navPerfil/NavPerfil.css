@@ -37,6 +37,7 @@
     justify-items: flex-start;
     margin-top: 10px;
     margin-bottom: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.418);
     flex-wrap: wrap;
     gap: 15px;
@@ -64,15 +65,36 @@
 
 .buttonsConecApad button {
     display: flex;
-    border: 0;
-    width: 120px;
-    padding: 4px 20px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 8px 20px;
     border-radius: 20px;
     color: #fff;
+    font-weight: 700;
+    font-size: 15px;
 }
 
 .buttonsChat-box {
     align-self: flex-end;
+}
+
+.buttonsChat-box button {
+    padding: 7px 30px;
+    border: none;
+    background: #191919;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.buttonsChat-box button:hover{
+    cursor: pointer;
+    background: #2c2c2c;
+    transition: .2s;
+}
+
+.buttonsChat-box button img{
+    height: 20px;
 }
 
 .buttonConectar {
@@ -81,6 +103,21 @@
 
 .buttonApadrinhar {
     background-color: #FF00FF;
+}
+
+.buttonConectar:hover {
+    cursor: pointer;
+    background-color: #0060ce;
+}
+
+.buttonApadrinhar:hover {
+    cursor: pointer;
+    background-color: #c900c9;
+}
+
+.buttonsConecApad img{
+    height: 16px;
+    margin-right: 8px;
 }
 
 .perfilPubMomMapCfa {
@@ -98,20 +135,35 @@
     list-style-type: none;
     flex-wrap: wrap;
     flex: 1;
-    
+    justify-content: center;
 }
 
 .perfilPubMomMapCfa button {
-    background: none;
+    background: #191919;
+    padding: 10px 20px;
     border: none;
     color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 20px;
 }
 
-.perfilPubMomMapCfa ul.perfilPubMomMapCfa li {
-    background-color: #1e1e1e;
-    padding: 12px 25px;
-    border-radius: 100px;
-    
+.perfilPubMomMapCfa button:hover {
+    background: #2c2c2c;
+    cursor: pointer;
+}
+
+.perfilPubMomMapCfa li{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.perfilPubMomMapCfa li .active{
+    width: 100%;
+    height: 5px;
+    background: #FF00FF;
+    border-radius: 20px;
 }
 
 .header-content {
@@ -125,7 +177,44 @@
     margin-left: auto;
 }
 
+.NavPerfil .btn {
+    border: none;
+    background: #191919;
+    color: #969696;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: background .2s;
+}
 
+.NavPerfil .btn:hover {
+    cursor: pointer;
+    background: #2c2c2c;
+    transition: background .2s;
+}
+
+.NavPerfil .btn-ico {
+    height: 17px;
+}
+
+.NavPerfil .btn-apadrinhar {
+    margin-left: auto;
+    background: #FF00FF;
+    color: white;
+    transition: background .2s;
+}
+
+@media (max-width: 991.98px) {
+    .perfilPubMomMapCfa button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
 
 @media (max-width: 767.98px) {
     .perfilFoto {
@@ -137,6 +226,12 @@
 
     .userName h2 {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 863px) {
+    .buttonsConecApad{
+        flex-direction: row;
     }
 }
 
@@ -155,5 +250,9 @@
 
     .userName h2 {
         font-size: 18px;
+    }
+
+    .buttonsChatConecApad{
+        flex-wrap: wrap-reverse;
     }
 }

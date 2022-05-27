@@ -2,6 +2,9 @@ import "./NavPerfil.css";
 import React from "react";
 import foto from "../../../media/profile_pictures/natan_proa.jpg";
 import ProfPicture from "../profPicture/ProfPicture";
+import ApadrinharBtn from "../../../media/icons/icons_apadrinhar_icon_fill.svg";
+import ChatBtn from "../../../media/icons/item_chat_icon_fill.svg";
+import ConectionBtn from "../../../media/icons/item_conections_icon_fill.svg";
 
 const NavPerfil = props => {
     return (
@@ -26,12 +29,12 @@ const NavPerfil = props => {
 
                             <div className="buttonsChatConecApad">
                                 <div className="buttonsChat-box">
-                                    <button className="buttonChat">chat</button>
+                                    <button className="buttonChat"><img src={ChatBtn} alt=""/></button>
                                 </div>
 
                                 <div className="buttonsConecApad">
-                                    <button className="buttonConectar">Conectar</button>
-                                    <button className="buttonApadrinhar" onClick={() => props.setButtonPopup(true)}>Apadrinhar</button>
+                                    <button className="buttonConectar"><img src={ConectionBtn} alt="ícone de apadrinhar"/> Conectar</button>
+                                    <button className="buttonApadrinhar" onClick={() => props.setButtonPopup(true)}><img src={ApadrinharBtn} alt="ícone de "/> Apadrinhar</button>
                                 </div>
                             </div>
 
@@ -39,11 +42,11 @@ const NavPerfil = props => {
 
                         <div className="perfilPubMomMapCfa">
                             <ul className="perfilPubMomMapCfa">
-                                <li><button>Publicações</button></li>
+                                <li><button>Publicações</button> <div className="active"></div></li>
                                 <li><button>Moments</button></li>
                                 <li><button>Mapa de carreira</button></li>
-                                <li><button>cursos favoritos</button></li>
-                                <li className="perfilConfig">...<img src="" alt="" /></li>
+                                <li><button>Cursos recomendados</button></li>
+                                <li><button>Cursos favoritos</button></li>
                             </ul>
                         </div>
                     </div>
