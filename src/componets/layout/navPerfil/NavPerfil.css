@@ -1,11 +1,11 @@
-.perfilContainer {
+.NavPerfil .perfilContainer {
     background-color: #191919;
     display: flex;
     justify-content: center;
 
 }
 
-.perfilHeader {
+.NavPerfil .perfilHeader {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -16,21 +16,21 @@
     overflow: hidden;
 }
 
-.perfilCapa {
+.NavPerfil .perfilCapa {
     max-height: 350px;
     height: 100%;
     display: flex;
     justify-content: center;
 }
 
-.perfilCapa img {
+.NavPerfil .perfilCapa img {
     width: 100%;
     object-fit: cover;
     border-radius: 0 0 20px 20px;
 
 }
 
-.perfilNomeInteracao {
+.NavPerfil .perfilNomeInteracao {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -43,27 +43,27 @@
     gap: 15px;
 }
 
-.perfilFoto {
+.NavPerfil .perfilFoto {
     display: flex;
     margin-top: -100px;
     width: 170px;
     height: 170px;
 }
 
-.buttonsChatConecApad {
+.NavPerfil .buttonsChatConecApad {
     display: flex;
     margin-left: auto;
     gap: 10px;
 }
 
-.buttonsConecApad {
+.NavPerfil .buttonsConecApad {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-self: flex-end;
 }
 
-.buttonsConecApad button {
+.NavPerfil .buttonsConecApad button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,11 +75,11 @@
     font-size: 15px;
 }
 
-.buttonsChat-box {
+.NavPerfil .buttonsChat-box {
     align-self: flex-end;
 }
 
-.buttonsChat-box button {
+.NavPerfil .buttonsChat-box button {
     padding: 7px 30px;
     border: none;
     background: #191919;
@@ -87,40 +87,40 @@
     transition: .2s;
 }
 
-.buttonsChat-box button:hover{
+.NavPerfil .buttonsChat-box button:hover{
     cursor: pointer;
     background: #2c2c2c;
     transition: .2s;
 }
 
-.buttonsChat-box button img{
+.NavPerfil .buttonsChat-box button img{
     height: 20px;
 }
 
-.buttonConectar {
+.NavPerfil .buttonConectar {
     background-color: #0079FF;
 }
 
-.buttonApadrinhar {
+.NavPerfil .buttonApadrinhar {
     background-color: #FF00FF;
 }
 
-.buttonConectar:hover {
+.NavPerfil .buttonConectar:hover {
     cursor: pointer;
     background-color: #0060ce;
 }
 
-.buttonApadrinhar:hover {
+.NavPerfil .buttonApadrinhar:hover {
     cursor: pointer;
     background-color: #c900c9;
 }
 
-.buttonsConecApad img{
+.NavPerfil .buttonsConecApad img{
     height: 16px;
     margin-right: 8px;
 }
 
-.perfilPubMomMapCfa {
+.NavPerfil .perfilPubMomMapCfa {
     display: flex;
     flex-direction: row;
     align-self: flex-start;
@@ -128,7 +128,7 @@
     margin-bottom: 10px;
 }
 
-.perfilPubMomMapCfa ul.perfilPubMomMapCfa {
+.NavPerfil .perfilPubMomMapCfa ul.perfilPubMomMapCfa {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -138,7 +138,7 @@
     justify-content: center;
 }
 
-.perfilPubMomMapCfa button {
+.NavPerfil .perfilPubMomMapCfa button {
     background: #191919;
     padding: 10px 20px;
     border: none;
@@ -148,32 +148,32 @@
     border-radius: 20px;
 }
 
-.perfilPubMomMapCfa button:hover {
+.NavPerfil .perfilPubMomMapCfa button:hover {
     background: #2c2c2c;
     cursor: pointer;
 }
 
-.perfilPubMomMapCfa li{
+.NavPerfil .perfilPubMomMapCfa li{
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.perfilPubMomMapCfa li .active{
+.NavPerfil .perfilPubMomMapCfa li .active{
     width: 100%;
     height: 5px;
     background: #FF00FF;
     border-radius: 20px;
 }
 
-.header-content {
+.NavPerfil .header-content {
     display: flex;
     flex-direction: column;
     width: 80%;
     max-width: 1200px;
 }
 
-.perfilConfig {
+.NavPerfil .perfilConfig {
     margin-left: auto;
 }
 
@@ -210,49 +210,49 @@
 }
 
 @media (max-width: 991.98px) {
-    .perfilPubMomMapCfa button {
+    .NavPerfil .perfilPubMomMapCfa button {
         font-size: 14px;
         padding: 10px;
     }
 }
 
 @media (max-width: 767.98px) {
-    .perfilFoto {
+    .NavPerfil .perfilFoto {
         display: flex;
         margin-top: -70px;
         width: 120px;
         height: 120px;
     }
 
-    .userName h2 {
+    .NavPerfil .userName h2 {
         font-size: 20px;
     }
 }
 
 @media (max-width: 863px) {
-    .buttonsConecApad{
+    .NavPerfil .buttonsConecApad{
         flex-direction: row;
     }
 }
 
 @media (max-width: 575.98px) {
-    .perfilHeader {
+    .NavPerfil .perfilHeader {
         margin: 0;
         border-radius: 0;
     }
 
-    .perfilFoto {
+    .NavPerfil .perfilFoto {
         display: flex;
         margin-top: -50px;
         width: 80px;
         height: 80px;
     }
 
-    .userName h2 {
+    .NavPerfil .userName h2 {
         font-size: 18px;
     }
 
-    .buttonsChatConecApad{
+    .NavPerfil .buttonsChatConecApad{
         flex-wrap: wrap-reverse;
     }
 }

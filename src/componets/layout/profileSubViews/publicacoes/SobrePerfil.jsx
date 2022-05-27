@@ -1,6 +1,6 @@
 import "./sobrePerfil.css";
 import React, { useState } from "react";
-import iconeSchool from "../../../media/icons/item_school_icon_fill.svg"
+import iconeSchool from "../../../../media/icons/item_school_icon_fill.svg"
 
 const SobrePerfil = props => {
     return (

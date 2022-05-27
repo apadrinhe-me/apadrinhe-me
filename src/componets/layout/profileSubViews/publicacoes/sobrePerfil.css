@@ -1,5 +1,5 @@
 .sobrePerfil {
-    max-width: 900px;
+    flex: 1;
     border: none;
     background: #191919;
     border-radius: 10px;

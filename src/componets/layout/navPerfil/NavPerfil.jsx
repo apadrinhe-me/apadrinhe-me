@@ -5,6 +5,7 @@ import ProfPicture from "../profPicture/ProfPicture";
 import ApadrinharBtn from "../../../media/icons/icons_apadrinhar_icon_fill.svg";
 import ChatBtn from "../../../media/icons/item_chat_icon_fill.svg";
 import ConectionBtn from "../../../media/icons/item_conections_icon_fill.svg";
+import {Link} from "react-router-dom";
 
 const NavPerfil = props => {
     return (
@@ -40,15 +41,15 @@ const NavPerfil = props => {
 
                         </div>
 
-                        <div className="perfilPubMomMapCfa">
+                        <nav className="perfilPubMomMapCfa">
                             <ul className="perfilPubMomMapCfa">
-                                <li><button>Publicações</button> <div className="active"></div></li>
+                                <li><Link to="/perfil/publicacoes"><button>Publicações</button></Link> <div className="active"></div></li>
                                 <li><button>Moments</button></li>
                                 <li><button>Mapa de carreira</button></li>
                                 <li><button>Cursos recomendados</button></li>
                                 <li><button>Cursos favoritos</button></li>
                             </ul>
-                        </div>
+                        </nav>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,14 @@
+.Publicacoes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.Publicacoes .profile-about{
+    flex: 1;
+}
+
+.profile-posts{
+    flex: 2;
+}
