@@ -14,10 +14,10 @@ const Moments =  () => {
             <Menu logged={true}/>
             <div className="Moments">
                 <div className="container">
-                    <aside className={videoFullscreen !== 0 ? "for-you fulscreenmode" : "for-you"} >
+                    <aside className={videoFullscreen !== 0 ? "for-you my-scrollbar fulscreenmode" : "for-you my-scrollbar"} >
                         <ForYou />
                     </aside>
-                    <main className={videoFullscreen !== 0 ? "moments-feed fulscreenmode" : "moments-feed"}>
+                    <main className={videoFullscreen !== 0 ? "moments-feed fulscreenmode my-scrollbar" : "moments-feed my-scrollbar"}>
                         <MomentsPost id={1} setFullscreen={setVideoFullscreen}/>
                         <MomentsPost id={2} setFullscreen={setVideoFullscreen}/>
                     </main>

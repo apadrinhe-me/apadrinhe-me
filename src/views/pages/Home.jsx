@@ -63,7 +63,7 @@ const Home = () => {
                     </div>
 
                     <h2>Destaques</h2>
-                    <div className="spotlights">
+                    <div className="spotlights my-scrollbar">
                         <Spotlights />
                     </div>
 
