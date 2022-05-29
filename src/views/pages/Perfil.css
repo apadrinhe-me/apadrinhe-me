@@ -1,3 +1,8 @@
+.Perfil{
+    display: flex;
+    flex-direction: column;
+}
+
 .Perfil .perfilSobrePost ul li {
     list-style: none;
 }
@@ -7,7 +12,9 @@
     flex-direction: row;
     width: 100%;
     max-width: 1200px;
-    margin: 10px auto;
+    align-self: center;
+    justify-content: flex-start;
+    margin-top: 10px;
 }
 
 @media (max-width: 910px) {
