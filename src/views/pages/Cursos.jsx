@@ -4,8 +4,8 @@ import React from "react";
 import Menu from "../../componets/layout/Menu";
 import Curso from "../../componets/layout/cardCursos/CardCurso"
 import administracaoicone from "../../media/icons/item_people_icon_stroke.svg"
-import Offcanvas from "../../componets/layout/offcanvas/Offcanvas";
-import bootstrap from "bootstrap";
+/*import Offcanvas from "../../componets/layout/offcanvas/Offcanvas";
+import bootstrap from "bootstrap";*/
 
 const Cursos = () => {
     return (
@@ -14,7 +14,7 @@ const Cursos = () => {
             <div className="Cursos">
 
                 <div className="cursos-mobile">
-                    <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Categorias de cursos</button>
+                    <button className="btn btn-primary" type="button" /*data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"*/>Categorias de cursos</button>
                 </div>
 
                 <div className="categoriasCurso">
@@ -44,7 +44,7 @@ const Cursos = () => {
                 </div>
             </div>
 
-            <Offcanvas />
+            {/*<Offcanvas />*/}
         </>
     );
 }

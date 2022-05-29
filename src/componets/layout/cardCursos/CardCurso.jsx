@@ -4,8 +4,8 @@ import React from "react";
 const CardCurso = props => {
     return (
         <div className="cardCurso">
-                <div>
-                    <img src="" alt="" />
+                <div className="cadCursoHeader">
+                    <div className="containerRosa" ></div>
                     <h3>Metodologia ágeis</h3>
                     <h4>Intituto Proa</h4>
                     <img src="" alt="" />
