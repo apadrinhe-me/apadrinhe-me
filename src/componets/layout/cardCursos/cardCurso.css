@@ -1,0 +1,8 @@
+.cardCurso{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: red;
+    padding: 15px;
+    flex-basis: 350px;
+}
