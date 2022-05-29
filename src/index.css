@@ -22,6 +22,25 @@ body{
     display: none !important;
 }
 
+/*Custom scrollbar*/
+.my-scrollbar::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 10px;
+}
+
+/* Track */
+.my-scrollbar::-webkit-scrollbar-track {
+    background: #adadad;
+    border-radius: 10px;
+}
+
+/* Handle */
+.my-scrollbar::-webkit-scrollbar-thumb {
+    background: #484848;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 /*
 Breakpoints responsivos do bootstrap
 

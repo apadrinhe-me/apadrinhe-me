@@ -54,6 +54,7 @@
     display: flex;
     margin-left: auto;
     gap: 10px;
+    align-self: flex-end;
 }
 
 .NavPerfil .buttonsConecApad {
@@ -77,6 +78,9 @@
 
 .NavPerfil .buttonsChat-box {
     align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .NavPerfil .buttonsChat-box button {
@@ -207,6 +211,34 @@
     background: #FF00FF;
     color: white;
     transition: background .2s;
+}
+
+.NavPerfil .userName{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.NavPerfil .btn-editar-perfil{
+    border: 1px solid #0079FF;
+    background: transparent;
+    color: #0079FF;
+    font-weight: 700;
+    padding: 7px 0;
+    font-size: 15px;
+    border-radius: 20px;
+    transition: .2s;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavPerfil .btn-editar-perfil:hover{
+    background: #0079FF;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
 }
 
 @media (max-width: 991.98px) {

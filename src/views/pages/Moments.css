@@ -35,23 +35,6 @@
     overflow-y: auto;
 }
 
-.Moments .moments-feed::-webkit-scrollbar {
-    width: 7px;
-    border-radius: 10px;
-}
-
-/* Track */
-.Moments .moments-feed::-webkit-scrollbar-track {
-    background: #adadad;
-    border-radius: 10px;
-}
-
-/* Handle */
-.Moments .moments-feed::-webkit-scrollbar-thumb {
-    background: #484848;
-    border-radius: 10px;
-}
-
 /*Modo tela cheia*/
 .full-screen-post{
     display: none;

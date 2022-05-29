@@ -29,24 +29,6 @@
     flex-basis: 400px;
 }
 
-/* width */
-.Home .spotlights::-webkit-scrollbar {
-    width: 7px;
-    border-radius: 10px;
-}
-
-/* Track */
-.Home .spotlights::-webkit-scrollbar-track {
-    background: #adadad;
-    border-radius: 10px;
-}
-
-/* Handle */
-.Home .spotlights::-webkit-scrollbar-thumb {
-    background: #484848;
-    border-radius: 10px;
-}
-
 @media (max-width: 575.98px) {
     .Home{
         flex-direction: column;

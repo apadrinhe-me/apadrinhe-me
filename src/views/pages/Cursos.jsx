@@ -9,14 +9,11 @@ const Curso = () => {
     return (
         <>
             <Menu />
-            <div className="Cursos">
+            <div className="Cursos border">
 
                 <div className="categoriasCurso">
                     <ul>
-                        <li>
-
-                            <p>lore Todos os Cursos</p>
-                        </li>
+                        <li>Todos os Cursos</li>
                         <li>    Administração</li>
                         <li>  Tecnologia</li>
                         <li>  Contabilidade e Finanças</li>
@@ -28,18 +25,18 @@ const Curso = () => {
                 </div>
 
                 <div className="cardsCursos">
-
                     <div>
                         <h2>Todos os Cursos</h2>
                         <button><img src="" alt="" /></button>
                     </div>
-                    <div className="cardcurso" >
 
-                        <Cursos />
-                        <Cursos />
-                        <Cursos />
+                    <div className="card" >
+                        <ul>
+                            <li><Cursos /></li>
+                            <li><Cursos /></li>
+                            <li> <Cursos /></li>
+                        </ul>
                     </div>
-
                 </div>
 
 

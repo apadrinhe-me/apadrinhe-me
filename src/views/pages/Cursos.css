@@ -1,30 +1,44 @@
-.Cursos  {
-    display: flex;
-    
-    background-color: #323232;
+.Cursos {
+    display: flex ;
+    background: #191919;
 }
 
-.categoriasCurso{
-    
-    
+.categoriasCurso {
+    overflow: hidden;
+    position: fixed;
+    height: 100vh;
+    margin: 60px 0;
     background-color: #191919;
-    padding: 0 10px;
+    padding: 10px 10px;
 }
 
 .categoriasCurso li {
-  border-radius: 20px;
-  background-color: #323232;
-  box-shadow:  0 0 1em #242424;
- 
-  margin: 0 10px 30px 10px;
-  padding: 15px 40px;
-  list-style: none;
+    border-radius: 20px;
+    background-color: #323232;
+    box-shadow: 0 0 1em #242424;
+    margin: 0 10px 20px 10px;
+    padding: 15px 40px;
+    list-style: none;
 }
 
+.cardsCursos {
+    position: relative;
+    left: 340px;
+    padding-top: 10px;
+    background-color: #323232;
+    margin: 10px 10px;
+    border-radius: 20px;
+    
+}
 
-
-.cardcurso {
+.card ul  {
     display: flex;
+    flex-direction:column;
+    background-color: red;
+    
+    max-width: 250px;
     flex-wrap: wrap;
+    
+    width: 100%;
+    
 }
-
