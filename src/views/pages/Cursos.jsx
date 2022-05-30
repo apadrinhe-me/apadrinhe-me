@@ -19,22 +19,56 @@ const Cursos = () => {
 
                 <div className="categoriasCurso">
                     <ul>
-                        <li>Todos os Cursos</li>
-                        <li>Administração</li>
-                        <li>Tecnologia</li>
-                        <li>Contabilidade e Finanças</li>
-                        <li>Desenvolvimento Pessoal</li>
-                        <li>Educação</li>
-                        <li>Fundação TeC</li>
-                        <li>Favoritos</li>
+                        <li>
+                            <i className="bi bi-book-fill caixaIconeCategoriasCurso"></i>
+
+                            <p>Todos os Cursos</p>
+                        </li>
+                        <li>
+                            <i class="bi bi-graph-up caixaIconeCategoriasCurso"></i>
+                            <p>Administração</p>
+                        </li>
+                        <li>
+                            <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                            <p>Tecnologia</p>
+                        </li>
+                        <li>
+                            <i class="bi bi-graph-up caixaIconeCategoriasCurso"></i>
+                            <p>Contabilidade e Finanças</p>
+                        </li>
+                        <li>
+                            <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                            <p>Desenvolvimento Pessoal</p>
+                        </li>
+                        <li>
+                            <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                            <p>Educação</p>
+                        </li>
+                        <li>
+                            <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                            <p>Fundação TeC</p>
+                        </li>
+                        <li>
+                            <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                            <p>Favoritos</p>
+                        </li>
                     </ul>
                 </div>
 
-                <div className="cardsCursos border">
+                <div className="cardsCursos ">
                     <div className="nome-pagina">
-                        <h2>Todos os Cursos</h2>
-                        <button><img src="" alt="" />óia</button>
+                        <span className="h2Filter">
+
+                            <h2>Todos os Cursos</h2>
+                            <div className="caixaFilter">
+                                <i className="bi bi-funnel">Filtrar</i>
+                            </div>
+                        </span>
+                        <div className="separador2"></div>
+
                     </div>
+
+
 
                     <div className="card my-scrollbar" >
                         <Curso />
