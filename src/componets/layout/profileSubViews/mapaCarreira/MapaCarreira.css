@@ -29,7 +29,7 @@
 .MapaCarreira .timeline-scroll{
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: calc(100vw - 20px);
     max-width: 1200px;
     padding: 9px;
     gap: 7px;
@@ -165,8 +165,26 @@
     border-radius: 50%;
 }
 
-.MapaCarreira .current-goal{
+.MapaCarreira .current-goal-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.72);
+}
 
+.MapaCarreira .current-goal-details{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 100%;
+    max-width: 900px;
+    align-self: center;
+    margin-bottom: 40px;
+}
+
+.MapaCarreira .mt-10{
+    margin-top: 10px;
 }
 
 @media (max-width: 767.98px) {
