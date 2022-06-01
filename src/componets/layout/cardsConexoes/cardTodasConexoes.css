@@ -1,34 +1,8 @@
-.cardUsuarioInteracao {
-    max-width: 250px;
-    border: blue;
-  
-}
-
-.avatarUsuario {
-    background-color: #E5E6EB;
-    color: #282828;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.backgroundBlack {
-    background-color: #191919;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 10px 0;
-}
-
-.cardUsuarioInteracao h2 {
-    text-align: center;
-    padding: 5px 0;
-}
-
 .cardUsuarioInteracao span {
     display: flex;
     justify-content: space-between;
     gap: 2px;
     margin: 0 10px;
-
 }
 
 .buttonUsuarioInteracao {
