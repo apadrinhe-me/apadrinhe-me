@@ -50,7 +50,8 @@
 .Menu .container_right, .Menu .container_right_expand {
     display: flex;
     gap: 15px;
-    align-items: center;
+    align-items: center !important;
+    justify-content: center;
     max-width: 360px;
     height: 60px;
     padding: 0px 20px;
@@ -68,6 +69,7 @@
     align-items: center;
     list-style: none;
     background-color: transparent;
+    flex-wrap: nowrap !important;
 }
 
 .Menu .nav li {
@@ -121,7 +123,7 @@
 .Menu .login_control {
     height: 60px;
     display: flex;
-    align-items: center;
+    align-items: center !important;
     list-style: none;
 }
 

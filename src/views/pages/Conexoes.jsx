@@ -1,4 +1,4 @@
-import "./conexoes.css";
+import "./Conexoes.css";
 import React from "react";
 import Menu from "../../componets/layout/Menu";
 import CardTodasConexoes from "../../componets/layout/cardsConexoes/CardTodasConexoes";

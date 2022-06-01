@@ -20,6 +20,7 @@ import CursosFavoritos from "./profileSubViews/cursosFavoritos/CursosFavoritos";
 import ListaCursosPad from "./profileSubViews/listaCursosPad/ListaCursosPad";
 import ListaJovensApad from "./profileSubViews/listaJovensApad/ListaJovensApad";
 import NivelPadrinho from "./profileSubViews/nivelPadrinho/NivelPadrinho";
+import EditorMapaCarreira from "./profileSubViews/mapaCarreira/editarMapaCarreira/EditorMapaCarreira";
 
 const Conteudo = () => {
     return(
@@ -79,6 +80,7 @@ const Conteudo = () => {
                         <NivelPadrinho />
                     </Perfil>
                 }/>
+                <Route path="/perfil/mapacarreira/editor" element={<EditorMapaCarreira/>}/>
             </Routes>
         </div>
     );
