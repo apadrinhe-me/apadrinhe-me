@@ -35,19 +35,19 @@
     overflow-y: auto;
 }
 
-.Moments .moments-feed::-webkit-scrollbar {
+.Moments .moments-feed::-webkit-scrollbar, .Moments .for-you::-webkit-scrollbar {
     width: 7px;
     border-radius: 10px;
 }
 
 /* Track */
-.Moments .moments-feed::-webkit-scrollbar-track {
+.Moments .moments-feed::-webkit-scrollbar-track, .Moments .for-you::-webkit-scrollbar-track {
     background: #adadad;
     border-radius: 10px;
 }
 
 /* Handle */
-.Moments .moments-feed::-webkit-scrollbar-thumb {
+.Moments .moments-feed::-webkit-scrollbar-thumb, .Moments .for-you::-webkit-scrollbar-thumb {
     background: #484848;
     border-radius: 10px;
 }
