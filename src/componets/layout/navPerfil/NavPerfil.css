@@ -1,11 +1,11 @@
-.perfilContainer {
+.NavPerfil .perfilContainer {
     background-color: #191919;
     display: flex;
     justify-content: center;
 
 }
 
-.perfilHeader {
+.NavPerfil .perfilHeader {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -16,74 +16,115 @@
     overflow: hidden;
 }
 
-.perfilCapa {
+.NavPerfil .perfilCapa {
     max-height: 350px;
     height: 100%;
     display: flex;
     justify-content: center;
 }
 
-.perfilCapa img {
+.NavPerfil .perfilCapa img {
     width: 100%;
     object-fit: cover;
     border-radius: 0 0 20px 20px;
 
 }
 
-.perfilNomeInteracao {
+.NavPerfil .perfilNomeInteracao {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-items: flex-start;
     margin-top: 10px;
     margin-bottom: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.418);
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.perfilFoto {
+.NavPerfil .perfilFoto {
     display: flex;
     margin-top: -100px;
     width: 170px;
     height: 170px;
 }
 
-.buttonsChatConecApad {
+.NavPerfil .buttonsChatConecApad {
     display: flex;
     margin-left: auto;
     gap: 10px;
+    align-self: flex-end;
 }
 
-.buttonsConecApad {
+.NavPerfil .buttonsConecApad {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-self: flex-end;
 }
 
-.buttonsConecApad button {
+.NavPerfil .buttonsConecApad button {
     display: flex;
-    border: 0;
-    width: 120px;
-    padding: 4px 20px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 8px 20px;
     border-radius: 20px;
     color: #fff;
+    font-weight: 700;
+    font-size: 15px;
 }
 
-.buttonsChat-box {
+.NavPerfil .buttonsChat-box {
     align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.buttonConectar {
+.NavPerfil .buttonsChat-box button {
+    padding: 7px 30px;
+    border: none;
+    background: #191919;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.NavPerfil .buttonsChat-box button:hover{
+    cursor: pointer;
+    background: #2c2c2c;
+    transition: .2s;
+}
+
+.NavPerfil .buttonsChat-box button img{
+    height: 20px;
+}
+
+.NavPerfil .buttonConectar {
     background-color: #0079FF;
 }
 
-.buttonApadrinhar {
+.NavPerfil .buttonApadrinhar {
     background-color: #FF00FF;
 }
 
-.perfilPubMomMapCfa {
+.NavPerfil .buttonConectar:hover {
+    cursor: pointer;
+    background-color: #0060ce;
+}
+
+.NavPerfil .buttonApadrinhar:hover {
+    cursor: pointer;
+    background-color: #c900c9;
+}
+
+.NavPerfil .buttonsConecApad img{
+    height: 16px;
+    margin-right: 8px;
+}
+
+.NavPerfil .perfilPubMomMapCfa {
     display: flex;
     flex-direction: row;
     align-self: flex-start;
@@ -91,69 +132,159 @@
     margin-bottom: 10px;
 }
 
-.perfilPubMomMapCfa ul.perfilPubMomMapCfa {
+.NavPerfil .perfilPubMomMapCfa ul.perfilPubMomMapCfa {
     display: flex;
     flex-direction: row;
     gap: 10px;
     list-style-type: none;
     flex-wrap: wrap;
     flex: 1;
-    
+    justify-content: center;
 }
 
-.perfilPubMomMapCfa button {
-    background: none;
+.NavPerfil .perfilPubMomMapCfa button {
+    background: #191919;
+    padding: 10px 20px;
     border: none;
     color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 20px;
 }
 
-.perfilPubMomMapCfa ul.perfilPubMomMapCfa li {
-    background-color: #1e1e1e;
-    padding: 12px 25px;
-    border-radius: 100px;
-    
+.NavPerfil .perfilPubMomMapCfa button:hover {
+    background: #2c2c2c;
+    cursor: pointer;
 }
 
-.header-content {
+.NavPerfil .perfilPubMomMapCfa li{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.NavPerfil .perfilPubMomMapCfa li .active{
+    width: 100%;
+    height: 5px;
+    background: #FF00FF;
+    border-radius: 20px;
+}
+
+.NavPerfil .header-content {
     display: flex;
     flex-direction: column;
     width: 80%;
     max-width: 1200px;
 }
 
-.perfilConfig {
+.NavPerfil .perfilConfig {
     margin-left: auto;
 }
 
+.NavPerfil .btn {
+    border: none;
+    background: #191919;
+    color: #969696;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: background .2s;
+}
 
+.NavPerfil .btn:hover {
+    cursor: pointer;
+    background: #2c2c2c;
+    transition: background .2s;
+}
+
+.NavPerfil .btn-ico {
+    height: 17px;
+}
+
+.NavPerfil .btn-apadrinhar {
+    margin-left: auto;
+    background: #FF00FF;
+    color: white;
+    transition: background .2s;
+}
+
+.NavPerfil .userName{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.NavPerfil .btn-editar-perfil{
+    border: 1px solid #0079FF;
+    background: transparent;
+    color: #0079FF;
+    font-weight: 700;
+    padding: 7px 0;
+    font-size: 15px;
+    border-radius: 20px;
+    transition: .2s;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavPerfil .btn-editar-perfil:hover{
+    background: #0079FF;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+@media (max-width: 991.98px) {
+    .NavPerfil .perfilPubMomMapCfa button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
 
 @media (max-width: 767.98px) {
-    .perfilFoto {
+    .NavPerfil .perfilFoto {
         display: flex;
         margin-top: -70px;
         width: 120px;
         height: 120px;
     }
 
-    .userName h2 {
+    .NavPerfil .userName h2 {
         font-size: 20px;
     }
 }
 
+@media (max-width: 863px) {
+    .NavPerfil .buttonsConecApad{
+        flex-direction: row;
+    }
+}
+
 @media (max-width: 575.98px) {
-    .perfilHeader {
+    .NavPerfil .perfilHeader {
         margin: 0;
         border-radius: 0;
     }
 
-    .perfilFoto {
+    .NavPerfil .perfilFoto {
         display: flex;
         margin-top: -50px;
         width: 80px;
         height: 80px;
     }
 
-    .userName h2 {
+    .NavPerfil .userName h2 {
         font-size: 18px;
+    }
+
+    .NavPerfil .buttonsChatConecApad{
+        flex-wrap: wrap-reverse;
     }
 }

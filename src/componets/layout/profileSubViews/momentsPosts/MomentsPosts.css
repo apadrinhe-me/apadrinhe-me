@@ -1,0 +1,11 @@
+.MomentsPosts{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    height: 70vh;
+    overflow-y: auto;
+    background: #191919;
+    border-radius: 20px;
+}

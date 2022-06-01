@@ -1,5 +1,5 @@
 import "./Post.css";
-import React from "react";
+import React, { useState } from "react";
 import ProfPicture from "../profPicture/ProfPicture";
 import getPostDate from "../../funcional/getPostDate";
 
@@ -12,7 +12,7 @@ import shareIco from "../../../media/icons/item_share_icon_stroke.svg";
 import rocketIco from "../../../media/icons/icons_apadrinhar_icon_fill.svg";
 
 const Post = props => {
-    //formatar horáario do post
+    const[buttonPopup, setButtonPopup] = useState(false);
 
     return (
         <div className="Post">
@@ -41,7 +41,7 @@ const Post = props => {
                 <button className="btn btn-like"> <img src={likeIcoStroke} alt="icone de like" className="btn-ico" /> Curtir</button>
                 <button className="btn btn-comment"><img src={commentIcoStroke} alt="icone de like" className="btn-ico" /> Comentar</button>
                 <button className="btn btn-share"><img src={shareIco} alt="icone de like" className="btn-ico" /> Compartilhar</button>
-                <button className="btn btn-apadrinhar"><img src={rocketIco} alt="icone de like" className="btn-ico" />  Apadrinhar</button>
+                <button className="btn btn-apadrinhar" onClick={() => props.setButtonPopup(true)}><img src={rocketIco} alt="icone de like" className="btn-ico" /> Apadrinhar</button>
             </div>
         </div>
     );

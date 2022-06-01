@@ -1,0 +1,145 @@
+.ApadPopup{
+    z-index: 10003;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(54, 54, 54, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: darken .5s;
+}
+
+@keyframes slidein {
+    from{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes darken {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.ApadPopup .popup-inner{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 800px;
+    background: #191919;
+    color: white;
+    border-radius: 20px;
+    animation: slidein .5s;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ApadPopup .popup-inner::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+    border-radius: 20px;
+}
+
+.ApadPopup .popup-inner::-webkit-scrollbar-track {
+    background: #727272;        /* color of the tracking area */
+    width: 7px;
+    border-radius: 20px;
+}
+
+.ApadPopup .popup-inner::-webkit-scrollbar-thumb {
+    background-color: #ff337e;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.ApadPopup .popup-inner .close-btn{
+    position: absolute;
+    top: 15px;
+    left: auto;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.ApadPopup .popup-inner .close-btn:hover{
+    cursor: pointer;
+    font-weight: 900;
+}
+
+@keyframes slideout {
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+
+@keyframes lighten {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
+.ApadPopup .popup-inner.slideout{
+    animation: slideout .5s;
+}
+
+.ApadPopup.slideout{
+    animation: lighten .5s;
+}
+
+.ApadPopup .apad-types{
+    display: flex;
+    flex-direction: column;
+}
+
+.ApadPopup .popup-inner h2{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+.apadrinhe{
+    margin-bottom: 10px;
+}
+
+.other-types{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap-reverse;
+}

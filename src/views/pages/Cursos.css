@@ -1,1 +1,122 @@
+.Cursos {
+    display: flex;
+    background: #191919;
+    gap: 10px;
+    height: 90.80vh;
+}
 
+.separador2 {
+    background-color: #fff;
+    content: "";
+    height: 1px;
+    width: 100px;
+    width: 100%;
+    margin: 10px 0
+}
+
+.h2Filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.caixaFilter {
+    background-color: #e5e6eb96;
+    padding: 10px 30px;
+    border-radius: 20px;
+   
+    color: rgba(0, 0, 0, 0.692);
+    font-style: normal;
+    transition: 0.2s;
+}
+
+.caixaFilter:hover {
+    background-color: #e5e6ebcb;
+    transition: 0.2s;
+}
+
+.caixaIconeCategoriasCurso {
+    color: #000;
+    background-color: #E5E6EB;
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 100px;
+    transition: 0.2s;
+
+}
+
+.caixaIconeCategoriasCurso:hover {
+    background-color: #FF00FF;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.categoriasCurso {
+    overflow-y: auto;
+    background-color: #191919;
+    padding: 10px 10px;
+    height: calc(100vh - 80px);
+}
+
+.categoriasCurso li {
+    display: flex;
+    align-items: center;
+    border-radius: 80px;
+    background-color: #323232;
+    box-shadow: 0 0 1em #242424;
+    margin: 0 10px 20px 10px;
+    padding: 5px 10px;
+    list-style: none;
+}
+
+.cardsCursos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 10px;
+    background-color: #323232;
+    margin: 10px 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: auto;
+    height: calc(100vh - 150px);
+    align-items: flex-start;
+}
+
+.nome-pagina {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 35px;
+}
+
+.cursos-mobile {
+    display: none;
+}
+
+@media (max-width: 840px) {
+    .cursos-mobile {
+        display: block;
+    }
+
+    .categoriasCurso {
+        display: none;
+    }
+
+    .Cursos {
+        flex-direction: column;
+    }
+
+    .card {
+        height: calc(100vh - 170px);
+    }
+}
