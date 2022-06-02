@@ -11,6 +11,10 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
 
 //imports das ilustrações
 import ill1 from "../../../../../media/illustrations/Progress_Flatline.svg";
@@ -83,6 +87,32 @@ const EditorMapaCarreira = props => {
         }
     ]
 
+    const [openFullscreen, setOpenFullscreen] = React.useState(false);
+    const handleOpenFullscreen = () => setOpenFullscreen(true);
+    const handleCloseFullscreen = () => setOpenFullscreen(false);
+
+    const fullScreenModal = {
+        position: 'absolute',
+        width: "100vw",
+        height: "100vh",
+        bgcolor: '#191919',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+    };
+
+    const addMetaModal = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+    };
+
     return(
         <>
             <Menu/>
@@ -114,7 +144,7 @@ const EditorMapaCarreira = props => {
                     </div>
 
                     <div>
-                        <button className="btn-view-model">Visualizar modelo de mapa de carreira</button>
+                        <button className="btn-view-model" onClick={handleOpenFullscreen}>Visualizar modelo de mapa de carreira</button>
                     </div>
                 </div>
 
@@ -125,10 +155,10 @@ const EditorMapaCarreira = props => {
                     </div>
 
                     <div className="meta-cards">
-                        <Card sx={{ flexBasis: 200 }}>
+                        <Card sx={{ flexBasis: 200 }} className="my-card">
                             <CardContent>
                                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                    Meta escolar
+                                    Meta 1 - escolar
                                 </Typography>
                                 <Typography variant="h3" sx={{ fontSize: 18 }}>
                                     Completar o Ensino Médio
@@ -177,15 +207,15 @@ const EditorMapaCarreira = props => {
                             </CardActions>
                         </Card>
 
-                        <Card sx={{ flexBasis: 200 }}>
+                        <Card sx={{ flexBasis: 200 }} className="my-card">
                             <CardContent>
                                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                    Meta escolar
+                                    Meta 2 - escolar
                                 </Typography>
                                 <Typography variant="h3" sx={{ fontSize: 18 }}>
                                     Completar o Ensino Médio
                                 </Typography>
-                                <div className="card-details">
+                                <div className="card-details my-scrollbar">
                                     <div className="detail">
                                         <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
                                             Ano:
@@ -218,7 +248,7 @@ const EditorMapaCarreira = props => {
                                             Detalhes:
                                         </Typography>
                                         <Typography sx={{ fontSize: 15}}>
-                                            Finalmente me formar para...
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, aperiam cum debitis dolore dolorum est ex explicabo laudantium nostrum optio placeat quo, rem rerum sequi sit suscipit tempora tenetur ullam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid beatae, blanditiis consequuntur debitis dolor doloribus dolorum ex impedit ipsa iste molestiae omnis quae qui quibusdam rem tempore vero, vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem distinctio dolorem est fugit itaque maxime nulla optio provident, quae quam quasi quo, ratione reiciendis rerum suscipit temporibus vel voluptate.
                                         </Typography>
                                     </div>
 
@@ -229,7 +259,7 @@ const EditorMapaCarreira = props => {
                             </CardActions>
                         </Card>
 
-                        <Card sx={{ flexBasis: 200 }}>
+                        <Card sx={{ flexBasis: 200 }} className="my-card">
                             <CardContent sx={{height: "100%"}}>
                                 <Typography variant="h3" sx={{ fontSize: 18 }}>
                                     Adicionar nova meta
@@ -244,18 +274,32 @@ const EditorMapaCarreira = props => {
                             </CardContent>
                         </Card>
                     </div>
-
-                    <div className="mapa-preview">
-                        <h3>Pré-visualização do mapa</h3>
-
-                        <div className="timeline-div">
-                            <Timeline goals={goals}/>
-                        </div>
-                    </div>
-
                 </div>
             </div>
             <MenuMobile/>
+
+            <Modal
+                aria-labelledby="mostrar-exemplo-mapa-carreira"
+                aria-describedby="mostrar-exemplo-mapa-carreira"
+                open={openFullscreen}
+                onClose={handleCloseFullscreen}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}
+            >
+                <Fade in={openFullscreen}>
+                    <Box sx={fullScreenModal}>
+                        <Typography id="transition-modal-title" variant="h6" component="h2">
+                            Text in a modal
+                        </Typography>
+                        <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                        </Typography>
+                    </Box>
+                </Fade>
+            </Modal>
         </>
     );
 }

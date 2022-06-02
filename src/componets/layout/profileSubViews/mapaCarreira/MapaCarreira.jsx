@@ -75,9 +75,7 @@ const MapaCarreira = props => {
                 <Link to="/perfil/mapacarreira/editor"><button className="btn-edit-mapa"><i className="bi bi-pencil-square"></i> Editar mapa de carreira</button></Link>
             </div>
 
-            <div className="div-timeline">
-                <Timeline goals={goals}/>
-            </div>
+            <Timeline goals={goals}/>
         </div>
     );
 }

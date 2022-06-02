@@ -25,7 +25,7 @@ const Cursos = () => {
                             <p>Todos os Cursos</p>
                         </li>
                         <li>
-                            <i class="bi bi-graph-up caixaIconeCategoriasCurso"></i>
+                            <i className="bi bi-graph-up caixaIconeCategoriasCurso"></i>
                             <p>Administração</p>
                         </li>
                         <li>
@@ -33,7 +33,7 @@ const Cursos = () => {
                             <p>Tecnologia</p>
                         </li>
                         <li>
-                            <i class="bi bi-graph-up caixaIconeCategoriasCurso"></i>
+                            <i className="bi bi-graph-up caixaIconeCategoriasCurso"></i>
                             <p>Contabilidade e Finanças</p>
                         </li>
                         <li>

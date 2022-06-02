@@ -138,19 +138,13 @@
     border: 1px solid ;
 }
 
-.Timeline .timeline-container{
-    width: 100%;
+.EditorMapaCarreira .meta-cards .my-card{
+    height: 300px;
 }
 
-.Timeline .div-prev, .Timeline .div-next{
-    display: none;
-}
-
-.Timeline .timeline{
-    width: 100%;
-}
-.Timeline .education-icons{
-    width: 100%;
+.EditorMapaCarreira .meta-cards .my-card .card-details{
+    overflow-y: auto;
+    height: 135px;
 }
 
 @media (max-width: 767.98px) {

@@ -29,8 +29,8 @@ const Timeline = props => {
     }
 
     return(
-        <div className="Timeline border">
-            <div className="timeline-scroll border">
+        <div className="Timeline">
+            <div className="timeline-scroll">
                 <div className="div-prev">
                     <button onClick={() => goPrevYear()}><i className="bi bi-arrow-left-circle-fill"></i></button>
                 </div>
@@ -110,16 +110,18 @@ const Timeline = props => {
                     </button>
                 </div>
             </div>
-            <div className="current-goal-title">
-                <h1>{props.goals[currentGoal].nome}</h1>
-                <span>{props.goals[currentGoal].status === "achieved" ? "Já concluído" : props.goals[currentGoal].status === "in-progress" ? "Em andamento" : "Ainda não iniciado"}</span>
-            </div>
+            <div className="goal-info">
+                <div className="current-goal-title">
+                    <h1>{props.goals[currentGoal].nome}</h1>
+                    <span>{props.goals[currentGoal].status === "achieved" ? "Já concluído" : props.goals[currentGoal].status === "in-progress" ? "Em andamento" : "Ainda não iniciado"}</span>
+                </div>
 
-            <div className="current-goal-details">
-                <div> <strong>Instituição:</strong> <span>FIAP</span> </div>
-                <div> <strong>Vestibular:</strong> <span>FIAP</span> </div>
-                <div> <strong>Matrícula:</strong> <span>FIAP</span> </div>
-                <div className="mt-10"> <strong>Detalhes:</strong> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem dolores eaque esse expedita in maiores necessitatibus neque quam quis sunt tempore, voluptate voluptatem! Aspernatur autem expedita hic magni voluptatum.</span> </div>
+                <div className="current-goal-details">
+                    <div> <strong>Instituição:</strong> <span>FIAP</span> </div>
+                    <div> <strong>Vestibular:</strong> <span>FIAP</span> </div>
+                    <div> <strong>Matrícula:</strong> <span>FIAP</span> </div>
+                    <div className="mt-10"> <strong>Detalhes:</strong> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem dolores eaque esse expedita in maiores necessitatibus neque quam quis sunt tempore, voluptate voluptatem! Aspernatur autem expedita hic magni voluptatum.</span> </div>
+                </div>
             </div>
         </div>
     );

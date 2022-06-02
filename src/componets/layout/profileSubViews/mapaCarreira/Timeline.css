@@ -1,3 +1,4 @@
+
 .Timeline .timeline-scroll{
     display: flex;
     flex-direction: row;
@@ -165,6 +166,10 @@
 
 .Timeline .mt-10{
     margin-top: 10px;
+}
+
+.Timeline .goal-info{
+    padding: 15px;
 }
 
 @media (max-width: 767.98px) {

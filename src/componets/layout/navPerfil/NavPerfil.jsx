@@ -32,7 +32,7 @@ const NavPerfil = props => {
                             <div className="userName">
                                 <h2>UserName(name)</h2>
                                 <button className="btn-editar-perfil">
-                                    <i class="bi bi-pencil-square"></i>
+                                    <i className="bi bi-pencil-square"></i>
                                     Editar perfil
                                 </button>
                             </div>
