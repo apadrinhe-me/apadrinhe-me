@@ -18,7 +18,7 @@ import MomentsPosts from "./profileSubViews/momentsPosts/MomentsPosts";
 import MapaCarreira from "./profileSubViews/mapaCarreira/MapaCarreira";
 import CursosRecomendados from "./profileSubViews/cursosRecomendados/CursosRecomendados";
 import CursosFavoritos from "./profileSubViews/cursosFavoritos/CursosFavoritos";
-import ListaCursosPad from "./profileSubViews/listaCursosPad/ListaCursosPad";
+import HistoricoPad from "./profileSubViews/historicoPad/HistoricoPad";
 import ListaJovensApad from "./profileSubViews/listaJovensApad/ListaJovensApad";
 import NivelPadrinho from "./profileSubViews/nivelPadrinho/NivelPadrinho";
 import EditorMapaCarreira from "./profileSubViews/mapaCarreira/editarMapaCarreira/EditorMapaCarreira";
@@ -67,9 +67,9 @@ const Conteudo = () => {
                         <CursosFavoritos />
                     </Perfil>
                 }/>
-                <Route path="/perfil/recomendacoes" element={
+                <Route path="/perfil/historico" element={
                     <Perfil>
-                        <ListaCursosPad />
+                        <HistoricoPad />
                     </Perfil>
                 }/>
                 <Route path="/perfil/apadrinhamentos" element={

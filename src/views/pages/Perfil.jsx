@@ -20,7 +20,7 @@ const Perfil = props => {
         <>
             <Menu logged={true} />
             <main className="Perfil">
-                <NavPerfil profType="jovem"
+                <NavPerfil profType="padrinho"
                     setButtonPopup={setButtonPopup}
                 />
 
