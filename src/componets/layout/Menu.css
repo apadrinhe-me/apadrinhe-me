@@ -30,6 +30,7 @@
 }
 
 .Menu .container_middle {
+    flex-basis: 500px;
     display: flex;
     align-items: center;
     height: 60px;
@@ -73,7 +74,11 @@
 }
 
 .Menu .nav li {
-    border-radius: 50em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 8px;
 }
 
 .Menu .nav li:hover {
@@ -111,7 +116,7 @@
     text-decoration: none;
     color: white;
     width: 180px;
-    height: 40px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,7 +145,7 @@
 }
 
 .Menu .user-profile_btn div {
-    height: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
     background-image: linear-gradient(to bottom right, #3b435a, #3b435a50, #3b435a);
@@ -149,8 +154,7 @@
 }
 
 .Menu .user-profile_btn img {
-    height: 30px;
-    margin-left: 5px;
+    height: 45px;
     object-fit: cover;
     border-radius: 50em;
 }
@@ -183,11 +187,10 @@
 }
 
 .btn-action{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50em;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: #4B4B4B;
@@ -257,7 +260,7 @@
         display: none;
     }
     .Menu .nav li a{
-        width: 70px;
+        width: 15vw;
     }
 
     .Menu .container_right.logged{

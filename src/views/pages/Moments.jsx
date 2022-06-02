@@ -1,5 +1,5 @@
 import "./Moments.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "../../componets/layout/Menu";
 import MenuMobile from "../../componets/layout/MenuMobile";
 import MomentsPost from "../../componets/layout/momentsPost/MomentsPost";
@@ -8,6 +8,16 @@ import MomentsFullscreen from "../../componets/layout/momentsFullScreen/MomentsF
 
 const Moments =  () => {
     const[videoFullscreen, setVideoFullscreen] = useState(0);
+
+    useEffect(() => {
+        if(videoFullscreen === 1){
+            document.querySelector(".Menu").style.display = "none";
+        } else {
+            document.querySelector(".Menu").style.display = "flex";
+        }
+    })
+
+    
 
     return(
         <>
