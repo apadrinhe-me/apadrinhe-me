@@ -1,0 +1,193 @@
+.Timeline .timeline-scroll{
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw - 20px);
+    max-width: 1200px;
+    padding: 9px;
+    gap: 7px;
+}
+
+.EditorMapaCarreira .Timeline .timeline-scroll{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 9px;
+    gap: 7px;
+}
+
+.Timeline .timeline-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.Timeline .div-prev, .Timeline .div-next{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Timeline .div-prev button, .Timeline .div-next button{
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: white;
+    border: none;
+    transition: .2s;
+    font-size: 35px;
+}
+
+.Timeline .div-prev button:hover, .Timeline .div-next button:hover{
+    cursor: pointer;
+    color: #ff00ff;
+    transition: .2s;
+}
+
+.Timeline .timeline{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    background: white;
+    border-radius: 20px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Timeline .timeline-goal{
+    color: white;
+    font-size: 20px;
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    height: 80%;
+}
+
+.Timeline .timeline-icon.in-progress .div-year span{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.Timeline .timeline-goal.achieved i, .Timeline .timeline-goal.not-achieved i, .Timeline .timeline-goal.in-progress i{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    background: linear-gradient(90deg, #3ABDF0, #703CFA, #E3428A);
+    border-radius: 50%;
+}
+
+.Timeline .timeline-goal.in-progress i{
+    font-size: 14px;
+}
+
+.Timeline .timeline-goal.not-achieved i{
+    font-size: 14px;
+}
+
+.Timeline .timeline-goal.final-goal{
+    background: linear-gradient(90deg, #3ABDF0, #703CFA, #E3428A);
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.Timeline .selected, .Timeline .timeline-goal:hover{
+    cursor: pointer;
+    background: linear-gradient(90deg, #3ABDF0, #703CFA, #E3428A);
+    color: white;
+    font-size: 18px;
+    border-radius: 25px;
+}
+
+.Timeline .selected i, .Timeline .timeline-goal:hover i{
+    cursor: pointer;
+    background: none !important;
+}
+
+.Timeline .education-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 1000px;
+}
+
+.Timeline .timeline-icon{
+    width: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.Timeline .div-icon{
+    width: 70%;
+}
+
+.Timeline .timeline-icon.final-goal i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    background: linear-gradient(90deg, #3ABDF0, #703CFA, #E3428A);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.Timeline .current-goal-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.72);
+}
+
+.Timeline .current-goal-details{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 100%;
+    max-width: 900px;
+    align-self: center;
+    margin-bottom: 40px;
+}
+
+.Timeline .mt-10{
+    margin-top: 10px;
+}
+
+@media (max-width: 767.98px) {
+    .Timeline .div-prev button, .Timeline .div-next button{
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1145px) {
+    .Timeline .timeline-container{
+        width: 100%;
+    }
+
+    .Timeline .div-prev, .Timeline .div-next{
+        display: none;
+    }
+
+    .Timeline .timeline{
+        width: 100%;
+    }
+    .Timeline .education-icons{
+        width: 100%;
+    }
+}

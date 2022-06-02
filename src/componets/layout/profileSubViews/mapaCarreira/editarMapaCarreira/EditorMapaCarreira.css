@@ -25,7 +25,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .EditorMapaCarreira .img-text{
@@ -76,6 +76,81 @@
 
 .EditorMapaCarreira .close-btn:hover{
     cursor: pointer;
+}
+
+.EditorMapaCarreira .montaMapa .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+
+.EditorMapaCarreira .montaMapa .header .return-profile{
+    display: flex;
+    gap: 7px;
+    color: white;
+    font-weight: 700;
+    align-items: center;
+    background: #FF00FF;
+    padding: 7px 13px;
+    border-radius: 15px;
+    border: none;
+    transition: background-color .2s;
+    text-decoration: none;
+}
+
+.EditorMapaCarreira .montaMapa .header .return-profile:hover{
+    background: #d500d5;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.EditorMapaCarreira .meta-cards{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.EditorMapaCarreira .card-details{
+    margin-top: 10px;
+}
+
+.EditorMapaCarreira .detail{
+    display: flex;
+    gap: 5px;
+}
+
+.EditorMapaCarreira .btn-editar{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.EditorMapaCarreira .add-meta-div{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.EditorMapaCarreira .add-meta-div button{
+    width: 100px;
+    height: 100px;
+    border: 1px solid ;
+}
+
+.Timeline .timeline-container{
+    width: 100%;
+}
+
+.Timeline .div-prev, .Timeline .div-next{
+    display: none;
+}
+
+.Timeline .timeline{
+    width: 100%;
+}
+.Timeline .education-icons{
+    width: 100%;
 }
 
 @media (max-width: 767.98px) {
