@@ -9,6 +9,7 @@ import Home from "../../views/pages/Home";
 import Login from "../../views/pages/Login";
 import Moments from "../../views/pages/Moments";
 import Perfil from "../../views/pages/Perfil";
+import Chat from "../../views/pages/Chat";
 
 //importando as subpáginas do perfil
 
@@ -32,6 +33,7 @@ const Conteudo = () => {
                 <Route path="/moments" element={<Moments />}/>
                 <Route path="/login" element={<Login />}/>
                 <Route path="/cadastro" element={<Cadastro />}/>
+                <Route path="/chat" element={<Chat />}/>
 
                 {/*Rotas do perfil*/}
 

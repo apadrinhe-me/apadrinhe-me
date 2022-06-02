@@ -67,9 +67,6 @@ const Cursos = () => {
                         <div className="separador2"></div>
 
                     </div>
-
-
-
                     <div className="card my-scrollbar" >
                         <Curso />
                         <Curso />

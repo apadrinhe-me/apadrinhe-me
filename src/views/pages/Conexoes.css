@@ -37,6 +37,13 @@
     color: #fff;
     font-weight: 600;
     margin: 10px 0 ;
+    transform: .2s;
+}
+
+.navegacaoConexoes li button:hover{
+    background-color: #292929;
+    cursor: pointer;
+    transform: .2s;
 }
 
 .cardInteracaoUsuarios {

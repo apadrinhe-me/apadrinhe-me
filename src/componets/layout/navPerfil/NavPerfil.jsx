@@ -42,7 +42,7 @@ const NavPerfil = props => {
 
                             <div className="buttonsChatConecApad">
                                 <div className="buttonsChat-box">
-                                    <button className="buttonChat"><img src={ChatBtn} alt=""/></button>
+                                    <Link to="/chat"><button className="buttonChat"><img src={ChatBtn} alt=""/></button></Link>
                                 </div>
 
                                 <div className="buttonsConecApad">

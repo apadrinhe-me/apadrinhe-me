@@ -43,7 +43,7 @@ const Menu = props => {
                                     <Link className="user-profile_btn" to="/perfil">
                                         <img style={{border: "1px solid white"}} src="https://media-exp1.licdn.com/dms/image/C4E03AQEMFO6yMCYjaQ/profile-displayphoto-shrink_200_200/0/1639491349201?e=1657756800&v=beta&t=V730pyqkTDzfhiWDYOPdleupWPRpv1WFUbm3AQh8fnY"/>
                                     </Link>
-                                    <button type="button" className="btn-action btn-chat"><img className="btn-icon" src={ChatIcon} alt="ícone de chat"/></button>
+                                    <Link to="/chat"><button type="button" className="btn-action btn-chat"><img className="btn-icon" src={ChatIcon} alt="ícone de chat"/></button></Link>
                                     <button type="button" className="btn-action btn-notifications"><img className="btn-icon" src={NotificationsIcon} alt="ícone de Notificações"/></button>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@ const Menu = props => {
                                 </div>
                             </Link>
 
-                            <button type="button" className="btn-action btn-chat"><img className="btn-icon" src={ChatIcon} alt="ícone de chat"/></button>
+                            <Link to="/chat"><button type="button" className="btn-action btn-chat"><img className="btn-icon" src={ChatIcon} alt="ícone de chat"/></button></Link>
                             <button type="button" className="btn-action btn-notifications"><img className="btn-icon" src={NotificationsIcon} alt="ícone de Notificações"/></button>
                         </div>
                         :
