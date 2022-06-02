@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import school_fill from "../../../../media/icons/item_school_icon_fill.svg";
 import school_colored from "../../../../media/icons/item_school_icon_colored.svg";
 import star from "../../../../media/icons/item_star_icon_fill.svg";
+import {Link} from "react-router-dom";
 
 const MapaCarreira = props => {
     const goals = [
@@ -93,13 +94,11 @@ const MapaCarreira = props => {
     return(
         <div className="MapaCarreira">
             <div className="div-edit">
-                <button className="btn-edit-mapa"><i className="bi bi-pencil-square"></i> Editar mapa de carreira</button>
+                <Link to="/perfil/mapacarreira/editor"><button className="btn-edit-mapa"><i className="bi bi-pencil-square"></i> Editar mapa de carreira</button></Link>
             </div>
             <div className="timeline-scroll">
                 <div className="div-prev">
-                    <button onClick={() => goPrevYear()}>
-                        <i className="bi bi-arrow-left-circle-fill"></i>
-                    </button>
+                        <button onClick={() => goPrevYear()}><i className="bi bi-arrow-left-circle-fill"></i></button>
                 </div>
                 <div className="timeline-container my-scrollbar">
                     <div className="education-icons">
