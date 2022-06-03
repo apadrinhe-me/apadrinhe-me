@@ -113,18 +113,9 @@
     background-color: #0079FF;
 }
 
-.NavPerfil .buttonApadrinhar {
-    background-color: #FF00FF;
-}
-
 .NavPerfil .buttonConectar:hover {
     cursor: pointer;
-    background-color: #0060ce;
-}
-
-.NavPerfil .buttonApadrinhar:hover {
-    cursor: pointer;
-    background-color: #c900c9;
+    background-color: #0065d2;
 }
 
 .NavPerfil .buttonsConecApad img {
@@ -174,7 +165,7 @@
 .NavPerfil .perfilPubMomMapCfa li .active {
     width: 100%;
     height: 5px;
-    background: #FF00FF;
+    background: linear-gradient(90deg, #d92588, #7630d9);
     border-radius: 20px;
 }
 

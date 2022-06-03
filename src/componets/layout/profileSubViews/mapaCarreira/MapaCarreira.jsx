@@ -1,4 +1,4 @@
-import "./mapaCarreira.css";
+import "./MapaCarreira.css";
 import React, {useState} from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 

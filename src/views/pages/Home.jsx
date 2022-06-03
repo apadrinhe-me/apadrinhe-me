@@ -13,14 +13,6 @@ const Home = () => {
     let desktopView = window.innerWidth > 576 ? true : false;
 
     const[viewport, setviewport] = useState(window.innerWidth < 576 ? 'mobile' : 'desktop')
-    const[buttonPopup, setButtonPopup] = useState(false);
-
-    if (buttonPopup){
-        document.querySelector('body').style.overflowY = 'hidden';
-    } else {
-        document.querySelector('body').style.overflowY = 'auto';
-    }
-
     window.addEventListener("resize", () => {
         if(window.innerWidth < 576){
             setviewport('mobile')
@@ -48,8 +40,7 @@ const Home = () => {
                         postMedia="mao_casa.jpg" 
                         qntLikes={1000}
                         qntComments={200}
-                        qntShares={10}
-                        setButtonPopup={setButtonPopup}/>
+                        qntShares={10}/>
                     </div>
 
                     <div className="spotlights">
@@ -79,13 +70,9 @@ const Home = () => {
                             qntLikes={1000}
                             qntComments={200}
                             qntShares={10}
-                            setButtonPopup={setButtonPopup}/>
+                            />
                     </div>
                 </If>
-
-                <ApadPopup
-                    trigger={buttonPopup}
-                    setTrigger={setButtonPopup}/>
             </div>
             <MenuMobile atual="Home" logged={true} />
         </>

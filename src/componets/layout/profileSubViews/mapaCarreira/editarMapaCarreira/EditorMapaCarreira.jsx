@@ -2,6 +2,7 @@
 import React, {useState} from "react";
 import Menu from "../../../Menu";
 import MenuMobile from "../../../MenuMobile";
+import { useBeforeunload } from 'react-beforeunload';
 
 //imports das bibliotecas e estilos
 import "./EditorMapaCarreira.css"
@@ -24,6 +25,7 @@ import {Link} from "react-router-dom";
 import Timeline from "../Timeline";
 
 const EditorMapaCarreira = props => {
+
     let goals = [
         {
             nome: "Goal 1",
@@ -150,11 +152,15 @@ const EditorMapaCarreira = props => {
 
                 <div className="montaMapa">
                     <div className="header">
-                        <h3 className="section-title">Metas adicionadas</h3>
-                        <Link to="/perfil/mapacarreira/"><button className="return-profile"><i className="bi bi-arrow-return-left"></i> Voltar para o perfil</button></Link>
+                        <button className="save-editions"><i className="bi bi-check-lg"></i> Salvar alterações</button>
+                        <Link to="/perfil/mapacarreira/" className="link"><button className="return-profile" onClick={() => {}}><i className="bi bi-arrow-return-left"></i> <span>Voltar para o perfil</span></button></Link>
                     </div>
 
-                    <div className="meta-cards">
+                    <div>
+                        <h3 className="section-title">Metas adicionadas</h3>
+                    </div>
+
+                    <div className="meta-cards my-scrollbar">
                         <Card sx={{ flexBasis: 200 }} className="my-card">
                             <CardContent>
                                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>

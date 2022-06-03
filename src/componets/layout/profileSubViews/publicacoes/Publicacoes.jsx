@@ -1,9 +1,12 @@
 import "./Publicacoes.css";
-import React from 'react';
+import React,{ useState } from 'react';
 import Post from "../../post/Post";
 import SobrePerfil from "./SobrePerfil";
 
 function Publicacoes(props) {
+
+    const[buttonPopup, setButtonPopup] = useState(false);
+
     return (
         <div className="Publicacoes">
             <div className="profile-about">
@@ -21,7 +24,7 @@ function Publicacoes(props) {
                     qntLikes={1000}
                     qntComments={200}
                     qntShares={10}
-                    setButtonPopup={props.setButtonPopup} />
+                    setButtonPopup={setButtonPopup} />
             </div>
         </div>
     );

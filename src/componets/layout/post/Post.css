@@ -95,15 +95,3 @@
 .Post .btn-ico {
     height: 17px;
 }
-
-.Post .btn-apadrinhar {
-    margin-left: auto;
-    background: #FF00FF;
-    color: white;
-    transition: background .2s;
-}
-
-.Post .btn-apadrinhar:hover {
-    background: #b700b7;
-    transition: background .2s;
-}
