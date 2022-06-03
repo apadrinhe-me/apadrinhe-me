@@ -1,15 +1,15 @@
-.MapaCarreira{
+.MapaCarreira {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.div-edit{
+.div-edit {
     padding: 9px;
 }
 
-.btn-edit-mapa{
+.btn-edit-mapa {
     border: none;
     background: #0079FF;
     border-radius: 20px;
@@ -20,7 +20,7 @@
     transition: .2s;
 }
 
-.btn-edit-mapa:hover{
+.btn-edit-mapa:hover {
     background: #0058bb;
     cursor: pointer;
     transition: .2s;
