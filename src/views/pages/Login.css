@@ -7,30 +7,106 @@
 }
 
 .principal_box {
+    box-shadow: 0 0 20px black;
+    align-items: center;
+    flex-direction: column;
     display: flex;
     justify-items: center;
-    justify-content: center;
+
     width: 500px;
-    height: 500px;
+    height: 560px;
     background-color: #0a1431;
     flex-wrap: wrap;
+    border-radius: 7px;
 }
 
+.voltar {
+    color: white;
+    text-decoration: none;
+}
 
+.logo_apadrinheme {
+    height: 50px;
+}
 
-.p {
-    height: 500px;
+.logo_box {
+    height: 200px;
 }
 
 .logo {
-    width: 60px;
-    height: 80px;
+    filter: drop-shadow(0 0 15px black);
+    width: 140px;
+    height: 240px;
     display: flex;
     align-content: center;
     justify-content: center;
 }
 
-.break {
-    flex-basis: 100%;
-    height: 0;
+
+
+.logoescrito {
+    width: 120px;
+    height: 27px;
+}
+
+.user_input {
+    padding: 0px 15px;
+    color: white;
+    outline: 0;
+    font-size: 12px;
+    background-color: #050a19;
+    border: 1.6px solid #D92588;
+    border-radius: 15px;
+    width: 300px;
+    height: 30px;
+}
+
+.password_input {
+    padding: 0px 15px;
+    color: white;
+    outline: 0;
+    font-size: 12px;
+    margin-top: 10px;
+    background-color: #050a19;
+    border: 1.6px solid #D92588;
+    border-radius: 15px;
+    width: 300px;
+    height: 30px;
+}
+
+.p1 {
+    font-size: 10px;
+    color: #D92588;
+    width: 300px;
+    margin-top: 6px;
+    font-weight: 30;
+    cursor: pointer;
+}
+
+.p2 {
+    margin-top: 7px;
+    font-size: 9px;
+    width: 122px;
+    display: flex;
+    color: white;
+}
+
+strong {
+    cursor: pointer;
+    display: flex;
+    color: #D92588;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 0 20px black;
+    font-size: 12px;
+    color: white;
+    outline: 0;
+    border: none;
+    background-color: #D92588;
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
 }
