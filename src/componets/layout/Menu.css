@@ -7,12 +7,12 @@
     position: fixed;
     z-index: 10000;
     box-shadow: 0px 5px 10px #00000035;
-    /* border-bottom: 1px solid #3b435a; */
+    border-bottom: 1px solid #292C35;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #0a1431;
+    background-color: #03050D;
     font-size: 16px;
 }
 
@@ -48,7 +48,8 @@
     background-color: transparent;
 }
 
-.Menu .container_right, .Menu .container_right_expand {
+.Menu .container_right,
+.Menu .container_right_expand {
     display: flex;
     gap: 15px;
     align-items: center !important;
@@ -78,7 +79,7 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 .Menu .nav li:hover {
@@ -87,7 +88,7 @@
     background-image: linear-gradient(to bottom right, #3b435a, #3b435a50);
 }
 
-.Menu .nav_icon{
+.Menu .nav_icon {
     width: 24px;
 }
 
@@ -115,8 +116,7 @@
 .Menu .nav li a {
     text-decoration: none;
     color: white;
-    width: 180px;
-    height: 45px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,16 +145,30 @@
 }
 
 .Menu .user-profile_btn div {
-    height: 50px;
+    width: 44px;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(to bottom right, #3b435a, #3b435a50, #3b435a);
-    border: 2px solid #3b435a;
+    border: solid 2px transparent;
     border-radius: 50em;
+    background-color: black;
+    background-image: linear-gradient(to bottom right, #3b435a,
+            #232836,
+            #3b435a), linear-gradient(to bottom right,
+            #3b435a25,
+            #3b435a);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition: 0.3s;
+}
+
+.Menu .user-profile_btn div:hover {
+    width: auto;
+    max-width: 150px;
+    transition: 0.3s;
 }
 
 .Menu .user-profile_btn img {
-    height: 45px;
+    height: 40px;
     object-fit: cover;
     border-radius: 50em;
 }
@@ -162,8 +176,7 @@
 .Menu .user-profile_btn p {
     font-size: 15px;
     font-weight: 600;
-    margin: 0px 10px;
-    max-width: 80px;
+    margin: 0px 20px 0px 10px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -182,28 +195,39 @@
 }
 
 /*Botões de notificação e chat*/
-.Menu .btn-icon{
-    height: 25px;
+.Menu .btn-icon {
+    height: 20px;
 }
 
-.btn-action{
-    width: 45px;
-    height: 45px;
+.btn-action {
+    width: 44px;
+    height: 44px;
     border-radius: 50em;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #4B4B4B;
-    border: none;
+    border: solid 2px transparent;
+    border-radius: 50em;
+    background-color: black;
+    background-image: linear-gradient(to bottom right, #03050d,
+            #03050d), linear-gradient(to bottom right,
+            #3b435a50,
+            #3b435a);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
-.btn-action:hover{
+.btn-action:hover {
     cursor: pointer;
-    background: #7e7e7e;
+    background-image: linear-gradient(to bottom right, #232836,
+            #3b435a), linear-gradient(to bottom right,
+            #3b435a,
+            #23283600);
+
 }
 
 /*Dropdown menu*/
-.Menu .menu-expand-ico{
+.Menu .menu-expand-ico {
     height: 20px;
 }
 
@@ -219,7 +243,8 @@
     padding-top: 5px;
 }
 
-.Menu .dropdown:hover .dropdown-content, .Menu .dropdown-content:hover .dropdown-content{
+.Menu .dropdown:hover .dropdown-content,
+.Menu .dropdown-content:hover .dropdown-content {
     display: block;
 }
 
@@ -232,9 +257,9 @@
     height: 40px;
     padding: 5px 10px;
     margin-left: 20px;
-    border-radius: 50em;
+    border-radius: 15px;
     color: #ffffff;
-    background-color: #3b435a;
+    background-color: #252530;
     font-size: 16px;
 }
 
@@ -244,34 +269,35 @@
 }
 
 @media (max-width: 1399.98px) {
-    .Menu .nav li a{
+    .Menu .nav li a {
         width: 140px;
     }
 }
 
 @media (max-width: 1199.98px) {
-    .Menu .nav li a{
+    .Menu .nav li a {
         width: 130px;
     }
 }
 
 @media (max-width: 991.98px) {
-    .Menu .search_bar{
+    .Menu .search_bar {
         display: none;
     }
-    .Menu .nav li a{
+
+    .Menu .nav li a {
         width: 15vw;
     }
 
-    .Menu .container_right.logged{
+    .Menu .container_right.logged {
         display: none;
     }
 
-    .sign-up_btn{
+    .sign-up_btn {
         display: none;
     }
 
-    .sing-in_btn{
+    .sing-in_btn {
         padding: 10px 20px;
         border-radius: 50em;
         box-shadow: 0px 5px 10px #00000035;
@@ -280,19 +306,22 @@
     }
 }
 
-@media (min-width: 992px){
-    .Menu .container_right_expand{
+@media (min-width: 992px) {
+    .Menu .container_right_expand {
         display: none;
     }
 }
 
 /*Esconder itens do menu principal pois jáa vai mostra no Menu Mobile*/
 @media (max-width: 575.98px) {
-    .Menu .container_middle, .Menu .user-profile_btn, .Menu .login_control{
+
+    .Menu .container_middle,
+    .Menu .user-profile_btn,
+    .Menu .login_control {
         display: none;
     }
 
-    .Menu .search_bar{
+    .Menu .search_bar {
         display: block;
     }
 }

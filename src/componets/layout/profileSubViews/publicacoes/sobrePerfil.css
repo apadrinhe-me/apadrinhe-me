@@ -1,12 +1,12 @@
 .sobrePerfil {
     flex: 1;
-    border: none;
-    background: #191919;
-    border-radius: 10px;
-    padding: 20px 10px;
+    border-radius: 15px;
+    background: #03050dee;
+    border: 1px solid #1C1E24;
+    padding: 25px 20px;
 }
 
-.sobrePerfil div:not(:last-child){
+.sobrePerfil div:not(:last-child) {
     margin-bottom: 20px;
 }
 
@@ -26,4 +26,3 @@
 .sobrePerfil ul li {
     display: flex;
 }
-

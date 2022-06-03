@@ -5,7 +5,8 @@ import ProfPicture from "../profPicture/ProfPicture";
 import ApadrinharBtn from "../../../media/icons/icons_apadrinhar_icon_fill.svg";
 import ChatBtn from "../../../media/icons/item_chat_icon_fill.svg";
 import ConectionBtn from "../../../media/icons/item_conections_icon_fill.svg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import Cover from "./Valentina_Profile/cover_space.png"
 
 const NavPerfil = props => {
     let url = window.location.href
@@ -16,11 +17,11 @@ const NavPerfil = props => {
     return (
         <div className="NavPerfil">
             <div className="perfilContainer">
-
+                <img className="bg_blur_perfil" src={Cover}></img>
                 <div className="perfilHeader">
                     <div className="header-content">
                         <div className="perfilCapa">
-                            <img src="https://www.proa.org.br/wp-content/uploads/2021/09/Captura-de-Tela-2021-09-27-as-16.08.50.png"></img>
+                            <img src={Cover}></img>
                         </div>
 
                         <div className="perfilNomeInteracao ">
@@ -30,7 +31,7 @@ const NavPerfil = props => {
                             </div>
 
                             <div className="userName">
-                                <h2>UserName(name)</h2>
+                                <h2>Valentina</h2>
                                 <button className="btn-editar-perfil">
                                     <i className="bi bi-pencil-square"></i>
                                     Editar perfil
@@ -39,14 +40,14 @@ const NavPerfil = props => {
 
                             <div className="buttonsChatConecApad">
                                 <div className="buttonsChat-box">
-                                    <Link to="/chat"><button className="buttonChat"><img src={ChatBtn} alt=""/></button></Link>
+                                    <Link to="/chat"><button className="buttonChat"><img src={ChatBtn} alt="" /></button></Link>
                                 </div>
 
                                 <div className="buttonsConecApad">
-                                    <button className="buttonConectar"><img src={ConectionBtn} alt="ícone de apadrinhar"/> Conectar</button>
+                                    <button className="buttonConectar"><img src={ConectionBtn} alt="ícone de apadrinhar" /> Conectar</button>
                                     {
                                         props.profType === "jovem" ?
-                                            <button className="buttonApadrinhar" onClick={() => props.setButtonPopup(true)}><img src={ApadrinharBtn} alt="ícone de "/> Apadrinhar</button>
+                                            <button className="buttonApadrinhar" onClick={() => props.setButtonPopup(true)}><img src={ApadrinharBtn} alt="ícone de " /> Apadrinhar</button>
                                             :
                                             ""
                                     }
@@ -66,7 +67,7 @@ const NavPerfil = props => {
                                             <li><Link to="/perfil/cursosrecomendados"><button>Cursos recomendados</button></Link> {profileTab === "cursosrecomendados" ? <div className="active"></div> : ""}</li>
                                             <li><Link to="/perfil/cursosfavoritos"><button>Cursos favoritos</button></Link> {profileTab === "cursosfavoritos" ? <div className="active"></div> : ""}</li>
                                         </>
-                                    :
+                                        :
                                         <>
                                             <li><Link to="/perfil/nivelpadrinho"><button>Seu nível</button></Link>{profileTab === "nivelpadrinho" ? <div className="active"></div> : ""}</li>
                                             <li><Link to="/perfil/publicacoes"><button>Publicações</button></Link>{profileTab === "publicacoes" ? <div className="active"></div> : ""}</li>

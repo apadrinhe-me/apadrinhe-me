@@ -1,30 +1,37 @@
 .NavPerfil .perfilContainer {
-    background-color: #191919;
     display: flex;
     justify-content: center;
+    object-fit: contain;
+}
 
+.bg_blur_perfil {
+    top: 75px;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 0;
+    width: 100%;
 }
 
 .NavPerfil .perfilHeader {
+    position: relative;
     display: flex;
     flex: 1;
     flex-direction: column;
     align-items: center;
-    margin: 10px 10px;
-    background-color: #282828;
-    border-radius: 40px;
+    background: #03050dee;
+    border: 1px solid #1C1E24;
     overflow: hidden;
+    backdrop-filter: blur(20px) saturate(180%);
 }
 
 .NavPerfil .perfilCapa {
-    max-height: 350px;
-    height: 100%;
+    height: 375px;
     display: flex;
     justify-content: center;
 }
 
 .NavPerfil .perfilCapa img {
-    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 0 0 20px 20px;
 
@@ -91,13 +98,13 @@
     transition: .2s;
 }
 
-.NavPerfil .buttonsChat-box button:hover{
+.NavPerfil .buttonsChat-box button:hover {
     cursor: pointer;
     background: #2c2c2c;
     transition: .2s;
 }
 
-.NavPerfil .buttonsChat-box button img{
+.NavPerfil .buttonsChat-box button img {
     height: 20px;
 }
 
@@ -119,7 +126,7 @@
     background-color: #c900c9;
 }
 
-.NavPerfil .buttonsConecApad img{
+.NavPerfil .buttonsConecApad img {
     height: 16px;
     margin-right: 8px;
 }
@@ -143,7 +150,7 @@
 }
 
 .NavPerfil .perfilPubMomMapCfa button {
-    background: #191919;
+    background-color: transparent;
     padding: 10px 20px;
     border: none;
     color: #fff;
@@ -153,17 +160,17 @@
 }
 
 .NavPerfil .perfilPubMomMapCfa button:hover {
-    background: #2c2c2c;
+    background: #1C1E24;
     cursor: pointer;
 }
 
-.NavPerfil .perfilPubMomMapCfa li{
+.NavPerfil .perfilPubMomMapCfa li {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.NavPerfil .perfilPubMomMapCfa li .active{
+.NavPerfil .perfilPubMomMapCfa li .active {
     width: 100%;
     height: 5px;
     background: #FF00FF;
@@ -213,13 +220,23 @@
     transition: background .2s;
 }
 
-.NavPerfil .userName{
+.NavPerfil .userName {
     display: flex;
+    flex-basis: 250px;
     flex-direction: column;
     gap: 10px;
 }
 
-.NavPerfil .btn-editar-perfil{
+.NavPerfil .userName h2 {
+    font-size: 32px;
+    padding: 15px 0px;
+}
+
+.NavPerfil .userName button {
+    width: 175px;
+}
+
+.NavPerfil .btn-editar-perfil {
     border: 1px solid #0079FF;
     background: transparent;
     color: #0079FF;
@@ -234,7 +251,7 @@
     justify-content: center;
 }
 
-.NavPerfil .btn-editar-perfil:hover{
+.NavPerfil .btn-editar-perfil:hover {
     background: #0079FF;
     color: white;
     cursor: pointer;
@@ -262,7 +279,7 @@
 }
 
 @media (max-width: 863px) {
-    .NavPerfil .buttonsConecApad{
+    .NavPerfil .buttonsConecApad {
         flex-direction: row;
     }
 }
@@ -284,7 +301,7 @@
         font-size: 18px;
     }
 
-    .NavPerfil .buttonsChatConecApad{
+    .NavPerfil .buttonsChatConecApad {
         flex-wrap: wrap-reverse;
     }
 }
