@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./Timeline.css";
+import "./timeline.css";
 import school_fill from "../../../../media/icons/item_school_icon_fill.svg";
 import school_colored from "../../../../media/icons/item_school_icon_colored.svg";
 import star from "../../../../media/icons/item_star_icon_fill.svg";

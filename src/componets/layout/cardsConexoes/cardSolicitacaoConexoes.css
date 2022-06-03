@@ -1,17 +1,17 @@
-.buttonUsuarioInteracao{
-    
+.buttonUsuarioInteracaoSolicitacao {
     text-align: center;
-    
-    padding: 10px 20px;
-   margin: 0 5px;
+    padding: 10px 25px;
+    margin: auto 5px;
+    border-style: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
 }
 
-
-
-.azul{
+.azul {
     background-color: #0079FF;
 }
 
-.vermelho{
-     background-color: #643232;
+.vermelho {
+    background-color: #643232;
 }
