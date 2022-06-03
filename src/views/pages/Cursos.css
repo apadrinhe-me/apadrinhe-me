@@ -33,6 +33,7 @@
 .caixaFilter:hover {
     background-color: #e5e6ebcb;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .caixaIconeCategoriasCurso {

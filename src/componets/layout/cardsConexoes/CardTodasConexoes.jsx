@@ -5,9 +5,9 @@ import React from "react";
 const CardTodasConexoes = props => {
     return (
         <div className="cardUsuarioInteracao ">
-            <div>
+            <div className="buttonsCardUsuarioInteracao" >
                 <button className="buttonUsuarioInteracao">Ver Perfil</button>
-                <i className="bi bi-check-lg CardUsusarioInteracaoIcons"></i>
+                <button className="CardUsusarioInteracaoIcons"><i className="bi bi-check-lg "></i></button>
             </div>
         </div>
     );

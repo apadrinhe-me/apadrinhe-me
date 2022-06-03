@@ -1,7 +1,7 @@
 .cardestrutura {
- background-color: #282828;
- border-radius: 20px;
- margin: 0 10px;
+    background-color: #282828;
+    border-radius: 20px;
+    margin: 0 10px;
 }
 
 .Conexoes {
@@ -33,17 +33,19 @@
     padding: 10px 20px;
     border-radius: 20px;
     background-color: #191919;
-    border-style: none;
-    color: #fff;
+    border: 1px solid #191919;
     font-weight: 600;
-    margin: 10px 0 ;
+    color: #fff;
+
+    margin: 10px 0;
     transform: .2s;
+    cursor: pointer;
 }
 
-.navegacaoConexoes li button:hover{
-    background-color: #292929;
-    cursor: pointer;
+.navegacaoConexoes li button:hover {
+
     transform: .2s;
+    border: 1px solid #fff;
 }
 
 .cardInteracaoUsuarios {
