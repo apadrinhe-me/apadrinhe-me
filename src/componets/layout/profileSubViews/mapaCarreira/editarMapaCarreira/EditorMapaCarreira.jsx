@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 import Menu from "../../../Menu";
 import MenuMobile from "../../../MenuMobile";
-import { useBeforeunload } from 'react-beforeunload';
+import { Beforeunload } from 'react-beforeunload';
 
 //imports das bibliotecas e estilos
 import "./EditorMapaCarreira.css"
@@ -117,6 +117,8 @@ const EditorMapaCarreira = props => {
 
     return(
         <>
+            <Beforeunload onBeforeunload={e => e.preventDefault()} />
+
             <Menu/>
             <div className="EditorMapaCarreira">
                 <div className="explicacaoMapa my-scrollbar">
