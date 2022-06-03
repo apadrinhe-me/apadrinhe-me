@@ -11,17 +11,21 @@ const CardConexoes = props => {
             <div className="avatarUsuario"><img src={Usuario} alt="" /></div>
             <div className="backgroundBlack">
                 <h2>Name</h2>
-                <span>
-                    {/* <TodasConexoes/>
-                    
 
-                   <PendenciasConexoes/>*/}
+                <div className="buttonsConexoes">
+                    <span>
+                        {
+                            props.tipo === 1 ?
+                                <TodasConexoes />
+                                :
+                                props.tipo === 2 ?
+                                    <SolicitacaoConexoes />
+                                    :
+                                    <PendenciasConexoes />
+                        }
+                    </span>
+                </div>
 
-                    <SolicitacaoConexoes/>
-
-
-                    
-                </span>
             </div>
         </div>
     );

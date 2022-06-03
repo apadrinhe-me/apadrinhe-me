@@ -9,6 +9,7 @@ import Home from "../../views/pages/Home";
 import Login from "../../views/pages/Login";
 import Moments from "../../views/pages/Moments";
 import Perfil from "../../views/pages/Perfil";
+import Chat from "../../views/pages/Chat";
 
 //importando as subpáginas do perfil
 
@@ -17,7 +18,7 @@ import MomentsPosts from "./profileSubViews/momentsPosts/MomentsPosts";
 import MapaCarreira from "./profileSubViews/mapaCarreira/MapaCarreira";
 import CursosRecomendados from "./profileSubViews/cursosRecomendados/CursosRecomendados";
 import CursosFavoritos from "./profileSubViews/cursosFavoritos/CursosFavoritos";
-import ListaCursosPad from "./profileSubViews/listaCursosPad/ListaCursosPad";
+import HistoricoPad from "./profileSubViews/historicoPad/HistoricoPad";
 import ListaJovensApad from "./profileSubViews/listaJovensApad/ListaJovensApad";
 import NivelPadrinho from "./profileSubViews/nivelPadrinho/NivelPadrinho";
 import EditorMapaCarreira from "./profileSubViews/mapaCarreira/editarMapaCarreira/EditorMapaCarreira";
@@ -32,6 +33,7 @@ const Conteudo = () => {
                 <Route path="/moments" element={<Moments />}/>
                 <Route path="/login" element={<Login />}/>
                 <Route path="/cadastro" element={<Cadastro />}/>
+                <Route path="/chat" element={<Chat />}/>
 
                 {/*Rotas do perfil*/}
 
@@ -65,9 +67,9 @@ const Conteudo = () => {
                         <CursosFavoritos />
                     </Perfil>
                 }/>
-                <Route path="/perfil/recomendacoes" element={
+                <Route path="/perfil/historico" element={
                     <Perfil>
-                        <ListaCursosPad />
+                        <HistoricoPad />
                     </Perfil>
                 }/>
                 <Route path="/perfil/apadrinhamentos" element={

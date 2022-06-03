@@ -8,7 +8,7 @@ import getPostDate from "../../funcional/getPostDate";
 const Comment = props => {
     return(
         <div className="Comment">
-            <ProfPicture src="natan_proa.jpg" scale={70} />
+            <ProfPicture src="natan_proa.jpg" scale={50} />
             <div className="comment-info">
                 <span className="text-primary">Usuário</span>
                 <span className="text-secondary">Comentário de id {props.id}</span>

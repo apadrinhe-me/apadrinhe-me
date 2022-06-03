@@ -4,7 +4,7 @@
     gap: 10px;
     flex: 1;
     background: #282828;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 10px;
 }
 
@@ -18,8 +18,8 @@
 .NewPost .post-input{
     border: 1px solid #969696;
     background: #282828;
-    border-radius: 20px;
-    padding: 15px;
+    border-radius: 8px;
+    padding: 10px 15px;
     width: 100%;
     resize: none;
     color: #fff;

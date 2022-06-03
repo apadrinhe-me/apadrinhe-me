@@ -13,7 +13,7 @@
 .Home .infinity-post-scroll{
     display: flex;
     flex-direction: column;
-    flex-basis: 700px;
+    flex-basis: 550px;
     gap: 20px;
 }
 

@@ -22,7 +22,8 @@ const MomentsFullscreen = props => {
         <div className="MomentsFullscreen">
             <div className="fulscreen-video">
                 <button className="close-button" id="close-button">X</button>
-                <video src={require("../../../media/moments_media/moments_video.mp4")} controls></video>
+                <video className="momentsVideo" src={require("../../../media/moments_media/moments_video.mp4")} controls></video>
+                <video className="backgroundFullscreenMoments" src={require("../../../media/moments_media/moments_video.mp4")} controls></video>
             </div>
 
             <div className="video-info">

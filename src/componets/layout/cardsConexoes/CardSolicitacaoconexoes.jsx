@@ -5,8 +5,8 @@ import React from "react";
 const CardSolicitacaoConexoes = props => {
     return (
         <div className="cardUsuarioInteracao ">
-            <button className="buttonUsuarioInteracao azul">Aceitar</button>
-            <button className="buttonUsuarioInteracao vermelho">Recusar</button>
+            <button className="buttonUsuarioInteracaoSolicitacao azul">Aceitar</button>
+            <button className="buttonUsuarioInteracaoSolicitacao vermelho">Recusar</button>
         </div>
     );
 }
