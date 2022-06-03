@@ -12,9 +12,15 @@ const CardConexoes = props => {
             <div className="backgroundBlack">
                 <h2>Name</h2>
                 <span>
-                    {/*<TodasConexoes/>
-                    <PendenciasConexoes/>*/}
+                    {/* <TodasConexoes/>
+                    
+
+                   <PendenciasConexoes/>*/}
+
                     <SolicitacaoConexoes/>
+
+
+                    
                 </span>
             </div>
         </div>
