@@ -95,6 +95,9 @@
     border-radius: 15px;
     border: none;
     transition: background-color .2s;
+}
+
+.EditorMapaCarreira .montaMapa .header .link{
     text-decoration: none;
 }
 
@@ -104,10 +107,33 @@
     transition: background-color .2s;
 }
 
+.EditorMapaCarreira .montaMapa .header .save-editions{
+    display: flex;
+    gap: 7px;
+    color: white;
+    font-weight: 700;
+    align-items: center;
+    background: #667bf2;
+    padding: 7px 13px;
+    border-radius: 15px;
+    border: none;
+    transition: background-color .2s;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.EditorMapaCarreira .montaMapa .header .save-editions:hover{
+    background: #4e5eb9;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
 .EditorMapaCarreira .meta-cards{
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    height: calc(100vh - 230px);
+    overflow-y: auto;
 }
 
 .EditorMapaCarreira .card-details{

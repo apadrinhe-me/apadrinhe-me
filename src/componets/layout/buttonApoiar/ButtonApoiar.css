@@ -1,0 +1,36 @@
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: #d92588;
+    inherits: false;
+}
+
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value:  #7630d9;
+    inherits: false;
+}
+
+.ButtonApoiar {
+    background: linear-gradient(45deg, var(--myColor1), var(--myColor2));
+    transition: --myColor1 .3s, --myColor2 .3s;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.ButtonApoiar:hover {
+    cursor: pointer;
+    --myColor1: #7630d9;
+    --myColor2: #d92588;
+}
+
+.ButtonApoiar img{
+    height: 16px;
+}
