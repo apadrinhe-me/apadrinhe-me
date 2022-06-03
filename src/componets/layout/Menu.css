@@ -23,8 +23,8 @@
     width: 100%;
     max-width: 1500px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     background-color: transparent;
 }
@@ -39,10 +39,10 @@
 }
 
 .Menu .container_left {
+    width: 360px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 360px;
     height: 60px;
     padding: 0px 20px;
     background-color: transparent;
@@ -50,11 +50,22 @@
 
 .Menu .container_right,
 .Menu .container_right_expand {
+    width: 360px;
     display: flex;
     gap: 15px;
     align-items: center !important;
     justify-content: center;
-    max-width: 360px;
+    height: 60px;
+    padding: 0px 20px;
+    background-color: transparent;
+}
+
+.Menu .container_right.logged {
+    width: 360px;
+    display: flex;
+    gap: 15px;
+    align-items: center !important;
+    justify-content: flex-end;
     height: 60px;
     padding: 0px 20px;
     background-color: transparent;
