@@ -30,12 +30,12 @@
     border-radius: 50%;
 }
 
-.nav li{
+.MenuMobile .nav li{
     padding: 7px;
     border-radius: 10px;
 }
 
-.nav li:hover{
+.MenuMobile .nav li:hover{
     box-shadow: 0px 5px 10px #00000035;
     background-image: linear-gradient(to bottom right, #3b435a, #3b435a50);
 }

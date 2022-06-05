@@ -3,7 +3,7 @@
     height: 60px;
 }
 
-.header_main {
+.Menu .header_main {
     position: fixed;
     z-index: 10000;
     box-shadow: 0px 5px 10px #00000035;

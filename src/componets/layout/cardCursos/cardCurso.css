@@ -7,32 +7,32 @@
     border-radius: 15px;
 }
 
-.containerRosa {
+.cardCurso .containerRosa {
     background-color: #FF00FF;
     height: 150px;
     border-start-end-radius: 15px;
     border-start-start-radius: 15px;
 }
 
-.containerCardCurso {
+.cardCurso .containerCardCurso {
     padding: 5px 10px;
 }
 
-.cardTamanho1 {
+.cardCurso .cardTamanho1 {
     font-size: 1em;
 }
 
-.cardTamanho2 {
+.cardCurso .cardTamanho2 {
     font-size: 0.7em;
 }
 
-.stars {
+.cardCurso .stars {
     display: flex;
     gap: 5px;
     margin: 8px 0;
 }
 
-.separador {
+.cardCurso .separador {
     content: "";
     height: 1px;
     width: 100px;
@@ -41,29 +41,29 @@
     margin: 10px 0;
 }
 
-.interacaoCurso {
+.cardCurso .interacaoCurso {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.interacaoCurso span {
+.cardCurso .interacaoCurso span {
     display: flex;
     align-items: center;
 }
 
-.informacaoDuracao {
+.cardCurso .informacaoDuracao {
     display: flex;
     gap: 10px;
     padding: 10px 0;
 }
 
-.InteracaoRecomendarMais {
+.cardCurso .InteracaoRecomendarMais {
     display: flex;
     justify-content: space-between;
 }
 
-.buttonRecomendarMais {
+.cardCurso .buttonRecomendarMais {
     border-radius: 20px;
     padding: 10px 60px;
     color: #fff;
@@ -72,7 +72,7 @@
     border: none;
 }
 
-.buttonMais {
+.cardCurso .buttonMais {
     display: flex;
     color: rgba(255, 255, 255, 0.432);
     padding: 10px 10px;

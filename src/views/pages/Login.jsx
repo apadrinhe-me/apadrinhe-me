@@ -6,7 +6,7 @@ import apadrinheme from "../../media/logo/apadrinhe-04.svg"
 
 const Login = () => {
     return (
-        <div className="login">
+        <div className="Login">
             <div></div>
             <div className="principal_box">
                 <div><a className="voltar" href="perfil">x</a></div>

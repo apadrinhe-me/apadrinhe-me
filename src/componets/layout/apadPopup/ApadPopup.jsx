@@ -15,7 +15,7 @@ const ApadPopup = props => {
     return(props.trigger) ? (
         <div className="ApadPopup">
             <div className="popup-inner">
-                <button className="close-btn" onClick={ () => closePopup() }>X</button>
+                <button className="close-btn" onClick={ () => closePopup() }><i className="bi bi-x-lg"></i></button>
                 <h2>Apadrinhar</h2>
                 <div className="apad-types">
                     <div className="apadrinhe">

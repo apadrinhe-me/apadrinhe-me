@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import Menu from "../../../Menu";
 import MenuMobile from "../../../MenuMobile";
 import { Beforeunload } from 'react-beforeunload';
+import Timeline from "../Timeline";
 
 //imports das bibliotecas e estilos
 import "./EditorMapaCarreira.css"
@@ -16,16 +17,85 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 //imports das ilustrações
 import ill1 from "../../../../../media/illustrations/Progress_Flatline.svg";
 import ill2 from "../../../../../media/illustrations/Winner_Isometric.svg";
 import ill3 from "../../../../../media/illustrations/Motivation_Flatline.svg";
 import {Link} from "react-router-dom";
-import Timeline from "../Timeline";
 
 const EditorMapaCarreira = props => {
 
+    //Objeto para as metas de exemplo
+    const exampleGoals = [
+        {
+            nome: "Goal 1",
+            year: 2015,
+            status: "achieved",
+            selected: false
+        },
+        {
+            nome: "Goal 2",
+            year: 2016,
+            status: "in-progress",
+            selected: false
+        },
+        {
+            nome: "Goal 3",
+            year: 2017,
+            status: "not-achieved",
+            selected: false
+        },
+        {
+            nome: "Goal 4",
+            year: 2018,
+            status: "not-achieved",
+            selected: false
+        },
+        {
+            nome: "Goal 5",
+            year: 2019,
+            status: "not-achieved",
+            selected: false
+        },
+        {
+            nome: "Goal 6",
+            year: 2020,
+            status: "not-achieved",
+            selected: false
+        },
+        {
+            nome: "Goal 7",
+            year: 2021,
+            status: "not-achieved",
+            selected: false
+        },
+        {
+            nome: "Goal 8",
+            year: 2022,
+            status: "not-achieved",
+            selected: false
+        },
+        {
+            nome: "Goal 9",
+            year: 2023,
+            status: "not-achieved",
+            selected: false
+        },
+        {
+            nome: "Goal 10",
+            year: 2024,
+            status: "final-goal",
+            selected: false
+        }
+    ]
+
+    //objeto para as metas que o usuário for adicionando
     let goals = [
         {
             nome: "Goal 1",
@@ -89,31 +159,55 @@ const EditorMapaCarreira = props => {
         }
     ]
 
-    const [openFullscreen, setOpenFullscreen] = React.useState(false);
+    //configurações para o modal fullscreen de exibir timeline de exemplo
+    const [openFullscreen, setOpenFullscreen] = useState(false);
     const handleOpenFullscreen = () => setOpenFullscreen(true);
     const handleCloseFullscreen = () => setOpenFullscreen(false);
 
+    //configurações para o modal de adicionar nova meta/editar meta
+    const [openNewMeta, setOpenNewMeta] = useState(false);
+    const handleOpenNewMeta = () => setOpenNewMeta(true);
+    const handleCloseNewMeta = () => setOpenNewMeta(false);
+
+    //estilo do modal de tela cheia
     const fullScreenModal = {
         position: 'absolute',
+        marginTop: '60px',
         width: "100vw",
-        height: "100vh",
+        height: "calc(100vh - 60px)",
         bgcolor: '#191919',
         border: '2px solid #000',
         boxShadow: 24,
         p: 4,
+        display: 'flex',
+        flexDirection: 'column',
+        color: 'white',
+        gap: '15px'
     };
 
+    //estilo do modal de nova meta
     const addMetaModal = {
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: 400,
+        width: '100%',
+        maxWidth: 600,
         bgcolor: 'background.paper',
-        border: '2px solid #000',
         boxShadow: 24,
-        p: 4,
+        p: 4
     };
+
+    //componentes controlados do formulário de adicionar meta
+    const [metaType, setMetaType] = useState('');
+    const [metaName, setMetaName] = useState('');
+    const [metaBegin, setMetaBegin] = useState('');
+    const [metaFinal, setMetaFinal] = useState('');
+    const [metaArea, setArea] = useState('');
+    const [metaLocal, setMetaLocal] = useState('');
+    const [metaDetails, setMetaDetails] = useState('');
+    const [metaCheck, setMetaCheck] = useState(false);
+    const [metaObjective, setMetaObjective] = useState(false);
 
     return(
         <>
@@ -211,7 +305,7 @@ const EditorMapaCarreira = props => {
                                 </div>
                             </CardContent>
                             <CardActions>
-                                <Button className="btn-editar" variant="outlined" size="small"><i className="bi bi-pencil-square"></i> Editar meta</Button>
+                                <Button className="btn-editar" variant="outlined" size="small" onClick={() => handleOpenNewMeta()}><i className="bi bi-pencil-square"></i> Editar meta</Button>
                             </CardActions>
                         </Card>
 
@@ -263,7 +357,7 @@ const EditorMapaCarreira = props => {
                                 </div>
                             </CardContent>
                             <CardActions>
-                                <Button className="btn-editar" variant="outlined" size="small"><i className="bi bi-pencil-square"></i> Editar meta</Button>
+                                <Button className="btn-editar" variant="outlined" size="small" onClick={() => handleOpenNewMeta()}><i className="bi bi-pencil-square"></i> Editar meta</Button>
                             </CardActions>
                         </Card>
 
@@ -277,7 +371,7 @@ const EditorMapaCarreira = props => {
                                         width: "100px",
                                         height: "100px",
                                         fontSize: 80
-                                    }}><i className="bi bi-plus"></i></Button>
+                                    }}><i className="bi bi-plus" onClick={() => handleOpenNewMeta()}></i></Button>
                                 </div>
                             </CardContent>
                         </Card>
@@ -299,12 +393,84 @@ const EditorMapaCarreira = props => {
             >
                 <Fade in={openFullscreen}>
                     <Box sx={fullScreenModal}>
-                        <Typography id="transition-modal-title" variant="h6" component="h2">
-                            Text in a modal
-                        </Typography>
-                        <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                        </Typography>
+                        <div className="header-div">
+                            <h3>Visualizar modelo de mapa de carreira</h3>
+                            <button className="close-btn" onClick={handleCloseFullscreen}><i className="bi bi-x-lg"></i></button>
+                        </div>
+                        <div className="editor-div-timeline">
+                            <Timeline goals={exampleGoals} />
+                        </div>
+                    </Box>
+                </Fade>
+            </Modal>
+
+            <Modal
+                aria-labelledby="adicionar-meta"
+                aria-describedby="adicionar-meta"
+                open={openNewMeta}
+                onClose={handleCloseNewMeta}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}
+            >
+                <Fade in={openNewMeta}>
+                    <Box sx={addMetaModal}>
+                        <Grid container direction="column" spacing={1}>
+                            <Grid item>
+                                <h3>Adicionar nova meta</h3>
+                            </Grid>
+                            <Grid item>
+                                <Grid container direction="row" spacing={3}>
+                                    <Grid item container direction="column" spacing={1} flex={1}>
+                                        <Grid item>
+                                            <FormControl variant="filled" fullWidth>
+                                                <InputLabel id="tipo_meta">Tipo da meta</InputLabel>
+                                                <Select
+                                                    labelId="tipo_meta"
+                                                    id="tipo_meta"
+                                                    value={metaType}
+                                                    onChange={e => setMetaType(e.target.value)}
+                                                    label="Tipo da meta"
+                                                >
+                                                    <MenuItem value={1}>Acadêmica</MenuItem>
+                                                    <MenuItem value={2}>Intercâmbio</MenuItem>
+                                                    <MenuItem value={3}>Viajem</MenuItem>
+                                                    <MenuItem value={3}>Profissional</MenuItem>
+                                                </Select>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item>
+                                            1
+                                        </Grid>
+                                        <Grid item>
+                                            1
+                                        </Grid>
+                                        <Grid item>
+                                            1
+                                        </Grid>
+                                    </Grid>
+                                    <Grid item flex={1}>
+                                        <Grid item>
+                                            2
+                                        </Grid>
+                                        <Grid item>
+                                            2
+                                        </Grid>
+                                        <Grid item>
+                                            2
+                                        </Grid>
+                                        <Grid item>
+                                            2
+                                        </Grid>
+                                        <Grid item>
+                                            2
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
                     </Box>
                 </Fade>
             </Modal>

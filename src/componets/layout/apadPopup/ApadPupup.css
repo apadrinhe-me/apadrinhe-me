@@ -69,25 +69,25 @@
 
 .ApadPopup .popup-inner .close-btn{
     position: absolute;
-    top: 15px;
-    left: auto;
-    right: 15px;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    z-index: 10009;
+    top: -20px;
+    margin-left: auto;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     border: none;
     background: transparent;
     color: white;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 25px;
+    transition: .2s;
 }
 
 .ApadPopup .popup-inner .close-btn:hover{
     cursor: pointer;
-    font-weight: 900;
+    transform: rotate(90deg);
+    transition: .2s;
 }
 
 @keyframes slideout {
