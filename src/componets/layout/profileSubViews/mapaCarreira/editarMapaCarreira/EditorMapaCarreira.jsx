@@ -22,6 +22,11 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 //imports das ilustrações
 import ill1 from "../../../../../media/illustrations/Progress_Flatline.svg";
@@ -192,7 +197,7 @@ const EditorMapaCarreira = props => {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: '100%',
-        maxWidth: 600,
+        maxWidth: 700,
         bgcolor: 'background.paper',
         boxShadow: 24,
         p: 4
@@ -203,11 +208,24 @@ const EditorMapaCarreira = props => {
     const [metaName, setMetaName] = useState('');
     const [metaBegin, setMetaBegin] = useState('');
     const [metaFinal, setMetaFinal] = useState('');
-    const [metaArea, setArea] = useState('');
+    const [metaArea, setMetaArea] = useState('');
     const [metaLocal, setMetaLocal] = useState('');
     const [metaDetails, setMetaDetails] = useState('');
     const [metaCheck, setMetaCheck] = useState(false);
     const [metaObjective, setMetaObjective] = useState(false);
+
+    //Array de área de conhecimento que o usuário pode escolher
+    const knowlodge_areas = [
+        'Tecnologia',
+        'Logística',
+        'Administração',
+        'Gestão de empresas',
+        'Ensino médio',
+        'Programação',
+        'Pesquisa científica',
+        'Historia',
+        'Geografia'
+    ];
 
     return(
         <>
@@ -423,16 +441,17 @@ const EditorMapaCarreira = props => {
                             </Grid>
                             <Grid item>
                                 <Grid container direction="row" spacing={3}>
-                                    <Grid item container direction="column" spacing={1} flex={1}>
+                                    <Grid item container direction="column" spacing={2} flex={1}>
                                         <Grid item>
-                                            <FormControl variant="filled" fullWidth>
-                                                <InputLabel id="tipo_meta">Tipo da meta</InputLabel>
+                                            <FormControl variant="filled" className="form-control" fullWidth>
+                                                <InputLabel id="tipo_meta">Tipo da meta *</InputLabel>
                                                 <Select
                                                     labelId="tipo_meta"
                                                     id="tipo_meta"
                                                     value={metaType}
                                                     onChange={e => setMetaType(e.target.value)}
-                                                    label="Tipo da meta"
+                                                    label="Tipo da meta*"
+                                                    required
                                                 >
                                                     <MenuItem value={1}>Acadêmica</MenuItem>
                                                     <MenuItem value={2}>Intercâmbio</MenuItem>
@@ -442,30 +461,63 @@ const EditorMapaCarreira = props => {
                                             </FormControl>
                                         </Grid>
                                         <Grid item>
-                                            1
+                                            <TextField
+                                                fullWidth
+                                                variant="filled"
+                                                required
+                                                id="nome_meta"
+                                                label="Nome da meta"
+                                                placeholder="Completar o ensino médio"
+                                            />
                                         </Grid>
                                         <Grid item>
-                                            1
+                                            <input type="date"/>
                                         </Grid>
                                         <Grid item>
-                                            1
+                                            <input type="date"/>
                                         </Grid>
                                     </Grid>
-                                    <Grid item flex={1}>
+                                    <Grid item container direction="column" spacing={2} flex={1}>
                                         <Grid item>
-                                            2
+                                            <Autocomplete
+                                                className="form-control"
+                                                disablePortal
+                                                fullWidth
+                                                id="meta_area"
+                                                options={knowlodge_areas}
+                                                renderInput={(params) => <TextField {...params} label="Area de conhecimento" variant="filled" value={metaArea}
+                                                                                    onChange={e => setMetaArea(e.target.value)} />}
+                                            />
                                         </Grid>
                                         <Grid item>
-                                            2
+                                            <TextField
+                                                fullWidth
+                                                variant="filled"
+                                                required
+                                                id="instituicao_meta"
+                                                label="Instituição/empresa/plataforma"
+                                                placeholder="Etec, USP, Microsoft, Udemy etc."
+                                                value={metaLocal}
+                                                onChange={e => setMetaLocal(e.target.value)}
+                                            />
                                         </Grid>
                                         <Grid item>
-                                            2
+                                            <TextField
+                                                id="meta_descricao"
+                                                label="Descrição"
+                                                multiline
+                                                maxRows={3}
+                                                value={metaDetails}
+                                                onChange={e => setMetaDetails(e.target.value)}
+                                                variant="filled"
+                                                fullWidth
+                                            />
                                         </Grid>
                                         <Grid item>
-                                            2
+                                            <FormControlLabel control={<Checkbox checked={metaCheck} onChange={e => setMetaCheck(e.target.checked)} />} label="Eu já concluí essa meta" />
                                         </Grid>
                                         <Grid item>
-                                            2
+                                            <FormControlLabel control={<Checkbox checked={metaObjective} onChange={e => setMetaObjective(e.target.checked)} />} label="Essa meta é o meu objetivo final" />
                                         </Grid>
                                     </Grid>
                                 </Grid>

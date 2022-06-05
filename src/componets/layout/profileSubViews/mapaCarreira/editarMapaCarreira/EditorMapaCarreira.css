@@ -204,6 +204,15 @@
     justify-content: center;
 }
 
+.form-control svg{
+    margin-left: auto !important;
+}
+
+.MuiAutocomplete-endAdornment{
+    display: flex;
+    justify-content: flex-end;
+}
+
 @media (max-width: 767.98px) {
     .EditorMapaCarreira .explicacaoMapa{
         display: none;
