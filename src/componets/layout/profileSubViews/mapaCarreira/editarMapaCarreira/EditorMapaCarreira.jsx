@@ -27,6 +27,11 @@ import Autocomplete from '@mui/material/Autocomplete';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 //imports das ilustrações
 import ill1 from "../../../../../media/illustrations/Progress_Flatline.svg";
@@ -34,133 +39,106 @@ import ill2 from "../../../../../media/illustrations/Winner_Isometric.svg";
 import ill3 from "../../../../../media/illustrations/Motivation_Flatline.svg";
 import {Link} from "react-router-dom";
 
+const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 const EditorMapaCarreira = props => {
 
     //Objeto para as metas de exemplo
     const exampleGoals = [
         {
-            nome: "Goal 1",
-            year: 2015,
-            status: "achieved",
-            selected: false
+            id: 1,
+            typo: "acadêmica",
+            name: "Completar o Ensino Médio",
+            yearBegin: 2015,
+            yearEnd: 2017,
+            area: 'Ensino médio',
+            local: 'ETEC',
+            description: 'Completei o ensino médio. Me graduei com nota máxima',
+            status: 'achieved',
+            finalObjective: false,
+            select: false
         },
         {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
+            id: 2,
+            typo: "acadêmica",
+            name: "Estudar para o enem",
+            yearBegin: 2017,
+            yearEnd: null,
+            area: 'Ensino médio',
+            local: 'São Judas',
+            description: 'Tirei 750 de média',
+            status: 'achieved',
+            finalObjective: false,
+            select: false
         },
         {
-            nome: "Goal 3",
-            year: 2017,
-            status: "not-achieved",
-            selected: false
+            id: 3,
+            typo: "acadêmica",
+            name: "ingressar em uma faculdade pública",
+            yearBegin: 2018,
+            yearEnd: null,
+            area: 'Tecnologia',
+            local: 'USP',
+            description: 'Passei na USP',
+            status: 'achieved',
+            finalObjective: false,
+            select: true
         },
         {
-            nome: "Goal 4",
-            year: 2018,
-            status: "not-achieved",
-            selected: false
+            id: 4,
+            typo: "profissional",
+            name: "Conseguir um estágio",
+            yearBegin: 2018,
+            yearEnd: null,
+            area: 'Tecnologia',
+            local: 'Oracle',
+            description: 'Quero conseguir um estágio na oracle',
+            status: 'in-progress',
+            finalObjective: false,
+            select: false
         },
         {
-            nome: "Goal 5",
-            year: 2019,
-            status: "not-achieved",
-            selected: false
+            id: 5,
+            typo: "intercâmbio",
+            name: "Fazer intercâmbio no Canada",
+            yearBegin: 2020,
+            yearEnd: null,
+            area: 'Língua estrangeira',
+            local: 'Canadaa',
+            description: 'Fazer intercâmbio no Canada',
+            status: 'not-achieved',
+            finalObjective: false,
+            select: false
         },
         {
-            nome: "Goal 6",
-            year: 2020,
-            status: "not-achieved",
-            selected: false
-        },
-        {
-            nome: "Goal 7",
-            year: 2021,
-            status: "not-achieved",
-            selected: false
-        },
-        {
-            nome: "Goal 8",
-            year: 2022,
-            status: "not-achieved",
-            selected: false
-        },
-        {
-            nome: "Goal 9",
-            year: 2023,
-            status: "not-achieved",
-            selected: false
-        },
-        {
-            nome: "Goal 10",
-            year: 2024,
-            status: "final-goal",
-            selected: false
+            id: 6,
+            typo: "profissional",
+            name: "Ser PO",
+            yearBegin: 2026,
+            area: 'Tenologia',
+            local: 'Oracle',
+            description: 'Quero ser PO da oracle',
+            status: 'not-achieved',
+            finalObjective: true,
+            select: false
         }
     ]
 
     //objeto para as metas que o usuário for adicionando
     let goals = [
         {
-            nome: "Goal 1",
-            year: 2015,
-            status: "achieved",
-            selected: false
-        },
-        {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
-        },
-        {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
-        },
-        {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
-        },
-        {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
-        },
-        {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
-        },
-        {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
-        },
-        {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
-        },
-        {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
-        },
-        {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
+            id: 1,
+            typo: "acadêmica",
+            name: "Completar o Ensino Médio",
+            yearBegin: 2015,
+            yearEnd: 2015,
+            area: 'Ensino médio',
+            local: 'ETEC',
+            description: 'ETEC',
+            status: 'not-achieved',
+            finalObjective: false
         }
     ]
 
@@ -206,13 +184,29 @@ const EditorMapaCarreira = props => {
     //componentes controlados do formulário de adicionar meta
     const [metaType, setMetaType] = useState('');
     const [metaName, setMetaName] = useState('');
-    const [metaBegin, setMetaBegin] = useState('');
-    const [metaFinal, setMetaFinal] = useState('');
+    const [metaBegin, setMetaBegin] = useState(null);
+    const [metaFinal, setMetaFinal] = useState(null);
     const [metaArea, setMetaArea] = useState('');
     const [metaLocal, setMetaLocal] = useState('');
     const [metaDetails, setMetaDetails] = useState('');
     const [metaCheck, setMetaCheck] = useState(false);
     const [metaObjective, setMetaObjective] = useState(false);
+
+    //estado da snackbar Alert para mostrar que a metaa foi salva
+    const [openSnack, setOpenSnack] = useState(false);
+
+    //controlando o clique do botão de salvar meta para abrir ou fechar o snackbar
+    const handleClickSnack = () => {
+        setOpenSnack(true);
+    };
+
+    const handleCloseSnack = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpenSnack(false);
+    };
 
     //Array de área de conhecimento que o usuário pode escolher
     const knowlodge_areas = [
@@ -266,7 +260,6 @@ const EditorMapaCarreira = props => {
 
                 <div className="montaMapa">
                     <div className="header">
-                        <button className="save-editions"><i className="bi bi-check-lg"></i> Salvar alterações</button>
                         <Link to="/perfil/mapacarreira/" className="link"><button className="return-profile" onClick={() => {}}><i className="bi bi-arrow-return-left"></i> <span>Voltar para o perfil</span></button></Link>
                     </div>
 
@@ -471,10 +464,26 @@ const EditorMapaCarreira = props => {
                                             />
                                         </Grid>
                                         <Grid item>
-                                            <input type="date"/>
+                                            <LocalizationProvider dateAdapter={AdapterDateFns}>
+                                                <DatePicker
+                                                    label="Data de início"
+                                                    views={['day', 'month', 'year']}
+                                                    value={metaBegin}
+                                                    onChange={newValue => setMetaBegin(newValue)}
+                                                    renderInput={(params) => <TextField fullWidth variant="filled" required {...params} />}
+                                                />
+                                            </LocalizationProvider>
                                         </Grid>
                                         <Grid item>
-                                            <input type="date"/>
+                                            <LocalizationProvider dateAdapter={AdapterDateFns}>
+                                                <DatePicker
+                                                    label="Data de fim"
+                                                    views={['day', 'month', 'year']}
+                                                    value={metaFinal}
+                                                    onChange={newValue => setMetaFinal(newValue)}
+                                                    renderInput={(params) => <TextField fullWidth variant="filled" {...params} />}
+                                                />
+                                            </LocalizationProvider>
                                         </Grid>
                                     </Grid>
                                     <Grid item container direction="column" spacing={2} flex={1}>
@@ -522,7 +531,15 @@ const EditorMapaCarreira = props => {
                                     </Grid>
                                 </Grid>
                             </Grid>
+                            <Grid item>
+                                <Button variant="contained" onClick={handleClickSnack}><i className="bi bi-check-lg"></i> &nbsp; Salvar meta</Button>
+                            </Grid>
                         </Grid>
+                        <Snackbar open={openSnack} autoHideDuration={6000} onClose={handleCloseSnack} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
+                            <Alert onClose={handleCloseSnack} severity="success" sx={{ width: '100%'}}>
+                                Meta salva com sucesso!
+                            </Alert>
+                        </Snackbar>
                     </Box>
                 </Fade>
             </Modal>

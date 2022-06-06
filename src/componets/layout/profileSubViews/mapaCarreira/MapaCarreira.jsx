@@ -6,66 +6,84 @@ import {Link} from "react-router-dom";
 import Timeline from "./Timeline";
 
 const MapaCarreira = props => {
+    //Objeto para as metas de exemplo
     const goals = [
         {
-            nome: "Goal 1",
-            year: 2015,
-            status: "achieved",
-            selected: false
+            id: 1,
+            typo: "acadêmica",
+            name: "Completar o Ensino Médio",
+            yearBegin: 2015,
+            yearEnd: 2017,
+            area: 'Ensino médio',
+            local: 'ETEC',
+            description: 'Completei o ensino médio. Me graduei com nota máxima',
+            status: 'achieved',
+            finalObjective: false,
+            select: false
         },
         {
-            nome: "Goal 2",
-            year: 2016,
-            status: "in-progress",
-            selected: false
+            id: 2,
+            typo: "acadêmica",
+            name: "Estudar para o enem",
+            yearBegin: 2017,
+            yearEnd: null,
+            area: 'Ensino médio',
+            local: 'São Judas',
+            description: 'Tirei 750 de média',
+            status: 'achieved',
+            finalObjective: false,
+            select: false
         },
         {
-            nome: "Goal 3",
-            year: 2017,
-            status: "not-achieved",
-            selected: false
+            id: 3,
+            typo: "acadêmica",
+            name: "ingressar em uma faculdade pública",
+            yearBegin: 2018,
+            yearEnd: null,
+            area: 'Tecnologia',
+            local: 'USP',
+            description: 'Passei na USP',
+            status: 'achieved',
+            finalObjective: false,
+            select: true
         },
         {
-            nome: "Goal 4",
-            year: 2018,
-            status: "not-achieved",
-            selected: false
+            id: 4,
+            typo: "profissional",
+            name: "Conseguir um estágio",
+            yearBegin: 2018,
+            yearEnd: null,
+            area: 'Tecnologia',
+            local: 'Oracle',
+            description: 'Quero conseguir um estágio na oracle',
+            status: 'in-progress',
+            finalObjective: false,
+            select: false
         },
         {
-            nome: "Goal 5",
-            year: 2019,
-            status: "not-achieved",
-            selected: false
+            id: 5,
+            typo: "intercâmbio",
+            name: "Fazer intercâmbio no Canada",
+            yearBegin: 2020,
+            yearEnd: null,
+            area: 'Língua estrangeira',
+            local: 'Canadaa',
+            description: 'Fazer intercâmbio no Canada',
+            status: 'not-achieved',
+            finalObjective: false,
+            select: false
         },
         {
-            nome: "Goal 6",
-            year: 2020,
-            status: "not-achieved",
-            selected: false
-        },
-        {
-            nome: "Goal 7",
-            year: 2021,
-            status: "not-achieved",
-            selected: false
-        },
-        {
-            nome: "Goal 8",
-            year: 2022,
-            status: "not-achieved",
-            selected: false
-        },
-        {
-            nome: "Goal 9",
-            year: 2023,
-            status: "not-achieved",
-            selected: false
-        },
-        {
-            nome: "Goal 10",
-            year: 2024,
-            status: "final-goal",
-            selected: false
+            id: 6,
+            typo: "profissional",
+            name: "Ser PO",
+            yearBegin: 2026,
+            area: 'Tenologia',
+            local: 'Oracle',
+            description: 'Quero ser PO da oracle',
+            status: 'not-achieved',
+            finalObjective: true,
+            select: false
         }
     ]
 

@@ -80,7 +80,7 @@
 
 .EditorMapaCarreira .montaMapa .header{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 5px 15px;
 }
 

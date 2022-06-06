@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'SF PRO Display';
-    src: url('fonts/SF-Pro-Display-Regular.otf') format('.otf');
+    src: url('fonts/SF-Pro-Display-Regular.woff');
 }
 
 * {
@@ -13,7 +13,7 @@
     padding: 0;
     top: 0;
     left: 0;
-    font-family: 'SF PRO Display', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {

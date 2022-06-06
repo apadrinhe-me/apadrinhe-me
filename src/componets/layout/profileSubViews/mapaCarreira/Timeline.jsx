@@ -37,12 +37,18 @@ const Timeline = props => {
                 <div className="timeline-container my-scrollbar">
                     <div className="education-icons">
                         {props.goals.map((goal, key) => {
-                            if (goal.status === "achieved"){
+                            if(goal.finalObjective) {
+                                return(
+                                    <div className="timeline-icon final-goal" key={key}>
+                                        <i className="bi bi-star-fill"></i>
+                                    </div>
+                                );
+                            } else if (goal.status === "achieved"){
                                 return (
                                     <div className="timeline-icon achieved" key={key}>
                                         <img src={school_fill} alt="ícone de chapéu da beca" className="div-icon"/>
                                         <div className="div-year">
-                                            <span>{goal.year}</span>
+                                            <span>{goal.yearBegin}</span>
                                         </div>
                                     </div>
                                 );
@@ -51,7 +57,7 @@ const Timeline = props => {
                                     <div className="timeline-icon in-progress" key={key}>
                                         <img src={school_colored} alt="ícone de chapéu da beca" className="div-icon"/>
                                         <div className="div-year">
-                                            <span>{goal.year}</span>
+                                            <span>{goal.yearBegin}</span>
                                         </div>
                                     </div>
                                 );
@@ -60,14 +66,8 @@ const Timeline = props => {
                                     <div className="timeline-icon achieved" key={key}>
                                         <img src={school_fill} alt="ícone de chapéu da beca" className="div-icon"/>
                                         <div className="div-year">
-                                            <span>{goal.year}</span>
+                                            <span>{goal.yearBegin}</span>
                                         </div>
-                                    </div>
-                                );
-                            } else {
-                                return(
-                                    <div className="timeline-icon final-goal" key={key}>
-                                        <i className="bi bi-star-fill"></i>
                                     </div>
                                 );
                             }
@@ -76,7 +76,13 @@ const Timeline = props => {
                     <div className="timeline">
 
                         {props.goals.map((goal, key) => {
-                            if (goal.status === "achieved"){
+                            if(goal.finalObjective) {
+                                return(
+                                    <div className={goal.selected ? "timeline-goal final-goal selected" : "timeline-goal final-goal"} key={key} id={"timeline-goal"+key} onClick={() => changeCurrentGoal(key)}>
+                                        <span>{goal.yearBegin}</span>
+                                    </div>
+                                );
+                            } else if (goal.status === "achieved"){
                                 return (
                                     <div className={goal.selected ? "timeline-goal achieved selected" : "timeline-goal achieved"} key={key} id={"timeline-goal"+key} onClick={() => changeCurrentGoal(key)}>
                                         <i className="bi bi-check-lg"></i>
@@ -94,12 +100,6 @@ const Timeline = props => {
                                         <i className="bi bi-star-fill"></i>
                                     </div>
                                 );
-                            } else {
-                                return(
-                                    <div className={goal.selected ? "timeline-goal final-goal selected" : "timeline-goal final-goal"} key={key} id={"timeline-goal"+key} onClick={() => changeCurrentGoal(key)}>
-                                        <span>{goal.year}</span>
-                                    </div>
-                                );
                             }
                         })}
                     </div>
@@ -112,15 +112,16 @@ const Timeline = props => {
             </div>
             <div className="goal-info">
                 <div className="current-goal-title">
-                    <h1>{props.goals[currentGoal].nome}</h1>
+                    <h1>{props.goals[currentGoal].name}</h1>
                     <span>{props.goals[currentGoal].status === "achieved" ? "Já concluído" : props.goals[currentGoal].status === "in-progress" ? "Em andamento" : "Ainda não iniciado"}</span>
                 </div>
 
                 <div className="current-goal-details">
-                    <div> <strong>Instituição:</strong> <span>FIAP</span> </div>
-                    <div> <strong>Vestibular:</strong> <span>FIAP</span> </div>
-                    <div> <strong>Matrícula:</strong> <span>FIAP</span> </div>
-                    <div className="mt-10"> <strong>Detalhes:</strong> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem dolores eaque esse expedita in maiores necessitatibus neque quam quis sunt tempore, voluptate voluptatem! Aspernatur autem expedita hic magni voluptatum.</span> </div>
+                    <div> <strong>Instituição/empresa/plataforma:</strong> <span>{props.goals[currentGoal].local}</span> </div>
+                    <div> <strong>Data de início:</strong> <span>{props.goals[currentGoal].yearBegin}</span> </div>
+                    <div> <strong>Data de fim:</strong> <span>{props.goals[currentGoal].yearBegin}</span> </div>
+                    <div> <strong>Área de conhecimento:</strong> <span>{props.goals[currentGoal].area}</span> </div>
+                    <div> <strong>Dexcrição:</strong> <span>{props.goals[currentGoal].description}</span> </div>
                 </div>
             </div>
         </div>
