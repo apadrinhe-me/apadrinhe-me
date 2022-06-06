@@ -1,6 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../media/logo/logo.svg"
+import React, {useRef} from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Logo from "../../media/logo/logo.svg";
+import ProfPicture from "../../componets/layout/profPicture/ProfPicture";
 import "./Menu.css";
 
 import HomeIconFill from "../../media/icons/item_home_icon_fill.svg";
@@ -15,14 +16,46 @@ import ChatIcon from "../../media/icons/item_chat_icon_fill.svg";
 import NotificationsIcon from "../../media/icons/item_alert_icon_fill.svg";
 import MenuIcon from "../../media/icons/item_menu_icon.svg";
 
+//import biblioteca MUI
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+
+const speedDialOptions = [
+    { icon: <img className="btn-icon" src={ChatIcon} alt="ícone de chat" style={{height: 16}} />, name: 'Chat' },
+    { icon: <img className="btn-icon" src={NotificationsIcon} alt="ícone de Notificações" style={{height: 16}} />, name: 'Notificações' },
+    { icon: <ProfPicture src="natan_proa.jpg" scale="100%"/>, name: 'Profile' }
+];
+
 const Menu = props => {
+    const navigate = useNavigate(); //hook para navegar nas páginas do react
+    const searchInput = useRef(); //pegar um elemento no react, como se fosse o getElementById
+    const logo = useRef();
+    const searchDiv = useRef();
+
+    //Função de abrir a caixinha de notificações
+    function openNotification(){
+        alert('abrir notificações');
+    }
+
+    //função para tirar a logo e colocar a barra de pesquisa no lugar
+    function showSearchBar(){
+        logo.current.style.display = "none";
+        searchInput.current.style.display = "block";
+        searchDiv.current.style.flexDirection = "row-reverse";
+    }
+
     return (
         <div className="Menu">
             <nav className="header_main">
                 <div className="container_max">
-                    <div className="container_left">
-                        <img src={Logo} height="25px" />
-                        <input type="text" placeholder="Pesquisar..." className="search_bar" />
+                    <div className="container_left" ref={searchDiv}>
+                        <img src={Logo} height="25px" ref={logo}/>
+                        <div className="search-div">
+                            <IconButton color="primary" onClick={() => showSearchBar()}><i className="bi bi-search"></i></IconButton>
+                            <input type="text" className="searchbar" ref={searchInput} placeholder="Pesquisar..."/>
+                        </div>
                     </div>
 
                     <div className="container_middle">
@@ -36,17 +69,35 @@ const Menu = props => {
 
                     {props.logged ?
                         <div className="container_right_expand">
-                            <div className="dropdown">
-                                <button type="button" className="btn-action btn-menu-expand"><img className="btn-icon menu-expand-ico" src={MenuIcon} alt="ícone de Menu" /></button>
-
-                                <div className="dropdown-content">
-                                    <Link className="user-profile_btn" to="/perfil">
-                                        <img style={{ border: "1px solid white" }} src="https://media-exp1.licdn.com/dms/image/C4E03AQEMFO6yMCYjaQ/profile-displayphoto-shrink_200_200/0/1639491349201?e=1657756800&v=beta&t=V730pyqkTDzfhiWDYOPdleupWPRpv1WFUbm3AQh8fnY" />
-                                    </Link>
-                                    <Link to="/chat"><button type="button" className="btn-action btn-chat"><img className="btn-icon" src={ChatIcon} alt="ícone de chat" /></button></Link>
-                                    <button type="button" className="btn-action btn-notifications"><img className="btn-icon" src={NotificationsIcon} alt="ícone de Notificações" /></button>
-                                </div>
-                            </div>
+                            <Box sx={{position:'absolute', right:"10px", left:"auto", top:8}}>
+                                <SpeedDial
+                                    ariaLabel="Notificações e chat"
+                                    icon={<img className="btn-icon menu-expand-ico" src={MenuIcon} alt="ícone de Menu" />}
+                                    direction="down"
+                                    FabProps={{size: "small"}}
+                                >
+                                    {speedDialOptions.map((action) => (
+                                    <SpeedDialAction
+                                        key={action.name}
+                                        icon={action.icon}
+                                        tooltipTitle={action.name}
+                                        onClick={() => {
+                                            switch(action.name){
+                                                case "Chat":
+                                                    navigate('/chat');
+                                                    break;
+                                                case "Profile":
+                                                    navigate('/perfil');
+                                                    break;
+                                                case "Notificações":
+                                                    openNotification();
+                                                    break;
+                                            }
+                                        }}
+                                    />
+                                    ))}
+                                </SpeedDial>
+                            </Box>
                         </div>
                         :
                         ""

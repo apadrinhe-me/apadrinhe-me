@@ -39,22 +39,45 @@
 }
 
 .Menu .container_left {
-    width: 360px;
+    flex-basis: 250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 60px;
     padding: 0px 20px;
     background-color: transparent;
+    gap: 10px;
+}
+
+.Menu .search-div{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.Menu .searchbar{
+    border: none;
+    background: #4B4B4B;
+    border-radius: 16px;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    display: none;
+    transition: 1s;
+}
+
+.Menu .searchbar:focus{
+    outline: none;
 }
 
 .Menu .container_right,
 .Menu .container_right_expand {
-    width: 360px;
+    flex-basis: 100px;
     display: flex;
     gap: 15px;
     align-items: center !important;
-    justify-content: center;
+    justify-content: center !important;
     height: 60px;
     padding: 0px 20px;
     background-color: transparent;
@@ -127,7 +150,7 @@
 .Menu .nav li a {
     text-decoration: none;
     color: white;
-    width: 150px;
+    width: 11vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,7 +262,7 @@
 
 /*Dropdown menu*/
 .Menu .menu-expand-ico {
-    height: 20px;
+    height: 16px;
 }
 
 .Menu .dropdown {
@@ -261,45 +284,28 @@
 
 /* Estilo barra de pesquisa */
 
-.Menu .search_bar {
-    border: 0;
-    outline: 0;
-    width: 100%;
-    height: 40px;
-    padding: 5px 10px;
-    margin-left: 20px;
-    border-radius: 15px;
-    color: #ffffff;
-    background-color: #252530;
-    font-size: 16px;
-}
-
 .Menu ::placeholder {
     color: #9da1ad;
     opacity: 1;
 }
 
-@media (max-width: 1399.98px) {
+@media (max-width: 865px){
     .Menu .nav li a {
-        width: 140px;
+        width: 100px;
+    }
+
+    .container_left img{
+        width: 23vh;
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 650px){
     .Menu .nav li a {
-        width: 130px;
+        width: 60px;
     }
 }
 
 @media (max-width: 991.98px) {
-    .Menu .search_bar {
-        display: none;
-    }
-
-    .Menu .nav li a {
-        width: 15vw;
-    }
-
     .Menu .container_right.logged {
         display: none;
     }
@@ -330,9 +336,5 @@
     .Menu .user-profile_btn,
     .Menu .login_control {
         display: none;
-    }
-
-    .Menu .search_bar {
-        display: block;
     }
 }
