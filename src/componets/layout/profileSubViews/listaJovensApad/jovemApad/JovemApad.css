@@ -1,0 +1,27 @@
+.JovemApad{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    background: #191919;
+    padding: 15px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.JovemApad .info-perfil{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+}
+
+.JovemApad .descricao-apad{
+    flex: 3;
+}
+
+.JovemApad .redirect{
+    flex: 1;
+}

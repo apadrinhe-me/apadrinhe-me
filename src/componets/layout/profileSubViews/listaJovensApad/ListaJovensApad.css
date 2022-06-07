@@ -1,0 +1,13 @@
+.ListaJovensApad{
+    width: 100%;
+    text-align: center;
+}
+
+.ListaJovensApad .lista{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    align-items: center;
+}

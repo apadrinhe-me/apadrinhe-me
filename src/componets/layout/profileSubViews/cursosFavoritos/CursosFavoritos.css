@@ -10,4 +10,5 @@
     display: flex;
     gap: 15px;
     height: calc(100vh - 300px);
+    justify-content: center;
 }
