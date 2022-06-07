@@ -1,0 +1,29 @@
+.Ajuda{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: #191919;
+    padding: 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.Ajuda .picture-to-picture{
+    flex-basis: 130px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: 24px;
+}
+
+.Ajuda .ajuda-descricao{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.Ajuda .data{
+    font-size: 13px;
+    color: #c5c5c5;
+}
