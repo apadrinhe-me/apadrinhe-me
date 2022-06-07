@@ -8,6 +8,7 @@
     justify-content: center;
     gap: 15px;
     padding: 0 10px;
+    position: relative;
 }
 
 .Home .infinity-post-scroll{
@@ -27,6 +28,8 @@
 .Home .spotlights{
     display: flex;
     flex-basis: 400px;
+    position: sticky;
+    top: 80px;
 }
 
 @media (max-width: 575.98px) {

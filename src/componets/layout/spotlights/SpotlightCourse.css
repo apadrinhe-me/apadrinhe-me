@@ -1,9 +1,10 @@
 .SpotlightCourse{
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
     overflow: hidden;
-    background: #2a324b;
+    background: #03050D;
+    border-radius: 15px;
+    border: 1px solid #292C35;
     flex-basis: 120px;
     color: white;
     text-decoration: none;

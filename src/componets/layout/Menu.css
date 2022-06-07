@@ -12,7 +12,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #03050D;
+    background-color: #03050D90;
+    backdrop-filter: saturate(180%) blur(20px);
     font-size: 16px;
 }
 
