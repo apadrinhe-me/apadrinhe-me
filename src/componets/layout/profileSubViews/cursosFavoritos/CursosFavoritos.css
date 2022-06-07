@@ -1,0 +1,13 @@
+.CursosFavoritos{
+    text-align: center;
+    width: 100%;
+}
+
+.CursosFavoritos .cursos{
+    padding: 15px;
+    flex: 1;
+    text-align: start;
+    display: flex;
+    gap: 15px;
+    height: calc(100vh - 300px);
+}

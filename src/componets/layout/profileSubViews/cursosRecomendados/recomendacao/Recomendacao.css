@@ -1,0 +1,28 @@
+.Recomendacao{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    background: #191919;
+    padding: 15px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.Recomendacao .icone{
+    flex: 1;
+    text-align: center;
+}
+
+.Recomendacao .icone i{
+    font-size: 30px;
+}
+
+.Recomendacao .descricao{
+    flex: 3;
+}
+
+.Recomendacao .redirect{
+    flex: 1;
+}

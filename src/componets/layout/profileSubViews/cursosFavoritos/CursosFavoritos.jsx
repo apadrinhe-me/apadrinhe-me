@@ -1,10 +1,16 @@
 import "./CursosFavoritos.css";
 import React from "react";
+import CardCurso from "../../cardCursos/CardCurso";
 
 const CursosFavoritos = props => {
     return(
         <div className="CursosFavoritos">
-            <h1>Cursos Favoritos</h1>
+            <h2>Cursos Favoritos</h2>
+            <div className="cursos">
+                <CardCurso />
+                <CardCurso />
+                <CardCurso />
+            </div>
         </div>
     );
 }
