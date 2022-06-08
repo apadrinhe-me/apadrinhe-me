@@ -1,10 +1,11 @@
 .Post {
     display: flex;
     flex-direction: column;
-    background: #03050D;
+    background: #191922;
     border-radius: 15px;
-    border: 1px solid #292C35;
+    box-shadow: 0 0 3px black;
 }
+
 
 .Post .post-header {
     display: flex;
@@ -59,7 +60,13 @@
     color: #B0B3B8;
     font-size: 12px;
     padding: 10px 10px;
-    border-bottom: 1px solid #1C1E24;
+}
+
+.Post hr {
+    border: 0;
+    border-bottom: 0.2px solid #62697b90;
+    width: 95%;
+    align-self: center;
 }
 
 .Post .post-engagement .commentsShares {
@@ -97,7 +104,7 @@
 
 .Post .btn:hover {
     cursor: pointer;
-    background: #202025;
+    background: #40405060;
 }
 
 .Post .btn-ico {

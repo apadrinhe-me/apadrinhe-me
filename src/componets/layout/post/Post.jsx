@@ -43,13 +43,14 @@ const Post = props => {
                     <img src={require(`../../../media/post_media/${props.postMedia}`)} alt="Imagem do post" className="post-img" />
                 </div>
                 <div className="post-engagement">
-                    <span className="likes">{props.qntLikes} likes</span> <span className="separatos"></span>
+                    <span className="likes">{props.qntLikes} likes</span>
                     <div className="commentsShares">
-                        <span className="comments">{props.qntComments} comentários</span> <span className="separatos"></span>
+                        <span className="comments">{props.qntComments} comentários</span>
                         <span className="shared">{props.qntShares} compartilhamentos</span>
                     </div>
 
                 </div>
+                <hr></hr>
                 <div className="post-actionBtns">
                     <div className="reactions">
                         <button className="btn btn-like"> <img src={likeIcoStroke} alt="icone de like" className="btn-ico" /></button>

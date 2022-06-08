@@ -1,40 +1,38 @@
-.NewPost{
+.NewPost {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
     flex: 1;
-    background: #282828;
-    border-radius: 8px;
+    background: #191922;
+    border-radius: 15px;
     padding: 10px;
 }
 
-.NewPost .post-input-box{
+.NewPost .post-input-box {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 15px;
 }
 
-.NewPost .post-input{
-    border: 1px solid #969696;
-    background: #282828;
-    border-radius: 8px;
+.NewPost .post-input {
+    border: 1px solid #96969655;
+    background-color: transparent;
+    border-radius: 10px;
     padding: 10px 15px;
     width: 100%;
     resize: none;
     color: #fff;
+    outline: 0;
 }
 
-.NewPost .post-input:focus{
-    outline: none;
+.post-profile-pic {
+    width: 50;
+    height: 50px;
 }
 
-.post-profile-pic{
-    width: 80px;
-    height: 72px;
-}
-
-.post-actions{
+.post-actions {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -42,7 +40,7 @@
     flex-wrap: wrap-reverse;
 }
 
-.btn-actions{
+.btn-actions {
     border: none;
     background: transparent;
     padding: 7px 15px;
@@ -52,7 +50,7 @@
     border-radius: 15px;
 }
 
-.btn-actions:hover{
+.btn-actions:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.295);
 }

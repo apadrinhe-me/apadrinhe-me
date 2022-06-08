@@ -20,7 +20,6 @@
     flex-direction: column;
     align-items: center;
     background: #03050dee;
-    border: 1px solid #1C1E24;
     overflow: hidden;
     backdrop-filter: blur(20px) saturate(180%);
 }
@@ -192,13 +191,11 @@
     align-items: center;
     gap: 10px;
     font-size: 14px;
-    transition: background .2s;
 }
 
 .NavPerfil .btn:hover {
     cursor: pointer;
     background: #2c2c2c;
-    transition: background .2s;
 }
 
 .NavPerfil .btn-ico {
