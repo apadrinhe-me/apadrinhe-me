@@ -6,7 +6,7 @@
 
 @property --myColor2 {
     syntax: '<color>';
-    initial-value:  #7630d9;
+    initial-value: #7630d9;
     inherits: false;
 }
 
@@ -19,7 +19,7 @@
     justify-content: center;
     padding: 10px 20px;
     border: none;
-    border-radius: 16px;
+    border-radius: 10px;
     color: white;
     font-weight: 600;
     font-size: 15px;
@@ -31,6 +31,6 @@
     --myColor2: #d92588;
 }
 
-.ButtonApoiar img{
+.ButtonApoiar img {
     height: 16px;
 }

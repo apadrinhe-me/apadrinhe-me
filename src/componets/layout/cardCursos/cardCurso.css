@@ -3,7 +3,7 @@
     flex-direction: column;
     background: #E5E6EB;
     color: #000;
-    flex-basis: 300px;
+    flex-basis: 292px;
     border-radius: 15px;
 }
 
@@ -76,5 +76,5 @@
     display: flex;
     color: rgba(255, 255, 255, 0.432);
     padding: 10px 10px;
-    
+
 }

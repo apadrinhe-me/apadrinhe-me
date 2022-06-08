@@ -64,10 +64,24 @@ const Cursos = () => {
                                 <i className="bi bi-funnel">Filtrar</i>
                             </div>
                         </span>
-                        <div className="separador2"></div>
 
                     </div>
                     <div className="card my-scrollbar" >
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
+                        <Curso />
                         <Curso />
                         <Curso />
                         <Curso />

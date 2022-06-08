@@ -15,9 +15,9 @@ import ApadPopup from "../apadPopup/ApadPopup";
 
 const Post = props => {
 
-    const[buttonPopup, setButtonPopup] = useState(false);
+    const [buttonPopup, setButtonPopup] = useState(false);
 
-    if (buttonPopup){
+    if (buttonPopup) {
         document.querySelector('body').style.overflowY = 'hidden';
     } else {
         document.querySelector('body').style.overflowY = 'auto';
@@ -44,23 +44,25 @@ const Post = props => {
                 </div>
                 <div className="post-engagement">
                     <span className="likes">{props.qntLikes} likes</span> <span className="separatos"></span>
-                    <div>
+                    <div className="commentsShares">
                         <span className="comments">{props.qntComments} comentários</span> <span className="separatos"></span>
                         <span className="shared">{props.qntShares} compartilhamentos</span>
                     </div>
 
                 </div>
                 <div className="post-actionBtns">
-                    <button className="btn btn-like"> <img src={likeIcoStroke} alt="icone de like" className="btn-ico" /> Curtir</button>
-                    <button className="btn btn-comment"><img src={commentIcoStroke} alt="icone de like" className="btn-ico" /> Comentar</button>
-                    <button className="btn btn-share"><img src={shareIco} alt="icone de like" className="btn-ico" /> Compartilhar</button>
+                    <div className="reactions">
+                        <button className="btn btn-like"> <img src={likeIcoStroke} alt="icone de like" className="btn-ico" /></button>
+                        <button className="btn btn-comment"><img src={commentIcoStroke} alt="icone de like" className="btn-ico" /></button>
+                        <button className="btn btn-share"><img src={shareIco} alt="icone de like" className="btn-ico" /></button>
+                    </div>
                     <ButtonApoiar setButtonPopup={setButtonPopup} />
                 </div>
             </div>
 
             <ApadPopup
                 trigger={buttonPopup}
-                setTrigger={setButtonPopup}/>
+                setTrigger={setButtonPopup} />
         </>
     );
 }

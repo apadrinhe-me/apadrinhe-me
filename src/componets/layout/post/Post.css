@@ -58,38 +58,46 @@
     flex-direction: row;
     color: #B0B3B8;
     font-size: 12px;
-    padding: 15px;
-    gap: 10px;
+    padding: 10px 10px;
     border-bottom: 1px solid #1C1E24;
+}
+
+.Post .post-engagement .commentsShares {
+    display: flex;
+    gap: 10px;
+}
+
+.reactions {
+    display: flex;
+    gap: 15px;
 }
 
 .Post .post-actionBtns {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 15px;
-    padding: 15px;
+    padding: 10px 10px;
     flex-wrap: wrap;
 }
 
 .Post .btn {
     border: none;
-    background: #191919;
+    background-color: transparent;
     color: #969696;
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
     font-size: 14px;
-    transition: background .2s;
 }
 
 .Post .btn:hover {
     cursor: pointer;
-    background: #2c2c2c;
-    transition: background .2s;
+    background: #202025;
 }
 
 .Post .btn-ico {
