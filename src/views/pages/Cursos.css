@@ -114,6 +114,8 @@
     background-color: #03050dbd;
     backdrop-filter: saturate(180%) blur(30px);
     border-bottom: 1px solid #292C35;
+    position: absolute;
+    z-index: 1000;
 }
 
 .cursos-mobile {

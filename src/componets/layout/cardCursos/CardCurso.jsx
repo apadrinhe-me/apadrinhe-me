@@ -1,9 +1,106 @@
 import "./cardCurso.css";
 import React from "react";
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import { red } from '@mui/material/colors';
+
+const ExpandMore = styled((props) => {
+    const { expand, ...other } = props;
+    return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+        duration: theme.transitions.duration.shortest,
+    }),
+}));
 
 const CardCurso = props => {
+    const [expanded, setExpanded] = React.useState(false);
+
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+    };
+
     return (
-        <div className="cardCurso">
+
+        <Card className="border" sx={{ maxWidth: 345, background: "#191922", borderRadius: "15px", boxShadow: "0 0 3px black", color: "white" }} className="cardCourse" >
+            <div className="CardHeader">
+                <div className="containerLeft">
+                    <div className="avatarCard">
+                        <img src={require("../../../media/course_banners/proa_logo.jpg")} height="45px" />
+                    </div>
+                    <div className="titleSubtitleCard">
+                        <h1>Proprofissão</h1>
+                        <span>Instituto PROA</span>
+                    </div>
+                </div>
+                <div className="iconCategoryCard">
+                    <i className="bi bi-laptop"></i>
+                </div>
+            </div>
+            <CardMedia
+                component="img"
+                height="194"
+                image={require("../../../media/course_banners/banner_proa.jpg")}
+                alt="PROPROFISSÃO"
+            />
+            <CardContent sx={{ width: "100%" }}>
+                <div className="listCourseDetails">
+                    <ul>
+                        <li>Duração: 6 meses</li>
+                        <li>Localidade: São Paulo</li>
+                        <li>HTML, CSS e JS</li>
+                        <li>Java Web Developtment</li>
+                        <li>Opa</li>
+                        <li>Opa</li>
+                    </ul>
+                </div>
+
+            </CardContent>
+            <CardActions disableSpacing className="cardActions">
+                <button aria-label="add to favorites">
+                    FAVORITO
+                </button>
+                <button aria-label="share">
+                    SHARE
+                </button>
+                <button className="expandCard"
+                    expand={expanded}
+                    onClick={handleExpandClick}
+                    aria-expanded={expanded}
+                    aria-label="show more">V</button>
+            </CardActions>
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <CardContent className="cardDescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda hic sunt est aliquam perspiciatis consectetur qui dolor, sed tempora doloribus tenetur placeat nam aliquid. Ad expedita accusantium mollitia. Consequatur?
+                </CardContent>
+            </Collapse>
+        </Card>
+
+    );
+}
+
+export default CardCurso;
+
+
+
+
+
+/*
+
+CARD ANTIGO
+
+
+
+  <div className="cardCurso">
             <div className="containerRosa" ></div>
             <div className="containerCardCurso">
 
@@ -41,8 +138,4 @@ const CardCurso = props => {
             </div>
 
         </div>
-
-    );
-}
-
-export default CardCurso;
+*/
