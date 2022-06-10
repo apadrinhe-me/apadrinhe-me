@@ -21,6 +21,7 @@
 }
 
 .Login .voltar {
+    margin-left: 476px;
     color: white;
     text-decoration: none;
 }
@@ -33,7 +34,7 @@
     height: 200px;
 }
 
-.Login  .logo {
+.Login .logo {
     filter: drop-shadow(0 0 15px black);
     width: 140px;
     height: 240px;
@@ -44,12 +45,12 @@
 
 
 
-.Login  .logoescrito {
+.Login .logoescrito {
     width: 120px;
     height: 27px;
 }
 
-.Login  .user_input {
+.Login .user_input {
     padding: 0px 15px;
     color: white;
     outline: 0;
@@ -61,7 +62,7 @@
     height: 30px;
 }
 
-.Login  .password_input {
+.Login .password_input {
     padding: 0px 15px;
     color: white;
     outline: 0;
@@ -74,24 +75,24 @@
     height: 30px;
 }
 
-.Login  .p1 {
+.Login .p1 {
     font-size: 10px;
     color: #D92588;
     width: 300px;
     margin-top: 6px;
-    font-weight: 30;
+
     cursor: pointer;
 }
 
 .Login .p2 {
     margin-top: 7px;
     font-size: 9px;
-    width: 122px;
+    width: 132px;
     display: flex;
     color: white;
 }
 
-.Login  strong {
+.Login strong {
     cursor: pointer;
     display: flex;
     color: #D92588;
