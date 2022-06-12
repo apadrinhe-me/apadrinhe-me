@@ -57,7 +57,7 @@ const NavPerfil = props => {
                             <div className="perfilNomeInteracao ">
 
                                 <div className="perfilFoto">
-                                    <ProfPicture src="natan_proa.jpg" scale={"100%"} />
+                                    <ProfPicture src="valentina.png" scale={"100%"} />
                                 </div>
 
                                 <div className="userName">

@@ -9,17 +9,17 @@ const Spotlights = () => {
             <h3 className="spotlight-title">Perfis em destaque</h3>
             <div className="spotlight-profiles">
                 <SpotlightProfile
-                    pic="natan_proa.jpg"
+                    pic="valentina.png"
                     name="Natan Barbosa"
                     description="Acumulou 43 pontos de atividade!"
                 />
                 <SpotlightProfile
-                    pic="natan_proa.jpg"
+                    pic="valentina.png"
                     name="Natan Barbosa"
                     description="Acumulou 43 pontos de atividade!"
                 />
                 <SpotlightProfile
-                    pic="natan_proa.jpg"
+                    pic="valentina.png"
                     name="Natan Barbosa"
                     description="Acumulou 43 pontos de atividade!"
                 />

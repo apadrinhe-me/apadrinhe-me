@@ -42,6 +42,7 @@
     .Home .spotlights{
         flex-basis: 0;
         margin-bottom: 20px;
+        top: 0;
     }
 
     .Home .new-post{
@@ -54,5 +55,6 @@
         border-radius: 15px;
         flex-basis: 300px;
         overflow: auto;
+        position: relative;
     }
 }

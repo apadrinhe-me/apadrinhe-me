@@ -1,0 +1,25 @@
+.Chat{
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.contatos{
+    flex: 1;
+}
+
+.conversa{
+    flex: 2;
+    background: #323232;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.lista-contatos{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 15px;
+    height: calc(100vh - 125px);
+    overflow-y: auto;
+}

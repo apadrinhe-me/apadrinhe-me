@@ -28,11 +28,11 @@ const Home = () => {
                 <If test={viewport === 'desktop'}>
                     <div className="infinity-post-scroll">
                         <div className="new-post">
-                           <NewPost profPicture="natan_proa.jpg" />
+                           <NewPost profPicture="valentina.png" />
                         </div> 
 
                         <Post 
-                        profPicture="natan_proa.jpg" 
+                        profPicture="valentina.png" 
                         fullname="Natan Barbosa" 
                         aspiration="Aspirante a desenvolvedor fullstack" 
                         postDate="2022-04-19 12:30:25"
@@ -41,8 +41,9 @@ const Home = () => {
                         qntLikes={1000}
                         qntComments={200}
                         qntShares={10}/>
-                         <Post 
-                        profPicture="natan_proa.jpg" 
+
+                        <Post 
+                        profPicture="valentina.png" 
                         fullname="Natan Barbosa" 
                         aspiration="Aspirante a desenvolvedor fullstack" 
                         postDate="2022-04-19 12:30:25"
@@ -51,8 +52,9 @@ const Home = () => {
                         qntLikes={1000}
                         qntComments={200}
                         qntShares={10}/>
-                         <Post 
-                        profPicture="natan_proa.jpg" 
+
+                        <Post 
+                        profPicture="valentina.png" 
                         fullname="Natan Barbosa" 
                         aspiration="Aspirante a desenvolvedor fullstack" 
                         postDate="2022-04-19 12:30:25"
@@ -61,18 +63,9 @@ const Home = () => {
                         qntLikes={1000}
                         qntComments={200}
                         qntShares={10}/>
-                         <Post 
-                        profPicture="natan_proa.jpg" 
-                        fullname="Natan Barbosa" 
-                        aspiration="Aspirante a desenvolvedor fullstack" 
-                        postDate="2022-04-19 12:30:25"
-                        postDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis odio ducimus numquam quas fuga autem at amet cumque sint modi impedit esse asperiores veritatis, ullam itaque reiciendis quaerat perferendis cum."
-                        postMedia="mao_casa.jpg" 
-                        qntLikes={1000}
-                        qntComments={200}
-                        qntShares={10}/>
-                         <Post 
-                        profPicture="natan_proa.jpg" 
+
+                        <Post 
+                        profPicture="valentina.png" 
                         fullname="Natan Barbosa" 
                         aspiration="Aspirante a desenvolvedor fullstack" 
                         postDate="2022-04-19 12:30:25"
@@ -90,7 +83,7 @@ const Home = () => {
 
                 <If test={viewport === 'mobile'}>
                     <div className="new-post">
-                        <NewPost profPicture="natan_proa.jpg" />
+                        <NewPost profPicture="valentina.png" />
                     </div>
 
                     <h2>Destaques</h2>
@@ -101,7 +94,7 @@ const Home = () => {
                     <h2>Postagens</h2>
                     <div className="infinity-post-scroll">
                         <Post
-                            profPicture="natan_proa.jpg"
+                            profPicture="valentina.png"
                             fullname="Natan Barbosa"
                             aspiration="Aspirante a desenvolvedor fullstack"
                             postDate="2022-04-19 12:30:25"
@@ -110,7 +103,7 @@ const Home = () => {
                             qntLikes={1000}
                             qntComments={200}
                             qntShares={10}
-                            />
+                        />
                     </div>
                 </If>
             </div>

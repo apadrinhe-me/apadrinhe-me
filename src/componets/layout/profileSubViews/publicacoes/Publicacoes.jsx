@@ -15,7 +15,7 @@ function Publicacoes(props) {
 
             <div className="profile-posts">
                 <Post
-                    profPicture="natan_proa.jpg"
+                    profPicture="valentina.png"
                     fullname="Natan Barbosa"
                     aspiration="Aspirante a desenvolvedor fullstack"
                     postDate="2022-04-19 12:30:25"

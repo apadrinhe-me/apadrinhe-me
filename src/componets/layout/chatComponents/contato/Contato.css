@@ -1,0 +1,38 @@
+.Contato{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    background: linear-gradient(45deg, #232323, #0A0A0A);
+    padding: 2px;
+    border-radius: 35px;
+}
+
+.Contato:hover{
+    cursor: pointer;
+    background: #232323;
+}
+
+.contato-picture{
+    flex: 1;
+}
+
+.contato-info{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px;
+}
+
+.contato-info span{
+    color: #c8c8c8;
+}
+
+.contato-last-msg{
+    flex: 1;
+    margin-left: auto;
+    padding: 6px;
+    font-size: 12px;
+    color: #c8c8c8;
+}

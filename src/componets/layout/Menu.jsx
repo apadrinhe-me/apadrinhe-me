@@ -25,7 +25,7 @@ import IconButton from "@mui/material/IconButton";
 const speedDialOptions = [
     { icon: <img className="btn-icon" src={ChatIcon} alt="ícone de chat" style={{ height: 16 }} />, name: 'Chat' },
     { icon: <img className="btn-icon" src={NotificationsIcon} alt="ícone de Notificações" style={{ height: 16 }} />, name: 'Notificações' },
-    { icon: <ProfPicture src="natan_proa.jpg" scale="100%" />, name: 'Profile' }
+    { icon: <ProfPicture src="valentina.png" scale="100%" />, name: 'Profile' }
 ];
 
 const Menu = props => {
@@ -118,7 +118,7 @@ const Menu = props => {
                         <div className="container_right logged">
                             <Link className="user-profile_btn" to="/perfil">
                                 <div>
-                                    <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEMFO6yMCYjaQ/profile-displayphoto-shrink_200_200/0/1639491349201?e=1657756800&v=beta&t=V730pyqkTDzfhiWDYOPdleupWPRpv1WFUbm3AQh8fnY" />
+                                    <img src={require("../../media/profile_pictures/valentina.png")} />
                                     <p>Valentina</p>
                                 </div>
                             </Link>
