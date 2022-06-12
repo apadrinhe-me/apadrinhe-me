@@ -8,12 +8,12 @@
     gap: 15px;
 }
 
-.SobrePerfil .sobre-title{
+.SobrePerfil .sobre-title {
     border-bottom: 1px solid #fff;
     padding-bottom: 15px;
 }
 
-.SobrePerfil .sobre-nivel{
+.SobrePerfil .sobre-nivel {
     display: flex;
     flex-direction: row;
     padding: 10px;
@@ -22,56 +22,56 @@
     align-items: center;
 }
 
-.emblem-img{
+.emblem-img {
     height: 50px;
 }
 
-.SobrePerfil .sobre-nivel .emblema{
+.SobrePerfil .sobre-nivel .emblema {
     flex-basis: 80px;
     align-items: center;
     justify-content: center;
 }
 
-.SobrePerfil .sobre-nivel .nivel-info{
+.SobrePerfil .sobre-nivel .nivel-info {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.SobrePerfil .sobre-nivel .nivel-info strong{
+.SobrePerfil .sobre-nivel .nivel-info strong {
     font-size: 15px;
 }
 
-.SobrePerfil .sobre-nivel .nivel-info .xp-bar{
+.SobrePerfil .sobre-nivel .nivel-info .xp-bar {
     display: flex;
 }
 
-.SobrePerfil .bar{
+.SobrePerfil .bar {
     flex: 1;
 }
 
-.SobrePerfil .bar-porcent{
+.SobrePerfil .bar-porcent {
     flex-basis: 50px;
     text-align: center;
     font-size: 13px;
     font-weight: 600;
 }
 
-.SobrePerfil .xp-info{
+.SobrePerfil .xp-info {
     display: flex;
     justify-content: space-between;
     font-size: 12px;
 }
 
-.my-row{
+.my-row {
     display: flex;
     flex-direction: row;
     gap: 10px;
     flex-wrap: wrap;
 }
 
-.engajamento{
+.engajamento {
     display: flex;
     flex-basis: 150px;
     flex-direction: column;
@@ -80,20 +80,20 @@
     border-radius: 8px;
     gap: 7px;
     justify-content: center;
-    font-size: 12px;
+    font-size: 13px;
 }
 
-.my-column{
+.my-column {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.reputacao{
+.reputacao {
     font-size: 16px;
 }
 
-.reputacao-estrelas{
+.reputacao-estrelas {
     display: flex;
     flex-direction: row;
     background: #101017;
@@ -101,7 +101,7 @@
     overflow: hidden;
 }
 
-.verified-logo{
+.verified-logo {
     flex: 1;
     background: linear-gradient(45deg, #D92588, #7630D9);
     padding: 10px;
@@ -111,7 +111,7 @@
     font-size: 20px;
 }
 
-.stars-icon{
+.stars-icon {
     flex: 3;
     display: flex;
     align-items: center;
@@ -119,52 +119,77 @@
     padding: 5px;
 }
 
-.social-media{
+.social-media {
     display: flex;
-    gap: 6px;
+    gap: 5px;
     justify-content: center;
 }
 
-.social-media button{
-    background: none;
+.social-media button {
+    background: #101017;
     border: none;
-    padding: 5px;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-media button i{
-    font-size: 35px;
+.social-media button i {
+    font-size: 27px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.social-media button i.bi-linkedin{
-    color: #0A68C9;
+.social-media button i.bi-linkedin {
+    color: #ffffff;
 }
 
-.social-media button i.bi-instagram{
-    color: #A40AF0;
+.social-media .linkedinButton {
+    background: #0077b5;
 }
 
-.social-media button i.bi-youtube{
-    color: #FF1017;
+.social-media button i.bi-instagram {
+    color: #ffffff;
 }
 
-.social-media button i.bi-spotify{
-    color: #04D647;
+.social-media .instagramButton {
+    background-image: linear-gradient(to bottom right, #8134af, #dd2a7b, #f58529);
 }
 
-.social-media button:hover{
+.social-media button i.bi-youtube {
+    color: #ffffff;
+}
+
+.social-media .youtubeButton {
+    background: #ff0000;
+}
+
+.social-media button i.bi-spotify {
+    color: #ffffff;
+}
+
+.social-media .spotifyButton {
+    background: #1ed761;
+}
+
+.social-media button:hover {
     cursor: pointer;
 }
 
-.social-media button:hover i{
+.social-media button:hover i {
     color: #fff;
 }
 
-.engajamento-info{
+.engajamento-info {
     display: flex;
     gap: 5px;
 }
 
-.profile-more-info{
+.profile-more-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -172,7 +197,7 @@
     border-radius: 8px;
 }
 
-.profile-more-name{
+.profile-more-name {
     display: flex;
     flex-direction: row;
     padding: 10px;
@@ -180,36 +205,36 @@
     border-bottom: 1px solid #fff;
 }
 
-.nickname{
+.nickname {
     font-size: 14px;
 }
 
-.my-ml-auto{
+.my-ml-auto {
     margin-left: auto;
 }
 
-.btn-format{
+.btn-format {
     background: none;
     border: none;
 }
 
-.profile-more-name .btn-format i{
+.profile-more-name .btn-format i {
     font-size: 30px;
     color: #adadad;
 }
 
-.profile-more-name .btn-format:hover{
+.profile-more-name .btn-format:hover {
     cursor: pointer;
 }
 
-.profile-more-name .btn-format:hover i{
+.profile-more-name .btn-format:hover i {
     color: #fff;
 }
 
-.aspiration{
+.aspiration {
     padding: 10px;
 }
 
-.profile-bio{
+.profile-bio {
     padding: 10px;
 }

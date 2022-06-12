@@ -112,6 +112,7 @@
     height: 70px;
     justify-content: center;
     background-color: #03050dbd;
+    -webkit-backdrop-filter: saturate(180%) blur(30px);
     backdrop-filter: saturate(180%) blur(30px);
     border-bottom: 1px solid #292C35;
     position: absolute;
