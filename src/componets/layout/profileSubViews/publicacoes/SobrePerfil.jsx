@@ -6,9 +6,9 @@ import { styled } from '@mui/material/styles';
 
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconFilled': {
-      color: '#D92588',
+        color: '#D92588',
     }
-  });
+});
 
 const SobrePerfil = props => {
     return (
@@ -18,7 +18,7 @@ const SobrePerfil = props => {
             </div>
             <div className="sobre-nivel">
                 <div className="emblema">
-                    a
+                    <img className="emblem-img" src={require("../../../../media/tags_rank/tag_aprendiz.svg").default}/>
                 </div>
                 <div className="nivel-info">
                     <strong>Veterano II</strong>
@@ -26,7 +26,7 @@ const SobrePerfil = props => {
                         <div className="bar">
                             <ProgressBar />
                         </div>
-                        
+
                         <div className="bar-porcent">
                             <span>50%</span>
                         </div>
@@ -39,9 +39,9 @@ const SobrePerfil = props => {
             </div>
             <div className="my-row">
                 <div className="engajamento">
-                    <div className="engajamento-info"><strong>+3,5k</strong> <span>seguidores</span></div>
-                    <div className="engajamento-info"><strong>+50</strong> <span>postagens</span></div>
-                    <div className="engajamento-info"><strong>+45</strong> <span>recomendações</span></div>
+                    <div><strong>+3,5k</strong> <span>seguidores</span></div>
+                    <div><strong>+50</strong> <span>postagens</span></div>
+                    <div><strong>+45</strong> <span>recomendações</span></div>
                 </div>
                 <div className="my-column">
                     <div className="reputacao">
@@ -51,7 +51,7 @@ const SobrePerfil = props => {
                                 <i className="bi bi-patch-check-fill"></i>
                             </div>
                             <div className="stars-icon">
-                                <Rating name="read-only" value={4} readOnly/>
+                                <Rating name="read-only" value={4} readOnly />
                             </div>
                         </div>
                     </div>
@@ -64,13 +64,25 @@ const SobrePerfil = props => {
                 </div>
             </div>
             <div className="profile-more-info">
-                    <div className="profile-more-name">
-                        <div>
-                            <h3>Natan Barbosa</h3>
-                            <span className="nickname">@natandevstack</span>
-                        </div>
+                <div className="profile-more-name">
+                    <div>
+                        <h3>Natan Barbosa</h3>
+                        <span className="nickname">@natandevstack</span>
+                    </div>
+                    <div className="my-ml-auto">
+                        <button className="btn-format"><i class="bi bi-box-arrow-up"></i></button>
                     </div>
                 </div>
+
+                <div className="aspiration">
+                    Quer se tornar um Desenvolvedor Fullstack
+                </div>
+
+                <div className="profile-bio">
+                    <h3>Biografia</h3>
+                    <p>Sou um jovem de 16 anos de idade. Meu sonho é trabalhar na área de tecnologia, para isso preciso de preparação... Estou na plataforma em busca de apoio para que eu possa me desenvolver de forma eficaz na área da programação, e assim me candidatar para os primeiros processos seletivos da minha história.</p>
+                </div>
+            </div>
         </div>
 
     )
