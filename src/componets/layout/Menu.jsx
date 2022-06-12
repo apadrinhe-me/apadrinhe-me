@@ -33,6 +33,7 @@ const Menu = props => {
     const searchInput = useRef(); //pegar um elemento no react, como se fosse o getElementById
     const logo = useRef();
     const searchDiv = useRef();
+    const searchClose = useRef();
 
     //Função de abrir a caixinha de notificações
     function openNotification() {
@@ -44,6 +45,14 @@ const Menu = props => {
         logo.current.style.display = "none";
         searchInput.current.style.display = "block";
         searchDiv.current.style.flexDirection = "row-reverse";
+        searchClose.current.style.display = "block";
+    }
+
+    function closeSearchBar() {
+        logo.current.style.display = "block";
+        searchInput.current.style.display = "none";
+        searchDiv.current.style.flexDirection = "row";
+        searchClose.current.style.display = "none";
     }
 
     return (
@@ -55,6 +64,7 @@ const Menu = props => {
                         <div className="search-div">
                             <IconButton color="primary" onClick={() => showSearchBar()}><i className="bi bi-search"></i></IconButton>
                             <input type="text" className="searchbar" ref={searchInput} placeholder="Pesquisar..." />
+                            <button onClick={() => closeSearchBar()} className="close-search-btn" ref={searchClose}><i className="bi bi-x-lg"></i></button>
                         </div>
                     </div>
 
