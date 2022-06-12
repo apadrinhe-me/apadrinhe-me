@@ -18,7 +18,7 @@ const SobrePerfil = props => {
             </div>
             <div className="sobre-nivel">
                 <div className="emblema">
-                    <img className="emblem-img" src={require("../../../../media/tags_rank/tag_aprendiz.svg").default}/>
+                    <img className="emblem-img" src={require("../../../../media/tags_rank/tag_aprendiz.svg").default} />
                 </div>
                 <div className="nivel-info">
                     <strong>Veterano II</strong>
@@ -56,10 +56,10 @@ const SobrePerfil = props => {
                         </div>
                     </div>
                     <div className="social-media">
-                        <button><i class="bi bi-linkedin"></i></button>
-                        <button><i class="bi bi-instagram"></i></button>
-                        <button><i class="bi bi-youtube"></i></button>
-                        <button><i class="bi bi-spotify"></i></button>
+                        <button className="linkedinButton" ><i class="bi bi-linkedin"></i></button>
+                        <button className="instagramButton" ><i class="bi bi-instagram"></i></button>
+                        <button className="youtubeButton" ><i class="bi bi-youtube"></i></button>
+                        <button className="spotifyButton" ><i class="bi bi-spotify"></i></button>
                     </div>
                 </div>
             </div>

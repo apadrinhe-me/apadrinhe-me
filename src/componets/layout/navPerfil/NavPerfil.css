@@ -19,9 +19,9 @@
     flex: 1;
     flex-direction: column;
     align-items: center;
-    background: #03050dee;
+    background: #03050dcd;
     overflow: hidden;
-    backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(30px) saturate(180%);
 }
 
 .NavPerfil .perfilCapa {
