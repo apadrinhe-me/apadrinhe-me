@@ -8,8 +8,28 @@ import { Link } from "react-router-dom";
 import Cover from "./Valentina_Profile/cover_space.png"
 import ButtonApoiar from "../buttonApoiar/ButtonApoiar";
 import ApadPopup from "../apadPopup/ApadPopup";
+import Backdrop from '@mui/material/Backdrop';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import Fade from '@mui/material/Fade';
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 500,
+    bgcolor: 'background.paper',
+    border: 'none',
+    boxShadow: 24,
+    p: 4,
+  };
 
 const NavPerfil = props => {
+    const [openEditProf, setOpenEditProf] = useState(false);
+    const handleOpen = () => setOpenEditProf(true);
+    const handleClose = () => setOpenEditProf(false);
+
     let url = window.location.href
     url = url.split("/")
 
@@ -42,7 +62,7 @@ const NavPerfil = props => {
 
                                 <div className="userName">
                                     <h2>Valentina</h2>
-                                    <button className="btn-editar-perfil">
+                                    <button className="btn-editar-perfil" onClick={handleOpen}>
                                         <i className="bi bi-pencil-square"></i>
                                         Editar perfil
                                     </button>
@@ -79,7 +99,6 @@ const NavPerfil = props => {
                                             </>
                                             :
                                             <>
-                                                <li><Link to="/perfil/nivelpadrinho"><button>Seu nível</button></Link>{profileTab === "nivelpadrinho" ? <div className="active"></div> : ""}</li>
                                                 <li><Link to="/perfil/publicacoes"><button>Publicações</button></Link>{profileTab === "publicacoes" ? <div className="active"></div> : ""}</li>
                                                 <li><Link to="/perfil/historico"><button>Histórico de ajudas</button></Link>{profileTab === "historico" ? <div className="active"></div> : ""}</li>
                                                 <li><Link to="/perfil/apadrinhamentos"><button>Jovens Apadrinhados</button></Link>{profileTab === "apadrinhamentos" ? <div className="active"></div> : ""}</li>
@@ -95,6 +114,30 @@ const NavPerfil = props => {
             <ApadPopup
             trigger={buttonPopup}
             setTrigger={setButtonPopup}/>
+
+            <Modal
+                aria-labelledby="transition-modal-title"
+                aria-describedby="transition-modal-description"
+                open={openEditProf}
+                onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                timeout: 500,
+                }}
+            >
+                <Fade in={openEditProf}>
+                    <Box sx={style}>
+                        <ul>
+                            <li>Alterar nome</li>
+                            <li>Alterar foto</li>
+                            <li>Alterar nickname</li>
+                            <li>Aspiração</li>
+                            <li>Alterar Bio</li>
+                        </ul>
+                    </Box>
+                </Fade>
+            </Modal>
         </>
     );
 }

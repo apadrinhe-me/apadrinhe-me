@@ -1,27 +1,215 @@
-.sobrePerfil {
+.SobrePerfil {
     flex: 1;
     background: #191922;
     border-radius: 15px;
     padding: 25px 20px;
-}
-
-.sobrePerfil div:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-.sobrePerfil h2 {
-    line-height: 40px;
-}
-
-.iconeCurriculo {
-    max-width: 40px;
-    margin-right: 10px;
-}
-
-.sobrePerfil li {
-    margin: 12px 0;
-}
-
-.sobrePerfil ul li {
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.SobrePerfil .sobre-title{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 15px;
+}
+
+.SobrePerfil .sobre-nivel{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background: #101017;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.emblem-img{
+    height: 50px;
+}
+
+.SobrePerfil .sobre-nivel .emblema{
+    flex-basis: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.SobrePerfil .sobre-nivel .nivel-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.SobrePerfil .sobre-nivel .nivel-info strong{
+    font-size: 15px;
+}
+
+.SobrePerfil .sobre-nivel .nivel-info .xp-bar{
+    display: flex;
+}
+
+.SobrePerfil .bar{
+    flex: 1;
+}
+
+.SobrePerfil .bar-porcent{
+    flex-basis: 50px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.SobrePerfil .xp-info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.my-row{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.engajamento{
+    display: flex;
+    flex-basis: 150px;
+    flex-direction: column;
+    background: #101017;
+    padding: 10px;
+    border-radius: 8px;
+    gap: 7px;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.my-column{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reputacao{
+    font-size: 16px;
+}
+
+.reputacao-estrelas{
+    display: flex;
+    flex-direction: row;
+    background: #101017;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.verified-logo{
+    flex: 1;
+    background: linear-gradient(45deg, #D92588, #7630D9);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.stars-icon{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.social-media{
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.social-media button{
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.social-media button i{
+    font-size: 35px;
+}
+
+.social-media button i.bi-linkedin{
+    color: #0A68C9;
+}
+
+.social-media button i.bi-instagram{
+    color: #A40AF0;
+}
+
+.social-media button i.bi-youtube{
+    color: #FF1017;
+}
+
+.social-media button i.bi-spotify{
+    color: #04D647;
+}
+
+.social-media button:hover{
+    cursor: pointer;
+}
+
+.social-media button:hover i{
+    color: #fff;
+}
+
+.engajamento-info{
+    display: flex;
+    gap: 5px;
+}
+
+.profile-more-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #101017;
+    border-radius: 8px;
+}
+
+.profile-more-name{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+.nickname{
+    font-size: 14px;
+}
+
+.my-ml-auto{
+    margin-left: auto;
+}
+
+.btn-format{
+    background: none;
+    border: none;
+}
+
+.profile-more-name .btn-format i{
+    font-size: 30px;
+    color: #adadad;
+}
+
+.profile-more-name .btn-format:hover{
+    cursor: pointer;
+}
+
+.profile-more-name .btn-format:hover i{
+    color: #fff;
+}
+
+.aspiration{
+    padding: 10px;
+}
+
+.profile-bio{
+    padding: 10px;
 }

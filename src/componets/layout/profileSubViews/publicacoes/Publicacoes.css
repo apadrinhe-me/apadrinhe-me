@@ -4,6 +4,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 10px;
 }
 
 .Publicacoes .profile-about {
@@ -11,5 +12,7 @@
 }
 
 .profile-posts {
-    flex-basis: 550px;
+    flex: 1;
+    min-width: 400px;
+    max-width: 600px;
 }

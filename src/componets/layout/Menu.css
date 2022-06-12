@@ -290,6 +290,19 @@
     opacity: 1;
 }
 
+.Menu .close-search-btn{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+    display: none;
+}
+
+.Menu .close-search-btn:hover{
+    cursor: pointer;
+    color: #b9b9b9;
+}
+
 @media (max-width: 865px) {
     .Menu .nav li a {
         width: 100px;
