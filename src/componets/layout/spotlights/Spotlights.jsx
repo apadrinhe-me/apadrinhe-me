@@ -4,7 +4,7 @@ import SpotlightProfile from "./SpotlightProfile";
 import SpotlightCourse from "./SpotlightCourse";
 
 const Spotlights = () => {
-    return(
+    return (
         <div className="Spotlights">
             <h3 className="spotlight-title">Perfis em destaque</h3>
             <div className="spotlight-profiles">
@@ -28,19 +28,19 @@ const Spotlights = () => {
             <h3 className="spotlight-title">Cursos em destaque</h3>
             <div className="spotlight-courses">
                 <SpotlightCourse
-                banner="html-course.jpg"
-                nome="Curso de desenvolvimento web"
-                distribuidora="Warner Bros"
+                    banner="https://birchtree.nyc3.digitaloceanspaces.com/images/wwdc18/dev-dots.png"
+                    nome="Desenvolvimento Web"
+                    distribuidora="PROA"
                 />
                 <SpotlightCourse
-                banner="html-course.jpg"
-                nome="Curso de desenvolvimento web"
-                distribuidora="Warner Bros"
+                    banner="https://birchtree.nyc3.digitaloceanspaces.com/images/wwdc18/dev-dots.png"
+                    nome="Desenvolvimento Web"
+                    distribuidora="PROA"
                 />
                 <SpotlightCourse
-                banner="html-course.jpg"
-                nome="Curso de desenvolvimento web"
-                distribuidora="Warner Bros"
+                    banner="https://birchtree.nyc3.digitaloceanspaces.com/images/wwdc18/dev-dots.png"
+                    nome="Desenvolvimento Web"
+                    distribuidora="PROA"
                 />
             </div>
 

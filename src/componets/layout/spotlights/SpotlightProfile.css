@@ -1,9 +1,9 @@
 .SpotlightProfile {
     display: flex;
     flex-direction: row;
-    background: #191922;
+    background: #667bf210;
     border-radius: 15px;
-    box-shadow: 0 0 3px black;
+    box-shadow: 0 0 5px #667bf250;
     padding: 10px;
     gap: 17px;
     align-items: center;

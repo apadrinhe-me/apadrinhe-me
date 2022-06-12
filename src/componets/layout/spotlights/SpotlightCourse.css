@@ -1,18 +1,19 @@
 .SpotlightCourse {
     display: flex;
+    align-items: center;
     flex-direction: column;
     overflow: hidden;
-    background: #191922;
+    background: #667bf210;
     border-radius: 15px;
-    box-shadow: 0 0 3px black;
-    flex-basis: 120px;
+    box-shadow: 0 0 3px #667bf2;
+    flex-basis: 180px;
     color: white;
     text-decoration: none;
 }
 
 .SpotlightCourse .course-banner img {
     width: 100%;
-    height: 70px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -35,20 +36,12 @@
 .course-distributor {
     font-size: 13px;
     word-break: break-word;
-    color: #c2c2c2;
 }
 
-.course-redirect button {
-    width: 100%;
-    border: none;
-    background: #191919;
-    color: #b4b4b4;
-    padding: 10px;
-    text-align: center;
-    border-radius: 20px;
+.course-redirect a {
+    text-decoration: none;
 }
 
-.course-redirect button:hover {
-    cursor: pointer;
-    background: #2c2c2c;
+.course-redirect a button {
+    width: 160px;
 }

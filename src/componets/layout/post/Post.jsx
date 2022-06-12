@@ -12,6 +12,7 @@ import commentIcoStroke from "../../../media/icons/item_comment_icon_stroke.svg"
 import shareIco from "../../../media/icons/item_share_icon_stroke.svg";
 import rocketIco from "../../../media/icons/icons_apadrinhar_icon_fill.svg";
 import ApadPopup from "../apadPopup/ApadPopup";
+import ButtonOneFill from "../buttons/ButtonOneFill";
 
 const Post = props => {
 
