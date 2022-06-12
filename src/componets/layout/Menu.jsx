@@ -1,6 +1,6 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../../media/logo/logo.svg";
+import Logo from "../../media/logo/logo-tipo-and-icon.svg";
 import ProfPicture from "../../componets/layout/profPicture/ProfPicture";
 import "./Menu.css";
 
@@ -23,9 +23,9 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 
 const speedDialOptions = [
-    { icon: <img className="btn-icon" src={ChatIcon} alt="ícone de chat" style={{height: 16}} />, name: 'Chat' },
-    { icon: <img className="btn-icon" src={NotificationsIcon} alt="ícone de Notificações" style={{height: 16}} />, name: 'Notificações' },
-    { icon: <ProfPicture src="natan_proa.jpg" scale="100%"/>, name: 'Profile' }
+    { icon: <img className="btn-icon" src={ChatIcon} alt="ícone de chat" style={{ height: 16 }} />, name: 'Chat' },
+    { icon: <img className="btn-icon" src={NotificationsIcon} alt="ícone de Notificações" style={{ height: 16 }} />, name: 'Notificações' },
+    { icon: <ProfPicture src="natan_proa.jpg" scale="100%" />, name: 'Profile' }
 ];
 
 const Menu = props => {
@@ -35,12 +35,12 @@ const Menu = props => {
     const searchDiv = useRef();
 
     //Função de abrir a caixinha de notificações
-    function openNotification(){
+    function openNotification() {
         alert('abrir notificações');
     }
 
     //função para tirar a logo e colocar a barra de pesquisa no lugar
-    function showSearchBar(){
+    function showSearchBar() {
         logo.current.style.display = "none";
         searchInput.current.style.display = "block";
         searchDiv.current.style.flexDirection = "row-reverse";
@@ -51,10 +51,10 @@ const Menu = props => {
             <nav className="header_main">
                 <div className="container_max">
                     <div className="container_left" ref={searchDiv}>
-                        <img src={Logo} height="25px" ref={logo}/>
+                        <img src={Logo} height="35px" ref={logo} />
                         <div className="search-div">
                             <IconButton color="primary" onClick={() => showSearchBar()}><i className="bi bi-search"></i></IconButton>
-                            <input type="text" className="searchbar" ref={searchInput} placeholder="Pesquisar..."/>
+                            <input type="text" className="searchbar" ref={searchInput} placeholder="Pesquisar..." />
                         </div>
                     </div>
 
@@ -69,32 +69,32 @@ const Menu = props => {
 
                     {props.logged ?
                         <div className="container_right_expand">
-                            <Box sx={{position:'absolute', right:"10px", left:"auto", top:8}}>
+                            <Box sx={{ position: 'absolute', right: "10px", left: "auto", top: 8 }}>
                                 <SpeedDial
                                     ariaLabel="Notificações e chat"
                                     icon={<img className="btn-icon menu-expand-ico" src={MenuIcon} alt="ícone de Menu" />}
                                     direction="down"
-                                    FabProps={{size: "small"}}
+                                    FabProps={{ size: "small" }}
                                 >
                                     {speedDialOptions.map((action) => (
-                                    <SpeedDialAction
-                                        key={action.name}
-                                        icon={action.icon}
-                                        tooltipTitle={action.name}
-                                        onClick={() => {
-                                            switch(action.name){
-                                                case "Chat":
-                                                    navigate('/chat');
-                                                    break;
-                                                case "Profile":
-                                                    navigate('/perfil');
-                                                    break;
-                                                case "Notificações":
-                                                    openNotification();
-                                                    break;
-                                            }
-                                        }}
-                                    />
+                                        <SpeedDialAction
+                                            key={action.name}
+                                            icon={action.icon}
+                                            tooltipTitle={action.name}
+                                            onClick={() => {
+                                                switch (action.name) {
+                                                    case "Chat":
+                                                        navigate('/chat');
+                                                        break;
+                                                    case "Profile":
+                                                        navigate('/perfil');
+                                                        break;
+                                                    case "Notificações":
+                                                        openNotification();
+                                                        break;
+                                                }
+                                            }}
+                                        />
                                     ))}
                                 </SpeedDial>
                             </Box>
