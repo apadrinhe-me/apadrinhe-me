@@ -77,11 +77,6 @@ const Conteudo = () => {
                         <ListaJovensApad />
                     </Perfil>
                 }/>
-                <Route path="/perfil/nivelpadrinho" element={
-                    <Perfil>
-                        <NivelPadrinho />
-                    </Perfil>
-                }/>
                 <Route path="/perfil/mapacarreira/editor" element={<EditorMapaCarreira/>}/>
             </Routes>
         </div>
