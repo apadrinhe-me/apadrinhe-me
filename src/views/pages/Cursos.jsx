@@ -3,9 +3,9 @@ import "./Cursos.css";
 import React from "react";
 import Menu from "../../componets/layout/Menu";
 import Curso from "../../componets/layout/cardCursos/CardCurso"
-import administracaoicone from "../../media/icons/item_people_icon_stroke.svg"
-/*import Offcanvas from "../../componets/layout/offcanvas/Offcanvas";
-import bootstrap from "bootstrap";*/
+
+
+import Button from '@mui/material/Button';
 
 const Cursos = () => {
     return (
@@ -13,9 +13,6 @@ const Cursos = () => {
             <Menu />
             <div className="Cursos">
 
-                <div className="cursos-mobile">
-                    <button className="btn btn-primary" type="button" /*data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"*/>Categorias de cursos</button>
-                </div>
 
                 <div className="categoriasCurso">
                     <ul>
@@ -57,12 +54,16 @@ const Cursos = () => {
 
                 <div className="cardsCursos ">
                     <div className="nome-pagina">
-                        <span className="h2Filter">
 
+                        <span className="h2Filter">
+                            <div className="cursos-mobile">
+                                <Button ><i className="bi bi-list"></i></Button>
+                            </div>
                             <h2>Todos os Cursos</h2>
                             <div className="caixaFilter">
                                 <i className="bi bi-funnel">Filtrar</i>
                             </div>
+
                         </span>
 
                     </div>

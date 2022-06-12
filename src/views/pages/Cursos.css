@@ -11,13 +11,16 @@
     height: 1px;
     width: 100px;
     width: 100%;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 .h2Filter {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 10px 0;
 }
 
 .caixaFilter {
@@ -57,8 +60,10 @@
     background: #03050D;
     border: 1px solid #292C35;
     padding: 10px 10px;
-    height: calc(100vh - 97.5px);
-    border-radius: 0px 0px 15px 0px;
+    height: calc(100vh - 80.5px);
+    border-radius: 15px 15px 15px 15px;
+    margin-top: 10px ;
+    margin-left: 10px;
 }
 
 .categoriasCurso li {
@@ -98,7 +103,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     overflow-y: auto;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 110px);
     align-items: flex-start;
 }
 
@@ -109,7 +114,7 @@
     padding: 0 35px;
     position: absolute;
     width: 100%;
-    height: 70px;
+
     justify-content: center;
     background-color: #03050dbd;
     backdrop-filter: saturate(180%) blur(30px);
@@ -120,6 +125,10 @@
 
 .cursos-mobile {
     display: none;
+}
+
+.cursos-mobile i {
+    font-size: 40px;
 }
 
 @media (max-width: 840px) {
@@ -135,7 +144,37 @@
         flex-direction: column;
     }
 
+    .h2Filter {
+        display: flex;
+        flex: 2;
+    }
+
     .card {
-        height: calc(100vh - 170px);
+        padding-top: 150px;
     }
 }
+
+
+@media (max-width: 480px) {
+
+    .card {
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .card {
+        padding-top: 190px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 230px) {
+
+    .card {
+        padding-top: 250px;
+        align-items: center;
+    }
+}
+

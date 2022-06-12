@@ -4,9 +4,10 @@
     border: blue;
 }
 
-.avatarUsuario {
-    background-color: #E5E6EB;
-    color: #282828;
+.avatarUsuario img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .buttonsConexoes{
