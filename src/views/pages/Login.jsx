@@ -9,7 +9,7 @@ const Login = () => {
         <div className="Login">
             <div></div>
             <div className="principal_box">
-                <div><a className="voltar" href="perfil">x</a></div>
+                <div><a className="voltar" href="/">x</a></div>
                 <div className="logo_box"><img className="logo" src={Logo} /></div>
 
                 <div className="logo_apadrinheme"><img className="logoescrito" src={apadrinheme} width="45px" /></div>
