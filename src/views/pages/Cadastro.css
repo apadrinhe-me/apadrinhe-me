@@ -1,3 +1,7 @@
+.Cadastro {
+    background: url("../../media/Imagens_pop-up/background_cadastro-01.svg") no-repeat center;
+}
+
 .Cadastro .Cards {
     display: flex;
     flex-direction: row;
@@ -6,65 +10,13 @@
     align-items: center;
 }
 
-
-.estilo1 {
-    order: 1;
-    height: 600px;
-}
-
-.estilo2 {
-    order: 4;
-    height: 600px;
-}
-
-.Cadastro .cardPadrinho {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    order: 2;
-    border-radius: 8px;
-    background-color: #E5E6EB;
-    width: 250px;
-    height: 300px;
-}
-
-.Cadastro .cardAfiliado {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    order: 3;
-    border-radius: 8px;
-    background-color: #E5E6EB;
-    width: 250px;
-    height: 300px;
-}
-
-
-.Cadastro p {
+.Cadastro .title_card {
     margin-top: 10px;
     text-align: center;
     color: #0C1330;
     font-weight: bold;
+    margin-bottom: 4px;
 }
-
-.Cadastro .botao {
-    margin-top: 40px;
-    font-size: 14px;
-    color: white;
-    outline: 0;
-    border: none;
-    background: linear-gradient(90deg, #d92588, #7630d9);
-    width: 140px;
-    height: 40px;
-    border-radius: 40px;
-}
-
-.Cadastro button:hover {
-    cursor: pointer;
-}
-
 
 /*.Cadastro .foguetin {
     align-self: flex-end;
@@ -114,4 +66,22 @@
 .Cadastro .voltar {
     color: #d92588;
     text-decoration: none;
+}
+
+.Cadastro .container_cards {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.Cadastro .text_card {
+    color: rgb(71, 70, 70);
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
 }

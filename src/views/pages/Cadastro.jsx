@@ -1,50 +1,26 @@
 import "./Cadastro.css";
-import React from "react";
+import React, { useState, useRef } from "react";
 import Logo from "../../media/logo/logoredondo-03.svg";
-import estilo2 from "../../media/Imagens_pop-up/estilodir_cadastro.svg";
-import estilo1 from "../../media/Imagens_pop-up/estilo2-cadastro.svg";
-import chapeu from "../../media/Imagens_pop-up/icon_cadastro-09.svg";
-import foguete from "../../media/Imagens_pop-up/icon_cadastro-10.svg";
-import { hoursToMinutes } from "date-fns";
+import Card_cadastro from "../../componets/layout/card_cadastro/Card_cadastro";
 
 
 
 const Cadastro = () => {
+    const ser_apadrinhado = useRef()
+    console.log(ser_apadrinhado)
     return (<div className="Cadastro">
-
-
-        <div className="Cards">
-            <div className="nav_cadastro"> <a className="voltar" href="/">voltar</a>
-                <img className="logo" src={Logo} height="80px" />
-                <button className="entrar">Entrar</button>
-
+        <div className="Cards" >
+            <div className="container_cards">
+                <Card_cadastro type="ser_apadrinhado" ref={ser_apadrinhado}>
+                    <h3 className="title_card">Quero ser <br /> afilhado(a)</h3>
+                    <p className="text_card">Crie conteúdeo para ser visto e receber ajuda de diversos apoiadores cadastrados na plataforma</p>
+                </Card_cadastro>
+                <Card_cadastro type="apadrinhar">
+                    <h3 className="title_card">Quero <br />apoiar</h3>
+                    <p className="text_card">  Acompanhe o desenvolvimento de jovens e encontre um para apoiar de diversas maneiras  </p>
+                </Card_cadastro>
             </div>
-            <div className="cardPadrinho">
-                <img className="chapeu" src={chapeu} height="100px" />
-                <p>Quero ser <br /> Apadrinhado(a)</p>
-                <button className="botao">Cadastre-se</button>
-
-            </div>
-            <div className="cardAfiliado">
-                <img className="foguete" src={foguete} height="110px" />
-                <p>Quero <br /> Apadrinhar</p>
-                <button className="botao">Cadastre-se</button>
-            </div>
-            <img className="estilo2" src={estilo2} />
-            <img className="estilo1" src={estilo1} />
-
-
-            {/*
-            <div className="foguete2"><img className="foguetin" src="" height="250px" /></div>*/}
-
-
         </div>
-
-
-
-
-
-
 
     </div>
     );

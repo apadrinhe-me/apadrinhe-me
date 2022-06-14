@@ -1,0 +1,55 @@
+.Card_cadastro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #E5E6EB;
+    width: 250px;
+    height: 300px;
+}
+
+.Card_cadastro.selecionado {
+    box-shadow: inset 300px 0 0 0 #ef4ba5;
+    color: white;
+    cursor: pointer;
+}
+
+.Card_cadastro.selecionado p {
+    color: white;
+}
+
+.Card_cadastro.selecionado:hover {
+    box-shadow: inset 300px 0 0 0 #ef4ba5;
+    color: white;
+    cursor: pointer;
+    transition: none;
+}
+
+.Card_cadastro button:hover {
+    cursor: pointer;
+}
+
+.Card_cadastro .text_Card {
+    color: rgba(155, 155, 155, 0.932);
+    font-size: 10px;
+}
+
+.Card_cadastro {
+    box-shadow: inset 0 0 0 0 #ffffff;
+    color: white;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+}
+
+.Card_cadastro:hover {
+    box-shadow: inset 300px 0 0 0 #ef4ba5;
+    color: white;
+    cursor: pointer;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.Card_cadastro:hover p {
+    color: white;
+    transition: color .3s ease-in-out;
+}
