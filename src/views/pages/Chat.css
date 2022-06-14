@@ -2,17 +2,26 @@
     padding: 15px;
     display: flex;
     gap: 15px;
+    height: calc(100vh - 60px);
+    overflow-y: hidden;
 }
 
 .contatos{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: calc(100vh - 125px);
 }
 
 .conversa{
     flex: 2;
     background: #323232;
-    padding: 8px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
 }
 
 .lista-contatos{
@@ -20,6 +29,44 @@
     flex: 1;
     flex-direction: column;
     gap: 15px;
-    height: calc(100vh - 125px);
+    height: 100%;
     overflow-y: auto;
+}
+
+.conversa .header{
+    flex: 1;
+    padding: 8px;
+}
+
+.conversa .msgs{
+    flex: 5;
+    max-height: calc(100vh - 300px);
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.conversa .msgbar-div{
+    flex-basis: 60px;
+    display: flex;
+}
+
+.drawer-close-btn{
+    text-align: end;
+}
+
+.Chat .close-btn:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+    .Chat {
+        height: calc(100vh - 120px);
+    }
+
+    .Chat .contatos{
+        display: none;
+    }
 }

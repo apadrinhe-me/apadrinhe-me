@@ -6,12 +6,12 @@ const Contato_info = props => {
     return(
         <div className="Contato_info">
             <div className="info-picture">
-                <ProfPicture src="valentina.png" scale={65} />
+                <ProfPicture src={props.profPic} scale={65} />
             </div>
 
             <div className="info-profile">
-                <strong>Wagner R. Pereira</strong>
-                <span className="status">online</span>
+                <strong>{props.nome}</strong>
+                <span className={props.status === "online" ? "status online" : "status offline"}>{props.status}</span>
             </div>
 
             <div className="info-options">
@@ -20,3 +20,5 @@ const Contato_info = props => {
         </div>
     );
 }
+
+export default Contato_info;

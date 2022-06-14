@@ -1,0 +1,62 @@
+.Msgbar{
+    flex: 1;
+    display: flex;
+    gap: 7px;
+    background: #626262;
+    padding: 10px;
+}
+
+.Msgbar .emoji-div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Msgbar .media-div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Msgbar .msginput-div{
+    flex: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Msgbar .msgaudio-div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-format{
+    border: none;
+    background: none;
+}
+
+.btn-format i{
+    font-size: 2.2em;
+}
+
+.btn-format:hover{
+    cursor: pointer;
+}
+
+.msg-input{
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    opacity: .5;
+}
+
+.msg-input:focus{
+    outline: none;
+}

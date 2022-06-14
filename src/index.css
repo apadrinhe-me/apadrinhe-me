@@ -47,6 +47,11 @@ body {
     cursor: pointer;
 }
 
+.btn-format{
+    background: none;
+    border: none;
+}
+
 /*
 Breakpoints responsivos do bootstrap
 

@@ -1,0 +1,44 @@
+.Msg{
+    width: 60%;
+    min-width: 300px;
+}
+
+.Msg div{
+    border-radius: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.Msg.remetente{
+    margin-left: auto;
+    text-align: right;
+}
+
+.Msg.remetente div{
+    background: #4B4B4B;
+}
+
+.Msg.destinatario div{
+    background: #191919;
+}
+
+.Msg span{
+    margin-right: 7px;
+}
+
+.Msg span i{
+    color: white;
+    font-size: 12px;
+}
+
+.Msg .hour{
+    font-size: 12px;
+    opacity: .6;
+}
+
+@media (max-width: 575.98px) {
+    .Msg{
+        width: 100%;
+        min-width: 0;
+    }
+}

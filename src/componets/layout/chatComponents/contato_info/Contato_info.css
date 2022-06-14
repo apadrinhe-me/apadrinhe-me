@@ -4,19 +4,46 @@
     border-radius: 8px;
     background: linear-gradient(to right, #232323, #0A0A0A);
     padding: 8px;
+    align-items: center;
 }
 
-.info-picture{
+.Contato_info .info-picture{
     flex: 1;
 }
 
-.info-profile{
+.Contato_info .info-profile{
     flex: 4;
     display: flex;
     flex-direction: column;
 }
 
-.info-options{
+.Contato_info .info-options{
     flex: 1;
     margin-left: auto;
+}
+
+.Contato_info .status.online{
+    color: #00FF00;
+}
+
+.Contato_info .status.offline{
+    color: #797979;
+}
+
+.Contato_info span .bi-circle-fill{
+    font-size: 6px;
+}
+
+.Contato_info .info-options button{
+    border: none;
+    background: none;
+    font-size: 25px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.Contato_info .info-options button:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
 }
