@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: radial-gradient(closest-corner, #4B4B4B 10%, #000 90%);
 }
 
 .Login .principal_box {
@@ -15,15 +16,25 @@
 
     width: 500px;
     height: 560px;
-    background-color: #0a1431;
+    background-color: #4B4B4B;
     flex-wrap: wrap;
     border-radius: 7px;
+    padding: 15px;
 }
 
 .Login .voltar {
-    margin-left: 476px;
-    color: white;
     text-decoration: none;
+    font-size: 13px;
+    color: #D92588;
+}
+
+.Login .voltar:hover{
+    text-decoration: underline;
+}
+
+
+.Login .voltar-div{
+    align-self: end;
 }
 
 .Login .logo_apadrinheme {
@@ -54,48 +65,52 @@
     padding: 0px 15px;
     color: white;
     outline: 0;
-    font-size: 12px;
+    font-size: 15px;
     background-color: #050a19;
     border: 1.6px solid #D92588;
     border-radius: 15px;
     width: 300px;
-    height: 30px;
+    height: 34px;
 }
 
 .Login .password_input {
     padding: 0px 15px;
     color: white;
     outline: 0;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 10px;
     background-color: #050a19;
     border: 1.6px solid #D92588;
     border-radius: 15px;
     width: 300px;
-    height: 30px;
+    height: 34px;
 }
 
 .Login .p1 {
-    font-size: 10px;
+    font-size: 13px;
     color: #D92588;
     width: 300px;
     margin-top: 6px;
-
     cursor: pointer;
+}
+
+.Login .p1:hover{
+    text-decoration: underline;
 }
 
 .Login .p2 {
     margin-top: 7px;
-    font-size: 9px;
-    width: 132px;
-    display: flex;
+    font-size: 13px;
     color: white;
 }
 
-.Login strong {
-    cursor: pointer;
-    display: flex;
+.Login .p2 a {
     color: #D92588;
+    text-decoration: none;
+}
+
+.Login .p2 a:hover{
+    text-decoration: underline;
 }
 
 .Login button {
@@ -110,4 +125,5 @@
     width: 120px;
     height: 30px;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
