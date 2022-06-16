@@ -48,7 +48,7 @@ const Chat = () => {
                     </div>
                 </div>
                 <div className="conversa">
-                    <Button variant="contained" sx={{width: "200px", mt: 2, alignSelf: "center"}} onClick={ () => setDrawer(true)}>lista de contatos</Button>
+                    <Button className="btn-show-contacts" variant="contained" sx={{width: "200px", mt: 2, alignSelf: "center"}} onClick={ () => setDrawer(true)}>lista de contatos</Button>
 
                     <div className="header">
                         <Contato_info
