@@ -5,8 +5,13 @@
     justify-content: center;
     border-radius: 8px;
     background-color: #E5E6EB;
-    width: 250px;
+    flex-basis: 250px;
     height: 300px;
+}
+
+.Card_cadastro .check_card{
+    margin-bottom: 8px;
+    cursor: pointer;
 }
 
 .Card_cadastro.selecionado {

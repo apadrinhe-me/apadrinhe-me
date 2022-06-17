@@ -1,0 +1,18 @@
+.RevisionCadastro{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+}
+
+.confirm-terms-div a{
+    color: #D92588;
+    text-decoration: none;
+}
+
+.confirm-terms-div a:hover{
+    text-decoration: underline;
+}
+

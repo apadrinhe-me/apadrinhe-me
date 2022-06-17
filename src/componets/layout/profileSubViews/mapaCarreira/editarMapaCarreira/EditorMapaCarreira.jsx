@@ -176,9 +176,10 @@ const EditorMapaCarreira = props => {
         transform: 'translate(-50%, -50%)',
         width: '100%',
         maxWidth: 700,
-        bgcolor: 'background.paper',
+        bgcolor: '#2d2d2d',
         boxShadow: 24,
-        p: 4
+        p: 4,
+        color: "#fff"
     };
 
     //componentes controlados do formulário de adicionar meta

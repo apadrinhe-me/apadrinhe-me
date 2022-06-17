@@ -1,0 +1,14 @@
+.PersonalInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+}
+
+.PersonalInfo .personal-info-form{
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
