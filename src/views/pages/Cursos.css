@@ -132,6 +132,10 @@
     font-size: 40px;
 }
 
+.drawer-close-btn{
+    text-align: end;
+}
+
 @media (max-width: 840px) {
     .cursos-mobile {
         display: block;
@@ -139,6 +143,11 @@
 
     .categoriasCurso {
         display: none;
+    }
+
+    .categoriasCurso.drawer-cursos{
+        display: block;
+        height: calc(100vh - 150px);
     }
 
     .Cursos {

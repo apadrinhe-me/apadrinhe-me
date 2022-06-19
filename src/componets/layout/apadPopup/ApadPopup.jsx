@@ -1,5 +1,5 @@
 import "./ApadPupup.css";
-import React from "react";
+import React, {useState} from "react";
 import ApadrinheCard from "./ApadrinheCard";
 import OthersCard from "./OthersCard";
 
@@ -11,6 +11,13 @@ const ApadPopup = props => {
 
         setTimeout(() => props.setTrigger(false), 450);
     }
+
+    const[selectedApoio, setSelectedApoio] = useState(0);
+    /*0 = Página inicial
+    * 1 = Apadrinhar
+    * 2 = Recomendação
+    * 3 = Doação rápida
+    * 4 = Doação de bens*/
 
     return(props.trigger) ? (
         <div className="ApadPopup">

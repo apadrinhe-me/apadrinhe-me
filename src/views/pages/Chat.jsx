@@ -15,7 +15,7 @@ const Chat = () => {
 
     return(
         <>
-            <Menu />
+            <Menu logged={true}/>
 
             <div className="Chat">
                 <div className="contatos">
@@ -68,7 +68,7 @@ const Chat = () => {
                 </div>
             </div>
 
-            <MenuMobile />
+            <MenuMobile logged={true} />
 
             <Drawer
                 open={drawer}

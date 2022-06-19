@@ -25,7 +25,7 @@ const Home = () => {
 
     return(
         <>
-            <Menu atual="Home" logged={true}/>
+            <Menu atual="Home" logged={false}/>
             <div className="Home">
                 <If test={viewport === 'desktop'}>
                     <div className="infinity-post-scroll">
@@ -109,7 +109,7 @@ const Home = () => {
                     </div>
                 </If>
             </div>
-            <MenuMobile atual="Home" logged={true} />
+            <MenuMobile atual="Home" logged={false} />
         </>
     );
 }
