@@ -21,7 +21,7 @@ const Moments =  () => {
 
     return(
         <>
-            <Menu logged={true}/>
+            <Menu logged={false}/>
             <div className="Moments">
                 <div className="container">
                     <aside className={videoFullscreen !== 0 ? "for-you my-scrollbar fulscreenmode" : "for-you my-scrollbar"} >
@@ -36,7 +36,7 @@ const Moments =  () => {
                     </div>
                 </div>
             </div>
-            <MenuMobile atual="Home" logged={true} />
+            <MenuMobile atual="Home" logged={false} />
         </>
     );
 }

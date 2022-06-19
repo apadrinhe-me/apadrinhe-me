@@ -293,4 +293,15 @@
     .NavPerfil .buttonsChatConecApad {
         flex-wrap: wrap-reverse;
     }
+
+    .NavPerfil .changename {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+    }
+
+    .editprofile {
+        list-style-type: none;
+        background: tomato;
+    }
 }

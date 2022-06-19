@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../media/logo/logo-tipo-and-icon.svg";
 import ProfPicture from "../../componets/layout/profPicture/ProfPicture";
@@ -21,6 +21,8 @@ import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
+import Dropdown from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 const speedDialOptions = [
     { icon: <img className="btn-icon" src={ChatIcon} alt="ícone de chat" style={{ height: 16 }} />, name: 'Chat' },
@@ -54,6 +56,16 @@ const Menu = props => {
         searchDiv.current.style.flexDirection = "row";
         searchClose.current.style.display = "none";
     }
+
+    //Menu do react no perfil (quando clica no perfil, vai ter as opções de ver perfil e deslogar)
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
     return (
         <div className="Menu">
@@ -116,12 +128,25 @@ const Menu = props => {
                     {props.logged ?
                         //logado
                         <div className="container_right logged">
-                            <Link className="user-profile_btn" to="/perfil">
+                            <div className="user-profile_btn" onClick={handleClick}>
                                 <div>
                                     <img src={require("../../media/profile_pictures/valentina.png")} />
                                     <p>Valentina</p>
                                 </div>
-                            </Link>
+                            </div>
+
+                            <Dropdown
+                                id="menu-perfil"
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                MenuListProps={{
+                                    'aria-labelledby': 'basic-button',
+                                }}
+                            >
+                                <Link to="/perfil"><MenuItem onClick={handleClose}><span style={{color: "white"}}>Meu perfil</span></MenuItem></Link>
+                                <MenuItem onClick={handleClose}><span style={{color: "red"}}>Sair</span></MenuItem>
+                            </Dropdown>
 
                             <Link to="/chat"><button type="button" className="btn-action btn-chat"><img className="btn-icon" src={ChatIcon} alt="ícone de chat" /></button></Link>
                             <button type="button" className="btn-action btn-notifications"><img className="btn-icon" src={NotificationsIcon} alt="ícone de Notificações" /></button>

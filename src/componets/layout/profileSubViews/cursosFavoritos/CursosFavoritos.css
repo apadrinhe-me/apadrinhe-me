@@ -13,5 +13,5 @@
     height: calc(100vh - 150px);
     justify-content: center;
     overflow-y: auto;
-    border: 1px solid red;
+    align-items: flex-start;
 }

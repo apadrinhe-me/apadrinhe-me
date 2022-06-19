@@ -15,7 +15,7 @@ const Chat = () => {
 
     return(
         <>
-            <Menu />
+            <Menu logged={true}/>
 
             <div className="Chat">
                 <div className="contatos">
@@ -48,7 +48,7 @@ const Chat = () => {
                     </div>
                 </div>
                 <div className="conversa">
-                    <Button variant="contained" sx={{width: "200px", mt: 2, alignSelf: "center"}} onClick={ () => setDrawer(true)}>lista de contatos</Button>
+                    <Button className="btn-show-contacts" variant="contained" sx={{width: "200px", mt: 2, alignSelf: "center"}} onClick={ () => setDrawer(true)}>lista de contatos</Button>
 
                     <div className="header">
                         <Contato_info
@@ -68,7 +68,7 @@ const Chat = () => {
                 </div>
             </div>
 
-            <MenuMobile />
+            <MenuMobile logged={true} />
 
             <Drawer
                 open={drawer}

@@ -38,23 +38,21 @@
     color: #fff;
 
     margin: 10px 0;
-    transform: .2s;
+    transition: .2s;
     cursor: pointer;
 }
 
 .navegacaoConexoes li button:hover {
-
-    transform: .2s;
+    transition: .2s;
     border: 1px solid #fff;
 }
 
 .cardInteracaoUsuarios {
+    padding: 20px;
     display: flex;
     gap: 20px;
-    flex: 1;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px auto;
 }
 
 @media (max-width: 700px){

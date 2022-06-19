@@ -59,8 +59,6 @@ const CardCurso = props => {
                         <li>Localidade: São Paulo</li>
                         <li>HTML, CSS e JS</li>
                         <li>Java Web Developtment</li>
-                        <li>Opa</li>
-                        <li>Opa</li>
                     </ul>
                 </div>
 

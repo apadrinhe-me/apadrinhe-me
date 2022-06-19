@@ -1,0 +1,42 @@
+.SelectTypeUser{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.SelectTypeUser h2{
+    font-size: 26px;
+    color: #D92588;
+    text-align: center;
+}
+
+.SelectTypeUser span{
+    font-size: 15px;
+}
+
+.SelectTypeUser .cards_cadastro{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.SelectTypeUser .footer_cadastro{
+    display: flex;
+    gap: 20px;
+    align-items: flex-end !important;
+    flex-wrap: wrap-reverse;
+}
+
+.SelectTypeUser .have-login{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.SelectTypeUser .have-login:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -4,6 +4,10 @@
     gap: 15px;
     height: calc(100vh - 60px);
     overflow-y: hidden;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    background: linear-gradient(45deg, #484848, #2c2c2c);
 }
 
 .contatos{
@@ -61,6 +65,10 @@
     cursor: pointer;
 }
 
+.Chat .btn-show-contacts{
+    display: none !important;
+}
+
 @media (max-width: 575.98px) {
     .Chat {
         height: calc(100vh - 120px);
@@ -68,5 +76,9 @@
 
     .Chat .contatos{
         display: none;
+    }
+
+    .Chat .btn-show-contacts{
+        display: block !important;
     }
 }

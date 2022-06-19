@@ -2,7 +2,7 @@
     flex: 1;
     display: flex;
     gap: 7px;
-    background: #626262;
+    background: #191919;
     padding: 10px;
 }
 
@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 7px;
 }
 
 .Msgbar .msgaudio-div{
@@ -41,6 +42,7 @@
 
 .btn-format i{
     font-size: 2.2em;
+    color: white;
 }
 
 .btn-format:hover{
@@ -59,4 +61,13 @@
 
 .msg-input:focus{
     outline: none;
+}
+
+.btn-send{
+    background: #626262;
+    border: none;
+}
+
+.btn-send i{
+    font-size: 2.2em;
 }

@@ -16,6 +16,7 @@ const Msgbar = props => {
 
             <div className="msginput-div">
                 <input type="text" className="msg-input" value={msgInput} onChange={e => setMsgInput(e.target.value)}/>
+                <button className="btn-format btn-send"><i className="bi bi-send"></i></button>
             </div>
 
             <div className="msgaudio-div">

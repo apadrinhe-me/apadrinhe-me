@@ -1,5 +1,5 @@
 import "./NavPerfil.css";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import foto from "../../../media/profile_pictures/natan_proa.jpg";
 import ProfPicture from "../profPicture/ProfPicture";
 import ChatBtn from "../../../media/icons/item_chat_icon_fill.svg";
@@ -12,6 +12,7 @@ import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
+import { borderRadius } from "@mui/system";
 
 const style = {
     position: 'absolute',
@@ -19,11 +20,13 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 500,
-    bgcolor: 'background.paper',
+    bgcolor: '#242526',
     border: 'none',
     boxShadow: 24,
+    borderRadius: 5,
+    listStyle: 'none',
     p: 4,
-  };
+};
 
 const NavPerfil = props => {
     const [openEditProf, setOpenEditProf] = useState(false);
@@ -35,9 +38,9 @@ const NavPerfil = props => {
 
     let profileTab = url[4] || 'publicacoes';
 
-    const[buttonPopup, setButtonPopup] = useState(false);
+    const [buttonPopup, setButtonPopup] = useState(false);
 
-    if (buttonPopup){
+    if (buttonPopup) {
         document.querySelector('body').style.overflowY = 'hidden';
     } else {
         document.querySelector('body').style.overflowY = 'auto';
@@ -112,8 +115,8 @@ const NavPerfil = props => {
                 </div>
             </div>
             <ApadPopup
-            trigger={buttonPopup}
-            setTrigger={setButtonPopup}/>
+                trigger={buttonPopup}
+                setTrigger={setButtonPopup} />
 
             <Modal
                 aria-labelledby="transition-modal-title"
@@ -123,18 +126,20 @@ const NavPerfil = props => {
                 closeAfterTransition
                 BackdropComponent={Backdrop}
                 BackdropProps={{
-                timeout: 500,
+                    timeout: 500,
                 }}
             >
                 <Fade in={openEditProf}>
                     <Box sx={style}>
-                        <ul>
-                            <li>Alterar nome</li>
-                            <li>Alterar foto</li>
-                            <li>Alterar nickname</li>
-                            <li>Aspiração</li>
-                            <li>Alterar Bio</li>
-                        </ul>
+                        <div className="editprofile">
+                            <ul>
+                                <div className="changename"><li>Alterar nome</li></div>
+                                <li>Alterar foto</li>
+                                <li>Alterar nickname</li>
+                                <li>Aspiração</li>
+                                <li>Alterar Bio</li>
+                            </ul>
+                        </div>
                     </Box>
                 </Fade>
             </Modal>

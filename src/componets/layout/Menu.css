@@ -201,6 +201,7 @@
     width: auto;
     max-width: 150px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .Menu .user-profile_btn img {
