@@ -28,6 +28,27 @@ body {
     display: none !important;
 }
 
+.d-flex{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
 /*Custom scrollbar*/
 .my-scrollbar::-webkit-scrollbar {
     width: 7px;

@@ -29,10 +29,10 @@
     flex-direction: row;
     align-items: center;
     background-color: transparent;
+    gap: 10px;
 }
 
 .Menu .container_middle {
-    flex-basis: 500px;
     display: flex;
     align-items: center;
     height: 60px;
@@ -41,7 +41,6 @@
 }
 
 .Menu .container_left {
-    flex-basis: 250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,6 +66,7 @@
     width: 100%;
     display: none;
     transition: 1s;
+    min-width: 80px;
 }
 
 .Menu .searchbar:focus {
@@ -310,15 +310,11 @@
     .Menu .nav li a {
         width: 100px;
     }
-
-    .container_left img {
-        width: 23vh;
-    }
 }
 
 @media (max-width: 650px) {
     .Menu .nav li a {
-        width: 60px;
+        width: 85px;
     }
 }
 

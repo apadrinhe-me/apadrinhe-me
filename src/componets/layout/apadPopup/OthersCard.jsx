@@ -19,7 +19,7 @@ const OthersCard = props => {
     return(
         <div className="OthersCard" style={OthersCard}>
             <div className="card-image" style={cardImage}>
-                <img src={require("../../../media/icons/item_star_icon_fill.svg").default} alt="ícone do card"/>
+                <img src={props.logo} alt="ícone do card"/>
             </div>
 
             <div className="card-info">
@@ -28,7 +28,7 @@ const OthersCard = props => {
             </div>
 
             <div className="card-btn">
-                <button style={button}>{props.btnText}</button>
+                <button style={button} onClick={() => props.setSelectedApoio(props.tipoApoio)}>{props.btnText}</button>
             </div>
         </div>
     );

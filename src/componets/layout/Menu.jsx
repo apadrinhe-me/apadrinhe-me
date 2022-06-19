@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../../media/logo/logo-tipo-and-icon.svg";
 import ProfPicture from "../../componets/layout/profPicture/ProfPicture";
 import "./Menu.css";
 
+import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
+import LogoSolo from "../../media/logo/logo-stroke-gradient-01.svg";
 import HomeIconFill from "../../media/icons/item_home_icon_fill.svg";
 import ConectionsIconFill from "../../media/icons/item_conections_icon_fill.svg";
 import CoursesIconFill from "../../media/icons/item_cursos_icon_fill.svg";
@@ -36,6 +37,7 @@ const Menu = props => {
     const logo = useRef();
     const searchDiv = useRef();
     const searchClose = useRef();
+    const speedDial = useRef();
 
     //Função de abrir a caixinha de notificações
     function openNotification() {
@@ -67,12 +69,25 @@ const Menu = props => {
         setAnchorEl(null);
     };
 
+    //Trocar de logo de acordo com o tamanho da tela
+    let showLogomarca = window.innerWidth <= 576 || window.innerWidth >= 850;
+    let showLogoSolo = window.innerWidth > 576 && window.innerWidth < 850;
+
+    const[viewport, setviewport] = useState(showLogomarca ? 'showLogomarca' : 'showLogoSolo');
+    window.addEventListener("resize", () => {
+        if(window.innerWidth <= 576 || window.innerWidth >= 850){
+            setviewport('showLogomarca');
+        } else {
+            setviewport('showLogoSolo');
+        }
+    })
+
     return (
         <div className="Menu">
             <nav className="header_main">
                 <div className="container_max">
                     <div className="container_left" ref={searchDiv}>
-                        <img src={Logo} height="35px" ref={logo} />
+                            <img src={viewport === 'showLogomarca' ? LogoMarca : LogoSolo} height={viewport === 'showLogomarca' ? "35px" : "40px"} ref={logo}/>
                         <div className="search-div">
                             <IconButton color="primary" onClick={() => showSearchBar()}><i className="bi bi-search"></i></IconButton>
                             <input type="text" className="searchbar" ref={searchInput} placeholder="Pesquisar..." />
@@ -90,7 +105,7 @@ const Menu = props => {
                     </div>
 
                     {props.logged ?
-                        <div className="container_right_expand">
+                        <div className="container_right_expand" ref={speedDial}>
                             <Box sx={{ position: 'absolute', right: "10px", left: "auto", top: 8 }}>
                                 <SpeedDial
                                     ariaLabel="Notificações e chat"
@@ -109,7 +124,7 @@ const Menu = props => {
                                                         navigate('/chat');
                                                         break;
                                                     case "Profile":
-                                                        navigate('/perfil');
+                                                        setAnchorEl(speedDial.current);
                                                         break;
                                                     case "Notificações":
                                                         openNotification();

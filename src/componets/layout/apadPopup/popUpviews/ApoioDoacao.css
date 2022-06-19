@@ -1,0 +1,112 @@
+.ApoioDoacao{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ApadPopup .header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+
+.ApadPopup .nome-apoio{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ApadPopup .quem-apoia{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ApadPopup .apoiado-nome{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ApadPopup .aspiracao{
+    font-size: 13px;
+    color: #c4c4c4;
+}
+
+.ApoioDoacao .pagamento-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 20px;
+}
+
+.ApoioDoacao .nome-email{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.ApoioDoacao .valor-doacao{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ApadPopup .metodo-pagamento{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.cartao-infos, .pix-info{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: black;
+    padding: 20px;
+    border: 2px solid #667BF2;
+    border-radius: 16px;
+}
+
+.payment-methods{
+    flex: 1;
+}
+
+.confirm-payment{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.link-termos{
+    color: #D92588;
+    text-decoration: none;
+}
+
+.link-termos:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.btn-finalizar-pagamento{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(to right, #667BF2, #7630D9);
+    color: white;
+}
+
+.btn-finalizar-pagamento:hover{
+    cursor: pointer;
+}
+
+.bi-shield-fill-check{
+    font-size: 25px;
+}

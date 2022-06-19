@@ -27,7 +27,7 @@ const MenuMobile = props => {
                         props.logged ?
                             <li><Link className="user-profile_btn" to="/perfil"><img className="nav_icon profPicture" src={require("../../media/profile_pictures/valentina.png")}/></Link></li>
                             :
-                            <li><Link to="/login"><img className="nav_icon" src={IconLogin} alt="ícone de login"/></Link></li>
+                            <li><Link to="/login"><i className="bi bi-box-arrow-in-right"></i></Link></li>
                     }
                 </ul>
             </nav>

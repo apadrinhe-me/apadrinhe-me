@@ -6,7 +6,7 @@ import CardPlanet1 from "../../../media/Imagens_pop-up/img_planet1.svg"
 import CardPlanet2 from "../../../media/Imagens_pop-up/img_planet2.svg"
 import CardRocket from "../../../media/Imagens_pop-up/img_rocketsmoke.svg"
 
-const ApadrinheCard = () => {
+const ApadrinheCard = props => {
     return(
         <div className="ApadrinheCard">
             <div className="card-image">
@@ -23,7 +23,7 @@ const ApadrinheCard = () => {
             </div>
 
             <div className="card-btn">
-                <button>Apadrinhar</button>
+                <button onClick={() => props.setSelectedApoio(props.tipoApoio)}>Apadrinhar</button>
             </div>
         </div>
     );

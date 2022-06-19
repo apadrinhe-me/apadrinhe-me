@@ -40,6 +40,12 @@
     background-image: linear-gradient(to bottom right, #3b435a, #3b435a50);
 }
 
+.MenuMobile .bi-box-arrow-in-right{
+    color: #add8e6;
+    font-size: 35px;
+    line-height: 150px;
+}
+
 @media (min-width: 576px) {
     .MenuMobile, .MenuMobile-margin{
         display: none;

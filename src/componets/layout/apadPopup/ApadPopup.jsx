@@ -2,6 +2,12 @@ import "./ApadPupup.css";
 import React, {useState} from "react";
 import ApadrinheCard from "./ApadrinheCard";
 import OthersCard from "./OthersCard";
+import ApoioInicio from "./popUpviews/ApoioInicio";
+import If from "../../funcional/If";
+import ApoioApadrinhar from "./popUpviews/ApoioApadrinhar";
+import ApoioRecomendacao from "./popUpviews/ApoioRecomendacao";
+import ApoioDoacao from "./popUpviews/ApoioDoacao";
+import ApoioMaterial from "./popUpviews/ApoioMaterial";
 
 const ApadPopup = props => {
     //Animação de fechar o popup
@@ -23,44 +29,31 @@ const ApadPopup = props => {
         <div className="ApadPopup">
             <div className="popup-inner">
                 <button className="close-btn" onClick={ () => closePopup() }><i className="bi bi-x-lg"></i></button>
-                <h2>Apadrinhar</h2>
-                <div className="apad-types">
-                    <div className="apadrinhe">
-                        <ApadrinheCard/>
-                    </div>
+                <h2>Apoiar</h2>
 
-                    <div className="other-types">
-                        <OthersCard
-                            background="#44308c"
-                            border="#3800FF"
-                            btnHover="#362670"
-                            icon="item_star_icon_fill.svg"
-                            title="Recomendação"
-                            description="Recomendar cursos gratuitos. Procure no catálogo acadêmico um curso e recomende. Há diversos cursos incríveis."
-                            btnText="Recomendar"
-                        />
+                <If test={selectedApoio === 0}>
+                    <ApoioInicio
+                        selectedApoio={selectedApoio}
+                        setSelectedApoio={setSelectedApoio}
+                    />
+                </If>
 
-                        <OthersCard
-                            background="#8c6530"
-                            border="#FF9000"
-                            btnHover="#362670"
-                            icon="item_star_icon_fill.svg"
-                            title="Doação rápida"
-                            description="Contribuição rápida e prática. Nessa modalidade você escolhe um valor predefinido para apoiar. Máx: R$ 100,00"
-                            btnText="Doar agora"
-                        />
+                <If test={selectedApoio === 1}>
+                    <ApoioApadrinhar setSelectedApoio={setSelectedApoio}/>
+                </If>
 
-                        <OthersCard
-                            background="#40ac61"
-                            border="#00902C"
-                            btnHover="#362670"
-                            icon="item_star_icon_fill.svg"
-                            title="Doação de bens"
-                            description="Contribua com os bens úteis para ajudar no quesito acadêmico. Seus bens podem fazer o bem. Veja o que você pode doar."
-                            btnText="Doar agora"
-                        />
-                    </div>
-                </div>
+                <If test={selectedApoio === 2}>
+                    <ApoioRecomendacao setSelectedApoio={setSelectedApoio}/>
+                </If>
+
+                <If test={selectedApoio === 3}>
+                    <ApoioDoacao setSelectedApoio={setSelectedApoio}/>
+                </If>
+
+                <If test={selectedApoio === 4}>
+                    <ApoioMaterial setSelectedApoio={setSelectedApoio}/>
+                </If>
+
             </div>
         </div>
     ) : "";

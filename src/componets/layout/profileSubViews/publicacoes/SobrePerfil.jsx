@@ -56,10 +56,10 @@ const SobrePerfil = props => {
                         </div>
                     </div>
                     <div className="social-media">
-                        <button className="linkedinButton" ><i class="bi bi-linkedin"></i></button>
-                        <button className="instagramButton" ><i class="bi bi-instagram"></i></button>
-                        <button className="youtubeButton" ><i class="bi bi-youtube"></i></button>
-                        <button className="spotifyButton" ><i class="bi bi-spotify"></i></button>
+                        <button className="linkedinButton" ><i className="bi bi-linkedin"></i></button>
+                        <button className="instagramButton" ><i className="bi bi-instagram"></i></button>
+                        <button className="youtubeButton" ><i className="bi bi-youtube"></i></button>
+                        <button className="spotifyButton" ><i className="bi bi-spotify"></i></button>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ const SobrePerfil = props => {
                         <span className="nickname">@natandevstack</span>
                     </div>
                     <div className="my-ml-auto">
-                        <button className="btn-format"><i class="bi bi-box-arrow-up"></i></button>
+                        <button className="btn-format"><i className="bi bi-box-arrow-up"></i></button>
                     </div>
                 </div>
 
