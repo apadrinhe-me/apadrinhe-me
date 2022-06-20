@@ -4,11 +4,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(closest-corner, #4B4B4B 10%, #000 90%);
+    background: url("../../media/backgrounds/background-login.png");
+    background-size: cover;
 }
 
 .Login .principal_box {
-    box-shadow: 0 0 20px black;
     align-items: center;
     flex-direction: column;
     display: flex;
@@ -16,20 +16,24 @@
 
     width: 500px;
     height: 560px;
-    background-color: #4B4B4B;
     flex-wrap: wrap;
     border-radius: 7px;
     padding: 15px;
+
+    border: 1px solid #AC2AAD;
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: saturate(180%) blur(120px);
 }
 
 .Login .voltar {
     text-decoration: none;
     font-size: 13px;
     color: #D92588;
+    font-weight: 700;
 }
 
 .Login .voltar:hover{
-    text-decoration: underline;
+    color: #e03c96;
 }
 
 
@@ -92,10 +96,11 @@
     width: 300px;
     margin-top: 6px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .Login .p1:hover{
-    text-decoration: underline;
+    color: #e03c96;
 }
 
 .Login .p2 {
@@ -107,10 +112,11 @@
 .Login .p2 a {
     color: #D92588;
     text-decoration: none;
+    font-weight: 700;
 }
 
 .Login .p2 a:hover{
-    text-decoration: underline;
+    color: #e03c96;
 }
 
 .Login button {

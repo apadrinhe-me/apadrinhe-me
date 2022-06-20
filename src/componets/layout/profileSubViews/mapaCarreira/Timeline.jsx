@@ -91,7 +91,7 @@ const Timeline = props => {
                             } else if (goal.status === "in-progress"){
                                 return(
                                     <div className={goal.selected ? "timeline-goal in-progress selected" : "timeline-goal in-progress"} key={key} id={"timeline-goal"+key} onClick={() => changeCurrentGoal(key)}>
-                                        <i className="bi bi-graph-up-arrow"></i>
+                                        <i className="bi bi-circle-fill"></i>
                                     </div>
                                 );
                             } else if (goal.status === "not-achieved"){

@@ -68,7 +68,7 @@ const CardCurso = props => {
                     FAVORITO
                 </button>
                 <button aria-label="share">
-                    SHARE
+                    RECOMENDAR
                 </button>
                 <button className="expandCard"
                     expand={expanded}

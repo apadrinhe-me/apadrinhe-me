@@ -41,7 +41,7 @@ const CreateLogin = props => {
                                 />
                             </LocalizationProvider>
                         </Grid>
-                        <Grid item><TextField id="email-resp-login" label="Email do respnsável" placeholder="exemplo@email.com" variant="outlined" fullWidth required value={props.parente_email} onChange={e => props.setParente_email(e.target.value)}/></Grid>
+                        <Grid item><TextField id="email-resp-login" label="Email do responsável" placeholder="exemplo@email.com" variant="outlined" fullWidth required value={props.parente_email} onChange={e => props.setParente_email(e.target.value)}/></Grid>
                     </Grid>
                 </Grid>
             </div>

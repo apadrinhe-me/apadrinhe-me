@@ -17,7 +17,7 @@ const Login = () => {
                 <input placeholder="Usuário" type="text" className='user_input'></input>
                 <input placeholder="Senha" type="password" maxLength={8} className='password_input'></input>
                 <span className="p1">Esqueci minha senha</span>
-                <button>Entrar</button>
+                <button onClick={() => window.location.href="/"}>Entrar</button>
                 <p className="p2">Não tem conta? <Link to="/cadastro">Cadastre-se</Link></p>
 
             </div>
