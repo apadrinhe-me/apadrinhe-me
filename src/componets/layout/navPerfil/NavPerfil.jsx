@@ -13,6 +13,9 @@ import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
 import { borderRadius } from "@mui/system";
+import valentinapic from "../../../media/profile_pictures/valentina.png"
+import valentinaprofile from "../../layout/navPerfil/Valentina_Profile/cover_space.png"
+import Button from "@mui/material/Button"
 
 const style = {
     position: 'absolute',
@@ -26,6 +29,8 @@ const style = {
     borderRadius: 5,
     listStyle: 'none',
     p: 4,
+    height: "70vh",
+    overflowY: "auto",
 };
 
 const NavPerfil = props => {
@@ -130,15 +135,44 @@ const NavPerfil = props => {
                 }}
             >
                 <Fade in={openEditProf}>
-                    <Box sx={style}>
+                    <Box className="my-scrollbar" sx={style}>
                         <div className="editprofile">
-                            <ul>
-                                <div className="changename"><li>Alterar nome</li></div>
-                                <li>Alterar foto</li>
-                                <li>Alterar nickname</li>
-                                <li>Aspiração</li>
-                                <li>Alterar Bio</li>
-                            </ul>
+                            <div className="box1_editprofile">
+                                <p>Editar perfil</p>
+                                <button className="exit" onClick={handleClose}>x</button>
+                            </div>
+                            <div className="editPic">
+                                <p>Foto de perfil</p>
+                                <input id="novafoto" type="file" />
+                                <label className="mudarfoto" htmlFor="novafoto">Mudar foto</label></div>
+                            <div className="d-flex justify-center"><img className="valentinapic" src={valentinapic} height="120px" width="120px" /></div>
+                            <div className="editcapa">
+                                <p>Foto da capa</p>
+                                <input id="novacapa" type="file" />
+                                <label className="mudarfoto" htmlFor="novacapa">Mudar capa</label>
+                            </div>
+                            <div className="d-flex justify-center"><img className="valentinaprofile" src={valentinaprofile} height="120px" /></div>
+                            <div className="editbiografia">
+                                <p>Biografia</p>
+                            </div>
+                            <div className="d-flex justify-center"><textarea className="textarea" placeholder="Digite aqui..."></textarea></div>
+                            <div className="alterarnome">
+                                <p>Alterar Nome</p>
+                                <div className="inputsnames">
+                                    <input className="inputname" type="text" placeholder="Nome" />
+                                    <input className="inputname" type="text" placeholder="Sobrenome" required /></div>
+                            </div>
+                            <div className="alterarusername">
+                                <p>Alterar UserName</p>
+                                <input className="changeusername" type="text" placeholder="Novo UserName" />
+                            </div>
+                            <div className="alteraraspiracao">
+                                <p>Alterar aspiração</p>
+                                <input className="changeaspiracao" type="text" placeholder="Aspirante a..." />
+                            </div>
+                            <div className="d-flex justify-center">
+                                <Button className="salvar" onClick={handleClose} >Salvar</Button>
+                            </div>
                         </div>
                     </Box>
                 </Fade>

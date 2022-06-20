@@ -247,6 +247,164 @@
     transition: .2s;
 }
 
+.box1_editprofile {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.box1_editprofile p {
+    margin-left: 173px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.box1_editprofile .exit {
+    border: none;
+    font-size: 16px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    padding: 4px 10px;
+    background: #383636;
+    color: rgb(187, 187, 187);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.box1_editprofile .exit:hover {
+    opacity: 1;
+}
+
+.editPic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.editcapa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.mudarfoto {
+    cursor: pointer;
+    color: #0065d2;
+    padding: 8px;
+    border-radius: 3px;
+
+}
+
+.mudarfoto:hover {
+    background-color: #515151b1;
+    transition: 0.2s;
+}
+
+.valentinapic {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.valentinaprofile {
+    padding-top: 8px;
+}
+
+.editbiografia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.editprofile p {
+    color: white
+}
+
+.textarea {
+    background-color: #242526;
+    border: none;
+    outline: 0;
+    resize: none;
+    width: 100%;
+    padding-top: 10px;
+    color: white;
+}
+
+.alterarnome {
+    padding-top: 10px;
+}
+
+.inputname {
+    margin-top: 10px;
+    background-color: #383838;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    flex: 1;
+    color: white;
+    padding: 4px
+}
+
+.inputsnames {
+    display: flex;
+    gap: 10px;
+}
+
+.alterarusername {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.changeusername {
+    margin-top: 10px;
+    background-color: #383838;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    flex: 1;
+    color: white;
+    padding: 4px
+}
+
+.alteraraspiracao {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.changeaspiracao {
+    margin-top: 10px;
+    background-color: #383838;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    flex: 1;
+    color: white;
+    padding: 4px
+}
+
+.salvar {
+    margin-top: 20px;
+    height: 40px;
+}
+
+#novafoto {
+    display: none;
+}
+
+#novacapa {
+    display: none;
+}
+
 @media (max-width: 991.98px) {
     .NavPerfil .perfilPubMomMapCfa button {
         font-size: 14px;
@@ -298,10 +456,5 @@
         display: flex;
         flex-direction: row;
         list-style-type: none;
-    }
-
-    .editprofile {
-        list-style-type: none;
-        background: tomato;
     }
 }
