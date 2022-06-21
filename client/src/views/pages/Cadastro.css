@@ -1,3 +1,9 @@
+.logoCadastro {
+    align-self: baseline;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 .Cadastro {
     background: url("../../media/backgrounds/background-login.png");
     background-size: cover;
@@ -66,11 +72,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border-radius: 10px;
-    padding: 15px;
-    border: 1px solid #AC2AAD;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 0 5px black;
     background: rgba(10, 10, 10, 0.5);
-    backdrop-filter: saturate(180%) blur(120px);
+    backdrop-filter: saturate(150%) blur(10px);
 }
 
 .Cadastro .text_card {
@@ -92,7 +99,7 @@
     inherits: false;
 }
 
-.continue-cad-btn{
+.continue-cad-btn {
     border: none;
     background: linear-gradient(to right, var(--myColor1), var(--myColor2));
     transition: --myColor1 .3s, --myColor2 .3s;
@@ -103,25 +110,25 @@
     width: 200px;
 }
 
-.continue-cad-btn:hover{
+.continue-cad-btn:hover {
     cursor: pointer;
     --myColor1: #7630d9;
     --myColor2: #d92588;
 }
 
-.Cadastro .msg_erro{
+.Cadastro .msg_erro {
     display: none;
 }
 
-.Cadastro .msg_erro.hide{
+.Cadastro .msg_erro.hide {
     display: none;
 }
 
-.Cadastro .msg_erro.show{
+.Cadastro .msg_erro.show {
     display: flex;
 }
 
-.Cadastro .cad_msg{
+.Cadastro .cad_msg {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,27 +137,27 @@
     font-size: 14px;
 }
 
-.Cadastro .btn-return{
+.Cadastro .btn-return {
     color: #D92588;
     font-size: 16px;
     font-weight: 600;
 }
 
-.Cadastro .btn-return i{
+.Cadastro .btn-return i {
     font-size: 15px;
     color: #D92588;
 }
 
-.Cadastro .btn-return:hover{
+.Cadastro .btn-return:hover {
     text-decoration: underline;
 }
 
-.Cadastro .return-previous-step{
+.Cadastro .return-previous-step {
     align-self: flex-start;
 }
 
 @media (max-width: 575.98px) {
-    .stepper-box{
+    .stepper-box {
         margin-top: 80px;
     }
 }

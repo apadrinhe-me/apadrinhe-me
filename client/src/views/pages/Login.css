@@ -15,14 +15,14 @@
     justify-items: center;
 
     width: 500px;
-    height: 560px;
+    height: 600px;
     flex-wrap: wrap;
-    border-radius: 7px;
-    padding: 15px;
-
-    border: 1px solid #AC2AAD;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 0 5px black;
     background: rgba(10, 10, 10, 0.5);
-    backdrop-filter: saturate(180%) blur(120px);
+    backdrop-filter: saturate(150%) blur(10px);
 }
 
 .Login .voltar {
@@ -32,12 +32,12 @@
     font-weight: 700;
 }
 
-.Login .voltar:hover{
+.Login .voltar:hover {
     color: #e03c96;
 }
 
 
-.Login .voltar-div{
+.Login .voltar-div {
     align-self: end;
 }
 
@@ -50,7 +50,6 @@
 }
 
 .Login .logo {
-    filter: drop-shadow(0 0 15px black);
     width: 140px;
     height: 240px;
     display: flex;
@@ -61,8 +60,7 @@
 
 
 .Login .logoescrito {
-    width: 120px;
-    height: 27px;
+    width: 200px;
 }
 
 .Login .user_input {
@@ -70,11 +68,17 @@
     color: white;
     outline: 0;
     font-size: 15px;
-    background-color: #050a19;
-    border: 1.6px solid #D92588;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 0;
     border-radius: 15px;
-    width: 300px;
-    height: 34px;
+    width: 350px;
+    height: 50px;
+}
+
+.Login .user_input:focus {
+    box-shadow: 0 0 15px #d92588dc;
+    outline: 1px solid #ff4dafdc;
 }
 
 .Login .password_input {
@@ -83,11 +87,17 @@
     outline: 0;
     font-size: 15px;
     margin-top: 10px;
-    background-color: #050a19;
-    border: 1.6px solid #D92588;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 0;
     border-radius: 15px;
-    width: 300px;
-    height: 34px;
+    width: 350px;
+    height: 50px;
+}
+
+.Login .password_input:focus {
+    box-shadow: 0 0 15px #d92588dc;
+    outline: 1px solid #ff4dafdc;
 }
 
 .Login .p1 {
@@ -99,7 +109,7 @@
     font-weight: 700;
 }
 
-.Login .p1:hover{
+.Login .p1:hover {
     color: #e03c96;
 }
 
@@ -115,21 +125,26 @@
     font-weight: 700;
 }
 
-.Login .p2 a:hover{
+.Login .p2 a:hover {
     color: #e03c96;
 }
 
 .Login button {
     cursor: pointer;
     margin-top: 30px;
-    box-shadow: 0 0 20px black;
-    font-size: 12px;
+    font-size: 15px;
     color: white;
     outline: 0;
     border: none;
-    background-color: #D92588;
-    width: 120px;
-    height: 30px;
-    border-radius: 20px;
+    background-color: #d92588;
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
     margin-bottom: 10px;
+    transition: 0.2s;
+}
+
+.Login button:hover {
+    background-color: #a31c66;
+    transition: 0.2s;
 }

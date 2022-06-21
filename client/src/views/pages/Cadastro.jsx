@@ -7,6 +7,7 @@ import CreateLogin from "../../componets/layout/pagesCadastro/CreateLogin";
 import PersonalInfo from "../../componets/layout/pagesCadastro/PersonalInfo";
 import ParentInfo from "../../componets/layout/pagesCadastro/ParentInfo";
 import RevisionCadastro from "../../componets/layout/pagesCadastro/RevisionCadastro";
+import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
 
 import Alert from '@mui/material/Alert';
 import Stepper from '@mui/material/Stepper';
@@ -173,6 +174,7 @@ const Cadastro = () => {
 
                 <div className="Cards">
                     <div className="container_cad">
+                        <img className="logoCadastro" src={LogoMarca} height="50px" />
                         {/*Stepper*/}
                         <Box sx={{ width: '100%' }} className="stepper-box">
                             <Stepper activeStep={cadEtapa} alternativeLabel >
