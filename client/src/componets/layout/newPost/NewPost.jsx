@@ -14,7 +14,7 @@ const NewPost = props => {
                 <textarea id="post-input" className="post-input" placeholder="Começar publicação" value={postInput} onChange={e => { setPostInput(e.target.value) }}></textarea>
             </div>
             <div className="post-btns border">
-
+                <button className="btn-format btn-post"> <i className="bi bi-camera"></i> <span>Foto</span></button>
             </div>
         </div>
     );

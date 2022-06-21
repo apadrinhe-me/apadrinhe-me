@@ -28,12 +28,12 @@
     outline: 0;
 }
 
-.post-profile-pic {
+.NewPost .post-profile-pic {
     width: 50;
     height: 50px;
 }
 
-.post-actions {
+.NewPost .post-actions {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -41,7 +41,7 @@
     flex-wrap: wrap-reverse;
 }
 
-.btn-actions {
+.NewPost .btn-actions {
     border: none;
     background: transparent;
     padding: 7px 15px;
@@ -51,7 +51,21 @@
     border-radius: 15px;
 }
 
-.btn-actions:hover {
+.NewPost .btn-actions:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.295);
+}
+
+.NewPost .post-btns{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.NewPost .post-btns .btn-post span{
+    color: white;
+}
+
+.NewPost .post-btns .btn-post i{
+    color: #D92588;
 }
