@@ -1,0 +1,71 @@
+.cardestrutura {
+    background-color: #282828;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+
+.Conexoes {
+    margin: 0 auto;
+    max-width: 800px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.507);
+}
+
+.Conexoes ul {
+    display: flex;
+    margin: 10px 10px;
+    justify-content: space-between;
+}
+
+.navegacaoConexoes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navegacaoConexoes li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.navegacaoConexoes li button {
+    flex: 1;
+    width: 200px;
+    min-width: 100px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #191919;
+    border: 1px solid #191919;
+    font-weight: 600;
+    color: #fff;
+
+    margin: 10px 0;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.navegacaoConexoes li button:hover {
+    transition: .2s;
+    border: 1px solid #fff;
+}
+
+.cardInteracaoUsuarios {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 700px){
+    .Conexoes ul{
+       justify-content: center;
+       gap: 10px;
+    }
+}
+
+@media (max-width: 220px){
+    .navegacaoConexoes li button {
+        padding: 10px 5px;
+        width: 100px;
+    }
+
+}
