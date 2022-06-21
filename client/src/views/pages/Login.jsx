@@ -22,7 +22,6 @@ const Login = () => {
             .required("Este campo é obrigatório"),
     });
 
-
     return (
         <div className="Login">
             <Formik initialValues={{}} onSubmit={handleClickLogin} validationSchema={validationLogin}>
