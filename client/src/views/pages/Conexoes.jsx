@@ -3,7 +3,7 @@ import "./Conexoes.css";
 import React, { useState } from "react";
 
 import Menu from "../../componets/layout/Menu";
-import CardConexoes from "../../componets/layout/cardsConexoes/CardConexoes";
+import ListaConexao from "../../componets/layout/listaConexoes/ListaConexao";
 import MenuMobile from "../../componets/layout/MenuMobile";
 import If from "../../componets/funcional/If";
 
@@ -51,48 +51,7 @@ const Conexoes = () => {
                 </div>
 
                 <div className="cardInteracaoUsuarios my-scrollbar">
-                    <If test={tipoConexao == 1}>
-                        {todasConec.map((conec, key) => {
-                            return(
-                                <CardConexoes
-                                    tipo={1}
-                                    foto={conec.foto}
-                                    nome={conec.nome}
-                                    aspiracao={conec.aspiracao}
-                                    key={key}
-                                />
-                            );
-                        })}
-                    </If>
-
-                    <If test={tipoConexao == 2}>
-                        {conecPendentes.map((conec, key) => {
-                            return(
-                                <CardConexoes
-                                    tipo={2}
-                                    foto={conec.foto}
-                                    nome={conec.nome}
-                                    aspiracao={conec.aspiracao}
-                                    msg={conec.msg}
-                                    key={key}
-                                />
-                            );
-                        })}
-                    </If>
-
-                    <If test={tipoConexao == 3}>
-                        {conecSolicitadas.map((conec, key) => {
-                            return(
-                                <CardConexoes
-                                    tipo={3}
-                                    foto={conec.foto}
-                                    nome={conec.nome}
-                                    aspiracao={conec.aspiracao}
-                                    key={key}
-                                />
-                            );
-                        })}
-                    </If>
+                    <ListaConexao/>
                 </div>
             </div>
 
@@ -102,3 +61,27 @@ const Conexoes = () => {
 }
 
 export default Conexoes;
+
+{/*<If test={tipoConexao == 1}>
+                        {todasConec.map((conec, key) => {
+                            return(
+                                <ListaConexao/>
+                            );
+                        })}
+                    </If>
+
+                    <If test={tipoConexao == 2}>
+                        {conecPendentes.map((conec, key) => {
+                            return(
+                                <ListaConexao/>
+                            );
+                        })}
+                    </If>
+
+                    <If test={tipoConexao == 3}>
+                        {conecSolicitadas.map((conec, key) => {
+                            return(
+                                <ListaConexao/>
+                            );
+                        })}
+                    </If>*/}
