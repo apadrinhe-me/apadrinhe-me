@@ -6,6 +6,7 @@ import Card_cadastro from "../../componets/layout/card_cadastro/Card_cadastro";
 import CreateLogin from "../../componets/layout/pagesCadastro/CreateLogin";
 import PersonalInfo from "../../componets/layout/pagesCadastro/PersonalInfo";
 import ParentInfo from "../../componets/layout/pagesCadastro/ParentInfo";
+import EnderecoCadastro from "../../componets/layout/pagesCadastro/EnderecoCadastro";
 import RevisionCadastro from "../../componets/layout/pagesCadastro/RevisionCadastro";
 import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
 
@@ -14,9 +15,9 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Box from '@mui/material/Box';
-import { colors } from "@mui/material";
 import Typography from '@mui/material/Typography';
-import { SxProps } from "@mui/material";
+import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
+import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider';
 
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as yup from "yup"
@@ -27,6 +28,7 @@ const steps = [
     'Crie seu login',
     'Adicione suas informações pessoais',
     'Adicione as informações de seu responável',
+    'Adicione seu Endereço',
     'Revisão',
 ];
 
@@ -52,6 +54,8 @@ const Cadastro = () => {
     const [confirmSenha, setConfirmSenha] = useState("")
     const [nomeCompleto, setNomeCompleto] = useState("")
     const [cpf, setCpf] = useState("")
+    const [renda, setRenda] = useState("")
+    const [escola, setEscola] = useState("")
     const [nickname, setNickname] = useState("")
     const [dataNasc, setDataNasc] = useState(null)
     const [genero, setGenero] = useState("")
@@ -61,6 +65,13 @@ const Cadastro = () => {
     const [parente_email, setParente_email] = useState("")
     const [precisaResponsavel, setPrecisaResponsavel] = useState(true);
     const [termosUso, setTermosUso] = useState(false);
+    const [cep, setCep] = useState("");
+    const [uf, setUf] = useState("");
+    const [cidade, setCidade] = useState("");
+    const [bairro, setBairro] = useState("");
+    const [rua, setRua] = useState("");
+    const [numero, setNumero] = useState("");
+    const [complemento, setComplemento] = useState("");
 
     //Objeto que armazena os dados do cadastro e põe no backend
     let cadastro = {
@@ -72,7 +83,18 @@ const Cadastro = () => {
             nickname_usuario: nickname,
             cpf_usuario: cpf,
             data_nasc_usuario: dataNasc,
-            genero_usuario: genero
+            genero_usuario: genero,
+            escolaridade: escola,
+            renda: renda
+        },
+        locationInfo: {
+            cep: cep,
+            uf: uf,
+            cidade: cidade,
+            Bairro: bairro,
+            rua: rua,
+            numero: numero,
+            complemento: complemento,
         },
         parentInfo: {
             cpf_responsavel: parente_cpf,
@@ -114,7 +136,7 @@ const Cadastro = () => {
                 }
                 break;
             case 2:
-                if (nomeCompleto == "" || cpf == "" || nickname == "" || dataNasc == null || genero == "") {
+                if (nomeCompleto == "" || cpf == "" || nickname == "" || dataNasc == null || genero == "" || renda == "" || (selectedPadrinType == "ser_apadrinhado" && escola == "")) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Preencha todos os campos"
                 } else if (cpf.length !== 11) {
@@ -155,6 +177,19 @@ const Cadastro = () => {
                 }
                 break;
             case 4:
+                if (cep == "" || uf == "" || cidade == "" || bairro == null || rua == null || numero == null) {
+                    msg_erro.current.classList.add("show")
+                    msg_erro_text.current.innerHTML = "Preencha todos os campos"
+                } else if (cep.length !== 8) {
+                    msg_erro.current.classList.add("show")
+                    msg_erro_text.current.innerHTML = "Digite um cep válido"
+                } else {
+                    msg_erro.current.classList.remove("show")
+                    msg_erro_text.current.innerHTML = ""
+                    setCadEtapa(5)
+                }
+                break;
+            case 5:
                 if (!termosUso) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Aceite os termos de uso"
@@ -171,112 +206,141 @@ const Cadastro = () => {
     return (
         <div className="Cadastro">
             <Formik initialValues={{}} onSubmit={cadastro} validationSchema={cadastro}>
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                    <div className="Cards">
+                        <div className="container_cad">
+                            <img className="logoCadastro" src={LogoMarca} height="50px" />
+                            {/*Stepper*/}
+                            <Box sx={{ width: '100%' }} className="stepper-box">
+                                <Stepper activeStep={cadEtapa} alternativeLabel >
+                                    {steps.map((label, key) => (
+                                        <Step key={label}>
+                                            <StepLabel>{label}</StepLabel>
+                                            {key === 3 ? <Typography variant="caption" sx={{ display: "block", width: "100%", textAlign: "center", mt: 1, color: "gray" }}>Caso &lt; 18 anos</Typography> : ""}
+                                        </Step>
+                                    ))}
+                                </Stepper>
+                            </Box>
 
-                <div className="Cards">
-                    <div className="container_cad">
-                        <img className="logoCadastro" src={LogoMarca} height="50px" />
-                        {/*Stepper*/}
-                        <Box sx={{ width: '100%' }} className="stepper-box">
-                            <Stepper activeStep={cadEtapa} alternativeLabel >
-                                {steps.map((label, key) => (
-                                    <Step key={label}>
-                                        <StepLabel>{label}</StepLabel>
-                                        {key === 3 ? <Typography variant="caption" sx={{ display: "block", width: "100%", textAlign: "center", mt: 1, color: "gray" }}>Caso &lt; 18 anos</Typography> : ""}
-                                    </Step>
-                                ))}
-                            </Stepper>
-                        </Box>
+                            {/*etapa 1*/}
+                            <If test={cadEtapa === 0}>
+                                <SelectTypeUser proximaEtapa={proximaEtapa}>
+                                    <Card_cadastro
+                                        type="ser_apadrinhado"
+                                        selectedPadrinType={selectedPadrinType}
+                                        setSelectedPadrinType={setSelectedPadrinType}
+                                    >
+                                        <h3 className="title_card">Quero ser <br /> afilhado(a)</h3>
+                                        <p className="text_card">Crie conteúdeo para ser visto e receber ajuda de diversos apoiadores cadastrados na plataforma</p>
+                                    </Card_cadastro>
 
-                        {/*etapa 1*/}
-                        <If test={cadEtapa === 0}>
-                            <SelectTypeUser proximaEtapa={proximaEtapa}>
-                                <Card_cadastro
-                                    type="ser_apadrinhado"
+                                    <Card_cadastro type="apadrinhar"
+                                        selectedPadrinType={selectedPadrinType}
+                                        setSelectedPadrinType={setSelectedPadrinType}
+                                    >
+                                        <h3 className="title_card">Quero <br />apoiar</h3>
+                                        <p className="text_card"> Acompanhe o desenvolvimento de jovens e encontre um para apoiar de diversas maneiras </p>
+                                    </Card_cadastro>
+                                </SelectTypeUser>
+                            </If>
+
+
+                            {/*etapa 2*/}
+                            <If test={cadEtapa === 1}>
+                                <CreateLogin
+                                    cadEtapa={cadEtapa}
+                                    setCadEtapa={setCadEtapa}
+                                    proximaEtapa={proximaEtapa}
+                                    email={email}
+                                    senha={senha}
+                                    confirmSenha={confirmSenha}
+                                    setEmail={setEmail}
+                                    setSenha={setSenha}
+                                    setConfirmSenha={setConfirmSenha}
+                                />
+                            </If>
+
+                            {/*etapa 3*/}
+                            <If test={cadEtapa === 2}>
+                                <PersonalInfo
+                                    cadEtapa={cadEtapa}
+                                    setCadEtapa={setCadEtapa}
+                                    proximaEtapa={proximaEtapa}
+                                    nomeCompleto={nomeCompleto}
+                                    cpf={cpf}
+                                    nickname={nickname}
+                                    dataNasc={dataNasc}
+                                    genero={genero}
+                                    setNomeCompleto={setNomeCompleto}
+                                    setCpf={setCpf}
+                                    setNickname={setNickname}
+                                    setDataNasc={setDataNasc}
+                                    setGenero={setGenero}
+                                    escola={escola}
+                                    setEscola={setEscola}
+                                    renda={renda}
+                                    setRenda={setRenda}
                                     selectedPadrinType={selectedPadrinType}
-                                    setSelectedPadrinType={setSelectedPadrinType}
-                                >
-                                    <h3 className="title_card">Quero ser <br /> afilhado(a)</h3>
-                                    <p className="text_card">Crie conteúdeo para ser visto e receber ajuda de diversos apoiadores cadastrados na plataforma</p>
-                                </Card_cadastro>
+                                />
+                            </If>
 
-                                <Card_cadastro type="apadrinhar"
-                                    selectedPadrinType={selectedPadrinType}
-                                    setSelectedPadrinType={setSelectedPadrinType}
-                                >
-                                    <h3 className="title_card">Quero <br />apoiar</h3>
-                                    <p className="text_card"> Acompanhe o desenvolvimento de jovens e encontre um para apoiar de diversas maneiras </p>
-                                </Card_cadastro>
-                            </SelectTypeUser>
-                        </If>
+                            {/*etapa 4*/}
+                            <If test={cadEtapa === 3}>
+                                <ParentInfo
+                                    cadEtapa={cadEtapa}
+                                    setCadEtapa={setCadEtapa}
+                                    proximaEtapa={proximaEtapa}
+                                    parente_nome={parente_nome}
+                                    parente_cpf={parente_cpf}
+                                    parente_dataNasc={parente_dataNasc}
+                                    parente_email={parente_email}
+                                    setParente_nome={setParente_nome}
+                                    setParente_cpf={setParente_cpf}
+                                    setParente_dataNasc={setParente_dataNasc}
+                                    setParente_email={setParente_email}
+                                />
+                            </If>
 
+                            {/*etapa 5*/}
+                            <If test={cadEtapa === 4}>
+                                <EnderecoCadastro
+                                    cadEtapa={cadEtapa}
+                                    setCadEtapa={setCadEtapa}
+                                    proximaEtapa={proximaEtapa}
+                                    cep={cep}
+                                    uf={uf}
+                                    cidade={cidade}
+                                    bairro={bairro}
+                                    rua={rua}
+                                    numero={numero}
+                                    complemento={complemento}
+                                    setCep={setCep}
+                                    setUf={setUf}
+                                    setCidade={setCidade}
+                                    setBairro={setBairro}
+                                    setRua={setRua}
+                                    setNumero={setNumero}
+                                    setComplemento={setComplemento}
+                                    precisaResponsavel={precisaResponsavel}
+                                />
+                            </If>
 
-                        {/*etapa 2*/}
-                        <If test={cadEtapa === 1}>
-                            <CreateLogin
-                                cadEtapa={cadEtapa}
-                                setCadEtapa={setCadEtapa}
-                                proximaEtapa={proximaEtapa}
-                                email={email}
-                                senha={senha}
-                                confirmSenha={confirmSenha}
-                                setEmail={setEmail}
-                                setSenha={setSenha}
-                                setConfirmSenha={setConfirmSenha}
-                            />
-                        </If>
+                            {/*etapa 6*/}
+                            <If test={cadEtapa === 5}>
+                                <RevisionCadastro
+                                    cadEtapa={cadEtapa}
+                                    setCadEtapa={setCadEtapa}
+                                    cadastro={cadastro}
+                                    proximaEtapa={proximaEtapa}
+                                    termosUso={termosUso}
+                                    setTermosUso={setTermosUso}
+                                />
+                            </If>
 
-                        {/*etapa 3*/}
-                        <If test={cadEtapa === 2}>
-                            <PersonalInfo
-                                cadEtapa={cadEtapa}
-                                setCadEtapa={setCadEtapa}
-                                proximaEtapa={proximaEtapa}
-                                nomeCompleto={nomeCompleto}
-                                cpf={cpf}
-                                nickname={nickname}
-                                dataNasc={dataNasc}
-                                genero={genero}
-                                setNomeCompleto={setNomeCompleto}
-                                setCpf={setCpf}
-                                setNickname={setNickname}
-                                setDataNasc={setDataNasc}
-                                setGenero={setGenero}
-                            />
-                        </If>
-
-                        {/*etapa 4*/}
-                        <If test={cadEtapa === 3}>
-                            <ParentInfo
-                                cadEtapa={cadEtapa}
-                                setCadEtapa={setCadEtapa}
-                                proximaEtapa={proximaEtapa}
-                                parente_nome={parente_nome}
-                                parente_cpf={parente_cpf}
-                                parente_dataNasc={parente_dataNasc}
-                                parente_email={parente_email}
-                                setParente_nome={setParente_nome}
-                                setParente_cpf={setParente_cpf}
-                                setParente_dataNasc={setParente_dataNasc}
-                                setParente_email={setParente_email}
-                            />
-                        </If>
-
-                        {/*etapa 5*/}
-                        <If test={cadEtapa === 4}>
-                            <RevisionCadastro
-                                cadEtapa={cadEtapa}
-                                setCadEtapa={setCadEtapa}
-                                cadastro={cadastro}
-                                proximaEtapa={proximaEtapa}
-                                precisaResponsavel={precisaResponsavel}
-                                termosUso={termosUso}
-                                setTermosUso={setTermosUso}
-                            />
-                        </If>
-
-                        <Alert severity="error" ref={msg_erro} className="msg_erro hide"><span className="msg_erro_text" ref={msg_erro_text}>ala</span></Alert>
+                            <Alert severity="error" ref={msg_erro} className="msg_erro hide"><span className="msg_erro_text" ref={msg_erro_text}>ala</span></Alert>
+                        </div>
                     </div>
-                </div>
+                </LocalizationProvider>
             </Formik>
         </div>
     );

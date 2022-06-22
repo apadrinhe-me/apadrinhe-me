@@ -14,7 +14,7 @@ const RevisionCadastro = props => {
     return (
         <div className="RevisionCadastro">
             <div className="return-previous-step">
-                <button className="btn-format btn-return" onClick={() => props.precisaResponsavel ? props.setCadEtapa(3) : props.setCadEtapa(2)}><i className="bi bi-arrow-return-left"></i> Voltar para etapa {props.precisaResponsavel ? 4 : 3}</button>
+                <button className="btn-format btn-return" onClick={() => props.setCadEtapa(4)}><i className="bi bi-arrow-return-left"></i> Voltar para etapa {props.cadEtapa}</button>
             </div>
             <div className="cad_msg">
                 <span>Tudo certo com suas informações?</span>
@@ -90,7 +90,7 @@ const RevisionCadastro = props => {
                 <Checkbox id="terms-of-use" checked={props.termosUso} onChange={e => props.setTermosUso(!props.termosUso)} /> <label htmlFor="terms-of-use">Concordo com os <Link to="#">termos da plataforma</Link></label>
             </div>
 
-            <button className="continue-cad-btn" onClick={() => props.proximaEtapa(4)}>Tudo pronto</button>
+            <button className="continue-cad-btn" onClick={() => props.proximaEtapa(5)}>Tudo pronto</button>
         </div>
     );
 }

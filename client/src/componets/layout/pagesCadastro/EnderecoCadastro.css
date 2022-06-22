@@ -1,0 +1,13 @@
+.EnderecoCadastro{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+}
+
+.EnderecoCadastro .personal-info-form{
+    flex: 1;
+    margin: 20px auto;
+}

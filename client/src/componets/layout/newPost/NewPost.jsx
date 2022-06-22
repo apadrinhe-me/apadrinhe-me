@@ -2,6 +2,7 @@ import "./NewPost.css";
 import React, { useState } from "react";
 import ProfPicture from "../profPicture/ProfPicture";
 import RocketImg from "../../../media/icons/icons_apadrinhar_icon_fill.svg";
+import MomentsImg from "../../../media/icons/item_moments_icon_fill.svg";
 
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
@@ -38,30 +39,25 @@ const NewPost = props => {
                     </div>
                     <textarea id="post-input" className="post-input" placeholder="Começar publicação" value={postInput} onChange={e => { setPostInput(e.target.value) }} onClick={() => {
                         setOpenPost(true)
-                        setPostType('texto')
+                        setPostType('post')
                     }} readOnly></textarea>
                 </div>
 
                 <div className="post-btns">
                     <button className="btn-format btn-post" onClick={() => {
                         setOpenPost(true)
-                        setPostType('foto')
-                    }}><i className="bi bi-image-fill"></i> <span>Foto</span></button>
-
-                    <button className="btn-format btn-post" onClick={() => {
-                        setOpenPost(true)
-                        setPostType('video')
-                    }}><i className="bi bi-play-btn-fill"></i> <span>Vídeo</span></button>
-
-                    <button className="btn-format btn-post" onClick={() => {
-                        setOpenPost(true)
-                        setPostType('texto')
-                    }}><i className="bi bi-card-text"></i> <span>Texto</span></button>
+                        setPostType('post')
+                    }}><i className="bi bi-plus-square-fill"></i> <span>Novo post</span></button>
 
                     <button className="btn-format btn-post" onClick={() => {
                         setOpenPost(true)
                         setPostType('apoio')
                     }}><img src={RocketImg} alt="rocket icon" height={20}/> <span>Me apoie</span></button>
+
+                    <button className="btn-format btn-post" onClick={() => {
+                        setOpenPost(true)
+                        setPostType('moments')
+                    }}><img src={MomentsImg} alt="rocket icon" height={20}/> <span>Novo moments</span></button>
                 </div>
             </div>
 
