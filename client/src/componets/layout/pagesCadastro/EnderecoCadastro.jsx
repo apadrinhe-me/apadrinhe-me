@@ -8,26 +8,37 @@ import {ApiCorreios} from "../../../services/api";
 
 const EnderecoCadastro = props => {
 
-    console.log(props.cep.length)
-    if(props.cep.length === 8){
-        ApiCorreios
-            .get(`/ws/${props.cep}/json/`)
-            .then((response) => {
-                console.log(response.data)
-                props.setUf(response.data.uf)
-                props.setCidade(response.data.localidade)
-                props.setBairro(response.data.bairro)
-                props.setRua(response.data.logradouro)
-            })
-            .catch((err) => {
-                alert("erro ao acessar seu CEP. Tente novamente")
-            });
-    } else {
-        props.setUf("")
-        props.setCidade("")
-        props.setBairro("")
-        props.setRua("")
-    }
+
+    useEffect(() => {
+        console.log(props.cep.length)
+
+        if(props.cep.length === 8){
+            ApiCorreios
+                .get(`/ws/${props.cep}/json/`)
+                .then((response) => {
+                    console.log(response.data)
+                    if (response.data.erro){
+                        props.setCepValido(false)
+                    } else {
+                        props.setCepValido(true)
+
+                        props.setUf(response.data.uf)
+                        props.setCidade(response.data.localidade)
+                        props.setBairro(response.data.bairro)
+                        props.setRua(response.data.logradouro)
+                    }
+                })
+                .catch((err) => {
+                    alert("erro ao acessar seu CEP. Tente novamente")
+                });
+        } else {
+            props.setUf("")
+            props.setCidade("")
+            props.setBairro("")
+            props.setRua("")
+        }
+    }, [props]);
+
 
     return(
         <div className="EnderecoCadastro">

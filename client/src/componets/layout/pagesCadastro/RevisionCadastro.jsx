@@ -11,6 +11,8 @@ import Checkbox from '@mui/material/Checkbox';
 import {Link} from "react-router-dom";
 
 const RevisionCadastro = props => {
+    console.log(props)
+
     return (
         <div className="RevisionCadastro">
             <div className="return-previous-step">
@@ -25,7 +27,7 @@ const RevisionCadastro = props => {
                     <Table size="small" aria-label="a dense table">
                         <TableBody>
                             <TableRow>
-                                <TableCell colSpan={2} align="center"><strong>Suas informações</strong></TableCell>
+                                <TableCell colSpan={2} align="center" sx={{}}><strong>Suas informações</strong></TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell align="right">Objetivo:</TableCell>
@@ -55,6 +57,42 @@ const RevisionCadastro = props => {
                                 <TableCell align="right">Gênero:</TableCell>
                                 <TableCell>{props.cadastro.userInfo.genero_usuario}</TableCell>
                             </TableRow>
+
+                            <TableRow>
+                                <TableCell colSpan={2} align="center"><strong>Localização</strong></TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">CEP:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.cep}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">UF:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.uf}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">Cidade:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.cidade}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">Bairro:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.bairro}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">Rua:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.rua}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">Número:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.numero}</TableCell>
+                            </TableRow>
+                            {props.cadastro.locationInfo.complemento != "" ?
+                                <TableRow>
+                                    <TableCell align="right">Complemento:</TableCell>
+                                    <TableCell>{props.cadastro.locationInfo.genero_usuario}</TableCell>
+                                </TableRow>
+                                :
+                                ""
+                            }
 
                             {props.precisaResponsavel ?
                                 <>

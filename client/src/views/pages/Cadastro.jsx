@@ -66,6 +66,7 @@ const Cadastro = () => {
     const [precisaResponsavel, setPrecisaResponsavel] = useState(true);
     const [termosUso, setTermosUso] = useState(false);
     const [cep, setCep] = useState("");
+    const [cepValido, setCepValido] = useState(false);
     const [uf, setUf] = useState("");
     const [cidade, setCidade] = useState("");
     const [bairro, setBairro] = useState("");
@@ -91,7 +92,7 @@ const Cadastro = () => {
             cep: cep,
             uf: uf,
             cidade: cidade,
-            Bairro: bairro,
+            bairro: bairro,
             rua: rua,
             numero: numero,
             complemento: complemento,
@@ -177,12 +178,17 @@ const Cadastro = () => {
                 }
                 break;
             case 4:
+                console.log(cepValido)
                 if (cep == "" || uf == "" || cidade == "" || bairro == null || rua == null || numero == null) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Preencha todos os campos"
                 } else if (cep.length !== 8) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Digite um cep válido"
+                } else if (!cepValido){
+                    console.log("caiu")
+                    msg_erro.current.classList.add("show")
+                    msg_erro_text.current.innerHTML = "Digite um CEP válido"
                 } else {
                     msg_erro.current.classList.remove("show")
                     msg_erro_text.current.innerHTML = ""
@@ -321,7 +327,10 @@ const Cadastro = () => {
                                     setRua={setRua}
                                     setNumero={setNumero}
                                     setComplemento={setComplemento}
-                                    precisaResponsavel={precisaResponsavel}
+                                    msg_erro={msg_erro}
+                                    msg_erro_text={msg_erro_text}
+                                    cepValido={cepValido}
+                                    setCepValido={setCepValido}
                                 />
                             </If>
 
@@ -334,6 +343,7 @@ const Cadastro = () => {
                                     proximaEtapa={proximaEtapa}
                                     termosUso={termosUso}
                                     setTermosUso={setTermosUso}
+                                    precisaResponsavel={precisaResponsavel}
                                 />
                             </If>
 
