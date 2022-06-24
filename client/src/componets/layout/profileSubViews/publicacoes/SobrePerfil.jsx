@@ -66,8 +66,8 @@ const SobrePerfil = props => {
             <div className="profile-more-info">
                 <div className="profile-more-name">
                     <div>
-                        <h3>Natan Barbosa</h3>
-                        <span className="nickname">@natandevstack</span>
+                        <h3>Valentina</h3>
+                        <span className="nickname">@valentina</span>
                     </div>
                     <div className="my-ml-auto">
                         <button className="btn-format"><i className="bi bi-box-arrow-up"></i></button>
@@ -75,12 +75,13 @@ const SobrePerfil = props => {
                 </div>
 
                 <div className="aspiration">
-                    Quer se tornar um Desenvolvedor Fullstack
+                    Quer se tornar uma astronoma
                 </div>
 
                 <div className="profile-bio">
                     <h3>Biografia</h3>
-                    <p>Sou um jovem de 16 anos de idade. Meu sonho é trabalhar na área de tecnologia, para isso preciso de preparação... Estou na plataforma em busca de apoio para que eu possa me desenvolver de forma eficaz na área da programação, e assim me candidatar para os primeiros processos seletivos da minha história.</p>
+                    <p>Ola! eu sou a Valentina, tenho 16 anos e meu sonho é ser astronoma. Desde sempre gosto muito desse assunto e sempre busquei estudar astronomia, meus pais sempre me apoiaram, porém nunca tiveram uma condição suficiente para que sobrasse um pouco para investir na minha educação. Mas quando conheci o Apadrinhe-me minha vida mudou completamente, pois aqui tenho a oportunidade de continuar estudando com a ajuda de outras pessoas e realizar meu sonho, e mudar minha vida e da minha família.
+                    </p>
                 </div>
             </div>
         </div>

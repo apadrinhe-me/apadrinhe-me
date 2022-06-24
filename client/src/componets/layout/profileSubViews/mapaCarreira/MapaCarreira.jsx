@@ -1,8 +1,8 @@
 import "./MapaCarreira.css";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Timeline from "./Timeline";
 
 const MapaCarreira = props => {
@@ -51,7 +51,7 @@ const MapaCarreira = props => {
             id: 4,
             typo: "profissional",
             name: "Conseguir um estágio",
-            yearBegin: 2018,
+            yearBegin: 2019,
             yearEnd: null,
             area: 'Tecnologia',
             local: 'Oracle',
@@ -65,9 +65,9 @@ const MapaCarreira = props => {
             typo: "intercâmbio",
             name: "Fazer intercâmbio no Canada",
             yearBegin: 2020,
-            yearEnd: null,
+            yearEnd: 2022,
             area: 'Língua estrangeira',
-            local: 'Canadaa',
+            local: 'ILAC – International Language Academy of Canada',
             description: 'Fazer intercâmbio no Canada',
             status: 'not-achieved',
             finalObjective: false,
@@ -87,13 +87,13 @@ const MapaCarreira = props => {
         }
     ]
 
-    return(
+    return (
         <div className="MapaCarreira">
             <div className="div-edit">
                 <Link to="/perfil/mapacarreira/editor"><button className="btn-edit-mapa"><i className="bi bi-pencil-square"></i> Editar mapa de carreira</button></Link>
             </div>
 
-            <Timeline goals={goals}/>
+            <Timeline goals={goals} />
         </div>
     );
 }

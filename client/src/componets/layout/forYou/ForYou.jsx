@@ -4,15 +4,15 @@ import ConectionSugestion from "./ConectionSugestion";
 import HotTopic from "./HotTopic";
 
 const ForYou = props => {
-    return(
+    return (
         <div className="ForYou">
             <h2 className="page-title">Moments</h2>
             <span className="page-subtitle">Sugestão de conexões</span>
             <div className="conection-sugestions">
                 <ConectionSugestion
-                    profPic="natan_proa.jpg"
-                    username="@nate_rock"
-                    name="Natan Barbosa"
+                    profPic="cris.jpg"
+                    username="@cris_ferreira"
+                    name="Cristian Ferreira"
                 />
 
                 <ConectionSugestion
@@ -22,41 +22,41 @@ const ForYou = props => {
                 />
 
                 <ConectionSugestion
-                    profPic="natan_proa.jpg"
-                    username="@nate_rock"
-                    name="Natan Barbosa"
+                    profPic="aurora.jpg"
+                    username="@auroraseles"
+                    name="Aurora Seles"
                 />
 
                 <ConectionSugestion
-                    profPic="natan_proa.jpg"
-                    username="@nate_rock"
-                    name="Natan Barbosa"
+                    profPic="valentina.png"
+                    username="@valentina"
+                    name="Valentina"
                 />
 
                 <ConectionSugestion
-                    profPic="natan_proa.jpg"
-                    username="@nate_rock"
-                    name="Natan Barbosa"
+                    profPic="wagner.png"
+                    username="@wag_pereira"
+                    name="Wagner Pereira"
                 />
 
                 <ConectionSugestion
-                    profPic="natan_proa.jpg"
-                    username="@nate_rock"
-                    name="Natan Barbosa"
+                    profPic="lg.png"
+                    username="@guu.reiss"
+                    name="Luis Gustavo"
                 />
             </div>
 
             <span className="page-subtitle">Em alta "foguinho" </span>
             <div className="HotTopics">
+                <HotTopic topic="#Apadrinhe-me" />
+                <HotTopic topic="#Astronomia" />
+                <HotTopic topic="#Doemateriais" />
                 <HotTopic topic="#Tecnologia" />
-                <HotTopic topic="#Tecnologia" />
-                <HotTopic topic="#Tecnologia" />
-                <HotTopic topic="#Tecnologia" />
-                <HotTopic topic="#Tecnologia" />
-                <HotTopic topic="#Tecnologia" />
+                <HotTopic topic="#Demoday" />
+                <HotTopic topic="#Estude" />
             </div>
 
-            <hr/>
+            <hr />
 
             <div className="copyright-div">
                 <div className="links">

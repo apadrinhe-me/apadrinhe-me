@@ -1,11 +1,11 @@
 import "./Publicacoes.css";
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import Post from "../../post/Post";
 import SobrePerfil from "./SobrePerfil";
 
 function Publicacoes(props) {
 
-    const[buttonPopup, setButtonPopup] = useState(false);
+    const [buttonPopup, setButtonPopup] = useState(false);
 
     return (
         <div className="Publicacoes">
@@ -16,10 +16,10 @@ function Publicacoes(props) {
             <div className="profile-posts">
                 <Post
                     profPicture="valentina.png"
-                    fullname="Natan Barbosa"
-                    aspiration="Aspirante a desenvolvedor fullstack"
+                    fullname="Valentina"
+                    aspiration="Aspirante a astrônoma"
                     postDate="2022-04-19 12:30:25"
-                    postDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis odio ducimus numquam quas fuga autem at amet cumque sint modi impedit esse asperiores veritatis, ullam itaque reiciendis quaerat perferendis cum."
+                    postDescription="Experiência que eu tive quando tinha 9 anos! muito bom relembrar esse momento incrível, primeira vez que usei um telescópio 🤩"
                     postMedia="mao_casa.jpg"
                     qntLikes={1000}
                     qntComments={200}
