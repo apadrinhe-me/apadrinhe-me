@@ -31,7 +31,7 @@ const Conteudo = () => {
                 <Route path="/conexoes" element={<Conexoes />}/>
                 <Route path="/cursos" element={<Cursos />}/>
                 <Route path="/moments" element={<Moments />}/>
-                <Route path="/login" element={<Login />}/>
+                <Route path="/login/:cadastro" element={<Login />}/>
                 <Route path="/cadastro" element={<Cadastro />}/>
                 <Route path="/chat" element={<Chat />}/>
 

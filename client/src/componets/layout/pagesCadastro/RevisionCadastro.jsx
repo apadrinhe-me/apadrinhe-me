@@ -23,8 +23,8 @@ const RevisionCadastro = props => {
                 <span>Revise seu login, leia os termos e tudo pronto 😁</span>
             </div>
             <div className="revisar-info-cadastro">
-                <TableContainer component={Paper}>
-                    <Table size="small" aria-label="a dense table">
+                <TableContainer component={Paper} sx={{maxHeight: 440, overflowY: 'auto'}}>
+                    <Table size="small" aria-label="a dense table" >
                         <TableBody>
                             <TableRow>
                                 <TableCell colSpan={2} align="center" sx={{}}><strong>Suas informações</strong></TableCell>

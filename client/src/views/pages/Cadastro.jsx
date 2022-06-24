@@ -1,5 +1,6 @@
 import "./Cadastro.css";
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import If from "../../componets/funcional/If";
 import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
 
@@ -38,16 +39,6 @@ function getIdadeUsuario(dataNasc) {
     let dataAtual = new Date();
     let idadeUser = dataAtual.getFullYear() - dataNasc.getFullYear();
     return idadeUser;
-}
-
-function cadastrarUser(infos) {
-    console.log(infos);
-
-    MyServer
-        .post("/register", infos)
-        .then(response => {
-            console.log(response);
-        })
 }
 
 const Cadastro = () => {
@@ -209,7 +200,13 @@ const Cadastro = () => {
                 } else {
                     msg_erro.current.classList.remove("show")
                     msg_erro_text.current.innerHTML = ""
-                    cadastrarUser(cadastro);
+
+                    //cadastrarUsuário
+                    MyServer
+                        .post("/register", cadastro)
+                        .then(response => {
+                            window.location.href = "http://localhost:3000/login/cadastrado"
+                        })
                 }
                 break;
         }
