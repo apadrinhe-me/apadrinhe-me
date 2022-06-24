@@ -1,6 +1,9 @@
 import "./Cadastro.css";
 import React, { useState, useRef } from "react";
 import If from "../../componets/funcional/If";
+import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
+
+//Telas cadastro
 import SelectTypeUser from "../../componets/layout/pagesCadastro/SelectTypeUser";
 import Card_cadastro from "../../componets/layout/card_cadastro/Card_cadastro";
 import CreateLogin from "../../componets/layout/pagesCadastro/CreateLogin";
@@ -8,8 +11,8 @@ import PersonalInfo from "../../componets/layout/pagesCadastro/PersonalInfo";
 import ParentInfo from "../../componets/layout/pagesCadastro/ParentInfo";
 import EnderecoCadastro from "../../componets/layout/pagesCadastro/EnderecoCadastro";
 import RevisionCadastro from "../../componets/layout/pagesCadastro/RevisionCadastro";
-import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
 
+//MUI
 import Alert from '@mui/material/Alert';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -19,9 +22,8 @@ import Typography from '@mui/material/Typography';
 import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
 import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider';
 
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import * as yup from "yup"
-
+//API
+import {MyServer} from "../../services/api";
 
 const steps = [
     'Selecione seu tipo de cadastro',
@@ -34,13 +36,18 @@ const steps = [
 
 function getIdadeUsuario(dataNasc) {
     let dataAtual = new Date();
-    let idadeUser = dataAtual.getFullYear() - dataNasc.getFullYear()
+    let idadeUser = dataAtual.getFullYear() - dataNasc.getFullYear();
     return idadeUser;
 }
 
 function cadastrarUser(infos) {
-    console.log(infos)
-    window.location.href = "/"
+    console.log(infos);
+
+    MyServer
+        .post("/register", infos)
+        .then(response => {
+            console.log(response);
+        })
 }
 
 const Cadastro = () => {
@@ -104,9 +111,6 @@ const Cadastro = () => {
             email_responsavel: parente_email
         }
     }
-
-    console.log(cadastro)
-
     //Função para fazer as verificações se está tudo preenchido certinho e seguir para próxima etapa
     const msg_erro = useRef(null);
     const msg_erro_text = useRef(null);
@@ -130,6 +134,9 @@ const Cadastro = () => {
                 } else if (senha !== confirmSenha) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "As senhas não batem"
+                } else if (senha.length < 6) {
+                    msg_erro.current.classList.add("show")
+                    msg_erro_text.current.innerHTML = "A senha deve conter ao menos 6 caracteres"
                 } else {
                     msg_erro.current.classList.remove("show")
                     msg_erro_text.current.innerHTML = ""
@@ -211,7 +218,6 @@ const Cadastro = () => {
 
     return (
         <div className="Cadastro">
-            <Formik initialValues={{}} onSubmit={cadastro} validationSchema={cadastro}>
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                     <div className="Cards">
                         <div className="container_cad">
@@ -351,7 +357,6 @@ const Cadastro = () => {
                         </div>
                     </div>
                 </LocalizationProvider>
-            </Formik>
         </div>
     );
 }

@@ -6,9 +6,130 @@
   <component name="ChangeListManager">
     <list default="true" id="15287c18-b7a6-4907-9dd2-a04873728e65" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/layout/pagesCadastro/EnderecoCadastro.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/componets/layout/pagesCadastro/EnderecoCadastro.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/layout/pagesCadastro/RevisionCadastro.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/componets/layout/pagesCadastro/RevisionCadastro.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/views/pages/Cadastro.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/pages/Cadastro.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/pages/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/bench.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/abort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/async.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/defer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/iterate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/readable_asynckit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/readable_parallel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/readable_serial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/readable_serial_ordered.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/streamify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/lib/terminator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/parallel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/serial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/serialOrdered.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/asynckit/stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/SECURITY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/UPGRADE_GUIDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/adapters/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/adapters/http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/adapters/xhr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/cancel/CancelToken.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/cancel/CanceledError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/cancel/isCancel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/Axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/AxiosError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/InterceptorManager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/buildFullPath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/dispatchRequest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/mergeConfig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/settle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/transformData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/defaults/env/FormData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/defaults/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/defaults/transitional.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/env/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/env/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/bind.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/buildURL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/combineURLs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/cookies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/deprecatedMethod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/isAbsoluteURL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/isAxiosError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/isURLSameOrigin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/normalizeHeaderName.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/null.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/parseHeaders.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/parseProtocol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/spread.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/toFormData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/validator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/axios/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/combined-stream/License" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/combined-stream/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/combined-stream/lib/combined_stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/combined-stream/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/combined-stream/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/delayed-stream/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/delayed-stream/License" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/delayed-stream/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/delayed-stream/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/delayed-stream/lib/delayed_stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/delayed-stream/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/follow-redirects/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/follow-redirects/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/follow-redirects/debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/follow-redirects/http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/follow-redirects/https.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/follow-redirects/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/follow-redirects/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/License" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/README.md.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/lib/browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/lib/form_data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/lib/populate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/form-data/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-db/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-db/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-db/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-db/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-db/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-db/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-types/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-types/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-types/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-types/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime-types/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/nodemon/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/nodemon/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/nodemon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/nodemon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,25 +161,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/bibliotecas/Documentos/repositório de atividades do PROA/_apadrinhe_me&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Programas\\PhpStorm 2020.1.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/bibliotecas/Documentos/repositório de atividades do PROA/_apadrinhe_me",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editing.templates",
+    "ts.external.directory.path": "D:\\Programas\\PhpStorm 2020.1.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\bibliotecas\Documentos\repositório de atividades do PROA\_apadrinhe_me\src\componets\layout" />
@@ -108,7 +234,9 @@
       <workItem from="1655860964364" duration="2067000" />
       <workItem from="1655902384781" duration="2440000" />
       <workItem from="1655910566157" duration="11395000" />
-      <workItem from="1655942605816" duration="3629000" />
+      <workItem from="1655942605816" duration="3871000" />
+      <workItem from="1656075265176" duration="2055000" />
+      <workItem from="1656077941622" duration="14549000" />
     </task>
     <servers />
   </component>

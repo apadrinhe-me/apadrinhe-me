@@ -6,4 +6,8 @@ const ApiCorreios = axios.create({
     baseURL: "https://viacep.com.br"
 })
 
-export {ApiCorreios}
+const MyServer = axios.create({
+    baseURL: "http://localhost:3001"
+})
+
+export {ApiCorreios, MyServer}
