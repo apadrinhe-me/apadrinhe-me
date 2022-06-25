@@ -61,7 +61,6 @@ const PersonalInfo = props => {
                         <Grid item>
                             <TextField id="renda" label="Renda familiar mensal" placeholder="Ex.: R$3000" variant="outlined" fullWidth required value={props.renda} onChange={e => props.setRenda(e.target.value)}/>
                         </Grid>
-                        {console.log(props.selectedPadrinType)}
 
                         {
                             props.selectedPadrinType == "ser_apadrinhado" ?

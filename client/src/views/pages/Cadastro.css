@@ -156,6 +156,33 @@
     align-self: flex-start;
 }
 
+.boxCadastro h3{
+    color: green;
+}
+
+.boxCadastro p{
+    color: #3D3D3D;
+    font-size: 0.9em;
+}
+
+.boxCadastro .btn-redirect-login{
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    background: #d92588;
+    color: white;
+    border-radius: 8px;
+    transition: background .2s;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.boxCadastro .btn-redirect-login:hover{
+    cursor: pointer;
+    background: #ab1e6c;
+    transition: background .2s;
+}
+
 @media (max-width: 575.98px) {
     .stepper-box {
         margin-top: 80px;

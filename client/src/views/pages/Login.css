@@ -16,7 +16,7 @@
 
     width: 500px;
     height: 600px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border-radius: 15px;
     padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.01);
@@ -147,4 +147,13 @@
 .Login button:hover {
     background-color: #a31c66;
     transition: 0.2s;
+}
+
+.Login .msg_erro {
+    display: none;
+    margin-top: 15px;
+}
+
+.Login .msg_erro.show {
+    display: flex;
 }
