@@ -8,27 +8,27 @@ import MenuMobile from "../../componets/layout/MenuMobile";
 import If from "../../componets/funcional/If";
 
 const todasConec = [
-    { foto: "diego.png", nome: "Diego Santos", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "aurora.png", nome: "Aurora seles", aspiracao: "Jornalista e Professora" },
     { foto: "gabriel.png", nome: "Gabriel Augusto", aspiracao: "Professor at Senac" },
-    { foto: "cris.png", nome: "Cristian Ferreira", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "cris.jpg", nome: "Cristian Ferreira", aspiracao: "Aspirante a desenvolvedor web" },
     { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
     { foto: "jailson.png", nome: "Jailson Costa", aspiracao: "Docente Full Stack Web Java no Senac São Paulo" },
     { foto: "valentina.png", nome: "Valentina", aspiracao: "Aspirante a astrônoma" },
     { foto: "lg.png", nome: "Luis Gustavo", aspiracao: "Aspirante a desenvolvedor web" },
-    { foto: "Ro.png", nome: "Rosani", aspiracao: "Aspirante a desenvolvedor web" },
-    { foto: "Wagner.png", nome: "Wagner Pereira", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "Ro.png", nome: "Rosani", aspiracao: "Cordenadora educacional" },
+    { foto: "wagner.png", nome: "Wagner Pereira", aspiracao: "Aspirante a desenvolvedor web" },
 ];
 
 const conecPendentes = [
-    { foto: "jv.png", nome: "Joao Victor", aspiracao: "Aspirante a desenvolvedor web", msg: "Gostei do seu conteúdo. Vamos conversar!" },
-    { foto: "aurora.jpg", nome: "Aurora Seles", aspiracao: "Jornalista e Professora", msg: "Gostei do seu conteúdo. Vamos conversar!" },
+    { foto: "murilo.png", nome: "murilo.png", aspiracao: "Aspirante a desenvolvedor web", msg: "Gostei do seu conteúdo. Vamos conversar!" },
+    { foto: "diego.png", nome: "Diego Santos", aspiracao: "Aspirante a desenvolvedor web", msg: "Gostei do seu conteúdo. Vamos conversar!" },
     { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web", msg: "Gostei do seu conteúdo. Vamos conversar!" },
     { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web", msg: "Gostei do seu conteúdo. Vamos conversar!" }
 ];
 
 const conecSolicitadas = [
-    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
-    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "jv.png", nome: "João Victor", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "diego.png", nome: "Diego Santos", aspiracao: "Aspirante a desenvolvedor web" },
     { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
     { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
     { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },

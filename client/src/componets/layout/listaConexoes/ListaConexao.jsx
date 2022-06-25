@@ -1,6 +1,5 @@
 import "./ListaConexao.css";
 import React, { useState } from "react";
-import perfilwag from "../../../media/profile_pictures/wagner.png"
 import Button from "@mui/material/Button"
 import If from "../../funcional/If";
 import ProfPicture from "../profPicture/ProfPicture";
