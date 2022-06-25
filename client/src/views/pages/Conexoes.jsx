@@ -8,30 +8,35 @@ import MenuMobile from "../../componets/layout/MenuMobile";
 import If from "../../componets/funcional/If";
 
 const todasConec = [
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
+    { foto: "diego.png", nome: "Diego Santos", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "gabriel.png", nome: "Gabriel Augusto", aspiracao: "Professor at Senac" },
+    { foto: "cris.png", nome: "Cristian Ferreira", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "jailson.png", nome: "Jailson Costa", aspiracao: "Docente Full Stack Web Java no Senac São Paulo" },
+    { foto: "valentina.png", nome: "Valentina", aspiracao: "Aspirante a astrônoma" },
+    { foto: "lg.png", nome: "Luis Gustavo", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "Ro.png", nome: "Rosani", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "Wagner.png", nome: "Wagner Pereira", aspiracao: "Aspirante a desenvolvedor web" },
 ];
 
 const conecPendentes = [
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web", msg: "Gostei do seu conteúdo. Vamos conversar!"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web", msg: "Gostei do seu conteúdo. Vamos conversar!"}
+    { foto: "jv.png", nome: "Joao Victor", aspiracao: "Aspirante a desenvolvedor web", msg: "Gostei do seu conteúdo. Vamos conversar!" },
+    { foto: "aurora.jpg", nome: "Aurora Seles", aspiracao: "Jornalista e Professora", msg: "Gostei do seu conteúdo. Vamos conversar!" },
+    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web", msg: "Gostei do seu conteúdo. Vamos conversar!" },
+    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web", msg: "Gostei do seu conteúdo. Vamos conversar!" }
 ];
 
 const conecSolicitadas = [
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"},
-    {foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web"}
+    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" },
+    { foto: "natan_proa.jpg", nome: "Natan Barbosa", aspiracao: "Aspirante a desenvolvedor web" }
 ];
 
 const Conexoes = () => {
-    const[tipoConexao, setTipoConexao] = useState(1)
+    const [tipoConexao, setTipoConexao] = useState(1)
     /**
      * 1 - todas conexões
      * 2 - Conexões pendentes
@@ -51,7 +56,34 @@ const Conexoes = () => {
                 </div>
 
                 <div className="cardInteracaoUsuarios my-scrollbar">
-                    <ListaConexao/>
+                    <If test={tipoConexao === 1}>
+
+                        {todasConec.map((conec, key) => {
+                            return (
+                                <ListaConexao tipoConexao={tipoConexao} nome={conec.nome} aspiracao={conec.aspiracao} foto={conec.foto} />
+                            )
+                        })}
+
+                    </If>
+                    <If test={tipoConexao === 2}>
+
+                        {conecSolicitadas.map((conec, key) => {
+                            return (
+                                <ListaConexao tipoConexao={tipoConexao} nome={conec.nome} aspiracao={conec.aspiracao} foto={conec.foto} />
+                            )
+                        })}
+
+                    </If>
+                    <If test={tipoConexao === 3}>
+
+                        {conecPendentes.map((conec, key) => {
+                            return (
+                                <ListaConexao tipoConexao={tipoConexao} nome={conec.nome} aspiracao={conec.aspiracao} foto={conec.foto} />
+                            )
+                        })}
+
+                    </If>
+
                 </div>
             </div>
 
@@ -62,7 +94,7 @@ const Conexoes = () => {
 
 export default Conexoes;
 
-{/*<If test={tipoConexao == 1}>
+/*{<If test={tipoConexao == 1}>
                         {todasConec.map((conec, key) => {
                             return(
                                 <ListaConexao/>
@@ -84,4 +116,4 @@ export default Conexoes;
                                 <ListaConexao/>
                             );
                         })}
-                    </If>*/}
+                    </If>}*/

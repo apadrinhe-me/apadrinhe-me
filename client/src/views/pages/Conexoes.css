@@ -48,21 +48,24 @@
 }
 
 .cardInteracaoUsuarios {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
 
-@media (max-width: 700px){
-    .Conexoes ul{
-       justify-content: center;
-       gap: 10px;
+@media (max-width: 700px) {
+    .Conexoes ul {
+        justify-content: center;
+        gap: 10px;
     }
 }
 
-@media (max-width: 220px){
+@media (max-width: 220px) {
     .navegacaoConexoes li button {
         padding: 10px 5px;
         width: 100px;
