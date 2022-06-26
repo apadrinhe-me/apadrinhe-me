@@ -24,11 +24,11 @@ import StepLabel from '@mui/material/StepLabel';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 //API
-import {MyServer} from "../../services/api";
+import { MyServer } from "../../services/api";
 
 const steps = [
     'Selecione seu tipo de cadastro',
@@ -205,7 +205,7 @@ const Cadastro = () => {
                 } else if (cep.length !== 8) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Digite um cep válido"
-                } else if (!cepValido){
+                } else if (!cepValido) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Digite um CEP válido"
                 } else {
@@ -226,7 +226,7 @@ const Cadastro = () => {
                     MyServer
                         .post("/register", cadastro)
                         .then(response => {
-                            if(response.data.cadastrado){
+                            if (response.data.cadastrado) {
                                 setOpenCadastradoBox(true);
                             } else {
                                 alert(response.data.msg)
@@ -386,7 +386,7 @@ const Cadastro = () => {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={boxCadastradoStyle} className="boxCadastro">
-                    <img src={Cadastrado} height={100}/>
+                    <img src={Cadastrado} height={100} />
                     <h3>Cadastro realizado com sucesso! <i className="bi bi-check-circle-fill"></i></h3>
                     <p>
                         Tudo certo com o seu cadastro. Você já pode fazer login e explorar a plataforma!

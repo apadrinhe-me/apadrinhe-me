@@ -19,24 +19,24 @@ body {
     display: none !important;
 }
 
-.d-flex{
+.d-flex {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
 }
 
-.flex-col{
+.flex-col {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.justify-center{
+.justify-center {
     justify-content: center;
 }
 
-.justify-between{
+.justify-between {
     justify-content: space-between;
 }
 
@@ -59,7 +59,7 @@ body {
     cursor: pointer;
 }
 
-.btn-format{
+.btn-format {
     background: none;
     border: none;
 }

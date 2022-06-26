@@ -62,7 +62,7 @@
     padding: 10px 10px;
     height: calc(100vh - 80.5px);
     border-radius: 15px 15px 15px 15px;
-    margin-top: 10px ;
+    margin-top: 10px;
     margin-left: 10px;
 }
 
@@ -132,7 +132,7 @@
     font-size: 40px;
 }
 
-.drawer-close-btn{
+.drawer-close-btn {
     text-align: end;
 }
 
@@ -145,7 +145,7 @@
         display: none;
     }
 
-    .categoriasCurso.drawer-cursos{
+    .categoriasCurso.drawer-cursos {
         display: block;
         height: calc(100vh - 150px);
     }
@@ -187,4 +187,3 @@
         align-items: center;
     }
 }
-
