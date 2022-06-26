@@ -1,5 +1,5 @@
 import "./Home.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "../../componets/layout/Menu";
 import Post from "../../componets/layout/post/Post";
 import NewPost from "../../componets/layout/newPost/NewPost";
@@ -7,8 +7,26 @@ import Spotlights from "../../componets/layout/spotlights/Spotlights";
 import If from "../../componets/funcional/If";
 import MenuMobile from "../../componets/layout/MenuMobile";
 import ApadPopup from "../../componets/layout/apadPopup/ApadPopup";
+import {MyServer} from "../../services/api";
+
+let login;
 
 const Home = () => {
+    const[logged, setLogged] = useState(false);
+
+    //verificar se está logado
+    useEffect(() => {
+        MyServer.get("/login").then(response => {
+            //Não pode logado na página de login
+            if(response.data.logged){
+                login = response.data.user;
+                setLogged(true)
+            }
+        })
+    }, [])
+
+    console.log(login)
+
     let mobileView = window.innerWidth <= 576 ? true : false;
     let desktopView = window.innerWidth > 576 ? true : false;
 
@@ -23,7 +41,7 @@ const Home = () => {
 
     return (
         <>
-            <Menu atual="Home" logged={false} />
+            <Menu atual="Home" logged={logged} />
             <div className="Home">
                 <If test={viewport === 'desktop'}>
                     <div className="infinity-post-scroll">

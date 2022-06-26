@@ -143,7 +143,6 @@ app.post("/login", (req, res) => {
                 if(valid){
                     //Usuário Logado
                     req.session.user = result[0];
-                    console.log(req.session.user)
                     res.send({logged: true, msg: "logado com sucesso"});
                 } else {
                     res.send({logged: false, msg: "Senha incorreta"});
