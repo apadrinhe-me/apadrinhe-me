@@ -22,7 +22,7 @@ const ForYou = props => {
                 />
 
                 <ConectionSugestion
-                    profPic="aurora.jpg"
+                    profPic="aurora.png"
                     username="@auroraseles"
                     name="Aurora Seles"
                 />
@@ -46,7 +46,7 @@ const ForYou = props => {
                 />
             </div>
 
-            <span className="page-subtitle">Em alta "foguinho" </span>
+            <span className="page-subtitle">Em alta 🔥🔥🔥 </span>
             <div className="HotTopics">
                 <HotTopic topic="#Apadrinhe-me" />
                 <HotTopic topic="#Astronomia" />

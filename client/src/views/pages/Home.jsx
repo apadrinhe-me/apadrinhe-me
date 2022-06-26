@@ -63,7 +63,7 @@ const Home = () => {
                             qntShares={10} />
 
                         <Post
-                            profPicture="aurora.jpg"
+                            profPicture="aurora.png"
                             fullname="Aurora Seles"
                             aspiration="Jornalista e Professora"
                             postDate="2022-04-19 12:30:25"

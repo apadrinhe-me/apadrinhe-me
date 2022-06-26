@@ -199,7 +199,6 @@ const Cadastro = () => {
                 }
                 break;
             case 4:
-                console.log(cepValido)
                 if (cep == "" || uf == "" || cidade == "" || bairro == null || rua == null || numero == null) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Preencha todos os campos"
@@ -207,7 +206,6 @@ const Cadastro = () => {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Digite um cep válido"
                 } else if (!cepValido){
-                    console.log("caiu")
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Digite um CEP válido"
                 } else {

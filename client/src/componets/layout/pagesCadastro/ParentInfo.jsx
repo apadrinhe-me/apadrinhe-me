@@ -19,7 +19,7 @@ const CreateLogin = props => {
             </div>
             <div className="cad_msg">
                 <span>Estamos quase lá!</span>
-                <span>Agora precisamos ds informações de seu responsável</span>
+                <span>Agora precisamos das informações de seu responsável</span>
             </div>
             <div className="personal-info-form">
                 <Grid container direction="row" spacing={3}>
