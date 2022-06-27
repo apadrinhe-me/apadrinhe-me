@@ -39,11 +39,11 @@ const MomentsPost = props => {
         <div className="MomentsPost" id={`moments-${props.id}`}>
             <div className="user-info">
                 <div className="user-profPic">
-                    <ProfPicture src="natan_proa.jpg" scale={60} />
+                    <ProfPicture src="valentina.png" scale={60} />
                 </div>
                 <div className="post-info">
-                    <span className="text-bold">Natan Barbosa</span>
-                    <span className="text-secondary">Aspirante a Desenvolvedor Fullstack</span>
+                    <span className="text-bold">Valentina</span>
+                    <span className="text-secondary">Aspirante a astrônoma</span>
                     <span className="text-secondary">19 de abril de 2022</span>
                 </div>
                 <div className="post-actions">
@@ -53,14 +53,14 @@ const MomentsPost = props => {
             </div>
 
             <div className="post-title-hashs">
-                <span className="post-title">Teste Natan Barbosa</span>
+                <span className="post-title">Estudando muito para alcançar meus objetivos 😁📚</span>
                 <span className="post-hashs">#Apadrinhe-me, #Tecnologia, #Educação,</span>
             </div>
 
             <div className="post-media">
                 <div className="contain-video">
                     <div className="moments-video">
-                        <video src={require("../../../media/moments_media/moments_video.mp4")} controls></video>
+                        <video src={require("../../../media/moments_media/valentinamoments.mp4")} controls></video>
                     </div>
                 </div>
 
