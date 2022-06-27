@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import PopupContent from "./PopupContent";
+import { OutlinedInput } from "@mui/material";
 
 //Estilizar a caixa de modal por aqui
 const popupStyle = {
@@ -22,6 +23,7 @@ const popupStyle = {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
+    borderRadius: 5,
 };
 
 
@@ -52,12 +54,12 @@ const NewPost = props => {
                     <button className="btn-format btn-post" onClick={() => {
                         setOpenPost(true)
                         setPostType('apoio')
-                    }}><img src={RocketImg} alt="rocket icon" height={20}/> <span>Me apoie</span></button>
+                    }}><img src={RocketImg} alt="rocket icon" height={20} /> <span>Me apoie</span></button>
 
                     <button className="btn-format btn-post" onClick={() => {
                         setOpenPost(true)
                         setPostType('moments')
-                    }}><img src={MomentsImg} alt="rocket icon" height={20}/> <span>Novo moments</span></button>
+                    }}><img src={MomentsImg} alt="rocket icon" height={20} /> <span>Novo moments</span></button>
                 </div>
             </div>
 

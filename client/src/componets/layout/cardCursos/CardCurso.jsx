@@ -10,6 +10,7 @@ import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import { red } from '@mui/material/colors';
+import favorito from "../../../media/icons/item_star_icon_stroke.svg"
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -65,7 +66,7 @@ const CardCurso = props => {
             </CardContent>
             <CardActions disableSpacing className="cardActions">
                 <button aria-label="add to favorites">
-                    FAVORITO
+                    <img src={favorito} height="20px" color="white" />
                 </button>
                 <button aria-label="share">
                     RECOMENDAR

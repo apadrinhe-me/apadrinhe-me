@@ -1,10 +1,10 @@
 import "./Login.css"
-import React, {useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Logo from "../../media/logo/logoredondo-03.svg"
 import apadrinheme from "../../media/logo/apadrinhe-04.svg"
-import { Link, useNavigate  } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Alert from "@mui/material/Alert";
-import {MyServer} from "../../services/api";
+import { MyServer } from "../../services/api";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -13,7 +13,7 @@ const Login = () => {
     useEffect(() => {
         MyServer.get("/login").then(response => {
             //Não pode logado na página de login
-            if(response.data.logged){
+            if (response.data.logged) {
                 navigate("/");
             }
         })
@@ -26,10 +26,10 @@ const Login = () => {
     const msg_erro_text = useRef(null);
 
     const handleSubmit = e => {
-        if(emailLogin === "" && senhaLogin === ""){
+        if (emailLogin === "" && senhaLogin === "") {
             msg_erro.current.classList.add("show")
             msg_erro_text.current.innerHTML = "Preencha os dois campos"
-        } else if(emailLogin.search('@') === -1){
+        } else if (emailLogin.search('@') === -1) {
             msg_erro.current.classList.add("show")
             msg_erro_text.current.innerHTML = "Digite um email válido"
         } else {
@@ -42,7 +42,7 @@ const Login = () => {
                     email: emailLogin,
                     senha: senhaLogin
                 }).then(response => {
-                    if(response.data.logged){
+                    if (response.data.logged) {
                         navigate("/");
                     } else {
                         msg_erro.current.classList.add("show")
@@ -63,7 +63,7 @@ const Login = () => {
 
                 <input name="email" placeholder="Email" type="text" className='user_input' value={emailLogin} onChange={e => setEmailLogin(e.target.value)} />
 
-                <input name="senha" placeholder="Senha" type="password" maxLength={8} className='password_input' value={senhaLogin} onChange={e => setSenhaLogin(e.target.value)} />
+                <input name="senha" placeholder="Senha" type="password" className='password_input' value={senhaLogin} onChange={e => setSenhaLogin(e.target.value)} />
 
                 <span className="p1">Esqueci minha senha</span>
                 <button type="submit" >Entrar</button>

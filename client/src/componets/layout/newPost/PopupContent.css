@@ -1,3 +1,145 @@
-.PopupContent{
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: #d92588;
+    inherits: false;
+}
+
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: #7630d9;
+    inherits: false;
+}
+
+.PopupContent {
+    display: flex;
+    flex-direction: column;
     color: white;
+    justify-content: center;
+}
+
+.topFixed {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid rgb(205, 204, 204);
+    margin-bottom: 20px;
+}
+
+.secondTop img {
+    border-radius: 50%;
+}
+
+.secondTop {
+    flex: 1;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.PopupContent textarea {
+    margin-top: 20px;
+    height: 100px;
+    max-width: 530px;
+    background: none;
+    border-radius: 10px;
+    color: white;
+    border: 2px solid rgb(53, 53, 176);
+    padding: 8px;
+    outline: none;
+}
+
+.PopupContent .buttons {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.PopupContent .buttons button {
+    border-radius: 20px;
+    padding: 6px;
+    width: 140px;
+}
+
+.PopupContent .recomendacao {
+    color: white;
+    font-weight: bold;
+    background: #3800FF;
+    outline: none;
+}
+
+.PopupContent .doacaorapida {
+    color: white;
+    font-weight: bold;
+    background: #FF9000;
+    outline: none;
+}
+
+.PopupContent .doacaodebens {
+    color: white;
+    font-weight: bold;
+    background: #00902C;
+    outline: none;
+}
+
+.PopupContent .apadrinhamento {
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--myColor1), var(--myColor2));
+    transition: --myColor1 .3s, --myColor2 .3s;
+    outline: none;
+    border-radius: 8px;
+}
+
+.apadrinhamento:hover {
+    cursor: pointer;
+    --myColor1: #7630d9;
+    --myColor2: #d92588;
+    font-size: 15px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.PopupContent button:hover {
+    border: 2px solid white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.PopupContent .publicar {
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    background: linear-gradient(45deg, #667BF2, #7630D9);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.PopupContent .publicar:hover {
+    transition: 0.3s;
+}
+
+.profilename p {
+    margin-top: 3px;
+    font-size: 12px;
+}
+
+#who {
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color: white;
+    background: rgb(44, 44, 44);
+    align-self: center;
+    margin-left: auto;
+    height: 30px;
+    width: 100px;
+    padding: 5px;
 }

@@ -7,18 +7,18 @@ import Spotlights from "../../componets/layout/spotlights/Spotlights";
 import If from "../../componets/funcional/If";
 import MenuMobile from "../../componets/layout/MenuMobile";
 import ApadPopup from "../../componets/layout/apadPopup/ApadPopup";
-import {MyServer} from "../../services/api";
+import { MyServer } from "../../services/api";
 
 let login;
 
 const Home = () => {
-    const[logged, setLogged] = useState(false);
+    const [logged, setLogged] = useState(false);
 
     //verificar se está logado
     useEffect(() => {
         MyServer.get("/login").then(response => {
             //Não pode logado na página de login
-            if(response.data.logged){
+            if (response.data.logged) {
                 login = response.data.user;
                 setLogged(true)
             }
@@ -63,17 +63,6 @@ const Home = () => {
                             qntShares={10} />
 
                         <Post
-                            profPicture="aurora.png"
-                            fullname="Aurora Seles"
-                            aspiration="Jornalista e Professora"
-                            postDate="2022-04-19 12:30:25"
-                            postDescription="Amor recíproco. Gratidão, Equipe 3, do Instituto PROA. Beijo, com afeto 🌹."
-                            postMedia="postaurora.png"
-                            qntLikes={1500}
-                            qntComments={600}
-                            qntShares={10} />
-
-                        <Post
                             profPicture="cris.jpg"
                             fullname="Cristian Ferreira"
                             aspiration="Aspirante a desenvolvedor fullstack"
@@ -88,6 +77,16 @@ const Home = () => {
                             qntComments={200}
                             qntShares={10} />
 
+                        <Post
+                            profPicture="aurora.png"
+                            fullname="Aurora Seles"
+                            aspiration="Jornalista e Professora"
+                            postDate="2022-04-19 12:30:25"
+                            postDescription="Amor recíproco. Gratidão, Equipe 3, do Instituto PROA. Beijo, com afeto 🌹."
+                            postMedia="postaurora.png"
+                            qntLikes={1500}
+                            qntComments={600}
+                            qntShares={10} />
                         <Post
                             profPicture="proa.png"
                             fullname="Instituto Proa"
