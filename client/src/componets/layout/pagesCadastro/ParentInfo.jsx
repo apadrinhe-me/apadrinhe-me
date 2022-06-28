@@ -19,7 +19,7 @@ const CreateLogin = props => {
             </div>
             <div className="cad_msg">
                 <span>Estamos quase lá!</span>
-                <span>Agora precisamos ds informações de seu responsável</span>
+                <span>Agora precisamos das informações de seu responsável</span>
             </div>
             <div className="personal-info-form">
                 <Grid container direction="row" spacing={3}>
@@ -30,16 +30,14 @@ const CreateLogin = props => {
 
                     <Grid item container direction="column" spacing={2} flex={1}>
                         <Grid item>
-                            <LocalizationProvider dateAdapter={AdapterDateFns}>
-                                <DatePicker
-                                    label="Data de nascimento do responsável"
-                                    views={['day', 'month', 'year']}
-                                    inputFormat="dd/mm/yyyy"
-                                    value={props.parente_dataNasc}
-                                    onChange={newValue => props.setParente_dataNasc(newValue)}
-                                    renderInput={(params) => <TextField fullWidth variant="outlined" required {...params} />}
-                                />
-                            </LocalizationProvider>
+                            <DatePicker
+                                label="Data de nascimento do responsável"
+                                views={['day', 'month', 'year']}
+                                inputFormat="dd/MM/yyyy"
+                                value={props.parente_dataNasc}
+                                onChange={newValue => props.setParente_dataNasc(newValue)}
+                                renderInput={(params) => <TextField fullWidth variant="outlined" required {...params} />}
+                            />
                         </Grid>
                         <Grid item><TextField id="email-resp-login" label="Email do responsável" placeholder="exemplo@email.com" variant="outlined" fullWidth required value={props.parente_email} onChange={e => props.setParente_email(e.target.value)}/></Grid>
                     </Grid>

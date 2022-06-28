@@ -4,8 +4,6 @@ import "./CreateLogin.css"
 import TextField from '@mui/material/TextField';
 
 const CreateLogin = props => {
-    console.log(props)
-
     return (
         <div className="CreateLogin">
             <div className="return-previous-step">

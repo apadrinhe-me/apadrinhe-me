@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../../media/backgrounds/background-login.png");
+    background: url("../../media/backgrounds/background-01.svg");
     background-size: cover;
 }
 
@@ -16,13 +16,13 @@
 
     width: 500px;
     height: 600px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border-radius: 15px;
     padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.01);
-    box-shadow: 0 0 5px black;
-    background: rgba(10, 10, 10, 0.5);
-    backdrop-filter: saturate(150%) blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    background: rgba(10, 10, 10, .6);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 
 .Login .voltar {
@@ -147,4 +147,17 @@
 .Login button:hover {
     background-color: #a31c66;
     transition: 0.2s;
+}
+
+.Login .msg_erro {
+    display: none;
+    margin-top: 15px;
+}
+
+.Login .msg_erro.show {
+    display: flex;
+}
+
+::placeholder {
+    color: rgba(175, 175, 175);
 }

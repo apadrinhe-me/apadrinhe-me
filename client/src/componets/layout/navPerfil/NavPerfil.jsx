@@ -109,7 +109,7 @@ const NavPerfil = props => {
                                             <>
                                                 <li><Link to="/perfil/publicacoes"><button>Publicações</button></Link>{profileTab === "publicacoes" ? <div className="active"></div> : ""}</li>
                                                 <li><Link to="/perfil/historico"><button>Histórico de ajudas</button></Link>{profileTab === "historico" ? <div className="active"></div> : ""}</li>
-                                                <li><Link to="/perfil/apadrinhamentos"><button>Jovens Apadrinhados</button></Link>{profileTab === "apadrinhamentos" ? <div className="active"></div> : ""}</li>
+                                                <li><Link to="/perfil/apadrinhamentos"><button>Apadrinhamentos educacionais</button></Link>{profileTab === "apadrinhamentos" ? <div className="active"></div> : ""}</li>
                                             </>
                                     }
 

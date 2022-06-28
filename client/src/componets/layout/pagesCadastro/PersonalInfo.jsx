@@ -6,13 +6,8 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import Autocomplete from '@mui/material/Autocomplete';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider';
-import {DatePicker} from '@mui/x-date-pickers/DatePicker';
+
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
 const PersonalInfo = props => {
 
@@ -35,16 +30,14 @@ const PersonalInfo = props => {
 
                     <Grid item container direction="column" spacing={2} flex={1}>
                         <Grid item>
-                            <LocalizationProvider dateAdapter={AdapterDateFns}>
-                                <DatePicker
-                                    label="Data de nascimento"
-                                    views={['day', 'month', 'year']}
-                                    inputFormat="dd/mm/yyyy"
-                                    value={props.dataNasc}
-                                    onChange={newValue => props.setDataNasc(newValue)}
-                                    renderInput={(params) => <TextField fullWidth variant="outlined" required {...params} />}
-                                />
-                            </LocalizationProvider>
+                            <DesktopDatePicker
+                                label="Data de nascimento"
+                                views={['day', 'month', 'year']}
+                                inputFormat="dd/MM/yyyy"
+                                value={props.dataNasc}
+                                onChange={newValue => props.setDataNasc(newValue)}
+                                renderInput={(params) => <TextField fullWidth variant="outlined" required {...params} />}
+                            />
                         </Grid>
                         <Grid item>
                             <FormControl variant="outlined" className="form-control" fullWidth>
@@ -64,6 +57,34 @@ const PersonalInfo = props => {
                                 </Select>
                             </FormControl>
                         </Grid>
+
+                        <Grid item>
+                            <TextField id="renda" label="Renda familiar mensal" placeholder="Ex.: R$3000" variant="outlined" fullWidth required value={props.renda} onChange={e => props.setRenda(e.target.value)}/>
+                        </Grid>
+
+                        {
+                            props.selectedPadrinType == "ser_apadrinhado" ?
+                            <Grid item>
+                                <FormControl variant="outlined" className="form-control" fullWidth>
+                                    <InputLabel id="tipo_meta" required>Escolaridade</InputLabel>
+                                    <Select
+                                        labelId="escolaridade"
+                                        id="escolaridade"
+                                        value={props.escola}
+                                        onChange={e => props.setEscola(e.target.value)}
+                                        label="Escolaridade"
+                                        required
+                                    >
+                                        <MenuItem value={"publica"}>Estudei majoritariamente em escola pública</MenuItem>
+                                        <MenuItem value={"particular"}>Estudei majoritariamente em escola particular</MenuItem>
+                                        <MenuItem value={"nenhum"}>Atualmente não estou matriculado</MenuItem>
+                                    </Select>
+                                </FormControl>
+                            </Grid>
+                            :
+                            ""
+                        }
+
                     </Grid>
                 </Grid>
             </div>

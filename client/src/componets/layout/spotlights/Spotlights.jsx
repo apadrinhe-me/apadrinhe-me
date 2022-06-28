@@ -10,17 +10,18 @@ const Spotlights = () => {
             <div className="spotlight-profiles">
                 <SpotlightProfile
                     pic="valentina.png"
-                    name="Natan Barbosa"
-                    description="Acumulou 43 pontos de atividade!"
+                    name="Valentina"
+                    description="Acumulou 100 pontos de atividade!"
                 />
                 <SpotlightProfile
-                    pic="valentina.png"
+                    pic="natan_proa.jpg"
                     name="Natan Barbosa"
-                    description="Acumulou 43 pontos de atividade!"
+                    description="Acumulou 50 pontos de atividade!"
                 />
+
                 <SpotlightProfile
-                    pic="valentina.png"
-                    name="Natan Barbosa"
+                    pic="cris.jpg"
+                    name="Cristian Ferreira"
                     description="Acumulou 43 pontos de atividade!"
                 />
             </div>

@@ -1,44 +1,65 @@
 import "./Cadastro.css";
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import If from "../../componets/funcional/If";
+
+//imagens
+import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
+import Cadastrado from "../../media/illustrations/cadastrado.svg";
+
+//Telas cadastro
 import SelectTypeUser from "../../componets/layout/pagesCadastro/SelectTypeUser";
 import Card_cadastro from "../../componets/layout/card_cadastro/Card_cadastro";
 import CreateLogin from "../../componets/layout/pagesCadastro/CreateLogin";
 import PersonalInfo from "../../componets/layout/pagesCadastro/PersonalInfo";
 import ParentInfo from "../../componets/layout/pagesCadastro/ParentInfo";
+import EnderecoCadastro from "../../componets/layout/pagesCadastro/EnderecoCadastro";
 import RevisionCadastro from "../../componets/layout/pagesCadastro/RevisionCadastro";
-import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
 
+//MUI
 import Alert from '@mui/material/Alert';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Box from '@mui/material/Box';
-import { colors } from "@mui/material";
+import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
-import { SxProps } from "@mui/material";
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import * as yup from "yup"
-
+//API
+import { MyServer } from "../../services/api";
 
 const steps = [
     'Selecione seu tipo de cadastro',
     'Crie seu login',
     'Adicione suas informações pessoais',
     'Adicione as informações de seu responável',
+    'Adicione seu Endereço',
     'Revisão',
 ];
 
+const boxCadastradoStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: '#fff',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 3,
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+    alignItems: "center",
+    textAlign: "center",
+};
+
 function getIdadeUsuario(dataNasc) {
     let dataAtual = new Date();
-    let idadeUser = dataAtual.getFullYear() - dataNasc.getFullYear()
+    let idadeUser = dataAtual.getFullYear() - dataNasc.getFullYear();
     return idadeUser;
-}
-
-function cadastrarUser(infos) {
-    console.log(infos)
-    window.location.href = "/"
 }
 
 const Cadastro = () => {
@@ -52,6 +73,8 @@ const Cadastro = () => {
     const [confirmSenha, setConfirmSenha] = useState("")
     const [nomeCompleto, setNomeCompleto] = useState("")
     const [cpf, setCpf] = useState("")
+    const [renda, setRenda] = useState("")
+    const [escola, setEscola] = useState("")
     const [nickname, setNickname] = useState("")
     const [dataNasc, setDataNasc] = useState(null)
     const [genero, setGenero] = useState("")
@@ -61,6 +84,16 @@ const Cadastro = () => {
     const [parente_email, setParente_email] = useState("")
     const [precisaResponsavel, setPrecisaResponsavel] = useState(true);
     const [termosUso, setTermosUso] = useState(false);
+    const [cep, setCep] = useState("");
+    const [cepValido, setCepValido] = useState(false);
+    const [uf, setUf] = useState("");
+    const [cidade, setCidade] = useState("");
+    const [bairro, setBairro] = useState("");
+    const [rua, setRua] = useState("");
+    const [numero, setNumero] = useState("");
+    const [complemento, setComplemento] = useState("");
+
+    const [openCadastradoBox, setOpenCadastradoBox] = useState(false);
 
     //Objeto que armazena os dados do cadastro e põe no backend
     let cadastro = {
@@ -72,7 +105,18 @@ const Cadastro = () => {
             nickname_usuario: nickname,
             cpf_usuario: cpf,
             data_nasc_usuario: dataNasc,
-            genero_usuario: genero
+            genero_usuario: genero,
+            escolaridade: escola,
+            renda: renda
+        },
+        locationInfo: {
+            cep: cep,
+            uf: uf,
+            cidade: cidade,
+            bairro: bairro,
+            rua: rua,
+            numero: numero,
+            complemento: complemento,
         },
         parentInfo: {
             cpf_responsavel: parente_cpf,
@@ -81,9 +125,6 @@ const Cadastro = () => {
             email_responsavel: parente_email
         }
     }
-
-    console.log(cadastro)
-
     //Função para fazer as verificações se está tudo preenchido certinho e seguir para próxima etapa
     const msg_erro = useRef(null);
     const msg_erro_text = useRef(null);
@@ -107,6 +148,9 @@ const Cadastro = () => {
                 } else if (senha !== confirmSenha) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "As senhas não batem"
+                } else if (senha.length < 6) {
+                    msg_erro.current.classList.add("show")
+                    msg_erro_text.current.innerHTML = "A senha deve conter ao menos 6 caracteres"
                 } else {
                     msg_erro.current.classList.remove("show")
                     msg_erro_text.current.innerHTML = ""
@@ -114,7 +158,7 @@ const Cadastro = () => {
                 }
                 break;
             case 2:
-                if (nomeCompleto == "" || cpf == "" || nickname == "" || dataNasc == null || genero == "") {
+                if (nomeCompleto == "" || cpf == "" || nickname == "" || dataNasc == null || genero == "" || renda == "" || (selectedPadrinType == "ser_apadrinhado" && escola == "")) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Preencha todos os campos"
                 } else if (cpf.length !== 11) {
@@ -155,13 +199,39 @@ const Cadastro = () => {
                 }
                 break;
             case 4:
+                if (cep == "" || uf == "" || cidade == "" || bairro == null || rua == null || numero == null) {
+                    msg_erro.current.classList.add("show")
+                    msg_erro_text.current.innerHTML = "Preencha todos os campos"
+                } else if (cep.length !== 8) {
+                    msg_erro.current.classList.add("show")
+                    msg_erro_text.current.innerHTML = "Digite um cep válido"
+                } else if (!cepValido) {
+                    msg_erro.current.classList.add("show")
+                    msg_erro_text.current.innerHTML = "Digite um CEP válido"
+                } else {
+                    msg_erro.current.classList.remove("show")
+                    msg_erro_text.current.innerHTML = ""
+                    setCadEtapa(5)
+                }
+                break;
+            case 5:
                 if (!termosUso) {
                     msg_erro.current.classList.add("show")
                     msg_erro_text.current.innerHTML = "Aceite os termos de uso"
                 } else {
                     msg_erro.current.classList.remove("show")
                     msg_erro_text.current.innerHTML = ""
-                    cadastrarUser(cadastro);
+
+                    //cadastrarUsuário
+                    MyServer
+                        .post("/register", cadastro)
+                        .then(response => {
+                            if (response.data.cadastrado) {
+                                setOpenCadastradoBox(true);
+                            } else {
+                                alert(response.data.msg)
+                            }
+                        })
                 }
                 break;
         }
@@ -170,8 +240,7 @@ const Cadastro = () => {
 
     return (
         <div className="Cadastro">
-            <Formik initialValues={{}} onSubmit={cadastro} validationSchema={cadastro}>
-
+            <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <div className="Cards">
                     <div className="container_cad">
                         <img className="logoCadastro" src={LogoMarca} height="50px" />
@@ -241,6 +310,11 @@ const Cadastro = () => {
                                 setNickname={setNickname}
                                 setDataNasc={setDataNasc}
                                 setGenero={setGenero}
+                                escola={escola}
+                                setEscola={setEscola}
+                                renda={renda}
+                                setRenda={setRenda}
+                                selectedPadrinType={selectedPadrinType}
                             />
                         </If>
 
@@ -263,21 +337,64 @@ const Cadastro = () => {
 
                         {/*etapa 5*/}
                         <If test={cadEtapa === 4}>
+                            <EnderecoCadastro
+                                cadEtapa={cadEtapa}
+                                setCadEtapa={setCadEtapa}
+                                proximaEtapa={proximaEtapa}
+                                cep={cep}
+                                uf={uf}
+                                cidade={cidade}
+                                bairro={bairro}
+                                rua={rua}
+                                numero={numero}
+                                complemento={complemento}
+                                setCep={setCep}
+                                setUf={setUf}
+                                setCidade={setCidade}
+                                setBairro={setBairro}
+                                setRua={setRua}
+                                setNumero={setNumero}
+                                setComplemento={setComplemento}
+                                msg_erro={msg_erro}
+                                msg_erro_text={msg_erro_text}
+                                cepValido={cepValido}
+                                setCepValido={setCepValido}
+                            />
+                        </If>
+
+                        {/*etapa 6*/}
+                        <If test={cadEtapa === 5}>
                             <RevisionCadastro
                                 cadEtapa={cadEtapa}
                                 setCadEtapa={setCadEtapa}
                                 cadastro={cadastro}
                                 proximaEtapa={proximaEtapa}
-                                precisaResponsavel={precisaResponsavel}
                                 termosUso={termosUso}
                                 setTermosUso={setTermosUso}
+                                precisaResponsavel={precisaResponsavel}
                             />
                         </If>
 
                         <Alert severity="error" ref={msg_erro} className="msg_erro hide"><span className="msg_erro_text" ref={msg_erro_text}>ala</span></Alert>
                     </div>
                 </div>
-            </Formik>
+            </LocalizationProvider>
+
+            <Modal
+                open={openCadastradoBox}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={boxCadastradoStyle} className="boxCadastro">
+                    <img src={Cadastrado} height={100} />
+                    <h3>Cadastro realizado com sucesso! <i className="bi bi-check-circle-fill"></i></h3>
+                    <p>
+                        Tudo certo com o seu cadastro. Você já pode fazer login e explorar a plataforma!
+                    </p>
+                    <Link to="/login" className="btn-redirect-login">Vamos lá</Link>
+                </Box>
+            </Modal>
+
         </div>
     );
 }

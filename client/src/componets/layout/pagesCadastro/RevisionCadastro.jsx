@@ -11,21 +11,23 @@ import Checkbox from '@mui/material/Checkbox';
 import {Link} from "react-router-dom";
 
 const RevisionCadastro = props => {
+    console.log(props)
+
     return (
         <div className="RevisionCadastro">
             <div className="return-previous-step">
-                <button className="btn-format btn-return" onClick={() => props.precisaResponsavel ? props.setCadEtapa(3) : props.setCadEtapa(2)}><i className="bi bi-arrow-return-left"></i> Voltar para etapa {props.precisaResponsavel ? 4 : 3}</button>
+                <button className="btn-format btn-return" onClick={() => props.setCadEtapa(4)}><i className="bi bi-arrow-return-left"></i> Voltar para etapa {props.cadEtapa}</button>
             </div>
             <div className="cad_msg">
                 <span>Tudo certo com suas informações?</span>
                 <span>Revise seu login, leia os termos e tudo pronto 😁</span>
             </div>
             <div className="revisar-info-cadastro">
-                <TableContainer component={Paper}>
-                    <Table size="small" aria-label="a dense table">
+                <TableContainer component={Paper} sx={{maxHeight: 440, overflowY: 'auto'}}>
+                    <Table size="small" aria-label="a dense table" >
                         <TableBody>
                             <TableRow>
-                                <TableCell colSpan={2} align="center"><strong>Suas informações</strong></TableCell>
+                                <TableCell colSpan={2} align="center" sx={{}}><strong>Suas informações</strong></TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell align="right">Objetivo:</TableCell>
@@ -55,6 +57,42 @@ const RevisionCadastro = props => {
                                 <TableCell align="right">Gênero:</TableCell>
                                 <TableCell>{props.cadastro.userInfo.genero_usuario}</TableCell>
                             </TableRow>
+
+                            <TableRow>
+                                <TableCell colSpan={2} align="center"><strong>Localização</strong></TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">CEP:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.cep}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">UF:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.uf}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">Cidade:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.cidade}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">Bairro:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.bairro}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">Rua:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.rua}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell align="right">Número:</TableCell>
+                                <TableCell>{props.cadastro.locationInfo.numero}</TableCell>
+                            </TableRow>
+                            {props.cadastro.locationInfo.complemento != "" ?
+                                <TableRow>
+                                    <TableCell align="right">Complemento:</TableCell>
+                                    <TableCell>{props.cadastro.locationInfo.genero_usuario}</TableCell>
+                                </TableRow>
+                                :
+                                ""
+                            }
 
                             {props.precisaResponsavel ?
                                 <>
@@ -90,7 +128,7 @@ const RevisionCadastro = props => {
                 <Checkbox id="terms-of-use" checked={props.termosUso} onChange={e => props.setTermosUso(!props.termosUso)} /> <label htmlFor="terms-of-use">Concordo com os <Link to="#">termos da plataforma</Link></label>
             </div>
 
-            <button className="continue-cad-btn" onClick={() => props.proximaEtapa(4)}>Tudo pronto</button>
+            <button className="continue-cad-btn" onClick={() => props.proximaEtapa(5)}>Tudo pronto</button>
         </div>
     );
 }

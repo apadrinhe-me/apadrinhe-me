@@ -1,5 +1,5 @@
 import "./MomentsPost.css";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import ProfPicture from "../profPicture/ProfPicture";
 
 //import dos ícones
@@ -30,21 +30,21 @@ const MomentsPost = props => {
     }
 
     useEffect(() => {
-        document.querySelector("#btn-comment-"+props.id).addEventListener('click', () => {
+        document.querySelector("#btn-comment-" + props.id).addEventListener('click', () => {
             props.setFullscreen(props.id)
         })
     })
 
-    return(
+    return (
         <div className="MomentsPost" id={`moments-${props.id}`}>
             <div className="user-info">
                 <div className="user-profPic">
-                    <ProfPicture src="natan_proa.jpg" scale={60} />
+                    <ProfPicture src="valentina.png" scale={60} />
                 </div>
                 <div className="post-info">
-                    <span className="text-bold">props.username</span>
-                    <span className="text-secondary">props.userAspiration</span>
-                    <span className="text-secondary">props.postDate</span>
+                    <span className="text-bold">Valentina</span>
+                    <span className="text-secondary">Aspirante a astrônoma</span>
+                    <span className="text-secondary">19 de abril de 2022</span>
                 </div>
                 <div className="post-actions">
                     <button type="button" className="btn btn-follow">Seguir</button>
@@ -53,14 +53,14 @@ const MomentsPost = props => {
             </div>
 
             <div className="post-title-hashs">
-                <span className="post-title">Eis que a 10/10 kkkkkk</span>
-                <span className="post-hashs">#10/10, #tumor, #picadas</span>
+                <span className="post-title">Estudando muito para alcançar meus objetivos 😁📚</span>
+                <span className="post-hashs">#Apadrinhe-me, #Tecnologia, #Educação,</span>
             </div>
 
             <div className="post-media">
                 <div className="contain-video">
                     <div className="moments-video">
-                        <video src={require("../../../media/moments_media/moments_video.mp4")} controls></video>
+                        <video src={require("../../../media/moments_media/valentinamoments.mp4")} controls></video>
                     </div>
                 </div>
 
@@ -76,19 +76,19 @@ const MomentsPost = props => {
                     </div>
 
                     <div className="btn-div">
-                        <button><img src={likeIco} alt="Botão de like" className="btn-icon"/></button>
+                        <button><img src={likeIco} alt="Botão de like" className="btn-icon" /></button>
                         <span>1.2k</span>
                     </div>
                     <div className="btn-div">
-                        <button><img src={commentIco} alt="Botão de Comentário" className="btn-icon" id={"btn-comment-"+props.id}/></button>
+                        <button><img src={commentIco} alt="Botão de Comentário" className="btn-icon" id={"btn-comment-" + props.id} /></button>
                         <span>1.2k</span>
                     </div>
                     <div className="btn-div">
-                        <button><img src={shareIco} alt="Botão de compartilhamento" className="btn-icon"/></button>
+                        <button><img src={shareIco} alt="Botão de compartilhamento" className="btn-icon" /></button>
                         <span>1.2k</span>
                     </div>
                     <div className="btn-div">
-                        <button><img src={saveIco} alt="Botão de salvar" className="btn-icon"/></button>
+                        <button><img src={saveIco} alt="Botão de salvar" className="btn-icon" /></button>
                     </div>
                 </div>
             </div>
