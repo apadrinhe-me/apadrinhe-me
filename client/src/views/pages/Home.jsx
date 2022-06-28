@@ -21,8 +21,6 @@ const Home = () => {
         }
     })
 
-
-
     return(
         <>
             <Menu atual="Home" logged={false}/>

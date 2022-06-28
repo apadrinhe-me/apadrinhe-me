@@ -28,12 +28,16 @@
     outline: 0;
 }
 
-.post-profile-pic {
-    width: 50;
+.NewPost .post-input:hover{
+    cursor: pointer;
+}
+
+.NewPost .post-profile-pic {
+    width: 50px;
     height: 50px;
 }
 
-.post-actions {
+.NewPost .post-actions {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -41,7 +45,7 @@
     flex-wrap: wrap-reverse;
 }
 
-.btn-actions {
+.NewPost .btn-actions {
     border: none;
     background: transparent;
     padding: 7px 15px;
@@ -51,7 +55,39 @@
     border-radius: 15px;
 }
 
-.btn-actions:hover {
+.NewPost .btn-actions:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.295);
+}
+
+.NewPost .post-btns{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.NewPost .btn-post{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 5px;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.NewPost .post-btns .btn-post span{
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.NewPost .post-btns .btn-post i{
+    color: #add8e6;
+    font-size: 20px;
+}
+
+.NewPost .post-btns .btn-post:hover{
+    background: rgba(103, 103, 103, 0.65);
+    transition: .2s;
 }

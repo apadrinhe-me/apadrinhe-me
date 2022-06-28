@@ -2,7 +2,7 @@ import "./Cursos.css";
 
 import React, {useState} from "react";
 import Menu from "../../componets/layout/Menu";
-import Curso from "../../componets/layout/cardCursos/CardCurso"
+import CardCurso from "../../componets/layout/cardCursos/CardCurso"
 
 
 import Button from '@mui/material/Button';
@@ -72,24 +72,24 @@ const Cursos = () => {
 
                     </div>
                     <div className="card my-scrollbar" >
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
-                        <Curso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
+                        <CardCurso />
                     </div>
                 </div>
             </div>
