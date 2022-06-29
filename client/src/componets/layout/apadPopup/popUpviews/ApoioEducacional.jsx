@@ -1,16 +1,16 @@
 import React from "react";
-import "./ApoioApadrinhar.css";
+import "./ApoioEducacional.css";
 
-const ApoioApadrinhar = props => {
+const ApoioEducacional = props => {
     return(
         <>
             <button className="btn-format btn-return" onClick={() => props.setSelectedApoio(0)}><i className="bi bi-arrow-return-left"></i> Voltar</button>
 
             <div className="ApoioApadrinhar border">
-                <h1>Apadrinhar</h1>
+                <h1>Educacional</h1>
             </div>
         </>
     );
 }
 
-export default ApoioApadrinhar;
+export default ApoioEducacional;

@@ -1,10 +1,10 @@
 import "./ApadPupup.css";
 import React, {useState} from "react";
-import ApadrinheCard from "./ApadrinheCard";
+
 import OthersCard from "./OthersCard";
 import ApoioInicio from "./popUpviews/ApoioInicio";
 import If from "../../funcional/If";
-import ApoioApadrinhar from "./popUpviews/ApoioApadrinhar";
+import ApoioEducacional from "./popUpviews/ApoioEducacional";
 import ApoioRecomendacao from "./popUpviews/ApoioRecomendacao";
 import ApoioDoacao from "./popUpviews/ApoioDoacao";
 import ApoioMaterial from "./popUpviews/ApoioMaterial";
@@ -23,13 +23,19 @@ const ApadPopup = props => {
     * 1 = Apadrinhar
     * 2 = Recomendação
     * 3 = Doação rápida
-    * 4 = Doação de bens*/
+    * 4 = Doação de bens
+    * 
+    * 1- educacional
+    * 2 - financeiro
+    * 3 - material
+    * 
+    * */
 
     return(props.trigger) ? (
         <div className="ApadPopup">
             <div className="popup-inner">
                 <button className="close-btn" onClick={ () => closePopup() }><i className="bi bi-x-lg"></i></button>
-                <h2>Apoiar</h2>
+                <h2>Opções de apadrinhamento</h2>
 
                 <If test={selectedApoio === 0}>
                     <ApoioInicio
@@ -39,11 +45,7 @@ const ApadPopup = props => {
                 </If>
 
                 <If test={selectedApoio === 1}>
-                    <ApoioApadrinhar setSelectedApoio={setSelectedApoio}/>
-                </If>
-
-                <If test={selectedApoio === 2}>
-                    <ApoioRecomendacao setSelectedApoio={setSelectedApoio}/>
+                    <ApoioEducacional setSelectedApoio={setSelectedApoio}/>
                 </If>
 
                 <If test={selectedApoio === 3}>
@@ -54,6 +56,7 @@ const ApadPopup = props => {
                     <ApoioMaterial setSelectedApoio={setSelectedApoio}/>
                 </If>
 
+               
             </div>
         </div>
     ) : "";

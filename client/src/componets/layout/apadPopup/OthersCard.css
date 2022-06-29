@@ -3,7 +3,7 @@
     flex-direction: column;
     background: #282828;
     flex: 3;
-    border-radius: 20px;
+    border-radius: 30px;
     overflow: hidden;
     gap: 15px;
     min-width: 200px;
@@ -19,7 +19,7 @@
 .OthersCard .card-image{
     width: 100%;
     height: 190px;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .OthersCard .card-image img{
