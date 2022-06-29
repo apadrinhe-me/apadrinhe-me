@@ -25,9 +25,9 @@ const ApoioInicio = props => {
                         description="Ofereça oportunidades e acompanhe o desenvolvimento de perto. Crieum laço afetivo com um aspirante, e prestigie seu sucesso."
                         btnText="Recomendar"
                         tipoApoio={1}
-                        logo={LogoEducacional }
+                        logo={LogoEducacional}
                     />
-                 
+
 
                     <OthersCard
                         background="#FF9000"

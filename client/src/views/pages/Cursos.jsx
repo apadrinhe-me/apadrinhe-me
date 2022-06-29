@@ -56,6 +56,10 @@ const Cursos = () => {
                             <p>Udemy</p>
                         </li>
                         <li>
+                            <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                            <p>Fundação Bradesco</p>
+                        </li>
+                        <li>
                             <i className="bi bi-star caixaIconeCategoriasCurso"></i>
                             <p>Favoritos</p>
                         </li>

@@ -64,6 +64,7 @@ const CardCurso = props => {
                 </div>
 
             </CardContent>
+
             <CardActions disableSpacing className="cardActions">
                 <button aria-label="add to favorites">
                     <img src={favorito} height="20px" color="white" />
@@ -79,7 +80,11 @@ const CardCurso = props => {
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent className="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda hic sunt est aliquam perspiciatis consectetur qui dolor, sed tempora doloribus tenetur placeat nam aliquid. Ad expedita accusantium mollitia. Consequatur?
+                    Núcleo Técnico
+                    Desenvolve as competências técnicas do aluno em Programação Java por meio de trabalho em grupo, vivências corporativas, projetos e atividades.
+
+                    Núcleo Comportamental
+                    Desenvolve as competências sociocomportamentais e o perfil profissional do aluno por meio de atividades relacionadas ao autoconhecimento, propósito, carreira e mercado de trabalho.
                 </CardContent>
             </Collapse>
         </Card>
