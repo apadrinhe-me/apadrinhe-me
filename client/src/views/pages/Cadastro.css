@@ -82,10 +82,10 @@
 }
 
 .Cadastro .text_card {
-    color: rgb(71, 70, 70);
-    font-size: 12px;
+    color: rgba(222, 222, 222, 0.387);
+    font-size: 14px;
+    padding: 4px;
     text-align: center;
-    font-weight: 600;
 }
 
 @property --myColor1 {

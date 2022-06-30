@@ -114,3 +114,27 @@
 .Post .btn-ico {
     height: 17px;
 }
+
+.Post .recomendacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(45deg, #3800FF, #2A00BF);
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    min-height: 40px;
+}
+
+.Post .recomendar_redirect a {
+    text-decoration: none;
+
+}
+
+.Post .recomendacao:hover {
+    border: 1px solid white;
+    transition: 0.2s;
+    cursor: pointer;
+}

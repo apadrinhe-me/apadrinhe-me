@@ -32,7 +32,7 @@ const ApoioInicio = props => {
                     <OthersCard
                         background="#FF9000"
                         border="#FF9000"
-                        btnHover="#362670"
+                        btnHover="s"
                         icon="item_star_icon_fill.svg"
                         title="Financeiro"
                         description="Contribuição rápida e prática. Nessa modalidade você escolhe um valor predefinido para apoiar. Máx: R$ 100,00"

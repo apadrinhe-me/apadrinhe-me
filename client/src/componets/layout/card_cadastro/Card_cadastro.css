@@ -4,19 +4,20 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 8px;
-    background-color: #E5E6EB;
+    background-color: #e5e6eb54;
     flex-basis: 250px;
     height: 300px;
 }
 
-.Card_cadastro .check_card{
+.Card_cadastro .check_card {
     margin-bottom: 8px;
     cursor: pointer;
     display: none;
 }
 
 .Card_cadastro.selecionado {
-    box-shadow: inset 300px 0 0 0 #ef4ba5;
+    box-shadow: 0 0 20px #d92588ed;
+    border: 2px solid #ef4ba5;
     color: white;
     cursor: pointer;
 }
@@ -26,7 +27,6 @@
 }
 
 .Card_cadastro.selecionado:hover {
-    box-shadow: inset 300px 0 0 0 #ef4ba5;
     color: white;
     cursor: pointer;
     transition: none;
@@ -37,7 +37,6 @@
 }
 
 .Card_cadastro .text_Card {
-    color: rgba(155, 155, 155, 0.932);
     font-size: 10px;
 }
 
@@ -49,7 +48,6 @@
 }
 
 .Card_cadastro:hover {
-    box-shadow: inset 300px 0 0 0 #ef4ba5;
     color: white;
     cursor: pointer;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
