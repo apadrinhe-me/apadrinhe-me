@@ -1,0 +1,50 @@
+#selectCobertura {
+    background: #191919;
+    height: 60px;
+    border-radius: 5px;
+    width: 200px;
+    color: #fff;
+}
+
+.selectCoberturaMes {
+    color: red;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    border: 1.5px solid #667BF2;
+    width: 100%;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+.status .statusAtual {
+    display: flex;
+    justify-content: flex-end;
+    
+    flex: 1;
+    height: 25px;
+    border-radius: 50px;
+    max-width: 80%;
+    background-color: #667BF2;
+    z-index: 100;
+}
+
+.statusAtual p{
+    margin-right: 10px;
+    
+}
+
+.statusContribuicao {
+    position: relative;
+    right: 0;
+    margin-left: 5px;
+    height: 25px;
+    border-radius: 50px;
+    max-width: 100%;
+    width: 60%;
+    background-color: #D92588;
+    z-index: 10000;
+}
