@@ -163,6 +163,12 @@ app.get("/login", (req, res) => {
     }
 })
 
+//logout
+app.get("/logout", (req, res) => {
+    req.session.destroy();
+    return res.send();
+})
+
 //porta do server
 app.listen(3001, () => {
     console.log("rodando servidor");

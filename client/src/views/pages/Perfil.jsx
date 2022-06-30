@@ -11,7 +11,7 @@ const Perfil = props => {
         <>
             <Menu logged={true} />
             <main className="Perfil">
-                <NavPerfil profType="jovem" />
+                <NavPerfil profType="jovem" id={1}/>
 
                 <div className="profileSubView">
                     {props.children}

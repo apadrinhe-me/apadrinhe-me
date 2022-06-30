@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ProfPicture from "../../componets/layout/profPicture/ProfPicture";
 import "./Menu.css";
+import {MyServer} from "../../services/api";
 
 import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
 import LogoSolo from "../../media/logo/logo-stroke-gradient-01.svg";
@@ -41,7 +42,7 @@ const Menu = props => {
 
     //Função de abrir a caixinha de notificações
     function openNotification() {
-        alert('abrir notificações');
+        //alert('abrir notificações');
     }
 
     //função para tirar a logo e colocar a barra de pesquisa no lugar
@@ -66,6 +67,11 @@ const Menu = props => {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
+        //logout
+        MyServer.get("/logout").then(response => {
+            window.location.href = "/login";
+        })
+
         setAnchorEl(null);
     };
 

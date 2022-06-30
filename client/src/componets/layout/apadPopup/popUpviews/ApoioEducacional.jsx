@@ -1,4 +1,4 @@
-{/*import React from "react";
+/*import React from "react";
 import "./ApoioEducacional.css";
 import LogoEducacional from "../../../../media/icons/IconsApoios/educacional.svg"
 
@@ -16,7 +16,7 @@ const ApoioEducacional = props => {
 }
 
 export default ApoioEducacional;
-*/}
+*/
 
 import React, { useState } from "react";
 import "./ApoioEducacional.css";
