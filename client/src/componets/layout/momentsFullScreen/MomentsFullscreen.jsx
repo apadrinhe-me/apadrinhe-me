@@ -1,5 +1,5 @@
 import "./MomentsFullscreen.css";
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import ProfPicture from "../profPicture/ProfPicture";
 import getPostDate from "../../funcional/getPostDate";
 
@@ -22,17 +22,17 @@ const MomentsFullscreen = props => {
         <div className="MomentsFullscreen">
             <div className="fulscreen-video">
                 <button className="close-button" id="close-button">X</button>
-                <video className="momentsVideo" src={require("../../../media/moments_media/moments_video.mp4")} controls></video>
-                <video className="backgroundFullscreenMoments" src={require("../../../media/moments_media/moments_video.mp4")} controls></video>
+                <video className="momentsVideo" src={require("../../../media/moments_media/valentinamoments.mp4")} controls></video>
+                <video className="backgroundFullscreenMoments" src={require("../../../media/moments_media/valentinamoments.mp4")} controls></video>
             </div>
 
             <div className="video-info">
                 <div className="post-info-section">
                     <div className="user-info-box">
-                        <ProfPicture src="natan_proa.jpg" scale={70} />
+                        <ProfPicture src="valentina.png" scale={70} />
                         <div className="user-info">
-                            <span className="text-primary">Usuário do post {props.id}</span>
-                            <span className="text-secondary">Aspirante a desenvolvedor fullstack</span>
+                            <span className="text-primary">Valentina {props.id}</span>
+                            <span className="text-secondary">Aspirante a Astrônoma</span>
                             <span className="text-secondary">{getPostDate("2022-05-23 14:40")}</span>
                         </div>
                         <div className="user-actions">
@@ -42,14 +42,14 @@ const MomentsFullscreen = props => {
                     </div>
 
                     <div className="post-info-box">
-                        <div className="post-title">Título post {props.id}</div>
-                        <div className="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores id sit vitae. Ab accusamus hic ipsam magnam nostrum ut. Consectetur non nulla numquam! Error incidunt, libero magnam pariatur repellat voluptatem.</div>
-                        <div className="post-hashs">#tumor #picadas</div>
+                        <div className="post-title">Estudando muito para alcançar meus objetivos 😁📚 {props.id}</div>
+                        <div className="post-description">Estudando muito para alcançar meus objetivos 😁📚 </div>
+                        <div className="post-hashs">#Apadrinhe-me #Tecnologia #Educação</div>
                         <div className="post-actions">
-                            <button className="btn-post"><img src={likeIco} alt="Botão de curtir"/>Curtir</button>
-                            <button className="btn-post"><img src={commentIco} alt="Botão de comentar"/>Comentar</button>
-                            <button className="btn-post"><img src={shareIco} alt="Botão de compartilhar"/>Compartilhar</button>
-                            <button className="btn-post"><img src={saveIco} alt="Botão de salvar"/>Salvar</button>
+                            <button className="btn-post"><img src={likeIco} alt="Botão de curtir" />Curtir</button>
+                            <button className="btn-post"><img src={commentIco} alt="Botão de comentar" />Comentar</button>
+                            <button className="btn-post"><img src={shareIco} alt="Botão de compartilhar" />Compartilhar</button>
+                            <button className="btn-post"><img src={saveIco} alt="Botão de salvar" />Salvar</button>
                         </div>
                     </div>
                 </div>
