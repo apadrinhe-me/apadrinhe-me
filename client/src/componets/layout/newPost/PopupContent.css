@@ -110,6 +110,13 @@
     cursor: pointer;
 }
 
+option {
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+
+
 .PopupContent .publicar {
     width: 250px;
     height: 40px;
@@ -142,4 +149,21 @@
     height: 30px;
     width: 100px;
     padding: 5px;
+}
+
+#who:hover {
+    cursor: pointer;
+}
+
+.PopupContent label {
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 4px;
+    color: #0065d2;
+}
+
+.PopupContent label:hover {
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }

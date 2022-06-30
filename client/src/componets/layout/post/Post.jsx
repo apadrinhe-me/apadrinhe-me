@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import ProfPicture from "../profPicture/ProfPicture";
 import getPostDate from "../../funcional/getPostDate";
 import ButtonApoiar from "../buttonApoiar/ButtonApoiar";
+import book from "../../../media/icons/item_cursos_icon_stroke.svg"
+import { Link } from "react-router-dom";
 
 //import dos ícones
 import likeIcoFill from "../../../media/icons/item_like_icon_fill.svg";
@@ -58,7 +60,11 @@ const Post = props => {
                         <button className="btn btn-comment"><img src={commentIcoStroke} alt="icone de like" className="btn-ico" /></button>
                         <button className="btn btn-share"><img src={shareIco} alt="icone de like" className="btn-ico" /></button>
                     </div>
+                    <div className="recomendar_redirect">
+                        <Link to="/cursos"><ButtonOneFill sx={{ color: "green" }}>Recomendar</ButtonOneFill>{/**<button className="recomendacao"><img src={book} height={16} />Recomendar</button>*/}</Link>
+                    </div>
                     <ButtonApoiar setButtonPopup={setButtonPopup} />
+
                 </div>
             </div>
 

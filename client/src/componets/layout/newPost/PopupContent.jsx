@@ -18,11 +18,15 @@ const PopupContent = props => {
                 </div>
                 <select id="who" name="estado">
                     <option value="publico"> Público </option>
-                    <option value="somenteeu">Somente eu</option>
-                    <option value="somente seguidores">Só seguidores</option>
+                    <option value="somenteeu">Seguidores</option>
+                    <option value="somente seguidores">Privado</option>
                 </select>
             </div>
-            <textarea></textarea>
+            <textarea>Legenda, Hashtags...</textarea>
+            <input id="novacapa" type="file" />
+            <label className="adcionarfoto" htmlFor="novacapa">Adcionar foto</label>
+            <input id="novacapa" type="file" />
+            <label className="adcionarfoto" htmlFor="novacapa">Novo moments</label>
             <div className="buttons">
                 <button className="recomendacao">Recomendação</button>
                 <button className="doacaorapida">Doação Rápida</button>
