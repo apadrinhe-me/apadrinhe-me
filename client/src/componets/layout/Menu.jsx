@@ -11,8 +11,8 @@ import CoursesIconFill from "../../media/icons/item_cursos_icon_fill.svg";
 import MomentsIconFill from "../../media/icons/item_moments_icon_fill.svg";
 import HomeIconStroke from "../../media/icons/item_home_icon_stroke.svg";
 import ConectionsIconStroke from "../../media/icons/item_conections_icon_stroke.svg";
-import CoursesIconStroke from "../../media/icons/item_cursos_icon_stroke.svg";
-import MomentsIconStroke from "../../media/icons/item_moments_icon_stroke.svg";
+import CoursesIconStroke from "../../media/icons/item_cursos_icon_fill.svg";
+import MomentsIconStroke from "../../media/icons/item_moments_icon_fill.svg";
 import ChatIcon from "../../media/icons/item_chat_icon_fill.svg";
 import NotificationsIcon from "../../media/icons/item_alert_icon_fill.svg";
 import MenuIcon from "../../media/icons/item_menu_icon.svg";
@@ -73,9 +73,9 @@ const Menu = props => {
     let showLogomarca = window.innerWidth <= 576 || window.innerWidth >= 850;
     let showLogoSolo = window.innerWidth > 576 && window.innerWidth < 850;
 
-    const[viewport, setviewport] = useState(showLogomarca ? 'showLogomarca' : 'showLogoSolo');
+    const [viewport, setviewport] = useState(showLogomarca ? 'showLogomarca' : 'showLogoSolo');
     window.addEventListener("resize", () => {
-        if(window.innerWidth <= 576 || window.innerWidth >= 850){
+        if (window.innerWidth <= 576 || window.innerWidth >= 850) {
             setviewport('showLogomarca');
         } else {
             setviewport('showLogoSolo');
@@ -87,7 +87,7 @@ const Menu = props => {
             <nav className="header_main">
                 <div className="container_max">
                     <div className="container_left" ref={searchDiv}>
-                            <img src={viewport === 'showLogomarca' ? LogoMarca : LogoSolo} height={viewport === 'showLogomarca' ? "35px" : "40px"} ref={logo}/>
+                        <img src={viewport === 'showLogomarca' ? LogoMarca : LogoSolo} height={viewport === 'showLogomarca' ? "35px" : "40px"} ref={logo} />
                         <div className="search-div">
                             <IconButton color="primary" onClick={() => showSearchBar()}><i className="bi bi-search"></i></IconButton>
                             <input type="text" className="searchbar" ref={searchInput} placeholder="Pesquisar..." />
@@ -159,8 +159,8 @@ const Menu = props => {
                                     'aria-labelledby': 'basic-button',
                                 }}
                             >
-                                <Link to="/perfil"><MenuItem onClick={handleClose}><span style={{color: "white"}}>Meu perfil</span></MenuItem></Link>
-                                <MenuItem onClick={handleClose}><span style={{color: "red"}}>Sair</span></MenuItem>
+                                <Link to="/perfil"><MenuItem onClick={handleClose}><span style={{ color: "white" }}>Meu perfil</span></MenuItem></Link>
+                                <MenuItem onClick={handleClose}><span style={{ color: "red" }}>Sair</span></MenuItem>
                             </Dropdown>
 
                             <Link to="/chat"><button type="button" className="btn-action btn-chat"><img className="btn-icon" src={ChatIcon} alt="ícone de chat" /></button></Link>

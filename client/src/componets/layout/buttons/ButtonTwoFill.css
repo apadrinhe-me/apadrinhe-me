@@ -1,0 +1,21 @@
+.ButtonTwoFill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 40px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #3800FF, #2A00BF);
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    border: 0;
+    transition: background .15s;
+}
+
+.ButtonTwoFill:hover {
+    cursor: pointer;
+    background: #3700ff82;
+    transition: background .15s;
+}

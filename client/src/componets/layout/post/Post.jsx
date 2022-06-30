@@ -14,7 +14,7 @@ import commentIcoStroke from "../../../media/icons/item_comment_icon_stroke.svg"
 import shareIco from "../../../media/icons/item_share_icon_stroke.svg";
 import rocketIco from "../../../media/icons/icons_apadrinhar_icon_fill.svg";
 import ApadPopup from "../apadPopup/ApadPopup";
-import ButtonOneFill from "../buttons/ButtonOneFill";
+import ButtonTwoFill from "../buttons/ButtonTwoFill";
 
 const Post = props => {
 
@@ -61,7 +61,7 @@ const Post = props => {
                         <button className="btn btn-share"><img src={shareIco} alt="icone de like" className="btn-ico" /></button>
                     </div>
                     <div className="recomendar_redirect">
-                        <Link to="/cursos"><ButtonOneFill sx={{ color: "green" }}>Recomendar</ButtonOneFill>{/**<button className="recomendacao"><img src={book} height={16} />Recomendar</button>*/}</Link>
+                        <Link to="/cursos"><ButtonTwoFill>Recomendar</ButtonTwoFill>{/**<button className="recomendacao"><img src={book} height={16} />Recomendar</button>*/}</Link>
                     </div>
                     <ButtonApoiar setButtonPopup={setButtonPopup} />
 
