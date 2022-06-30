@@ -18,11 +18,6 @@
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "mysql": "^2.18.1",
-<<<<<<< HEAD
-    
-    "nodemon": "^2.0.16"
-=======
     "nodemon": "^2.0.18"
->>>>>>> 502ef95276fffebe5465cf2f1c0e3ecc47b4e22e
   }
 }
