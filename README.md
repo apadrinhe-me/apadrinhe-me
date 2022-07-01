@@ -83,6 +83,6 @@ Infelizmente as escolas públicas de nosso país não investem o suficiente ness
   <a href="https://www.instagram.com/apadrinhe.me/" target="_blank"><img src="https://img.icons8.com/fluency/96/000000/instagram-new.png" height="95">
     <a href="apadrinhe.me@gmail.com" alt="Gmail"><img src="https://img.icons8.com/color/96/000000/gmail--v1.png" height="95">
     <a href="https://www.linkedin.com/company/81792159/admin/" alt="Linkedin"><img src="https://img.icons8.com/color/96/000000/linkedin-circled--v1.png" height="95">
-    <a href="https://www.youtube.com/channel/UCD6BXrobFoeA4vKsi6RyIFA?sub_confirmation=1" alt="Youtube"><img src="https://img.icons8.com/fluency/96/000000/youtube.png" height="95">
+    <a href="https://www.youtube.com/channel/UCD6BXrobFoeA4vKsi6RyIFA?sub_confirmation=1" alt="Youtube"><img src="https://img.icons8.com/color/96/000000/youtube-play.png"/>
     <a href="https://www.twitch.tv/apadrinhe_me" alt="Twitch"><img src="https://img.icons8.com/color/96/000000/twitch--v1.png" height="95">  
       </div> 
