@@ -39,6 +39,9 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { Link } from "react-router-dom";
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 
 const lightTheme = createTheme({
     palette: {
@@ -47,7 +50,7 @@ const lightTheme = createTheme({
 });
 
 const ApoioDoacao = props => {
-    const [alignment, setAlignment] = React.useState('web');
+    const [alignment, setAlignment] = useState('web');
 
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);

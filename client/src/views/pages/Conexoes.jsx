@@ -51,7 +51,7 @@ const Conexoes = () => {
 
     return (
         <>
-            <Menu className={false} />
+            <Menu className={false} atual="Conexoes"/>
             <div className="cardestrutura">
                 <div className="Conexoes">
                     <ul className="navegacaoConexoes">

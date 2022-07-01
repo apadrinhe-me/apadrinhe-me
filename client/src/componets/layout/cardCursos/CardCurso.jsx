@@ -32,7 +32,7 @@ const CardCurso = props => {
 
     return (
 
-        <Card className="border" sx={{ maxWidth: 345, background: "#191922", borderRadius: "15px", boxShadow: "0 0 3px black", color: "white" }} className="cardCourse" >
+        <Card sx={{ maxWidth: 345, background: "#191922", borderRadius: "15px", boxShadow: "0 0 3px black", color: "white" }} className="cardCourse" >
             <div className="CardHeader">
                 <div className="containerLeft">
                     <div className="avatarCard">

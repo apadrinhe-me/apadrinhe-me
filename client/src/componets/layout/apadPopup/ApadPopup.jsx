@@ -5,7 +5,6 @@ import OthersCard from "./OthersCard";
 import ApoioInicio from "./popUpviews/ApoioInicio";
 import If from "../../funcional/If";
 import ApoioEducacional from "./popUpviews/ApoioEducacional";
-import ApoioRecomendacao from "./popUpviews/ApoioRecomendacao";
 import ApoioDoacao from "./popUpviews/ApoioDoacao";
 import ApoioMaterial from "./popUpviews/ApoioMaterial";
 

@@ -5,6 +5,8 @@ import apadrinheme from "../../media/logo/apadrinhe-04.svg"
 import { Link, useNavigate } from "react-router-dom";
 import Alert from "@mui/material/Alert";
 import { MyServer } from "../../services/api";
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -64,6 +66,11 @@ const Login = () => {
                 <input name="email" placeholder="Email" type="text" className='user_input' value={emailLogin} onChange={e => setEmailLogin(e.target.value)} />
 
                 <input name="senha" placeholder="Senha" type="password" className='password_input' value={senhaLogin} onChange={e => setSenhaLogin(e.target.value)} />
+
+                <div className="stayLoggedDiv">
+                    <FormControlLabel control={<Checkbox sx={{color: "#D92588", '&.Mui-checked': {color: "#D92588"}}}/>} label="Manter-se logado" />
+                </div>
+                
 
                 <span className="p1">Esqueci minha senha</span>
                 <button type="submit" >Entrar</button>

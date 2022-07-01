@@ -21,7 +21,7 @@ const Moments =  () => {
 
     return(
         <>
-            <Menu logged={false}/>
+            <Menu logged={false} atual="Moments"/>
             <div className="Moments">
                 <div className="container">
                     <aside className={videoFullscreen !== 0 ? "for-you my-scrollbar fulscreenmode" : "for-you my-scrollbar"} >

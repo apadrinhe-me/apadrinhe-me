@@ -16,7 +16,7 @@ const Cursos = () => {
 
     return (
         <>
-            <Menu logged={false} />
+            <Menu logged={false} atual="Cursos"/>
             <div className="Cursos">
                 <div className="categoriasCurso">
                     <ul>
