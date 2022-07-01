@@ -80,6 +80,9 @@ Infelizmente as escolas públicas de nosso país não investem o suficiente ness
   
   <div align="center">
   <h2>Contatos</h2>
-  <a href="https://www.instagram.com/apadrinhe.me/" target="_blank"><img src="https://raw.githubusercontent.com/projetoMyAra/projetoMyAra/main/instagram_icon_logo.png" height="50">
-    <a href="apadrinhe.me@gmail.com" alt="Gmail"><img src="https://raw.githubusercontent.com/projetoMyAra/projetoMyAra/main/Gmail-Logo.png" height="45">
-    </div> 
+  <a href="https://www.instagram.com/apadrinhe.me/" target="_blank"><img src="https://img.icons8.com/fluency/96/000000/instagram-new.png" height="95">
+    <a href="apadrinhe.me@gmail.com" alt="Gmail"><img src="https://img.icons8.com/color/96/000000/gmail--v1.png" height="95">
+    <a href="https://www.linkedin.com/company/81792159/admin/" alt="Linkedin"><img src="https://img.icons8.com/color/96/000000/linkedin-circled--v1.png" height="95">
+    <a href="https://www.youtube.com/channel/UCD6BXrobFoeA4vKsi6RyIFA?sub_confirmation=1" alt="Youtube"><img src="https://img.icons8.com/fluency/96/000000/youtube.png" height="95">
+    <a href="https://www.twitch.tv/apadrinhe_me" alt="Twitch"><img src="https://img.icons8.com/color/96/000000/twitch--v1.png" height="95">  
+      </div> 
