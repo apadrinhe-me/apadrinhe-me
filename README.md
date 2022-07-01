@@ -1,16 +1,9 @@
-<div align="center">
-  <a href="https://github.com/projetoMyAra">
-    <img src="https://user-images.githubusercontent.com/99449971/174547908-5894601f-7ce7-4415-95a5-dfd0f41996b0.png" alt="Apadrinhe-me" width="300">
-  </a>
+<img src="https://user-images.githubusercontent.com/99970650/176962187-583c1a60-1c72-4064-93bb-481aa5b60564.svg"/>
   
-  <br>
-  
-  <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Outfit&size=33&duration=4500&color=0067F0&width=650&lines='Jovens+talentosos+merecem+oportunidades+não+apenas+sonhos."!">
-</p></div>
+  ##
   
    <div align="center">
-  <p> Nossa plataforma visa, realizar a interação entre jovens talentosos que são impossibilitados de investir em educação, com possíveis apadrinhadores..</p>
+  <p> Nossa plataforma visa, realizar a interação entre jovens talentosos que são impossibilitados de investir em educação, com possíveis apadrinhadores...</p>
 </div>
 
 ##
