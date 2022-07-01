@@ -1,7 +1,4 @@
 <div align="center">
-  <a href="https://github.com/projetoMyAra">
-    <img src="https://user-images.githubusercontent.com/99449971/174547908-5894601f-7ce7-4415-95a5-dfd0f41996b0.png" alt="Apadrinhe-me" width="300">
-  </a>
   
   <br>
   
