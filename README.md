@@ -26,15 +26,18 @@
   <br>
  
   <div>
- <h2 align="center">ᴛᴇᴄɴᴏʟᴏɢɪᴀs 👨🏻‍💻  </h2>
+ <h2 align="center">TECNOLOGIAS UTILIZADAS  </h2>
    <div align="center">
- <img align="center" alt="Illustrator" height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg">
- <img align="center" alt="Illustrator" height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-line.svg">
- <img align="center" alt="Símbolo Figma" height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />    
- <img align="center" alt="Símbolo HTML" height="70" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
- <img align="center" alt="Símbolo CSS" height="70" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
- <img align="center" alt="Símbolo JavaScript" height="75" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
- <img align="center" alt="MySql" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg">
+ <img align="center" alt="Trello" height="96" src="https://img.icons8.com/color/96/000000/trello.png">
+ <img align="center" alt="Illustrator" height="96" src="https://img.icons8.com/color/96/000000/adobe-illustrator--v1.png">
+ <img align="center" alt="Figma" height="96" src="https://img.icons8.com/color/96/000000/figma--v1.png" />    
+ <img align="center" alt="React" height="96" src="https://img.icons8.com/plasticine/100/000000/react.png">
+ <img align="center" alt="JavaScript" height="96" src="https://img.icons8.com/fluency/96/000000/javascript.png">
+ <img align="center" alt="Java" height="96" src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo--v1.png">
+ <img align="center" alt="NodeJS" height="96" src="https://img.icons8.com/color/96/000000/nodejs.png">
+  <img align="center" alt="MySql" height="96" src="https://img.icons8.com/color/96/000000/mysql-logo.png">
+  <img align="center" alt="Git" height="96" src="https://img.icons8.com/color/96/000000/git.png">
+  <img align="center" alt="GitHub" height="96" src="https://img.icons8.com/fluency/96/000000/github.png">
   </div>
   
   ##
@@ -68,7 +71,7 @@ Infelizmente as escolas públicas de nosso país não investem o suficiente ness
   <a href="" target="_blank"><img src="" height="140" target="_blank"></a>
 </div>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/NatanBarbosa">Natan Barbosa</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/carlos15eduardo">Carlos Eduardo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/MuriloMoura94">Murilo Moura</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/Cristian-Ferre">Cristian Ferreira</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/GuReis01">Luis Gustavo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/wagnerpereiradev">Wagner Pereira</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/NatanBarbosa">Natan Barbosa</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/carlos15eduardo">Carlos Eduardo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/MuriloMoura94">Murilo Moura</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/Cristian-Ferre">Cristian Ferreira</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/GuReis01">Luis Gustavo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/wagnerpereiradev">Wagner Pereira</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/wagnerpereiradev">Jose Gabriel</a>
   
   ##
   
