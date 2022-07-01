@@ -127,7 +127,7 @@ const Home = () => {
                             qntShares={15} />
                     </div>
 
-                    <div className="spotlights">
+                    <div className="spotlights my-scrollbar">
                         <Spotlights />
                     </div>
                 </If>

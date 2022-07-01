@@ -5,6 +5,7 @@ import getPostDate from "../../funcional/getPostDate";
 import ButtonApoiar from "../buttonApoiar/ButtonApoiar";
 import book from "../../../media/icons/item_cursos_icon_stroke.svg"
 import { Link } from "react-router-dom";
+import RecomendarPopup from "../recomendarPopup/RecomendarPopup";
 
 //import dos ícones
 import likeIcoFill from "../../../media/icons/item_like_icon_fill.svg";
@@ -16,6 +17,26 @@ import rocketIco from "../../../media/icons/icons_apadrinhar_icon_fill.svg";
 import ApadPopup from "../apadPopup/ApadPopup";
 import ButtonTwoFill from "../buttons/ButtonTwoFill";
 
+//MUI
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: "100%",
+    maxWidth: 600,
+    bgcolor: 'background.paper',
+    color: "#fff",
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+
 const Post = props => {
 
     const [buttonPopup, setButtonPopup] = useState(false);
@@ -25,6 +46,10 @@ const Post = props => {
     } else {
         document.querySelector('body').style.overflowY = 'auto';
     }
+
+    const [openRecomendacao, setOpenRecomendacao] = useState(false);
+    const handleOpenRecomendacao = () => setOpenRecomendacao(true);
+    const handleCloseRecomendacao = () => setOpenRecomendacao(false);
 
     return (
         <>
@@ -61,7 +86,7 @@ const Post = props => {
                         <button className="btn btn-share"><img src={shareIco} alt="icone de like" className="btn-ico" /></button>
                     </div>
                     <div className="recomendar_redirect">
-                        <Link to="/cursos"><ButtonTwoFill>Recomendar</ButtonTwoFill>{/**<button className="recomendacao"><img src={book} height={16} />Recomendar</button>*/}</Link>
+                        <ButtonTwoFill onclick={handleOpenRecomendacao}>Recomendar</ButtonTwoFill>
                     </div>
                     <ButtonApoiar setButtonPopup={setButtonPopup} />
 
@@ -71,6 +96,24 @@ const Post = props => {
             <ApadPopup
                 trigger={buttonPopup}
                 setTrigger={setButtonPopup} />
+
+            <Modal
+                    aria-labelledby="transition-modal-title"
+                    aria-describedby="transition-modal-description"
+                    open={openRecomendacao}
+                    onClose={handleCloseRecomendacao}
+                    closeAfterTransition
+                    BackdropComponent={Backdrop}
+                    BackdropProps={{
+                    timeout: 500,
+                    }}
+                >
+                    <Fade in={openRecomendacao}>
+                    <Box sx={style}>
+                        <RecomendarPopup handleCloseRecomendacao={handleCloseRecomendacao} />
+                    </Box>
+                    </Fade>
+                </Modal>
         </>
     );
 }

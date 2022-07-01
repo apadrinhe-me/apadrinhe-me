@@ -1,0 +1,17 @@
+.RecomendarPopup{
+    position: relative;
+}
+
+.RecomendarPopup .btn-close{
+    position: absolute;
+    top: -20px;
+    right: 0;   
+    left: auto;
+    font-size: 10px;
+    transition: .2s;
+}
+
+.RecomendarPopup .btn-close:hover{
+    transform: rotate(90deg);
+    transition: .2s;
+}
