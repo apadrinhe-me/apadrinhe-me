@@ -76,7 +76,7 @@ Infelizmente as escolas públicas de nosso país não investem o suficiente ness
 
   </div>
   
-&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/natan_barbosa">Natan Barbosa</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/carlose15">Carlos Eduardo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/murilo_moura">Murilo Moura</a>&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/cristian.ferreira">Cristian Ferreira</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/luisgustavoreisdev">Luis Gustavo</a>&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/wagnerpereira9">Wagner Pereira</a>&nbsp;<a href="https://linktr.ee/gabrielrsantana">Jose Gabriel</a>
+&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/natan_barbosa">Natan Barbosa</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/carlose15">Carlos Eduardo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/murilo_moura">Murilo Moura</a>&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/cristian.ferreira">Cristian Ferreira</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/luisgustavoreisdev">Luis Gustavo</a>&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/wagnerpereira9">Wagner Pereira</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/gabrielrsantana">Jose Gabriel</a>
   
   ##
   
