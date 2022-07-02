@@ -10,9 +10,8 @@ import LogoEducacional from "../../../../media/icons/IconsApoios/educacional.svg
 const ApoioInicio = props => {
     return (
         <div className="ApoioInicio ">
+            <h2>Opções de apadrinhamento</h2>
             <div className="apad-types">
-
-
                 <div className="other-types">
 
                     <OthersCard

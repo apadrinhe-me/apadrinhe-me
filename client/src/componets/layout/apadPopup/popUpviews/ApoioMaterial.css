@@ -35,21 +35,81 @@
     color: #c4c4c4;
 }
 
-.ApoioDoacao .pagamento-info{
+.ApoioMaterial .donateInfo{
+    margin-top: 20px;
+}
+
+.ApoioMaterial .donateInfo h3{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid gray;
+}
+
+.ApoioMaterial .donategrid{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.ApoioMaterial .donateColumn{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 5px 20px;
 }
 
-.ApoioDoacao .nome-email{
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
+.donateColumn{
+    flex: 1;
 }
 
-.ApoioDoacao .valor-doacao{
+.about-frete{
+    font-size: 14px;
+}
+
+.donateColumn a{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.text-yellow{
+    color: #cc9214;
+}
+
+.text-yellow:hover{
+    color: #fab31a;
+}
+
+.text-pink{
+    color: #9f2563;
+}
+
+.text-pink:hover{
+    color: #c9317d;
+}
+
+.btn-solicitar-frete{
+    padding: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #6a77ef, #7433d4);
+    color: white;
+}
+
+.btn-solicitar-frete:hover{
+    cursor: pointer;
+}
+
+.imgs-parceiros{
     display: flex;
-    flex-direction: column;
     gap: 10px;
+    justify-content: center;
+}
+
+.myselect .MuiSvgIcon-root{
+    margin-left: auto;
 }

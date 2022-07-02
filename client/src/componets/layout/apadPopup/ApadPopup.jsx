@@ -34,7 +34,6 @@ const ApadPopup = props => {
         <div className="ApadPopup">
             <div className="popup-inner">
                 <button className="close-btn" onClick={ () => closePopup() }><i className="bi bi-x-lg"></i></button>
-                <h2>Opções de apadrinhamento</h2>
 
                 <If test={selectedApoio === 0}>
                     <ApoioInicio
