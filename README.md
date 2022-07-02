@@ -66,12 +66,14 @@ Infelizmente as escolas públicas de nosso país não investem o suficiente ness
    <a href="https://github.com/NatanBarbosa" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/174565248-bd15009e-c75a-4e44-b086-f3c17f654c08.jpeg" height="140" target="_blank"></a>
   <a href="https://github.com/carlos15eduardo" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/174565645-8aa826c5-ba8b-4b22-abb4-f162fb5d7b0d.jpeg" height="140" target="_blank"></a>
  <a href="https://github.com/MuriloMoura94" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/174566055-989192b8-2515-4f88-9979-3cba89ae3ee2.jpeg" height="140"></a>
- <a href="https://github.com/Cristian-Ferre" target="_blank"><img src="" height="140" target="_blank"></a>
- <a href="" target="_blank"><img src="" height="140" target="_blank"></a>
-  <a href="" target="_blank"><img src="" height="140" target="_blank"></a>
-</div>
+ <a href="https://github.com/Cristian-Ferre" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/176978694-78f3daa3-2a23-456d-8aba-79e26bea80fe.jpg" height="140" target="_blank"></a>
+ <a href="https://github.com/GuReis01" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/176978532-bfd44c21-6a7f-4fbb-bac5-6573cf9aaab4.jpg" height="140" target="_blank"></a>
+  <a href="https://github.com/wagnerpereiradev" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/176978552-6c9e9133-a684-4e78-94a2-537293cf4e26.jpg" height="140" target="_blank"></a>
+<a href="https://github.com/JGabrielRodrigues" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/176978541-2f8c91b2-e96a-4983-95f8-f6781b81ea8e.jpg" height="140" target="_blank"></a>
+
+  </div>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/NatanBarbosa">Natan Barbosa</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/carlos15eduardo">Carlos Eduardo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/MuriloMoura94">Murilo Moura</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/Cristian-Ferre">Cristian Ferreira</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/GuReis01">Luis Gustavo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/wagnerpereiradev">Wagner Pereira</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/wagnerpereiradev">Jose Gabriel</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/natan_barbosa">Natan Barbosa</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/carlose15">Carlos Eduardo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://linktr.ee/murilo_moura">Murilo Moura</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://linktr.ee/cristian.ferreira">Cristian Ferreira</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/luisgustavoreisdev">Luis Gustavo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/wagnerpereira9">Wagner Pereira</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linktr.ee/gabrielrsantana">Jose Gabriel</a>
   
   ##
   
