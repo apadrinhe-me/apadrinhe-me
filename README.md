@@ -1,9 +1,8 @@
 <img src="https://user-images.githubusercontent.com/99970650/176962187-583c1a60-1c72-4064-93bb-481aa5b60564.svg"/>
   
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=aldhabi&size=18&duration=4080&color=1613D7&background=FF112500&center=verdadeiro&vCenter=verdadeiro&lines=Uma+ferramenta+SEPTEM-DEV.)](https://git.io/typing-svg)
 
-##
+
   
    <div align="center">
   <p> Nossa plataforma visa, realizar a interação entre jovens talentosos que são impossibilitados de investir em educação, com possíveis apadrinhadores...</p>
