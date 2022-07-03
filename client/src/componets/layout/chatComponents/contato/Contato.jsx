@@ -15,7 +15,11 @@ const Contato = props => {
             <div className="contato-last-msg">
                 <span>{props.tempo}</span>
             </div>
+
+            
         </div>
+
+        
     );
 }
 
