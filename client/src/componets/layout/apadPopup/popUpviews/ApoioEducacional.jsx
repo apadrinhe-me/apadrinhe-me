@@ -20,7 +20,7 @@ export default ApoioEducacional;
 
 import React, { useState } from "react";
 import "./ApoioEducacional.css";
-import LogoEducacional from "../../../../media/icons/IconsApoios/educacional.svg"
+import LogoEducacional from "../../../../media/Imagens_pop-up/icon_cadastro-09.svg"
 
 import ProfPicture from "../../profPicture/ProfPicture";
 import QrCode from "../../../../media/payment/qr-code-pic.png"
@@ -67,7 +67,7 @@ const ApoioDoacao = props => {
                 <div className="header">
                     <div className="nome-apoio">
                         <img src={LogoEducacional} alt="dinheiro e raio" height={80} />
-                        <h3>Doação rápida</h3>
+                        <h3>Apadrinhamento educacional</h3>
                     </div>
 
                     <div className="quem-apoia">
