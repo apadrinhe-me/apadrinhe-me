@@ -6,6 +6,7 @@ import If from "../../componets/funcional/If";
 //imagens
 import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
 import Cadastrado from "../../media/illustrations/cadastrado.svg";
+import Background from "../../media/backgrounds/background-01.svg";
 
 //Telas cadastro
 import SelectTypeUser from "../../componets/layout/pagesCadastro/SelectTypeUser";
@@ -240,6 +241,7 @@ const Cadastro = () => {
 
     return (
         <div className="Cadastro">
+            <img src={Background} alt="background" className="cadastro-background" />
             <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <div className="Cards">
                     <div className="container_cad">
