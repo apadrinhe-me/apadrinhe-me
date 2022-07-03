@@ -17,12 +17,12 @@
   
   <div>
      <h3>Visão 👀</h3>
-     <p>Ajudar jovens a realizarem seus sonhos de vida.  </p>
+     <p>Gerar oportunidades para jovens de baixa renda poderem se desenvolver educacionalmente e profissionalmente.</p>
   </div>
   
   <div>
      <h3>Valores 🤝</h3>
-     <p>Hombridade,Respeito e Esperança  </p>
+     <p>Hombridade, respeito e esperança.</p>
   </div>
   
   <br>
