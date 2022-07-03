@@ -10,7 +10,7 @@
     color: red;
 }
 
-.status {
+.pagamento-info .status {
     display: flex;
     align-items: center;
     height: 35px;
