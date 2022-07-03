@@ -5,6 +5,7 @@
 }
 
 .Cadastro {
+    height: 100vh;
     background: url("../../media/backgrounds/background-01.svg");
     background-size: cover;
 }
