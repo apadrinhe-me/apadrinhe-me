@@ -9,11 +9,11 @@ import { MyServer } from "../../services/api";
 
 let login;
 
-const Moments =  () => {
-    const[videoFullscreen, setVideoFullscreen] = useState(0);
+const Moments = () => {
+    const [videoFullscreen, setVideoFullscreen] = useState(0);
 
     useEffect(() => {
-        if(videoFullscreen === 1){
+        if (videoFullscreen === 1) {
             document.querySelector(".Menu").style.display = "none";
         } else {
             document.querySelector(".Menu").style.display = "flex";
@@ -33,19 +33,19 @@ const Moments =  () => {
         })
     }, [])
 
-    
 
-    return(
+
+    return (
         <>
-            <Menu logged={logged} atual="Moments"/>
+            <Menu logged={logged} atual="Moments" />
             <div className="Moments">
                 <div className="container">
                     <aside className={videoFullscreen !== 0 ? "for-you my-scrollbar fulscreenmode" : "for-you my-scrollbar"} >
                         <ForYou />
                     </aside>
                     <main className={videoFullscreen !== 0 ? "moments-feed fulscreenmode my-scrollbar" : "moments-feed my-scrollbar"}>
-                        <MomentsPost id={1} setFullscreen={setVideoFullscreen}/>
-                        <MomentsPost id={2} setFullscreen={setVideoFullscreen}/>
+                        <MomentsPost id={1} setFullscreen={setVideoFullscreen} />
+                        <MomentsPost id={2} setFullscreen={setVideoFullscreen} />
                     </main>
                     <div className={videoFullscreen !== 0 ? "full-screen-post fulscreenmode" : "full-screen-post"}>
                         <MomentsFullscreen id={videoFullscreen} setFullscreen={setVideoFullscreen} />
