@@ -5,6 +5,9 @@ import MenuMobile from "../../componets/layout/MenuMobile";
 import MomentsPost from "../../componets/layout/momentsPost/MomentsPost";
 import ForYou from "../../componets/layout/forYou/ForYou";
 import MomentsFullscreen from "../../componets/layout/momentsFullScreen/MomentsFullscreen";
+import { MyServer } from "../../services/api";
+
+let login;
 
 const Moments =  () => {
     const[videoFullscreen, setVideoFullscreen] = useState(0);
@@ -17,11 +20,24 @@ const Moments =  () => {
         }
     })
 
+    const [logged, setLogged] = useState(false);
+
+    //verificar se está logado
+    useEffect(() => {
+        MyServer.get("/login").then(response => {
+            //Não pode logado na página de login
+            if (response.data.logged) {
+                login = response.data.user;
+                setLogged(true)
+            }
+        })
+    }, [])
+
     
 
     return(
         <>
-            <Menu logged={false} atual="Moments"/>
+            <Menu logged={logged} atual="Moments"/>
             <div className="Moments">
                 <div className="container">
                     <aside className={videoFullscreen !== 0 ? "for-you my-scrollbar fulscreenmode" : "for-you my-scrollbar"} >
@@ -36,7 +52,7 @@ const Moments =  () => {
                     </div>
                 </div>
             </div>
-            <MenuMobile atual="Home" logged={false} />
+            <MenuMobile atual="Moments" logged={false} />
         </>
     );
 }

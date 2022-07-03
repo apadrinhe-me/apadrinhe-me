@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "../../componets/layout/Menu";
 import MenuMobile from "../../componets/layout/MenuMobile";
 import "./Chat.css";
@@ -10,13 +10,29 @@ import Button from "@mui/material/Button";
 import { Drawer } from "@mui/material";
 import Box from "@mui/material/Box";
 import mayara from "../../media/profile_pictures/mayara.png"
+import { MyServer } from "../../services/api";
+
+let login;
 
 const Chat = () => {
     const [drawer, setDrawer] = useState(false);
 
+    const [logged, setLogged] = useState(false);
+
+    //verificar se está logado
+    useEffect(() => {
+        MyServer.get("/login").then(response => {
+            //Não pode logado na página de login
+            if (response.data.logged) {
+                login = response.data.user;
+                setLogged(true)
+            }
+        })
+    }, [])
+
     return (
         <>
-            <Menu logged={true} />
+            <Menu logged={logged} />
 
             <div className="Chat">
                 <div className="contatos">

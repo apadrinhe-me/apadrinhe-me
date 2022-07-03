@@ -241,7 +241,7 @@ const Cadastro = () => {
 
     return (
         <div className="Cadastro">
-            <img src={Background} alt="background" className="cadastro-background" />
+            <div className="cadastro-background"></div>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <div className="Cards">
                     <div className="container_cad">

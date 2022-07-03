@@ -1,4 +1,5 @@
 .Login {
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -154,6 +155,9 @@
 .Login .msg_erro {
     display: none;
     margin-top: 15px;
+    position: absolute;
+    top: "10px";
+    left: "10px";
 }
 
 .Login .msg_erro.show {

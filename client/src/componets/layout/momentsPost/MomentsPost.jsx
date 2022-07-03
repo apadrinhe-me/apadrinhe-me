@@ -33,7 +33,7 @@ const MomentsPost = props => {
         document.querySelector("#btn-comment-" + props.id).addEventListener('click', () => {
             props.setFullscreen(props.id)
         })
-    })
+    }, [])
 
     return (
         <div className="MomentsPost" id={`moments-${props.id}`}>

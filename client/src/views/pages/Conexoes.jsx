@@ -1,11 +1,14 @@
 
 import "./Conexoes.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Menu from "../../componets/layout/Menu";
 import ListaConexao from "../../componets/layout/listaConexoes/ListaConexao";
 import MenuMobile from "../../componets/layout/MenuMobile";
 import If from "../../componets/funcional/If";
+import { MyServer } from "../../services/api";
+
+let login;
 
 const todasConec = [
     { foto: "aurora.png", nome: "Aurora seles", aspiracao: "Jornalista e Professora" },
@@ -49,9 +52,22 @@ const Conexoes = () => {
      * 3 - Conexões solicitadas
      */
 
+     const [logged, setLogged] = useState(false);
+
+     //verificar se está logado
+     useEffect(() => {
+         MyServer.get("/login").then(response => {
+             //Não pode logado na página de login
+             if (response.data.logged) {
+                 login = response.data.user;
+                 setLogged(true)
+             }
+         })
+     }, [])
+
     return (
         <>
-            <Menu className={false} atual="Conexoes"/>
+            <Menu logged={logged} atual="Conexoes"/>
             <div className="cardestrutura">
                 <div className="Conexoes">
                     <ul className="navegacaoConexoes">
@@ -93,7 +109,7 @@ const Conexoes = () => {
                 </div>
             </div>
 
-            <MenuMobile logged={false} />
+            <MenuMobile logged={false} atual="Conexoes"/>
         </>
     );
 }

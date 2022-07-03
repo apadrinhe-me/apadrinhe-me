@@ -66,12 +66,15 @@ const Menu = props => {
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
-    const handleClose = () => {
+    const logout = () => {
         //logout
+        setAnchorEl(null);
+
         MyServer.get("/logout").then(response => {
             window.location.href = "/login";
         })
-
+    }
+    const handleClose = () => {
         setAnchorEl(null);
     };
 
@@ -166,7 +169,7 @@ const Menu = props => {
                                 }}
                             >
                                 <Link to="/perfil"><MenuItem onClick={handleClose}><span style={{ color: "white" }}>Meu perfil</span></MenuItem></Link>
-                                <MenuItem onClick={handleClose}><span style={{ color: "red" }}>Sair</span></MenuItem>
+                                <MenuItem onClick={logout}><span style={{ color: "red" }}>Sair</span></MenuItem>
                             </Dropdown>
 
                             <Link to="/chat"><button type="button" className="btn-action btn-chat"><img className="btn-icon" src={ChatIcon} alt="ícone de chat" /></button></Link>

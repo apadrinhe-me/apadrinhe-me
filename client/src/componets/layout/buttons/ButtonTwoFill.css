@@ -6,16 +6,17 @@
     min-height: 40px;
     padding: 10px 20px;
     border-radius: 10px;
-    background: linear-gradient(45deg, #3800FF, #2A00BF);
+    background: #2A00BF;
     font-weight: bold;
     color: white;
     font-size: 15px;
     border: 0;
-    transition: background .15s;
+    transition: .25s;
 }
 
 .ButtonTwoFill:hover {
     cursor: pointer;
-    background: #3700ff82;
-    transition: background .15s;
+    background: #2A00BF;
+    filter: saturate(50%);
+    transition: .25s;
 }

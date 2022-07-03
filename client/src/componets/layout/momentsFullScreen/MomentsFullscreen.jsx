@@ -12,16 +12,11 @@ import CommentBox from "./CommentBox";
 import Comment from "./Comment";
 
 const MomentsFullscreen = props => {
-    useEffect(() => {
-        document.querySelector("#close-button").addEventListener('click', () => {
-            props.setFullscreen(0);
-        })
-    })
 
     return (
         <div className="MomentsFullscreen">
             <div className="fulscreen-video">
-                <button className="close-button" id="close-button">X</button>
+                <button className="close-button" id="close-button" onClick={() => props.setFullscreen(0)}>X</button>
                 <video className="momentsVideo" src={require("../../../media/moments_media/valentinamoments.mp4")} controls></video>
                 <video className="backgroundFullscreenMoments" src={require("../../../media/moments_media/valentinamoments.mp4")} controls></video>
             </div>
@@ -42,7 +37,7 @@ const MomentsFullscreen = props => {
                     </div>
 
                     <div className="post-info-box">
-                        <div className="post-title">Estudando muito para alcançar meus objetivos 😁📚 {props.id}</div>
+                        <div className="post-title">Estudando muito para alcançar meus objetivos 😁📚</div>
                         <div className="post-description">Estudando muito para alcançar meus objetivos 😁📚 </div>
                         <div className="post-hashs">#Apadrinhe-me #Tecnologia #Educação</div>
                         <div className="post-actions">

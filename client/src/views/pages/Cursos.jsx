@@ -1,6 +1,6 @@
 import "./Cursos.css";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "../../componets/layout/Menu";
 import CardCurso from "../../componets/layout/cardCursos/CardCurso"
 
@@ -10,13 +10,29 @@ import MenuMobile from "../../componets/layout/MenuMobile";
 import Box from "@mui/material/Box";
 import Contato from "../../componets/layout/chatComponents/contato/Contato";
 import { Drawer } from "@mui/material";
+import { MyServer } from "../../services/api";
+
+let login;
 
 const Cursos = () => {
     const [drawer, setDrawer] = useState(false);
 
+    const [logged, setLogged] = useState(false);
+
+    //verificar se está logado
+    useEffect(() => {
+        MyServer.get("/login").then(response => {
+            //Não pode logado na página de login
+            if (response.data.logged) {
+                login = response.data.user;
+                setLogged(true)
+            }
+        })
+    }, [])
+
     return (
         <>
-            <Menu logged={false} atual="Cursos"/>
+            <Menu logged={logged} atual="Cursos"/>
             <div className="Cursos">
                 <div className="categoriasCurso">
                     <ul>
@@ -152,7 +168,7 @@ const Cursos = () => {
                 </Box>
             </Drawer>
 
-            <MenuMobile logged={false} />
+            <MenuMobile logged={false} atual="Cursos"/>
         </>
     );
 }
