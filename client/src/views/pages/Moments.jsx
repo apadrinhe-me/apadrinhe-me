@@ -65,8 +65,8 @@ const Moments = () => {
                             setFullscreenInfo={setFullscreenInfo}
                             usuario="Carlos Eduardo"
                             data="19 de abril de 2022"
-                            hashtag="#Instituto Proa, #Biologia, #Livros,"
-                            objetivo="Aspirante a Biologo"
+                            hashtag="#Fuvest, #Biologia, #Livros,"
+                            objetivo="Aspirante a Biólogo"
                             titulo="Nem humanas, Nem exatas, Biologicas 🙈"
                             profile="cadu.png"
                             video="jovemEstudando.mp4"

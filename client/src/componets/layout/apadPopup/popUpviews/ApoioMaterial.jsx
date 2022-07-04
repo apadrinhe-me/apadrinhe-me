@@ -41,7 +41,7 @@ const ApoioMaterial = props => {
                 <div className="header">
                     <div className="nome-apoio">
                         <img src={LogoMaterial} alt="dinheiro e raio" height={80}/>
-                        <h3>Apadrinhamento de material</h3>
+                        <h3>Apadrinhamento de Material</h3>
                     </div>
 
                     <div className="quem-apoia">
@@ -76,15 +76,15 @@ const ApoioMaterial = props => {
                                     onChange={handleChangeCond}
                                     input={<OutlinedInput label="Condição" id="demo-dialog-native" />}
                                 >
-                                    <option value="novo">novo</option>
-                                    <option value="semi-novo">semi-novo</option>
-                                    <option value="usado">usado</option>
+                                    <option value="novo">Novo</option>
+                                    <option value="semi-novo">Semi-novo</option>
+                                    <option value="usado">Usado</option>
                                 </Select>
                             </FormControl>
 
                             <span className="about-frete">Frete calculado em <a href="#" className="text-yellow">Melhor envio</a> Clique <a href="#" className="text-yellow">aqui</a> e saiba mais</span>
                         
-                            <FormControlLabel control={<Checkbox />} label={<span>Eu concordo com os <a href="#" className="text-pink">termos e condições</a></span>} />
+                            <FormControlLabel control={<Checkbox />} label={<span>Eu concordo com os <a href="#" className="text-pink">Termos e Condições</a></span>} />
                         
                             <button className="btn-solicitar-frete">Solicitar frete</button>
 

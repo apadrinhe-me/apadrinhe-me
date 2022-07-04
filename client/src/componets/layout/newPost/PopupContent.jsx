@@ -22,11 +22,13 @@ const PopupContent = props => {
                     <option value="somente seguidores">Privado</option>
                 </select>
             </div>
-            <textarea>Legenda, Hashtags...</textarea>
+            <textarea></textarea>
             <input id="novacapa" type="file" />
             <label className="adcionarfoto" htmlFor="novacapa">Adicionar foto</label>
+
             <input id="novacapa" type="file" />
             <label className="adcionarfoto" htmlFor="novacapa">Novo moments</label>
+
             <div className="buttons">
                 <button className="recomendacao">Recomendação</button>
                 <button className="doacaorapida">Apadrinhamento Financeiro</button>

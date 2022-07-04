@@ -168,6 +168,7 @@ option {
     font-size: 14px;
     padding: 4px;
     color: #0065d2;
+    transition: 0.3s;
 }
 
 .PopupContent label:hover {

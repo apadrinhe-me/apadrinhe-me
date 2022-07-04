@@ -80,7 +80,7 @@ const MapaCarreira = props => {
             yearBegin: 2026,
             area: 'Tenologia',
             local: 'Oracle',
-            description: 'Quero ser PO da oracle',
+            description: 'Quero ser PO na oracle',
             status: 'not-achieved',
             finalObjective: true,
             select: false

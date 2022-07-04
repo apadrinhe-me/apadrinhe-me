@@ -42,7 +42,7 @@ const ApoioDoacao = props => {
                 <div className="header">
                     <div className="nome-apoio">
                         <img src={LogoDoacao} alt="dinheiro e raio" height={80}/>
-                        <h3>Apadrinhamento financeiro</h3>
+                        <h3>Apadrinhamento Financeiro</h3>
                     </div>
 
                     <div className="quem-apoia">
@@ -57,7 +57,7 @@ const ApoioDoacao = props => {
                 <div className="pagamento-info">
                     <div className="nome-email">
                         <TextField id="nome-pagador" label="Nome" variant="outlined" fullWidth/>
-                        <TextField id="email-pagador" label="email" variant="outlined" fullWidth/>
+                        <TextField id="email-pagador" label="Email" variant="outlined" fullWidth/>
                     </div>
 
                     <div className="valor-doacao">
@@ -145,7 +145,7 @@ const ApoioDoacao = props => {
                         </div>
 
                         <div className="confirm-payment">
-                            <FormControlLabel control={<Checkbox />} label={<span>Eu concordo com os <Link to="/" className="link-termos">termos e condições</Link></span>} />
+                            <FormControlLabel control={<Checkbox />} label={<span>Eu concordo com os <Link to="/" className="link-termos">Termos e Condições</Link></span>} />
                             <button className="btn-finalizar-pagamento">Finalizar</button>
                         </div>
                     </div>

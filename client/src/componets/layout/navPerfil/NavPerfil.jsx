@@ -143,7 +143,7 @@ const NavPerfil = props => {
                         <div className="editprofile">
                             <div className="box1_editprofile">
                                 <p>Editar perfil</p>
-                                <button className="exit" onClick={handleClose}>x</button>
+                                <button className="exit" onClick={handleClose}><i className="bi bi-x-lg"></i></button>
                             </div>
                             <div className="editPic">
                                 <p>Foto de perfil</p>
@@ -167,7 +167,7 @@ const NavPerfil = props => {
                                     <input className="inputname" type="text" placeholder="Sobrenome" required /></div>
                             </div>
                             <div className="alterarusername">
-                                <p>Alterar UserName</p>
+                                <p>Alterar nickname</p>
                                 <input className="changeusername" type="text" placeholder="Novo UserName" />
                             </div>
                             <div className="alteraraspiracao">

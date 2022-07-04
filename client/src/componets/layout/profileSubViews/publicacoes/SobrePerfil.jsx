@@ -21,27 +21,27 @@ const SobrePerfil = props => {
                     <img className="emblem-img" src={require("../../../../media/tags_rank/tag_aprendiz.svg").default} />
                 </div>
                 <div className="nivel-info">
-                    <strong>Veterano II</strong>
+                    <strong>Aprendiz I</strong>
                     <div className="xp-bar">
                         <div className="bar">
                             <ProgressBar />
                         </div>
 
                         <div className="bar-porcent">
-                            <span>100%</span>
+                            <span>63%</span>
                         </div>
                     </div>
                     <div className="xp-info">
-                        <span>1625xp</span>
-                        <span>175xp para Veterano III</span>
+                        <span>300xp</span>
+                        <span>175xp para Aprendiz II</span>
                     </div>
                 </div>
             </div>
             <div className="my-row">
                 <div className="engajamento">
-                    <div><strong>+200</strong> <span>conexões</span></div>
-                    <div><strong>1</strong> <span>postagem</span></div>
-                    <div><strong>+12</strong> <span>recomendações</span></div>
+                    <div><strong>13</strong> <span>Conexões</span></div>
+                    <div><strong>1</strong> <span>Postagem</span></div>
+                    <div><strong>7</strong> <span>Recomendações</span></div>
                 </div>
                 <div className="my-column">
                     <div className="reputacao">
@@ -75,12 +75,12 @@ const SobrePerfil = props => {
                 </div>
 
                 <div className="aspiration">
-                    Quer se tornar uma astronoma
+                    Quer se tornar uma astrônoma
                 </div>
 
                 <div className="profile-bio">
                     <h3>Biografia</h3>
-                    <p>Ola! eu sou a Valentina, tenho 16 anos e meu sonho é ser astronoma. Desde sempre gosto muito desse assunto e sempre busquei estudar astronomia, meus pais sempre me apoiaram, porém nunca tiveram uma condição suficiente para que sobrasse um pouco para investir na minha educação. Mas quando conheci o Apadrinhe-me minha vida mudou completamente, pois aqui tenho a oportunidade de continuar estudando com a ajuda de outras pessoas e realizar meu sonho, e mudar minha vida e da minha família.
+                    <p>Olá! Eu sou a Valentina, tenho 16 anos e meu sonho é ser astrônoma. Sempre gostei muito desse assunto e busquei estudar astronomia. Meus pais sempre me apoiaram, porém nunca tiveram uma condição suficiente para que sobrasse um pouco para investir na minha educação. Mas quando conheci o Apadrinhe-me minha vida mudou completamente, pois aqui tenho a oportunidade de continuar estudando com a ajuda de outras pessoas para realizar meu sonho, e mudar minha vida e da minha família.
                     </p>
                 </div>
             </div>

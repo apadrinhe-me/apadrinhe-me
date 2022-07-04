@@ -20,9 +20,9 @@ const todasConec = [
     { foto: "lg.png", nome: "Luis Gustavo", aspiracao: "Aspirante a desenvolvedor FullStack" },
     { foto: "Ro.png", nome: "Rosani", aspiracao: "Cordenadora educacional" },
     { foto: "wagner.png", nome: "Wagner Pereira", aspiracao: "Aspirante a desenvolvedor FullStack" },
-    { foto: "murilo.png", nome: "Murilo Moura", aspiracao: "Desenvolvedor Web" },
-    { foto: "jg.png", nome: "José Gabriel", aspiracao: "Desenvolvedor Web" },
-    { foto: "cadu.png", nome: "Carlos Eduardo", aspiracao: "Desenvolvedor Web" }
+    { foto: "murilo.png", nome: "Murilo Moura", aspiracao: "Aspirante a Engenheiro"},
+    { foto: "jg.png", nome: "José Gabriel", aspiracao: "Aspirante a Analista de Dados" },
+    { foto: "cadu.png", nome: "Carlos Eduardo", aspiracao: "Aspirante a biólogo" }
 ];
 
 const conecPendentes = [

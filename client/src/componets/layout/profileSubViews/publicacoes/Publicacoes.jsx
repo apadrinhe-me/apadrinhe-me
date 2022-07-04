@@ -24,7 +24,9 @@ function Publicacoes(props) {
                     qntLikes={1000}
                     qntComments={200}
                     qntShares={10}
-                    setButtonPopup={setButtonPopup} />
+                    setButtonPopup={setButtonPopup} 
+                    btnApadrinhar={true}
+                    />
             </div>
         </div>
     );

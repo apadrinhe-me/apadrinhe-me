@@ -73,6 +73,10 @@ body {
     border: none;
 }
 
+.flex-1{
+    flex: 1;
+}
+
 /*
 Breakpoints responsivos do bootstrap
 

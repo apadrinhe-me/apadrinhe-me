@@ -21,7 +21,7 @@ const ApoioInicio = props => {
                         btnHover="#362670"
                         icon="item_star_icon_fill.svg"
                         title="Educacional"
-                        description="Ofereça oportunidades e acompanhe o desenvolvimento de perto. Crieum laço afetivo com um aspirante, e prestigie seu sucesso."
+                        description="Ofereça oportunidades e acompanhe o desenvolvimento de perto. Crie um laço afetivo com um aspirante, e prestigie seu sucesso."
                         btnText="Recomendar"
                         tipoApoio={1}
                         logo={LogoEducacional}
