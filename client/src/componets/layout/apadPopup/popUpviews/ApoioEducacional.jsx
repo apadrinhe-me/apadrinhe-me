@@ -1,23 +1,3 @@
-{/*import React from "react";
-import "./ApoioEducacional.css";
-import LogoEducacional from "../../../../media/icons/IconsApoios/educacional.svg"
-
-const ApoioEducacional = props => {
-    return(
-        <>
-            <button className="btn-format btn-return" onClick={() => props.setSelectedApoio(0)}><i className="bi bi-arrow-return-left"></i> Voltar</button>
-
-            <div className="ApoioApadrinhar border">
-                <img src={LogoEducacional} alt="" />
-                <h1>Educacional</h1>
-            </div>
-        </>
-    );
-}
-
-export default ApoioEducacional;
-*/}
-
 import React, { useState } from "react";
 import "./ApoioEducacional.css";
 import LogoEducacional from "../../../../media/icons/IconsApoios/educacional.svg"
@@ -97,7 +77,7 @@ const ApoioDoacao = props => {
                     <h3>Status</h3>
                     <span className="status">
                         <span className="statusContribuicao">
-                            
+
                             <span className="statusAtual" ><p>50%</p>  </span>
                         </span>
                     </span>
@@ -200,3 +180,22 @@ const ApoioDoacao = props => {
 }
 
 export default ApoioDoacao;
+{/*import React from "react";
+import "./ApoioEducacional.css";
+import LogoEducacional from "../../../../media/icons/IconsApoios/educacional.svg"
+
+const ApoioEducacional = props => {
+    return(
+        <>
+            <button className="btn-format btn-return" onClick={() => props.setSelectedApoio(0)}><i className="bi bi-arrow-return-left"></i> Voltar</button>
+
+            <div className="ApoioApadrinhar border">
+                <img src={LogoEducacional} alt="" />
+                <h1>Educacional</h1>
+            </div>
+        </>
+    );
+}
+
+export default ApoioEducacional;
+*/}
