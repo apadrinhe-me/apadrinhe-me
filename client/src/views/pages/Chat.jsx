@@ -41,7 +41,7 @@ const Chat = () => {
                         <Contato
                             prof_picture="mayara.png"
                             nome_contato="Mayara Rodrigues"
-                            ultima_msg="Mayara Rodrigues te recomendou um curso..."
+                            ultima_msg="Mayara te recomendou um curso..."
                             tempo="3 min"
                         />
                         <Contato
@@ -53,7 +53,7 @@ const Chat = () => {
                         <Contato
                             prof_picture="cris.jpg"
                             nome_contato="Cristian Ferreira"
-                            ultima_msg="Cristian Ferreira te recomendou um curso..."
+                            ultima_msg="Cristian te recomendou um curso..."
                             tempo="16 min"
                         />
                         <Contato
@@ -83,8 +83,8 @@ const Chat = () => {
                             <br />
                             Essa é a difença, espero que tenha ajudado
                             <br />
-                            Beijo, com afeto 🌹 (você)</Msg>
-                        <Msg pov="remetente" hour="22:25">Muito obgd prof, ficou muito claro(eu)</Msg>
+                            Beijo, com afeto 🌹 </Msg>
+                        <Msg pov="remetente" hour="22:25">Muito obgd prof, ficou muito claro</Msg>
                     </div>
                     <div className="msgbar-div">
                         <Msgbar />
