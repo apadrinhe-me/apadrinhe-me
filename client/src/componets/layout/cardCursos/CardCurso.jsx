@@ -24,12 +24,6 @@ const ExpandMore = styled((props) => {
 }));
 
 const CardCurso = props => {
-    const [expanded, setExpanded] = React.useState(false);
-
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
-
     return (
 
         <Card sx={{ flexBasis: 300, background: "#191922", borderRadius: "15px", boxShadow: "0 0 3px black", color: "white" }} className="cardCourse" >
@@ -54,8 +48,8 @@ const CardCurso = props => {
             <CardContent sx={{ width: "100%" }}>
                 <div className="listCourseDetails">
                     <ul>
-                        <li>Duração: {props.duracao}</li>
-                        <li>Localidade: {props.localidade}</li>
+                        <li>Duração: <strong>{props.duracao}</strong></li>
+                        <li>Localidade: <strong>{props.localidade}</strong></li>
                         <li>{props.conteudos}</li>
                     </ul>
                 </div>
@@ -69,17 +63,7 @@ const CardCurso = props => {
                 <button aria-label="share">
                     RECOMENDAR
                 </button>
-                <button className="expandCard"
-                    expand={expanded}
-                    onClick={handleExpandClick}
-                    aria-expanded={expanded}
-                    aria-label="show more">V</button>
             </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent className="cardDescription">
-                    {props.descricao}    
-                </CardContent>
-            </Collapse>
         </Card>
 
     );

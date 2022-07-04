@@ -48,3 +48,23 @@
     background-color: #D92588;
     z-index: 10000;
 }
+
+.legendaItem{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.legendaCor{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.azul{
+    background: #667BF2;
+}
+
+.rosa{
+    background: #D92588;
+}

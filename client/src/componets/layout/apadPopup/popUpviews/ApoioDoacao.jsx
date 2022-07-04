@@ -46,10 +46,10 @@ const ApoioDoacao = props => {
                     </div>
 
                     <div className="quem-apoia">
-                        <ProfPicture src="valentina.png" scale={60} />
+                        <ProfPicture src={props.fotoJovem} scale={60} />
                         <div className="apoiado-nome">
-                            <strong>Valentina</strong>
-                            <span className="aspiracao">Aspirante a desenvolvedora web</span>
+                            <strong>{props.nomeJovem}</strong>
+                            <span className="aspiracao">{props.aspiracaoJovem}</span>
                         </div>
                     </div>
                 </div>
