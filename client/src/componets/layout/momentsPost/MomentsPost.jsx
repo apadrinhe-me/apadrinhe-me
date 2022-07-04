@@ -12,7 +12,6 @@ import MomentsComment from "./MomentsComment";
 
 
 const MomentsPost = props => {
-    console.log(props.profile)
     const [openMobileComments, setOpenMobileComments] = useState(false);
 
     function nextPost() {
@@ -35,7 +34,7 @@ const MomentsPost = props => {
         }
     }
 
-    useEffect(() => {
+    /*useEffect(() => {
         document.querySelector("#btn-comment-" + props.id).addEventListener('click', () => {
             if (window.innerWidth < 576) {
                 setOpenMobileComments(true)
@@ -43,7 +42,7 @@ const MomentsPost = props => {
                 props.setFullscreen(props.id)
             }
         })
-    }, [])
+    })*/
 
     return (
         <>
@@ -91,7 +90,14 @@ const MomentsPost = props => {
                             <span>{props.like}</span>
                         </div>
                         <div className="btn-div">
-                            <button><img src={commentIco} alt="Botão de Comentário" className="btn-icon" id={"btn-comment-" + props.id} /></button>
+                            <button id={"btn-comment-" + props.id} onClick={() => {
+                                if (window.innerWidth < 576) {
+                                    setOpenMobileComments(true)
+                                } else {
+                                    props.setFullscreen(props.id)
+                                    props.setFullscreenInfo(props);
+                                }
+                            }}><img src={commentIco} alt="Botão de Comentário" className="btn-icon"/></button>
                             <span>{props.comentario}</span>
                         </div>
                         <div className="btn-div">
@@ -104,13 +110,7 @@ const MomentsPost = props => {
                     </div>
                 </div>
             </div>
-
-
             <MomentsComment setOpenMobileComments={setOpenMobileComments} openMobileComments={openMobileComments} />
-
-          
-
-
         </>
     );
 }

@@ -11,6 +11,7 @@ let login;
 
 const Moments = () => {
     const [videoFullscreen, setVideoFullscreen] = useState(0);
+    const [fullscreenInfo, setFullscreenInfo] = useState({});
 
     useEffect(() => {
         if (videoFullscreen === 1) {
@@ -33,8 +34,6 @@ const Moments = () => {
         })
     }, [])
 
-
-
     return (
         <>
             <Menu logged={logged} atual="Moments" />
@@ -47,6 +46,7 @@ const Moments = () => {
                         <MomentsPost
                             id={1}
                             setFullscreen={setVideoFullscreen}
+                            setFullscreenInfo={setFullscreenInfo}
                             usuario="Valentina"
                             data="19 de abril de 2022"
                             hashtag="#Apadrinhe-me, #Tecnologia, #Educação,"
@@ -62,6 +62,7 @@ const Moments = () => {
                         <MomentsPost
                             id={2}
                             setFullscreen={setVideoFullscreen}
+                            setFullscreenInfo={setFullscreenInfo}
                             usuario="Carlos Eduardo"
                             data="19 de abril de 2022"
                             hashtag="#Instituto Proa, #Biologia, #Livros,"
@@ -77,6 +78,7 @@ const Moments = () => {
                         <MomentsPost
                             id={3}
                             setFullscreen={setVideoFullscreen}
+                            setFullscreenInfo={setFullscreenInfo}
                             usuario="Murilo Moura"
                             data="14 de março de 2022"
                             hashtag="#mecanico, #Senac, #Gravidade,"
@@ -92,9 +94,12 @@ const Moments = () => {
 
                     </main>
                     <div className={videoFullscreen !== 0 ? "full-screen-post fulscreenmode" : "full-screen-post"}>
-                        <MomentsFullscreen id={1} setFullscreen={setVideoFullscreen}  nome="dacu"/>
-                        <MomentsFullscreen id={2} setFullscreen={setVideoFullscreen} nome="dacu"/>
-                        <MomentsFullscreen id={3} setFullscreen={setVideoFullscreen} nome="dacu"/>
+                        {videoFullscreen !== 0 ?
+                            <MomentsFullscreen id={videoFullscreen} setFullscreen={setVideoFullscreen} fullscreenInfo={fullscreenInfo}/>
+                            :
+                            ""
+                        }
+                        
                     </div>
                 </div>
             </div>
