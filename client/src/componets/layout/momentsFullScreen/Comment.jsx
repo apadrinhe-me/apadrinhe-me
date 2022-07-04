@@ -11,7 +11,7 @@ const Comment = props => {
             <ProfPicture src="natan_proa.jpg" scale={50} />
             <div className="comment-info">
                 <span className="text-primary">Usuário</span>
-                <span className="text-secondary">Comentário de id {props.id}</span>
+                <span className="text-secondary">Comentário de id  {props.id}</span>
                 <div className="comment-buttons">
                     {/*<span className="comment-date">5 dias atrás</span>*/}
                     <button className="btn-like"><img src={LikeIco} alt="Botão de curtir comentário"/> 10</button>
