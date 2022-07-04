@@ -86,10 +86,15 @@ const Post = props => {
                         <button className="btn btn-comment"><img src={commentIcoStroke} alt="icone de like" className="btn-ico" /></button>
                         <button className="btn btn-share"><img src={shareIco} alt="icone de like" className="btn-ico" /></button>
                     </div>
-                    <div className="recomendar_redirect">
-                        <ButtonTwoFill onclick={handleOpenRecomendacao}>Recomendar</ButtonTwoFill>
-                    </div>
-                    <ButtonApoiar setButtonPopup={setButtonPopup} />
+                    {props.btnApadrinhar ? 
+                        <>
+                            <ButtonTwoFill onclick={handleOpenRecomendacao}>Recomendar</ButtonTwoFill>
+                            <ButtonApoiar setButtonPopup={setButtonPopup} />
+                        </>
+                        :
+                        ""
+                    }
+                    
 
                 </div>
             </div>

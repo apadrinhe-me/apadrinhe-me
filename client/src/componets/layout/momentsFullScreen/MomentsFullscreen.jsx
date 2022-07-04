@@ -12,8 +12,6 @@ import CommentBox from "./CommentBox";
 import Comment from "./Comment";
 
 const MomentsFullscreen = props => {
-    console.log(props.fullscreenInfo);
-
     return (
         <div className="MomentsFullscreen">
             <div className="fulscreen-video">

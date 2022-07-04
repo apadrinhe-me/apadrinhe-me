@@ -60,7 +60,9 @@ const Home = () => {
                             postMedia="postdonatan.jpg"
                             qntLikes={800}
                             qntComments={200}
-                            qntShares={10} />
+                            qntShares={10} 
+                            btnApadrinhar={true}
+                            />
 
                         <Post
                             profPicture="cris.jpg"
@@ -75,7 +77,9 @@ const Home = () => {
                             postMedia="postcristian.jpg"
                             qntLikes={1000}
                             qntComments={200}
-                            qntShares={10} />
+                            qntShares={10} 
+                            btnApadrinhar={true}
+                            />
 
                         <Post
                             profPicture="aurora.png"
@@ -86,7 +90,9 @@ const Home = () => {
                             postMedia="postaurora.png"
                             qntLikes={1500}
                             qntComments={600}
-                            qntShares={10} />
+                            qntShares={10} 
+                            btnApadrinhar={false}
+                            />
                         <Post
                             profPicture="proa.png"
                             fullname="Instituto Proa"
@@ -98,7 +104,9 @@ const Home = () => {
                             postMedia="postproa.jpg"
                             qntLikes={15000}
                             qntComments={7000}
-                            qntShares={30} />
+                            qntShares={30} 
+                            btnApadrinhar={false}
+                            />
 
                         <Post
                             profPicture="wagner.png"
@@ -109,7 +117,9 @@ const Home = () => {
                             postMedia="postwagner.png"
                             qntLikes={340}
                             qntComments={120}
-                            qntShares={15} />
+                            qntShares={15} 
+                            btnApadrinhar={true}
+                            />
 
                         <Post
                             profPicture="lg.png"
@@ -124,7 +134,9 @@ const Home = () => {
                             postMedia="postlg.png"
                             qntLikes={340}
                             qntComments={120}
-                            qntShares={15} />
+                            qntShares={15} 
+                            btnApadrinhar={true}
+                            />
                     </div>
 
                     <div className="spotlights my-scrollbar">
@@ -155,7 +167,9 @@ const Home = () => {
                             postMedia="postdonatan.jpg"
                             qntLikes={800}
                             qntComments={200}
-                            qntShares={10} />
+                            qntShares={10} 
+                            btnApadrinhar={true}
+                            />
 
                         <Post
                             profPicture="cris.jpg"
@@ -170,7 +184,9 @@ const Home = () => {
                             postMedia="postcristian.jpg"
                             qntLikes={1000}
                             qntComments={200}
-                            qntShares={10} />
+                            qntShares={10} 
+                            btnApadrinhar={true}
+                            />
 
                         <Post
                             profPicture="aurora.png"
@@ -181,7 +197,10 @@ const Home = () => {
                             postMedia="postaurora.png"
                             qntLikes={1500}
                             qntComments={600}
-                            qntShares={10} />
+                            qntShares={10} 
+                            btnApadrinhar={false}
+                            />
+
                         <Post
                             profPicture="proa.png"
                             fullname="Instituto Proa"
@@ -193,7 +212,9 @@ const Home = () => {
                             postMedia="postproa.jpg"
                             qntLikes={15000}
                             qntComments={7000}
-                            qntShares={30} />
+                            qntShares={30} 
+                            btnApadrinhar={false}
+                            />
 
                         <Post
                             profPicture="wagner.png"
@@ -204,7 +225,9 @@ const Home = () => {
                             postMedia="postwagner.png"
                             qntLikes={340}
                             qntComments={120}
-                            qntShares={15} />
+                            qntShares={15} 
+                            btnApadrinhar={true}
+                            />
 
                         <Post
                             profPicture="lg.png"
@@ -219,7 +242,9 @@ const Home = () => {
                             postMedia="postlg.png"
                             qntLikes={340}
                             qntComments={120}
-                            qntShares={15} />
+                            qntShares={15} 
+                            btnApadrinhar={true}
+                            />
                     </div>
                 </If>
             </div>

@@ -1,5 +1,5 @@
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Menu from "../../../Menu";
 import MenuMobile from "../../../MenuMobile";
 import { Beforeunload } from 'react-beforeunload';
@@ -37,7 +37,7 @@ import MuiAlert from '@mui/material/Alert';
 import ill1 from "../../../../../media/illustrations/Progress_Flatline.svg";
 import ill2 from "../../../../../media/illustrations/Winner_Isometric.svg";
 import ill3 from "../../../../../media/illustrations/Motivation_Flatline.svg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -127,18 +127,83 @@ const EditorMapaCarreira = props => {
     ]
 
     //objeto para as metas que o usuário for adicionando
-    let goals = [
+    const goals = [
         {
             id: 1,
             typo: "acadêmica",
             name: "Completar o Ensino Médio",
             yearBegin: 2015,
-            yearEnd: 2015,
+            yearEnd: 2017,
             area: 'Ensino médio',
             local: 'ETEC',
-            description: 'ETEC',
+            description: 'Completei o ensino médio. Me graduei com nota máxima',
+            status: 'achieved',
+            finalObjective: false,
+            select: false
+        },
+        {
+            id: 2,
+            typo: "acadêmica",
+            name: "Estudar para o enem",
+            yearBegin: 2017,
+            yearEnd: null,
+            area: 'Ensino médio',
+            local: 'São Judas',
+            description: 'Tirei 750 de média',
+            status: 'achieved',
+            finalObjective: false,
+            select: false
+        },
+        {
+            id: 3,
+            typo: "acadêmica",
+            name: "ingressar em uma faculdade pública",
+            yearBegin: 2018,
+            yearEnd: null,
+            area: 'Tecnologia',
+            local: 'USP',
+            description: 'Passei na USP',
+            status: 'achieved',
+            finalObjective: false,
+            select: true
+        },
+        {
+            id: 4,
+            typo: "profissional",
+            name: "Conseguir um estágio",
+            yearBegin: 2019,
+            yearEnd: null,
+            area: 'Tecnologia',
+            local: 'Oracle',
+            description: 'Quero conseguir um estágio na oracle',
+            status: 'in-progress',
+            finalObjective: false,
+            select: false
+        },
+        {
+            id: 5,
+            typo: "intercâmbio",
+            name: "Fazer intercâmbio no Canada",
+            yearBegin: 2020,
+            yearEnd: 2022,
+            area: 'Língua estrangeira',
+            local: 'ILAC – International Language Academy of Canada',
+            description: 'Fazer intercâmbio no Canada',
             status: 'not-achieved',
-            finalObjective: false
+            finalObjective: false,
+            select: false
+        },
+        {
+            id: 6,
+            typo: "profissional",
+            name: "Ser PO",
+            yearBegin: 2026,
+            area: 'Tenologia',
+            local: 'Oracle',
+            description: 'Quero ser PO da oracle',
+            status: 'not-achieved',
+            finalObjective: true,
+            select: false
         }
     ]
 
@@ -222,11 +287,11 @@ const EditorMapaCarreira = props => {
         'Geografia'
     ];
 
-    return(
+    return (
         <>
             <Beforeunload onBeforeunload={e => e.preventDefault()} />
 
-            <Menu/>
+            <Menu />
             <div className="EditorMapaCarreira">
                 <div className="explicacaoMapa my-scrollbar">
                     <button className="close-btn"><i className="bi bi-x-lg"></i></button>
@@ -234,19 +299,19 @@ const EditorMapaCarreira = props => {
 
                     <div className="img-text">
                         <p>Construa o seu mapa de carreira. Conte aqui sua história, conquistas, e objetivos e mostre para o mundo como você chegou até aqui e onde pretende chegar</p>
-                        
+
                         <img src={ill1} alt="Linha de motivação" />
                     </div>
 
                     <div className="img-text">
                         <img src={ill2} alt="Linha de motivação" />
-                        
+
                         <p>Adicione suas conquistas passadas e conte detalhes sobre elas.</p>
                     </div>
 
                     <div className="img-text">
                         <p>Adicione seus objetivos futuros e conte onde você quer chegar e quando pretende realiza-los.</p>
-                        
+
                         <img src={ill3} alt="Linha de motivação" />
                     </div>
 
@@ -261,7 +326,7 @@ const EditorMapaCarreira = props => {
 
                 <div className="montaMapa">
                     <div className="header">
-                        <Link to="/perfil/mapacarreira/" className="link"><button className="return-profile" onClick={() => {}}><i className="bi bi-arrow-return-left"></i> <span>Voltar para o perfil</span></button></Link>
+                        <Link to="/perfil/mapacarreira/" className="link"><button className="return-profile" onClick={() => { }}><i className="bi bi-arrow-return-left"></i> <span>Voltar para o perfil</span></button></Link>
                     </div>
 
                     <div>
@@ -269,112 +334,64 @@ const EditorMapaCarreira = props => {
                     </div>
 
                     <div className="meta-cards my-scrollbar">
-                        <Card sx={{ flexBasis: 200 }} className="my-card">
-                            <CardContent>
-                                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                    Meta 1 - escolar
-                                </Typography>
-                                <Typography variant="h3" sx={{ fontSize: 18 }}>
-                                    Completar o Ensino Médio
-                                </Typography>
-                                <div className="card-details">
-                                    <div className="detail">
-                                        <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
-                                            Ano:
+                        {goals.map((goal, key) => {
+                            return (
+                                <Card sx={{ flexBasis: 200 }} className="my-card">
+                                    <CardContent>
+                                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                            Meta {goal.id} - {goal.typo}
                                         </Typography>
-                                        <Typography sx={{ fontSize: 15}}>
-                                            2016
+                                        <Typography variant="h3" sx={{ fontSize: 18 }}>
+                                            {goal.name}
                                         </Typography>
-                                    </div>
+                                        <div className="card-details my-scrollbar">
+                                            <div className="detail">
+                                                <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
+                                                    Ano:
+                                                </Typography>
+                                                <Typography sx={{ fontSize: 15 }}>
+                                                    {goal.yearBegin} {goal.yearEnd ? `- ${goal.yearEnd}` : ""}
+                                                </Typography>
+                                            </div>
 
-                                    <div className="detail">
-                                        <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
-                                            Área:
-                                        </Typography>
-                                        <Typography sx={{ fontSize: 15}}>
-                                            Ensino Médio
-                                        </Typography>
-                                    </div>
+                                            <div className="detail">
+                                                <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
+                                                    Área:
+                                                </Typography>
+                                                <Typography sx={{ fontSize: 15 }}>
+                                                    {goal.area}
+                                                </Typography>
+                                            </div>
 
-                                    <div className="detail">
-                                        <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
-                                            Instituição:
-                                        </Typography>
-                                        <Typography sx={{ fontSize: 15}}>
-                                            SESI
-                                        </Typography>
-                                    </div>
+                                            <div className="detail">
+                                                <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
+                                                    Instituição:
+                                                </Typography>
+                                                <Typography sx={{ fontSize: 15 }}>
+                                                    {goal.local}
+                                                </Typography>
+                                            </div>
 
-                                    <div>
-                                        <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
-                                            Detalhes:
-                                        </Typography>
-                                        <Typography sx={{ fontSize: 15}}>
-                                            Finalmente me formar para...
-                                        </Typography>
-                                    </div>
+                                            <div>
+                                                <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
+                                                    Detalhes:
+                                                </Typography>
+                                                <Typography sx={{ fontSize: 15 }}>
+                                                    {goal.description}
+                                                </Typography>
+                                            </div>
 
-                                </div>
-                            </CardContent>
-                            <CardActions>
-                                <Button className="btn-editar" variant="outlined" size="small" onClick={() => handleOpenNewMeta()}><i className="bi bi-pencil-square"></i> Editar meta</Button>
-                            </CardActions>
-                        </Card>
-
-                        <Card sx={{ flexBasis: 200 }} className="my-card">
-                            <CardContent>
-                                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                    Meta 2 - escolar
-                                </Typography>
-                                <Typography variant="h3" sx={{ fontSize: 18 }}>
-                                    Completar o Ensino Médio
-                                </Typography>
-                                <div className="card-details my-scrollbar">
-                                    <div className="detail">
-                                        <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
-                                            Ano:
-                                        </Typography>
-                                        <Typography sx={{ fontSize: 15}}>
-                                            2016
-                                        </Typography>
-                                    </div>
-
-                                    <div className="detail">
-                                        <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
-                                            Área:
-                                        </Typography>
-                                        <Typography sx={{ fontSize: 15}}>
-                                            Ensino Médio
-                                        </Typography>
-                                    </div>
-
-                                    <div className="detail">
-                                        <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
-                                            Instituição:
-                                        </Typography>
-                                        <Typography sx={{ fontSize: 15}}>
-                                            SESI
-                                        </Typography>
-                                    </div>
-
-                                    <div>
-                                        <Typography sx={{ fontSize: 15, fontWeight: 700 }}>
-                                            Detalhes:
-                                        </Typography>
-                                        <Typography sx={{ fontSize: 15}}>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, aperiam cum debitis dolore dolorum est ex explicabo laudantium nostrum optio placeat quo, rem rerum sequi sit suscipit tempora tenetur ullam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid beatae, blanditiis consequuntur debitis dolor doloribus dolorum ex impedit ipsa iste molestiae omnis quae qui quibusdam rem tempore vero, vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem distinctio dolorem est fugit itaque maxime nulla optio provident, quae quam quasi quo, ratione reiciendis rerum suscipit temporibus vel voluptate.
-                                        </Typography>
-                                    </div>
-
-                                </div>
-                            </CardContent>
-                            <CardActions>
-                                <Button className="btn-editar" variant="outlined" size="small" onClick={() => handleOpenNewMeta()}><i className="bi bi-pencil-square"></i> Editar meta</Button>
-                            </CardActions>
-                        </Card>
+                                        </div>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button className="btn-editar" variant="outlined" size="small" onClick={() => handleOpenNewMeta()}><i className="bi bi-pencil-square"></i> Editar meta</Button>
+                                    </CardActions>
+                                </Card>
+                            );
+                        })}
 
                         <Card sx={{ flexBasis: 200 }} className="my-card">
-                            <CardContent sx={{height: "100%"}}>
+                            <CardContent sx={{ height: "100%" }}>
                                 <Typography variant="h3" sx={{ fontSize: 18 }}>
                                     Adicionar nova meta
                                 </Typography>
@@ -390,7 +407,7 @@ const EditorMapaCarreira = props => {
                     </div>
                 </div>
             </div>
-            <MenuMobile/>
+            <MenuMobile />
 
             <Modal
                 aria-labelledby="mostrar-exemplo-mapa-carreira"
@@ -496,7 +513,7 @@ const EditorMapaCarreira = props => {
                                                 id="meta_area"
                                                 options={knowlodge_areas}
                                                 renderInput={(params) => <TextField {...params} label="Area de conhecimento" variant="filled" value={metaArea}
-                                                                                    onChange={e => setMetaArea(e.target.value)} />}
+                                                    onChange={e => setMetaArea(e.target.value)} />}
                                             />
                                         </Grid>
                                         <Grid item>
@@ -527,7 +544,7 @@ const EditorMapaCarreira = props => {
                                             <FormControlLabel control={<Checkbox checked={metaCheck} onChange={e => setMetaCheck(e.target.checked)} />} label="Eu já concluí essa meta" />
                                         </Grid>
                                         <Grid item>
-                                            <FormControlLabel control={<Checkbox checked={metaObjective} onChange={e => setMetaObjective(e.target.checked)} />} label="Essa meta é o meu objetivo final" />
+                                            <FormControlLabel control={<Checkbox checked={metaObjective} onChange={e => setMetaObjective(e.target.checked)} />} label="Preciso de apadrinhamento" />
                                         </Grid>
                                     </Grid>
                                 </Grid>
@@ -537,7 +554,7 @@ const EditorMapaCarreira = props => {
                             </Grid>
                         </Grid>
                         <Snackbar open={openSnack} autoHideDuration={6000} onClose={handleCloseSnack} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
-                            <Alert onClose={handleCloseSnack} severity="success" sx={{ width: '100%'}}>
+                            <Alert onClose={handleCloseSnack} severity="success" sx={{ width: '100%' }}>
                                 Meta salva com sucesso!
                             </Alert>
                         </Snackbar>
