@@ -1,6 +1,6 @@
 import React from "react";
 import "./SelectTypeUser.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SelectTypeUser = props => {
 
@@ -9,7 +9,7 @@ const SelectTypeUser = props => {
             <h2>Cadastro</h2>
             <div className="cad_msg">
                 <span>Bem vindo à nossa plataforma. Ficamos felizes de você fazer parte de nossa comunidade!</span>
-                <span>Para começar, qual seu objetivo na paltforma?</span>
+                <span>Para começar, qual seu objetivo na plataforma?</span>
             </div>
 
 

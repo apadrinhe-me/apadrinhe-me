@@ -19,7 +19,7 @@ const popupStyle = {
     transform: 'translate(-50%, -50%)',
     maxWidth: 600,
     width: "100%",
-    bgcolor: 'background.paper',
+    bgcolor: '#101017',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,

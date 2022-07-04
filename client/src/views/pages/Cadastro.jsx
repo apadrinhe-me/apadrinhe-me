@@ -267,7 +267,7 @@ const Cadastro = () => {
                                     setSelectedPadrinType={setSelectedPadrinType}
                                 >
                                     <h3 className="title_card">Quero ser <br /> afilhado(a)</h3>
-                                    <p className="text_card">Crie conteúdeo para ser visto e receber ajuda de diversos apoiadores cadastrados na plataforma</p>
+                                    <p className="text_card">Crie conteúdo para ser visto e receber ajuda de diversos apoiadores cadastrados na plataforma</p>
                                 </Card_cadastro>
 
                                 <Card_cadastro type="apadrinhar"

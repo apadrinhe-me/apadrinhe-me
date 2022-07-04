@@ -8,7 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const RevisionCadastro = props => {
     console.log(props)
@@ -23,7 +23,7 @@ const RevisionCadastro = props => {
                 <span>Revise seu login, leia os termos e tudo pronto 😁</span>
             </div>
             <div className="revisar-info-cadastro">
-                <TableContainer component={Paper} sx={{maxHeight: 440, overflowY: 'auto'}}>
+                <TableContainer component={Paper} sx={{ maxHeight: 440, overflowY: 'auto' }}>
                     <Table size="small" aria-label="a dense table" >
                         <TableBody>
                             <TableRow>
@@ -125,7 +125,7 @@ const RevisionCadastro = props => {
             </div>
 
             <div className="confirm-terms-div">
-                <Checkbox id="terms-of-use" checked={props.termosUso} onChange={e => props.setTermosUso(!props.termosUso)} /> <label htmlFor="terms-of-use">Concordo com os <Link to="#">termos da plataforma</Link></label>
+                <Checkbox id="terms-of-use" checked={props.termosUso} onChange={e => props.setTermosUso(!props.termosUso)} /> <label htmlFor="terms-of-use">Concordo com os <Link to="#">Termos da Plataforma</Link></label>
             </div>
 
             <button className="continue-cad-btn" onClick={() => props.proximaEtapa(5)}>Tudo pronto</button>

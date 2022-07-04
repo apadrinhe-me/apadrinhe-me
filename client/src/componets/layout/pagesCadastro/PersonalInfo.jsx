@@ -17,15 +17,15 @@ const PersonalInfo = props => {
                 <button className="btn-format btn-return" onClick={() => props.setCadEtapa(1)}><i className="bi bi-arrow-return-left"></i> Voltar para etapa {props.cadEtapa}</button>
             </div>
             <div className="cad_msg">
-                <span>Muito bem! agora precisamos te conheçer melhor.</span>
-                <span>Não se preocupe. Suas informaçõeos estão seguras com a gente</span>
+                <span>Muito bem! Agora precisamos te conheçer melhor.</span>
+                <span>Não se preocupe. Suas informações estão seguras com a gente</span>
             </div>
             <div className="personal-info-form">
                 <Grid container direction="row" spacing={3}>
                     <Grid item container direction="column" spacing={2} flex={1}>
-                        <Grid item><TextField id="nome-login" label="Nome completo" variant="outlined" fullWidth required value={props.nomeCompleto} onChange={e => props.setNomeCompleto(e.target.value)}/></Grid>
-                        <Grid item><TextField id="nick-login" label="Nickname" placeholder="Apelido como será chamado na plataforma" variant="outlined" fullWidth required value={props.nickname} onChange={e => props.setNickname(e.target.value)}/></Grid>
-                        <Grid item><TextField id="cpf-login" label="CPF" placeholder="apenas numeros" variant="outlined" fullWidth required value={props.cpf} onChange={e => props.setCpf(e.target.value)}/></Grid>
+                        <Grid item><TextField id="nome-login" label="Nome completo" variant="outlined" fullWidth required value={props.nomeCompleto} onChange={e => props.setNomeCompleto(e.target.value)} /></Grid>
+                        <Grid item><TextField id="nick-login" label="Nickname" placeholder="Apelido como será chamado na plataforma" variant="outlined" fullWidth required value={props.nickname} onChange={e => props.setNickname(e.target.value)} /></Grid>
+                        <Grid item><TextField id="cpf-login" label="CPF" placeholder="Apenas números" variant="outlined" fullWidth required value={props.cpf} onChange={e => props.setCpf(e.target.value)} /></Grid>
                     </Grid>
 
                     <Grid item container direction="column" spacing={2} flex={1}>
@@ -59,30 +59,30 @@ const PersonalInfo = props => {
                         </Grid>
 
                         <Grid item>
-                            <TextField id="renda" label="Renda familiar mensal" placeholder="Ex.: R$3000" variant="outlined" fullWidth required value={props.renda} onChange={e => props.setRenda(e.target.value)}/>
+                            <TextField id="renda" label="Renda familiar mensal" placeholder="Ex.: R$3000" variant="outlined" fullWidth required value={props.renda} onChange={e => props.setRenda(e.target.value)} />
                         </Grid>
 
                         {
                             props.selectedPadrinType == "ser_apadrinhado" ?
-                            <Grid item>
-                                <FormControl variant="outlined" className="form-control" fullWidth>
-                                    <InputLabel id="tipo_meta" required>Escolaridade</InputLabel>
-                                    <Select
-                                        labelId="escolaridade"
-                                        id="escolaridade"
-                                        value={props.escola}
-                                        onChange={e => props.setEscola(e.target.value)}
-                                        label="Escolaridade"
-                                        required
-                                    >
-                                        <MenuItem value={"publica"}>Estudei majoritariamente em escola pública</MenuItem>
-                                        <MenuItem value={"particular"}>Estudei majoritariamente em escola particular</MenuItem>
-                                        <MenuItem value={"nenhum"}>Atualmente não estou matriculado</MenuItem>
-                                    </Select>
-                                </FormControl>
-                            </Grid>
-                            :
-                            ""
+                                <Grid item>
+                                    <FormControl variant="outlined" className="form-control" fullWidth>
+                                        <InputLabel id="tipo_meta" required>Escolaridade</InputLabel>
+                                        <Select
+                                            labelId="escolaridade"
+                                            id="escolaridade"
+                                            value={props.escola}
+                                            onChange={e => props.setEscola(e.target.value)}
+                                            label="Escolaridade"
+                                            required
+                                        >
+                                            <MenuItem value={"publica"}>Estudei majoritariamente em escola pública</MenuItem>
+                                            <MenuItem value={"particular"}>Estudei majoritariamente em escola particular</MenuItem>
+                                            <MenuItem value={"nenhum"}>Atualmente não estou matriculado</MenuItem>
+                                        </Select>
+                                    </FormControl>
+                                </Grid>
+                                :
+                                ""
                         }
 
                     </Grid>
