@@ -38,6 +38,10 @@
     word-break: break-word;
 }
 
+.course-redirect{
+    margin-top: auto;
+}
+
 .course-redirect a {
     text-decoration: none;
 }

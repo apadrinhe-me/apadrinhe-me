@@ -32,34 +32,31 @@ const CardCurso = props => {
 
     return (
 
-        <Card sx={{ maxWidth: 345, background: "#191922", borderRadius: "15px", boxShadow: "0 0 3px black", color: "white" }} className="cardCourse" >
+        <Card sx={{ flexBasis: 300, background: "#191922", borderRadius: "15px", boxShadow: "0 0 3px black", color: "white" }} className="cardCourse" >
             <div className="CardHeader">
                 <div className="containerLeft">
-                    <div className="avatarCard">
-                        <img src={require("../../../media/course_banners/proa_logo.jpg")} height="45px" />
-                    </div>
+                    <img src={require("../../../media/course_partners/" + props.partnerLogo)} height={60} />
+
                     <div className="titleSubtitleCard">
-                        <h1>Proprofissão</h1>
-                        <span>Instituto PROA</span>
+                        <h1>{props.nomeCurso}</h1>
+                        <span>{props.partnerName}</span>
                     </div>
                 </div>
                 <div className="iconCategoryCard">
-                    <i className="bi bi-laptop"></i>
+                    {props.categoriaIco}
                 </div>
             </div>
             <CardMedia
+                sx={{width: "300px", height: "180px", objectFit: "cover"}}
                 component="img"
-                height="194"
-                image={require("../../../media/course_banners/banner_proa.jpg")}
-                alt="PROPROFISSÃO"
+                image={require("../../../media/course_banners/" + props.banneCurso)}
             />
             <CardContent sx={{ width: "100%" }}>
                 <div className="listCourseDetails">
                     <ul>
-                        <li>Duração: 6 meses</li>
-                        <li>Localidade: São Paulo</li>
-                        <li>HTML, CSS e JS</li>
-                        <li>Java Web Developtment</li>
+                        <li>Duração: {props.duracao}</li>
+                        <li>Localidade: {props.localidade}</li>
+                        <li>{props.conteudos}</li>
                     </ul>
                 </div>
 
@@ -80,11 +77,7 @@ const CardCurso = props => {
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent className="cardDescription">
-                    Núcleo Técnico
-                    Desenvolve as competências técnicas do aluno em Programação Java por meio de trabalho em grupo, vivências corporativas, projetos e atividades.
-
-                    Núcleo Comportamental
-                    Desenvolve as competências sociocomportamentais e o perfil profissional do aluno por meio de atividades relacionadas ao autoconhecimento, propósito, carreira e mercado de trabalho.
+                    {props.descricao}    
                 </CardContent>
             </Collapse>
         </Card>
