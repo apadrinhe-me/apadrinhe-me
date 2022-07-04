@@ -1,6 +1,6 @@
 import "./Cursos.css";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "../../componets/layout/Menu";
 import CardCurso from "../../componets/layout/cardCursos/CardCurso"
 
@@ -10,18 +10,65 @@ import MenuMobile from "../../componets/layout/MenuMobile";
 import Box from "@mui/material/Box";
 import Contato from "../../componets/layout/chatComponents/contato/Contato";
 import { Drawer } from "@mui/material";
+import { MyServer } from "../../services/api";
+
+//IMG Parceiros
+import AluraLogo from "../../media/course_partners/alura.png";
+import BradescoLogo from "../../media/course_partners/bradesco.ico";
+import UdemyLogo from "../../media/course_partners/Udemy.webp";
+import ProaLogo from "../../media/course_partners/proa.png";
+import PrimeLogo from "../../media/course_partners/prime.png";
+import TCLogo from "../../media/course_partners/tc.svg";
+
+let login;
 
 const Cursos = () => {
     const [drawer, setDrawer] = useState(false);
+    const [logged, setLogged] = useState(false);
+
+    //verificar se está logado
+    useEffect(() => {
+        MyServer.get("/login").then(response => {
+            //Não pode logado na página de login
+            if (response.data.logged) {
+                login = response.data.user;
+                setLogged(true)
+            }
+        })
+    }, [])
+
+    const [expanded1, setExpanded1] = React.useState(false);
+    const handleExpandClick1 = () => {
+        setExpanded1(!expanded1);
+    };
+
+    const [expanded2, setExpanded2] = React.useState(false);
+    const handleExpandClick2 = () => {
+        setExpanded2(!expanded2);
+    };
+
+    const [expanded3, setExpanded3] = React.useState(false);
+    const handleExpandClick3 = () => {
+        setExpanded3(!expanded3);
+    };
+
+    const [expanded4, setExpanded4] = React.useState(false);
+    const handleExpandClick4 = () => {
+        setExpanded4(!expanded4);
+    };
+
+    const [expanded5, setExpanded5] = React.useState(false);
+    const handleExpandClick5 = () => {
+        setExpanded5(!expanded5);
+    };
 
     return (
         <>
-            <Menu logged={false} />
+            <Menu logged={logged} atual="Cursos" />
             <div className="Cursos">
                 <div className="categoriasCurso">
+                    <h4 className="categoria-title">Categorias</h4>
                     <ul>
-                        <li><h4>Categorias</h4></li>
-
                         <li>
                             <i className="bi bi-graph-up caixaIconeCategoriasCurso"></i>
                             <p>Administração</p>
@@ -42,26 +89,34 @@ const Cursos = () => {
                             <i className="bi bi-book caixaIconeCategoriasCurso"></i>
                             <p>Educação</p>
                         </li>
-                        <li><h4>Instituições</h4></li>
-                        <li>
-                            <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
-                            <p>Fundação TeC</p>
+                    </ul>
+
+                    <br />
+                    <h4 className="categoria-title">Instituições</h4>
+                    <ul>
+                        <li className="partner">
+                            <img src={TCLogo} alt="Logo Alura" />
+                            <p>Fundação T&C</p>
                         </li>
-                        <li>
-                            <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                        <li className="partner">
+                            <img src={AluraLogo} alt="Logo Alura" />
                             <p>Alura</p>
                         </li>
-                        <li>
-                            <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                        <li className="partner">
+                            <img src={UdemyLogo} alt="Logo Alura" />
                             <p>Udemy</p>
                         </li>
-                        <li>
-                            <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                        <li className="partner">
+                            <img src={BradescoLogo} alt="Logo Alura" />
                             <p>Fundação Bradesco</p>
                         </li>
-                        <li>
-                            <i className="bi bi-star caixaIconeCategoriasCurso"></i>
-                            <p>Favoritos</p>
+                        <li className="partner">
+                            <img src={ProaLogo} alt="Logo Alura" />
+                            <p>PROA</p>
+                        </li>
+                        <li className="partner">
+                            <img src={PrimeLogo} alt="Logo Alura" />
+                            <p>Prime Cursos</p>
                         </li>
                     </ul>
                 </div>
@@ -82,24 +137,65 @@ const Cursos = () => {
 
                     </div>
                     <div className="card my-scrollbar" >
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
-                        <CardCurso />
+                        <CardCurso
+                            partnerLogo="proa.png"
+                            nomeCurso="ProProfissão"
+                            partnerName="Instituto PROA"
+                            categoriaIco={<i className="bi bi-code-slash"></i>}
+                            banneCurso="banner_proa.jpg"
+                            duracao="6 meses"
+                            localidade="São Paulo - Lapa"
+                            conteudos="Java Web Developtment"
+                            descricao="Núcleo Técnico Desenvolve as competências técnicas do aluno em Programação Java por meio de trabalho em grupo, vivências corporativas, projetos e atividades. Núcleo Comportamental Desenvolve as competências sociocomportamentais e o perfil profissional do aluno por meio de atividades relacionadas ao autoconhecimento, propósito, carreira e mercado de trabalho."
+                        />
+
+                        <CardCurso
+                            partnerLogo="tc.svg"
+                            nomeCurso="Inteligência Artificial"
+                            partnerName="Fundação T&C"
+                            categoriaIco={<i className="bi bi-code-slash"></i>}
+                            banneCurso="IA.jpeg"
+                            duracao="100 horas"
+                            localidade="Remoto"
+                            conteudos="Inteligência artificial e conceitos bases"
+                            descricao="A IA refere-se a sistemas ou máquinas que imitam a inteligência humana"
+                        />
+
+                        <CardCurso
+                            partnerLogo="tc.svg"
+                            nomeCurso="Python"
+                            partnerName="Fundação T&C"
+                            categoriaIco={<i className="bi bi-code-slash"></i>}
+                            banneCurso="python.jpg"
+                            duracao="60 horas"
+                            localidade="Remoto"
+                            conteudos="Introdução à logica de programação e principais conceitos python"
+                            descricao="Instalação, recursos, tipo de dados, aplicativos, para um desenvolvimento melhor."
+                        />
+
+                        <CardCurso
+                            partnerLogo="prime.png"
+                            nomeCurso="Inteligência emocional"
+                            partnerName="Prime cursos"
+                            categoriaIco={<i className="bi bi-person"></i>}
+                            banneCurso="inteligencia-emocional.jpg"
+                            duracao="20 horas"
+                            localidade="Remoto"
+                            conteudos="Como lidar com as emoções"
+                            descricao="A inteligência emocional está cada vez mais presente no mercado de trabalho. Portanto, nesse curso, você irá aprender a lidar com todas as realidades do mundo corporativo."
+                        />
+
+                        <CardCurso
+                            partnerLogo="bradesco.ico"
+                            nomeCurso="Responsabilidade Social e Sustentabilidade"
+                            partnerName="Fundação bradesco"
+                            categoriaIco={<i className="bi bi-graph-up"></i>}
+                            banneCurso="responsabilidade-social.jpg"
+                            duracao="15 horas"
+                            localidade="Remoto"
+                            conteudos="Principais artigos de responsabilidade social"
+                            descricao="A inteligência emocional está cada vez mais presente no mercado de trabalho. Portanto, nesse curso, você irá aprender a lidar com todas as realidades do mundo corporativo."
+                        />
                     </div>
                 </div>
             </div>
@@ -112,47 +208,63 @@ const Cursos = () => {
                 <Box sx={{ mt: "65px", display: "flex", flexDirection: "column", gap: "10px" }}>
                     <button className="btn-format drawer-close-btn" onClick={() => setDrawer(false)}><i className="bi bi-x-lg"></i></button>
                     <div className="categoriasCurso drawer-cursos">
+                        <h4 className="categoria-title">Categorias</h4>
                         <ul>
-                            <li><h4>Categorias</h4></li>
-                            <li>
-                                <i className="bi bi-book-fill caixaIconeCategoriasCurso"></i>
-
-                                <p>Todos os Cursos</p>
-                            </li>
                             <li>
                                 <i className="bi bi-graph-up caixaIconeCategoriasCurso"></i>
                                 <p>Administração</p>
                             </li>
                             <li>
-                                <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                                <i className="bi bi-code-slash caixaIconeCategoriasCurso"></i>
                                 <p>Tecnologia</p>
                             </li>
                             <li>
-                                <i className="bi bi-graph-up caixaIconeCategoriasCurso"></i>
+                                <i className="bi bi-cash-coin caixaIconeCategoriasCurso"></i>
                                 <p>Contabilidade e Finanças</p>
                             </li>
                             <li>
-                                <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                                <i className="bi bi-person caixaIconeCategoriasCurso"></i>
                                 <p>Desenvolvimento Pessoal</p>
                             </li>
                             <li>
-                                <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                                <i className="bi bi-book caixaIconeCategoriasCurso"></i>
                                 <p>Educação</p>
                             </li>
-                            <li>
-                                <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
-                                <p>Fundação TeC</p>
+                        </ul>
+
+                        <br />
+                        <h4 className="categoria-title">Instituições</h4>
+                        <ul>
+                            <li className="partner">
+                                <img src={TCLogo} alt="Logo Alura" />
+                                <p>Fundação T&C</p>
                             </li>
-                            <li>
-                                <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
-                                <p>Favoritos</p>
+                            <li className="partner">
+                                <img src={AluraLogo} alt="Logo Alura" />
+                                <p>Alura</p>
+                            </li>
+                            <li className="partner">
+                                <img src={UdemyLogo} alt="Logo Alura" />
+                                <p>Udemy</p>
+                            </li>
+                            <li className="partner">
+                                <img src={BradescoLogo} alt="Logo Alura" />
+                                <p>Fundação Bradesco</p>
+                            </li>
+                            <li className="partner">
+                                <img src={ProaLogo} alt="Logo Alura" />
+                                <p>PROA</p>
+                            </li>
+                            <li className="partner">
+                                <img src={PrimeLogo} alt="Logo Alura" />
+                                <p>Prime Cursos</p>
                             </li>
                         </ul>
                     </div>
                 </Box>
             </Drawer>
 
-            <MenuMobile logged={false} />
+            <MenuMobile logged={false} atual="Cursos" />
         </>
     );
 }

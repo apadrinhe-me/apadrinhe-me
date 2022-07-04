@@ -5,7 +5,6 @@ import OthersCard from "./OthersCard";
 import ApoioInicio from "./popUpviews/ApoioInicio";
 import If from "../../funcional/If";
 import ApoioEducacional from "./popUpviews/ApoioEducacional";
-import ApoioRecomendacao from "./popUpviews/ApoioRecomendacao";
 import ApoioDoacao from "./popUpviews/ApoioDoacao";
 import ApoioMaterial from "./popUpviews/ApoioMaterial";
 
@@ -35,7 +34,6 @@ const ApadPopup = props => {
         <div className="ApadPopup">
             <div className="popup-inner">
                 <button className="close-btn" onClick={ () => closePopup() }><i className="bi bi-x-lg"></i></button>
-                <h2>Opções de apadrinhamento</h2>
 
                 <If test={selectedApoio === 0}>
                     <ApoioInicio
@@ -45,15 +43,27 @@ const ApadPopup = props => {
                 </If>
 
                 <If test={selectedApoio === 1}>
-                    <ApoioEducacional setSelectedApoio={setSelectedApoio}/>
+                    <ApoioEducacional 
+                    fotoJovem={props.fotoJovem}
+                    nomeJovem={props.nomeJovem}
+                    aspiracaoJovem={props.aspiracaoJovem}
+                    setSelectedApoio={setSelectedApoio}/>
                 </If>
 
                 <If test={selectedApoio === 3}>
-                    <ApoioDoacao setSelectedApoio={setSelectedApoio}/>
+                    <ApoioDoacao 
+                    fotoJovem={props.fotoJovem}
+                    nomeJovem={props.nomeJovem}
+                    aspiracaoJovem={props.aspiracaoJovem}
+                    setSelectedApoio={setSelectedApoio}/>
                 </If>
 
                 <If test={selectedApoio === 4}>
-                    <ApoioMaterial setSelectedApoio={setSelectedApoio}/>
+                    <ApoioMaterial 
+                    fotoJovem={props.fotoJovem}
+                    nomeJovem={props.nomeJovem}
+                    aspiracaoJovem={props.aspiracaoJovem}
+                    setSelectedApoio={setSelectedApoio}/>
                 </If>
 
                

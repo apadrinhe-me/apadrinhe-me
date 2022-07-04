@@ -24,7 +24,7 @@ const PopupContent = props => {
             </div>
             <textarea>Legenda, Hashtags...</textarea>
             <input id="novacapa" type="file" />
-            <label className="adcionarfoto" htmlFor="novacapa">Adcionar foto</label>
+            <label className="adcionarfoto" htmlFor="novacapa">Adicionar foto</label>
             <input id="novacapa" type="file" />
             <label className="adcionarfoto" htmlFor="novacapa">Novo moments</label>
             <div className="buttons">

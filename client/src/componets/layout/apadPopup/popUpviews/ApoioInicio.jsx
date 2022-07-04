@@ -3,16 +3,15 @@ import "./ApoioInicio.css";
 
 import OthersCard from "../OthersCard";
 import LogoRecomendacao from "../../../../media/icons/IconsApoios/recomendation.svg"
-import LogoDoacao from "../../../../media/icons/IconsApoios/fast_donate.svg"
-import LogoMaterial from "../../../../media/icons/IconsApoios/sponsoring.svg"
-import LogoEducacional from "../../../../media/icons/IconsApoios/educacional.svg"
+import LogoDoacao from "../../../../media/icons/IconsApoios/fast_donate_white.svg"
+import LogoMaterial from "../../../../media/icons/IconsApoios/sponsoring_white.svg"
+import LogoEducacional from "../../../../media/icons/IconsApoios/educacional_white.svg"
 
 const ApoioInicio = props => {
     return (
         <div className="ApoioInicio ">
+            <h2>Opções de apadrinhamento</h2>
             <div className="apad-types">
-
-
                 <div className="other-types">
 
                     <OthersCard

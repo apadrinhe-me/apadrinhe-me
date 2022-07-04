@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 import "./ApoioDoacao.css";
-import LogoRecomendacao from "../../../../media/icons/IconsApoios/recomendation.svg"
 import LogoDoacao from "../../../../media/icons/IconsApoios/fast_donate.svg"
-import LogoMaterial from "../../../../media/icons/IconsApoios/sponsoring.svg"
 import ProfPicture from "../../profPicture/ProfPicture";
 import QrCode from "../../../../media/payment/qr-code-pic.png"
 import ApadrinhemeLogo from "../../../../media/logo/logo-tipo-and-icon.svg"
@@ -44,14 +42,14 @@ const ApoioDoacao = props => {
                 <div className="header">
                     <div className="nome-apoio">
                         <img src={LogoDoacao} alt="dinheiro e raio" height={80}/>
-                        <h3>Doação rápida</h3>
+                        <h3>Apadrinhamento financeiro</h3>
                     </div>
 
                     <div className="quem-apoia">
-                        <ProfPicture src="valentina.png" scale={60} />
+                        <ProfPicture src={props.fotoJovem} scale={60} />
                         <div className="apoiado-nome">
-                            <strong>Valentina</strong>
-                            <span className="aspiracao">Aspirante a desenvolvedora web</span>
+                            <strong>{props.nomeJovem}</strong>
+                            <span className="aspiracao">{props.aspiracaoJovem}</span>
                         </div>
                     </div>
                 </div>

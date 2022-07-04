@@ -1,8 +1,4 @@
 const express = require("express");
-<<<<<<< HEAD
-const app = express();
-const mysql = require("mysql");
-=======
 const mysql = require("mysql");
 const cors = require("cors");
 const bcrypt = require("bcrypt")
@@ -10,7 +6,6 @@ const saltRounds = 10
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
->>>>>>> 502ef95276fffebe5465cf2f1c0e3ecc47b4e22e
 
 const app = express(); //executar o express
 
@@ -18,22 +13,9 @@ const app = express(); //executar o express
 const db = mysql.createPool({
     host: "localhost",
     user: "root",
-<<<<<<< HEAD
-    password: "root",
-    database: "apadrinhe_me",
-});
-
-app.get('/', (req, res) => {
-    db.query(
-        "INSERT INTO usuarios ( email_usuario, senha_usuario, nome_completo_usuario, nickname_usuario, data_nasc_usuario, genero_usuario, confirmacao_responsavel, confirmacao_usuario, renda_familiar) VALUES('cristianferreira@gmail.com', '1234567', 'cris', 'cris123', '08/03/2003', 'masculino','sim', 'sim', '1000')", (err, result) => {if(err) {console.log(err)}
-    }
-    );
-});
-=======
     password: "",
     database: "apadrinhe_me"
 })
->>>>>>> 502ef95276fffebe5465cf2f1c0e3ecc47b4e22e
 
 //Caso dê erro com o fornt conextando com o back
 app.use(cors({
@@ -181,12 +163,13 @@ app.get("/login", (req, res) => {
     }
 })
 
+//logout
+app.get("/logout", (req, res) => {
+    req.session.destroy();
+    return res.send();
+})
+
 //porta do server
 app.listen(3001, () => {
-<<<<<<< HEAD
-    console.log("rodando na portan 3001");
-}); 
-=======
     console.log("rodando servidor");
 })
->>>>>>> 502ef95276fffebe5465cf2f1c0e3ecc47b4e22e

@@ -116,6 +116,7 @@
     align-items: center;
     height: 50px;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .Menu .nav li:hover {
@@ -125,7 +126,7 @@
 }
 
 .Menu .nav_icon {
-    width: 24px;
+    height: 24px;
 }
 
 @keyframes anim {
@@ -156,7 +157,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50em;
+    height: 100%;
 }
 
 /* Estilos opções do usuário */

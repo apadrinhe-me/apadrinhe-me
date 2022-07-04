@@ -1,4 +1,5 @@
 .Login {
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -72,7 +73,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border: 0;
     border-radius: 15px;
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     height: 50px;
 }
 
@@ -91,7 +93,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border: 0;
     border-radius: 15px;
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     height: 50px;
 }
 
@@ -152,10 +155,21 @@
 .Login .msg_erro {
     display: none;
     margin-top: 15px;
+    position: absolute;
+    top: "10px";
+    left: "10px";
 }
 
 .Login .msg_erro.show {
     display: flex;
+}
+
+.Login .stayLoggedDiv{
+    align-self: flex-start;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 15px 10px;
 }
 
 ::placeholder {

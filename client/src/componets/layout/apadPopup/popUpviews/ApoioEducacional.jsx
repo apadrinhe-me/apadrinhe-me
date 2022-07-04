@@ -1,6 +1,26 @@
-import React, { useState } from "react";
+/*import React from "react";
 import "./ApoioEducacional.css";
 import LogoEducacional from "../../../../media/icons/IconsApoios/educacional.svg"
+
+const ApoioEducacional = props => {
+    return(
+        <>
+            <button className="btn-format btn-return" onClick={() => props.setSelectedApoio(0)}><i className="bi bi-arrow-return-left"></i> Voltar</button>
+
+            <div className="ApoioApadrinhar border">
+                <img src={LogoEducacional} alt="" />
+                <h1>Educacional</h1>
+            </div>
+        </>
+    );
+}
+
+export default ApoioEducacional;
+*/
+
+import React, { useState } from "react";
+import "./ApoioEducacional.css";
+import LogoEducacional from "../../../../media/Imagens_pop-up/icon_cadastro-09.svg"
 
 import ProfPicture from "../../profPicture/ProfPicture";
 import QrCode from "../../../../media/payment/qr-code-pic.png"
@@ -19,6 +39,9 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { Link } from "react-router-dom";
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 
 const lightTheme = createTheme({
     palette: {
@@ -27,7 +50,7 @@ const lightTheme = createTheme({
 });
 
 const ApoioDoacao = props => {
-    const [alignment, setAlignment] = React.useState('web');
+    const [alignment, setAlignment] = useState('web');
 
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
@@ -35,6 +58,10 @@ const ApoioDoacao = props => {
 
     const [doacaoPersonalizada, setDoacaoPersonalizada] = useState(0);
     const [validadeCartao, setValidadeCartao] = useState(null)
+
+    const [nomeCurso, setNomeCurso] = useState('Bacharel Sistemas da informação');
+    const [duracaoCurso, setDuracaoCurso] = useState('4 anos');
+    const [mensalidadeCurso, setMensalidadeCurso] = useState('R$ 1000');
 
     return (
         <>
@@ -44,26 +71,26 @@ const ApoioDoacao = props => {
                 <div className="header">
                     <div className="nome-apoio">
                         <img src={LogoEducacional} alt="dinheiro e raio" height={80} />
-                        <h3>Doação rápida</h3>
+                        <h3>Apadrinhamento educacional</h3>
                     </div>
 
                     <div className="quem-apoia">
-                        <ProfPicture src="valentina.png" scale={60} />
+                        <ProfPicture src={props.fotoJovem} scale={60} />
                         <div className="apoiado-nome">
-                            <strong>Valentina</strong>
-                            <span className="aspiracao">Aspirante a desenvolvedora web</span>
+                            <strong>{props.nomeJovem}</strong>
+                            <span className="aspiracao">{props.aspiracaoJovem}</span>
                         </div>
                     </div>
                 </div>
 
                 <div className="pagamento-info">
                     <div className="nome-email">
-                        <TextField id="nome-pagador" label="Nome do curso" variant="outlined" fullWidth />
-                        <TextField id="email-pagador" label="duração" variant="outlined" fullWidth />
-                        <TextField id="email-pagador" label="Mensalidade" variant="outlined" fullWidth />
+                        <TextField id="nome-pagador" label="Nome do curso" variant="outlined" fullWidth value={nomeCurso} InputProps={{ readOnly: true, }} />
+                        <TextField id="email-pagador" label="Duração" variant="outlined" fullWidth value={duracaoCurso} readOnly InputProps={{ readOnly: true, }} />
+                        <TextField id="email-pagador" label="Mensalidade" variant="outlined" fullWidth value={mensalidadeCurso} readOnly InputProps={{ readOnly: true, }} />
 
                     </div>
-                    <h3>cobertura</h3>
+                    <h3>Cobertura</h3>
                     <select name="" id="selectCobertura">
 
                         <option className="selectCoberturaMes" value="1">1 mês de apoio</option>
@@ -74,17 +101,17 @@ const ApoioDoacao = props => {
                         <option value="6">6 mês de apoio</option>
                     </select>
 
-                    <h3>Status</h3>
+                    <h3>Status do apadrinhamento</h3>
                     <span className="status">
                         <span className="statusContribuicao">
-
                             <span className="statusAtual" ><p>50%</p>  </span>
-                        </span>
-                    </span>
-                    <FormControlLabel control={<Checkbox />} label={<span>Quero receber <Link to="/" className="link-termos">relatórios periodicos</Link> referente ao desempenho do jovem via e-mail</span>} />
-
-
-
+                        </span >
+                    </span >
+                    <div className="legendaBarra">
+                        <div className="legendaItem"> <div className="legendaCor azul"></div> <small>Quanto já contribuiram com esse jovem</small> </div>
+                        <div className="legendaItem"> <div className="legendaCor rosa"></div> <small>Quanto você contribuirá</small> </div>
+                    </div>
+                    <FormControlLabel control={<Checkbox />} label={<span>Quero receber <Link to="/" className="link-termos">Relatórios Periodicos</Link> referente ao desempenho do jovem via e-mail</span>} />
 
                     <strong>Método de pagamento</strong>
                     <div className="metodo-pagamento">
@@ -173,8 +200,8 @@ const ApoioDoacao = props => {
                         </div>
                         <img src={ApadrinhemeLogo} height={36} alt="Logo plataforma" />
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
         </>
     );
 }

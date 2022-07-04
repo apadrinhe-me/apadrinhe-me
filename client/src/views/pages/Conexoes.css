@@ -2,12 +2,13 @@
     background: #191922;
     border-radius: 15px;
     border: 1px solid #292C35;
-    margin: 20px 25%;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .Conexoes {
     margin: 0 auto;
-    max-width: 800px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.507);
 }
 

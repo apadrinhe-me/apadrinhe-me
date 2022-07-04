@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ProfPicture from "../../componets/layout/profPicture/ProfPicture";
 import "./Menu.css";
+import {MyServer} from "../../services/api";
 
 import LogoMarca from "../../media/logo/logo-tipo-and-icon.svg";
 import LogoSolo from "../../media/logo/logo-stroke-gradient-01.svg";
@@ -11,8 +12,8 @@ import CoursesIconFill from "../../media/icons/item_cursos_icon_fill.svg";
 import MomentsIconFill from "../../media/icons/item_moments_icon_fill.svg";
 import HomeIconStroke from "../../media/icons/item_home_icon_stroke.svg";
 import ConectionsIconStroke from "../../media/icons/item_conections_icon_stroke.svg";
-import CoursesIconStroke from "../../media/icons/item_cursos_icon_fill.svg";
-import MomentsIconStroke from "../../media/icons/item_moments_icon_fill.svg";
+import CoursesIconStroke from "../../media/icons/item_cursos_icon_stroke.svg";
+import MomentsIconStroke from "../../media/icons/item_moments_icon_stroke.svg";
 import ChatIcon from "../../media/icons/item_chat_icon_fill.svg";
 import NotificationsIcon from "../../media/icons/item_alert_icon_fill.svg";
 import MenuIcon from "../../media/icons/item_menu_icon.svg";
@@ -41,7 +42,7 @@ const Menu = props => {
 
     //Função de abrir a caixinha de notificações
     function openNotification() {
-        alert('abrir notificações');
+        //alert('abrir notificações');
     }
 
     //função para tirar a logo e colocar a barra de pesquisa no lugar
@@ -65,6 +66,14 @@ const Menu = props => {
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
+    const logout = () => {
+        //logout
+        setAnchorEl(null);
+
+        MyServer.get("/logout").then(response => {
+            window.location.href = "/login";
+        })
+    }
     const handleClose = () => {
         setAnchorEl(null);
     };
@@ -160,7 +169,7 @@ const Menu = props => {
                                 }}
                             >
                                 <Link to="/perfil"><MenuItem onClick={handleClose}><span style={{ color: "white" }}>Meu perfil</span></MenuItem></Link>
-                                <MenuItem onClick={handleClose}><span style={{ color: "red" }}>Sair</span></MenuItem>
+                                <MenuItem onClick={logout}><span style={{ color: "red" }}>Sair</span></MenuItem>
                             </Dropdown>
 
                             <Link to="/chat"><button type="button" className="btn-action btn-chat"><img className="btn-icon" src={ChatIcon} alt="ícone de chat" /></button></Link>

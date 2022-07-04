@@ -28,7 +28,7 @@ const SobrePerfil = props => {
                         </div>
 
                         <div className="bar-porcent">
-                            <span>50%</span>
+                            <span>100%</span>
                         </div>
                     </div>
                     <div className="xp-info">
@@ -39,9 +39,9 @@ const SobrePerfil = props => {
             </div>
             <div className="my-row">
                 <div className="engajamento">
-                    <div><strong>+3,5k</strong> <span>seguidores</span></div>
-                    <div><strong>+50</strong> <span>postagens</span></div>
-                    <div><strong>+45</strong> <span>recomendações</span></div>
+                    <div><strong>+200</strong> <span>conexões</span></div>
+                    <div><strong>1</strong> <span>postagem</span></div>
+                    <div><strong>+12</strong> <span>recomendações</span></div>
                 </div>
                 <div className="my-column">
                     <div className="reputacao">
@@ -51,7 +51,7 @@ const SobrePerfil = props => {
                                 <i className="bi bi-patch-check-fill"></i>
                             </div>
                             <div className="stars-icon">
-                                <Rating name="read-only" value={4} readOnly />
+                                <Rating name="read-only" value={5} readOnly />
                             </div>
                         </div>
                     </div>

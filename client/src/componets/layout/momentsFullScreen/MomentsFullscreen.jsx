@@ -12,28 +12,24 @@ import CommentBox from "./CommentBox";
 import Comment from "./Comment";
 
 const MomentsFullscreen = props => {
-    useEffect(() => {
-        document.querySelector("#close-button").addEventListener('click', () => {
-            props.setFullscreen(0);
-        })
-    })
+    console.log(props.fullscreenInfo);
 
     return (
         <div className="MomentsFullscreen">
             <div className="fulscreen-video">
-                <button className="close-button" id="close-button">X</button>
-                <video className="momentsVideo" src={require("../../../media/moments_media/valentinamoments.mp4")} controls></video>
-                <video className="backgroundFullscreenMoments" src={require("../../../media/moments_media/valentinamoments.mp4")} controls></video>
+                <button className="close-button" id="close-button" onClick={() => props.setFullscreen(0)}>X</button>
+                <video className="momentsVideo" src={require("../../../media/moments_media/" + props.fullscreenInfo.video)} controls></video>
+                <video className="backgroundFullscreenMoments" src={require("../../../media/moments_media/" + props.fullscreenInfo.video)} controls></video>
             </div>
 
             <div className="video-info">
                 <div className="post-info-section">
                     <div className="user-info-box">
-                        <ProfPicture src="valentina.png" scale={70} />
+                        <ProfPicture src={props.fullscreenInfo.profile} scale={70} />
                         <div className="user-info">
-                            <span className="text-primary">Valentina {props.id}</span>
-                            <span className="text-secondary">Aspirante a Astrônoma</span>
-                            <span className="text-secondary">{getPostDate("2022-05-23 14:40")}</span>
+                            <span className="text-primary">{props.fullscreenInfo.usuario}</span>
+                            <span className="text-secondary">{props.fullscreenInfo.objetivo}</span>
+                            <span className="text-secondary">{props.fullscreenInfo.data}</span>
                         </div>
                         <div className="user-actions">
                             <button type="button" className="btn btn-follow">Seguir</button>
@@ -42,9 +38,9 @@ const MomentsFullscreen = props => {
                     </div>
 
                     <div className="post-info-box">
-                        <div className="post-title">Estudando muito para alcançar meus objetivos 😁📚 {props.id}</div>
-                        <div className="post-description">Estudando muito para alcançar meus objetivos 😁📚 </div>
-                        <div className="post-hashs">#Apadrinhe-me #Tecnologia #Educação</div>
+                        <div className="post-title">{props.fullscreenInfo.titulo}</div>
+                        <div className="post-description">{props.fullscreenInfo.titulo} </div>
+                        <div className="post-hashs">{props.fullscreenInfo.hashtag}</div>
                         <div className="post-actions">
                             <button className="btn-post"><img src={likeIco} alt="Botão de curtir" />Curtir</button>
                             <button className="btn-post"><img src={commentIco} alt="Botão de comentar" />Comentar</button>
@@ -63,11 +59,6 @@ const MomentsFullscreen = props => {
                         <Comment id={2} />
                         <Comment id={3} />
                         <Comment id={4} />
-                        <Comment id={5} />
-                        <Comment id={5} />
-                        <Comment id={5} />
-                        <Comment id={5} />
-                        <Comment id={5} />
                         <Comment id={5} />
                     </div>
                 </div>

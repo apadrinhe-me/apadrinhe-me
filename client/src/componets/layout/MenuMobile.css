@@ -2,11 +2,16 @@
     display: flex;
     width: 100%;
     height: 60px;
-    z-index: 999;
-    position: sticky;
+    z-index: 99999;
+    position: fixed;
     bottom: 0;
+    top: auto;
     background: #071028;
     box-shadow: 0px 5px 10px #00000035;
+}
+
+.margin-top-menu{
+    height: 60px;
 }
 
 .MenuMobile .nav{
@@ -40,14 +45,18 @@
     background-image: linear-gradient(to bottom right, #3b435a, #3b435a50);
 }
 
+.MenuMobile .nav li a{
+    height: 100%;
+    width: 100%;
+}
+
 .MenuMobile .bi-box-arrow-in-right{
     color: #add8e6;
     font-size: 35px;
-    line-height: 150px;
 }
 
 @media (min-width: 576px) {
-    .MenuMobile, .MenuMobile-margin{
+    .MenuMobile, .margin-top-menu{
         display: none;
     }
 }
