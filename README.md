@@ -65,13 +65,13 @@ Infelizmente as escolas públicas de nosso país não investem o suficiente ness
   ##
   
   <div align="center">
-   <a href="https://github.com/NatanBarbosa" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/174565248-bd15009e-c75a-4e44-b086-f3c17f654c08.jpeg" height="120" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/carlos15eduardo" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/174565645-8aa826c5-ba8b-4b22-abb4-f162fb5d7b0d.jpeg" height="120" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <a href="https://github.com/MuriloMoura94" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/174566055-989192b8-2515-4f88-9979-3cba89ae3ee2.jpeg" height="120"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <a href="https://github.com/Cristian-Ferre" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/176978694-78f3daa3-2a23-456d-8aba-79e26bea80fe.jpg" height="120" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <a href="https://github.com/GuReis01" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/176978532-bfd44c21-6a7f-4fbb-bac5-6573cf9aaab4.jpg" height="120" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/wagnerpereiradev" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/176978552-6c9e9133-a684-4e78-94a2-537293cf4e26.jpg" height="120" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/JGabrielRodrigues" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/176978541-2f8c91b2-e96a-4983-95f8-f6781b81ea8e.jpg" height="120" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="https://github.com/NatanBarbosa" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/177195916-79b278c5-8214-4074-bc48-881cad235ae5.jpg" height="130" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/carlos15eduardo" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/177195803-fa678a08-72f2-4c73-b083-2e9520e64645.jpg" height="130" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="https://github.com/MuriloMoura94" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/177196183-883c0184-e3b5-443d-9ccd-4ccb2f200b03.jpg" height="130"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="https://github.com/Cristian-Ferre" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/177196086-c44d4fb7-38a7-410c-bc47-eb4a3e9e5cbd.jpg" height="130" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="https://github.com/GuReis01" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/177196113-812cf190-02c7-44fc-bcd9-838a84586d9e.jpg" height="130" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/wagnerpereiradev" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/177196140-e83ebfa2-f814-48fa-8b4d-88dccf6c0448.jpg" height="130" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/JGabrielRodrigues" target="_blank"><img src="https://user-images.githubusercontent.com/99449971/177196096-19b58d04-35fc-4b33-9080-05a395bf2618.jpg" height="130" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
   </div>
   
