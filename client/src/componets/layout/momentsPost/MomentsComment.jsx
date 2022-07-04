@@ -20,8 +20,7 @@ const MomentsComment = props => {
                 </div>
                 <CommentBox />
                 <div className="comments">
-                    <Comment />
-                    <Comment />
+                    <Comment/>
                     <Comment />
                     <Comment />
                     <Comment />
