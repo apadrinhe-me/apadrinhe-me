@@ -12,6 +12,7 @@ import MomentsComment from "./MomentsComment";
 
 
 const MomentsPost = props => {
+    console.log(props.profile)
     const [openMobileComments, setOpenMobileComments] = useState(false);
 
     function nextPost() {
@@ -49,12 +50,12 @@ const MomentsPost = props => {
             <div className="MomentsPost" id={`moments-${props.id}`}>
                 <div className="user-info">
                     <div className="user-profPic">
-                        <ProfPicture src="valentina.png" scale={60} />
+                        <ProfPicture src={props.profile} scale={60} />
                     </div>
                     <div className="post-info">
-                        <span className="text-bold">Valentina</span>
-                        <span className="text-secondary">Aspirante a astrônoma</span>
-                        <span className="text-secondary">19 de abril de 2022</span>
+                        <span className="text-bold">{props.usuario}</span>
+                        <span className="text-secondary">{props.objetivo}</span>
+                        <span className="text-secondary">{props.data}</span>
                     </div>
                     <div className="post-actions">
                         <button type="button" className="btn btn-follow">Seguir</button>
@@ -63,14 +64,14 @@ const MomentsPost = props => {
                 </div>
 
                 <div className="post-title-hashs">
-                    <span className="post-title">Estudando muito para alcançar meus objetivos 😁📚</span>
-                    <span className="post-hashs">#Apadrinhe-me, #Tecnologia, #Educação,</span>
+                    <span className="post-title">{props.titulo}</span>
+                    <span className="post-hashs">{props.hashtag}</span>
                 </div>
 
                 <div className="post-media">
                     <div className="contain-video">
                         <div className="moments-video">
-                            <video src={require("../../../media/moments_media/valentinamoments.mp4")} controls></video>
+                            <video src={require("../../../media/moments_media/" + props.video)} controls></video>
                         </div>
                     </div>
 
@@ -87,15 +88,15 @@ const MomentsPost = props => {
 
                         <div className="btn-div">
                             <button><img src={likeIco} alt="Botão de like" className="btn-icon" /></button>
-                            <span>1.2k</span>
+                            <span>{props.like}</span>
                         </div>
                         <div className="btn-div">
                             <button><img src={commentIco} alt="Botão de Comentário" className="btn-icon" id={"btn-comment-" + props.id} /></button>
-                            <span>1.2k</span>
+                            <span>{props.comentario}</span>
                         </div>
                         <div className="btn-div">
                             <button><img src={shareIco} alt="Botão de compartilhamento" className="btn-icon" /></button>
-                            <span>1.2k</span>
+                            <span>{props.compartilhamento}</span>
                         </div>
                         <div className="btn-div">
                             <button><img src={saveIco} alt="Botão de salvar" className="btn-icon" /></button>
@@ -104,7 +105,12 @@ const MomentsPost = props => {
                 </div>
             </div>
 
-            <MomentsComment setOpenMobileComments={setOpenMobileComments} openMobileComments={openMobileComments}/>
+
+            <MomentsComment setOpenMobileComments={setOpenMobileComments} openMobileComments={openMobileComments} />
+
+          
+
+
         </>
     );
 }

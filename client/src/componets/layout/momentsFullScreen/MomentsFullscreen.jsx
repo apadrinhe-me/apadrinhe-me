@@ -26,7 +26,7 @@ const MomentsFullscreen = props => {
                     <div className="user-info-box">
                         <ProfPicture src="valentina.png" scale={70} />
                         <div className="user-info">
-                            <span className="text-primary">Valentina {props.id}</span>
+                            <span className="text-primary">{props.nome} {props.id}</span>
                             <span className="text-secondary">Aspirante a Astrônoma</span>
                             <span className="text-secondary">{getPostDate("2022-05-23 14:40")}</span>
                         </div>

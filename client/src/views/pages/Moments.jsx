@@ -44,11 +44,57 @@ const Moments = () => {
                         <ForYou />
                     </aside>
                     <main className={videoFullscreen !== 0 ? "moments-feed fulscreenmode my-scrollbar" : "moments-feed my-scrollbar"}>
-                        <MomentsPost id={1} setFullscreen={setVideoFullscreen} />
-                        <MomentsPost id={2} setFullscreen={setVideoFullscreen} />
+                        <MomentsPost
+                            id={1}
+                            setFullscreen={setVideoFullscreen}
+                            usuario="Valentina"
+                            data="19 de abril de 2022"
+                            hashtag="#Apadrinhe-me, #Tecnologia, #Educação,"
+                            objetivo="Aspirante a astrônoma"
+                            titulo="Estudando muito para alcançar meus objetivos 😁📚"
+                            profile="valentina.png"
+                            video="valentinamoments.mp4"
+                            like="2.2k"
+                            comentario="1.2k"
+                            compartilhamento="1.1k"
+                        />
+
+                        <MomentsPost
+                            id={2}
+                            setFullscreen={setVideoFullscreen}
+                            usuario="Carlos Eduardo"
+                            data="19 de abril de 2022"
+                            hashtag="#Instituto Proa, #Biologia, #Livros,"
+                            objetivo="Aspirante a Biologo"
+                            titulo="Nem humanas, Nem exatas, Biologicas 🙈"
+                            profile="cadu.png"
+                            video="jovemEstudando.mp4"
+                            like="1.2k"
+                            comentario="789"
+                            compartilhamento="450"
+                        />
+
+                        <MomentsPost
+                            id={3}
+                            setFullscreen={setVideoFullscreen}
+                            usuario="Murilo Moura"
+                            data="14 de março de 2022"
+                            hashtag="#mecanico, #Senac, #Gravidade,"
+                            objetivo="Aspirante a Engenheiro"
+                            titulo="Com grandes poderes, vem grandes responsabilidades 🚀🔧"
+                            profile="murilo.png"
+                            video="sonhador.mp4"
+                            like="4.3k"
+                            comentario="2.4"
+                            compartilhamento="1.6"
+                        />
+
+
                     </main>
                     <div className={videoFullscreen !== 0 ? "full-screen-post fulscreenmode" : "full-screen-post"}>
-                        <MomentsFullscreen id={videoFullscreen} setFullscreen={setVideoFullscreen} />
+                        <MomentsFullscreen id={1} setFullscreen={setVideoFullscreen}  nome="dacu"/>
+                        <MomentsFullscreen id={2} setFullscreen={setVideoFullscreen} nome="dacu"/>
+                        <MomentsFullscreen id={3} setFullscreen={setVideoFullscreen} nome="dacu"/>
                     </div>
                 </div>
             </div>
