@@ -141,8 +141,7 @@
 }
 
 .EditorMapaCarreira .detail{
-    display: flex;
-    gap: 5px;
+    margin-bottom: 8px;
 }
 
 .EditorMapaCarreira .btn-editar{
