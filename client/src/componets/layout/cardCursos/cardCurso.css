@@ -1,17 +1,9 @@
-.cardCurso {
-    display: flex;
-    flex-direction: column;
-    background: #E5E6EB;
-    color: #000;
-    flex-basis: 295px;
-    border-radius: 15px;
-}
-
 .cardCourse {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    height: 440px;
 }
 
 .CardHeader {
