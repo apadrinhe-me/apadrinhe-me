@@ -121,7 +121,11 @@ const NavPerfil = props => {
             </div>
             <ApadPopup
                 trigger={buttonPopup}
-                setTrigger={setButtonPopup} />
+                setTrigger={setButtonPopup} 
+                fotoJovem="valentina.png"
+                nomeJovem="Valentina"
+                aspiracaoJovem="Aspirante a astrônoma"
+            />
 
             <Modal
                 aria-labelledby="transition-modal-title"
