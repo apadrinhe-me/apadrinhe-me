@@ -1,4 +1,4 @@
-.Recomendacao{
+.Recomendacao {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -10,19 +10,24 @@
     align-items: center;
 }
 
-.Recomendacao .icone{
+.Recomendacao .icone {
     flex: 1;
     text-align: center;
 }
 
-.Recomendacao .icone i{
+.Recomendacao .icone i {
     font-size: 30px;
 }
 
-.Recomendacao .descricao{
+.Recomendacao .descricao {
     flex: 3;
 }
 
-.Recomendacao .redirect{
+.Recomendacao .redirect {
     flex: 1;
+}
+
+.Recomendacao .redirect a {
+    text-decoration: none;
+    color: #0065D2;
 }

@@ -1,9 +1,10 @@
 import "./Recomendacao.css";
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
 
 const Recomendacao = props => {
-    return(
+    return (
         <div className="Recomendacao">
             <div className="icone">
                 <i class="bi bi-book"></i>
@@ -14,7 +15,7 @@ const Recomendacao = props => {
             </div>
 
             <div className="redirect">
-                <Button >Ir para o curso</Button>
+                <Button ><Link to="/cursos">Ir para o curso</Link></Button>
             </div>
 
         </div>
