@@ -43,15 +43,27 @@ const ApadPopup = props => {
                 </If>
 
                 <If test={selectedApoio === 1}>
-                    <ApoioEducacional setSelectedApoio={setSelectedApoio}/>
+                    <ApoioEducacional 
+                    fotoJovem={props.fotoJovem}
+                    nomeJovem={props.nomeJovem}
+                    aspiracaoJovem={props.aspiracaoJovem}
+                    setSelectedApoio={setSelectedApoio}/>
                 </If>
 
                 <If test={selectedApoio === 3}>
-                    <ApoioDoacao setSelectedApoio={setSelectedApoio}/>
+                    <ApoioDoacao 
+                    fotoJovem={props.fotoJovem}
+                    nomeJovem={props.nomeJovem}
+                    aspiracaoJovem={props.aspiracaoJovem}
+                    setSelectedApoio={setSelectedApoio}/>
                 </If>
 
                 <If test={selectedApoio === 4}>
-                    <ApoioMaterial setSelectedApoio={setSelectedApoio}/>
+                    <ApoioMaterial 
+                    fotoJovem={props.fotoJovem}
+                    nomeJovem={props.nomeJovem}
+                    aspiracaoJovem={props.aspiracaoJovem}
+                    setSelectedApoio={setSelectedApoio}/>
                 </If>
 
                

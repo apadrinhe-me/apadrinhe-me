@@ -24,7 +24,6 @@ let login;
 
 const Cursos = () => {
     const [drawer, setDrawer] = useState(false);
-
     const [logged, setLogged] = useState(false);
 
     //verificar se está logado
@@ -38,9 +37,34 @@ const Cursos = () => {
         })
     }, [])
 
+    const [expanded1, setExpanded1] = React.useState(false);
+    const handleExpandClick1 = () => {
+        setExpanded1(!expanded1);
+    };
+
+    const [expanded2, setExpanded2] = React.useState(false);
+    const handleExpandClick2 = () => {
+        setExpanded2(!expanded2);
+    };
+
+    const [expanded3, setExpanded3] = React.useState(false);
+    const handleExpandClick3 = () => {
+        setExpanded3(!expanded3);
+    };
+
+    const [expanded4, setExpanded4] = React.useState(false);
+    const handleExpandClick4 = () => {
+        setExpanded4(!expanded4);
+    };
+
+    const [expanded5, setExpanded5] = React.useState(false);
+    const handleExpandClick5 = () => {
+        setExpanded5(!expanded5);
+    };
+
     return (
         <>
-            <Menu logged={logged} atual="Cursos"/>
+            <Menu logged={logged} atual="Cursos" />
             <div className="Cursos">
                 <div className="categoriasCurso">
                     <h4 className="categoria-title">Categorias</h4>
@@ -71,27 +95,27 @@ const Cursos = () => {
                     <h4 className="categoria-title">Instituições</h4>
                     <ul>
                         <li className="partner">
-                            <img src={TCLogo} alt="Logo Alura"/>
+                            <img src={TCLogo} alt="Logo Alura" />
                             <p>Fundação T&C</p>
                         </li>
                         <li className="partner">
-                            <img src={AluraLogo} alt="Logo Alura"/>
+                            <img src={AluraLogo} alt="Logo Alura" />
                             <p>Alura</p>
                         </li>
                         <li className="partner">
-                            <img src={UdemyLogo} alt="Logo Alura"/>
+                            <img src={UdemyLogo} alt="Logo Alura" />
                             <p>Udemy</p>
                         </li>
                         <li className="partner">
-                            <img src={BradescoLogo} alt="Logo Alura"/>
+                            <img src={BradescoLogo} alt="Logo Alura" />
                             <p>Fundação Bradesco</p>
                         </li>
                         <li className="partner">
-                            <img src={ProaLogo} alt="Logo Alura"/>
+                            <img src={ProaLogo} alt="Logo Alura" />
                             <p>PROA</p>
                         </li>
                         <li className="partner">
-                            <img src={PrimeLogo} alt="Logo Alura"/>
+                            <img src={PrimeLogo} alt="Logo Alura" />
                             <p>Prime Cursos</p>
                         </li>
                     </ul>
@@ -113,7 +137,7 @@ const Cursos = () => {
 
                     </div>
                     <div className="card my-scrollbar" >
-                        <CardCurso 
+                        <CardCurso
                             partnerLogo="proa.png"
                             nomeCurso="ProProfissão"
                             partnerName="Instituto PROA"
@@ -125,7 +149,7 @@ const Cursos = () => {
                             descricao="Núcleo Técnico Desenvolve as competências técnicas do aluno em Programação Java por meio de trabalho em grupo, vivências corporativas, projetos e atividades. Núcleo Comportamental Desenvolve as competências sociocomportamentais e o perfil profissional do aluno por meio de atividades relacionadas ao autoconhecimento, propósito, carreira e mercado de trabalho."
                         />
 
-                        <CardCurso 
+                        <CardCurso
                             partnerLogo="tc.svg"
                             nomeCurso="Inteligência Artificial"
                             partnerName="Fundação T&C"
@@ -137,7 +161,7 @@ const Cursos = () => {
                             descricao="A IA refere-se a sistemas ou máquinas que imitam a inteligência humana"
                         />
 
-                        <CardCurso 
+                        <CardCurso
                             partnerLogo="tc.svg"
                             nomeCurso="Python"
                             partnerName="Fundação T&C"
@@ -149,7 +173,7 @@ const Cursos = () => {
                             descricao="Instalação, recursos, tipo de dados, aplicativos, para um desenvolvimento melhor."
                         />
 
-                        <CardCurso 
+                        <CardCurso
                             partnerLogo="prime.png"
                             nomeCurso="Inteligência emocional"
                             partnerName="Prime cursos"
@@ -161,7 +185,7 @@ const Cursos = () => {
                             descricao="A inteligência emocional está cada vez mais presente no mercado de trabalho. Portanto, nesse curso, você irá aprender a lidar com todas as realidades do mundo corporativo."
                         />
 
-                        <CardCurso 
+                        <CardCurso
                             partnerLogo="bradesco.ico"
                             nomeCurso="Responsabilidade Social e Sustentabilidade"
                             partnerName="Fundação bradesco"
@@ -169,7 +193,8 @@ const Cursos = () => {
                             banneCurso="responsabilidade-social.jpg"
                             duracao="15 horas"
                             localidade="Remoto"
-                            conteudos="Nos dias de hoje, a preocupação com a sustentabilidade não é só dos cidadãos, mas também das grandes empresas. Conheça quais são suas responsabilidades perante à esse tema"
+                            conteudos="Principais artigos de responsabilidade social"
+                            descricao="A inteligência emocional está cada vez mais presente no mercado de trabalho. Portanto, nesse curso, você irá aprender a lidar com todas as realidades do mundo corporativo."
                         />
                     </div>
                 </div>
@@ -183,47 +208,63 @@ const Cursos = () => {
                 <Box sx={{ mt: "65px", display: "flex", flexDirection: "column", gap: "10px" }}>
                     <button className="btn-format drawer-close-btn" onClick={() => setDrawer(false)}><i className="bi bi-x-lg"></i></button>
                     <div className="categoriasCurso drawer-cursos">
+                        <h4 className="categoria-title">Categorias</h4>
                         <ul>
-                            <li><h4>Categorias</h4></li>
-                            <li>
-                                <i className="bi bi-book-fill caixaIconeCategoriasCurso"></i>
-
-                                <p>Todos os Cursos</p>
-                            </li>
                             <li>
                                 <i className="bi bi-graph-up caixaIconeCategoriasCurso"></i>
                                 <p>Administração</p>
                             </li>
                             <li>
-                                <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                                <i className="bi bi-code-slash caixaIconeCategoriasCurso"></i>
                                 <p>Tecnologia</p>
                             </li>
                             <li>
-                                <i className="bi bi-graph-up caixaIconeCategoriasCurso"></i>
+                                <i className="bi bi-cash-coin caixaIconeCategoriasCurso"></i>
                                 <p>Contabilidade e Finanças</p>
                             </li>
                             <li>
-                                <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                                <i className="bi bi-person caixaIconeCategoriasCurso"></i>
                                 <p>Desenvolvimento Pessoal</p>
                             </li>
                             <li>
-                                <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
+                                <i className="bi bi-book caixaIconeCategoriasCurso"></i>
                                 <p>Educação</p>
                             </li>
-                            <li>
-                                <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
-                                <p>Fundação TeC</p>
+                        </ul>
+
+                        <br />
+                        <h4 className="categoria-title">Instituições</h4>
+                        <ul>
+                            <li className="partner">
+                                <img src={TCLogo} alt="Logo Alura" />
+                                <p>Fundação T&C</p>
                             </li>
-                            <li>
-                                <i className="bi bi-laptop caixaIconeCategoriasCurso"></i>
-                                <p>Favoritos</p>
+                            <li className="partner">
+                                <img src={AluraLogo} alt="Logo Alura" />
+                                <p>Alura</p>
+                            </li>
+                            <li className="partner">
+                                <img src={UdemyLogo} alt="Logo Alura" />
+                                <p>Udemy</p>
+                            </li>
+                            <li className="partner">
+                                <img src={BradescoLogo} alt="Logo Alura" />
+                                <p>Fundação Bradesco</p>
+                            </li>
+                            <li className="partner">
+                                <img src={ProaLogo} alt="Logo Alura" />
+                                <p>PROA</p>
+                            </li>
+                            <li className="partner">
+                                <img src={PrimeLogo} alt="Logo Alura" />
+                                <p>Prime Cursos</p>
                             </li>
                         </ul>
                     </div>
                 </Box>
             </Drawer>
 
-            <MenuMobile logged={false} atual="Cursos"/>
+            <MenuMobile logged={false} atual="Cursos" />
         </>
     );
 }

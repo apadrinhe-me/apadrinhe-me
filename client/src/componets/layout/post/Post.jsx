@@ -40,7 +40,6 @@ const style = {
   };
 
 const Post = props => {
-
     const [buttonPopup, setButtonPopup] = useState(false);
 
     if (buttonPopup) {
@@ -97,7 +96,11 @@ const Post = props => {
 
             <ApadPopup
                 trigger={buttonPopup}
-                setTrigger={setButtonPopup} />
+                setTrigger={setButtonPopup} 
+                fotoJovem={props.profPicture}
+                nomeJovem={props.fullname}
+                aspiracaoJovem={props.aspiration}
+            />
 
             <Modal
                     aria-labelledby="transition-modal-title"

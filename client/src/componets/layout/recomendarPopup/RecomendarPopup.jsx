@@ -26,16 +26,56 @@ const RecomendarPopup = props => {
                 <strong>Selecione o curso</strong> <br />
                 <div className="selectCourse">
                     <div className="course">
-                        <CardCurso />
+                        <CardCurso
+                            partnerLogo="proa.png"
+                            nomeCurso="ProProfissão"
+                            partnerName="Instituto PROA"
+                            categoriaIco={<i className="bi bi-code-slash"></i>}
+                            banneCurso="banner_proa.jpg"
+                            duracao="6 meses"
+                            localidade="São Paulo - Lapa"
+                            conteudos="Java Web Developtment"
+                            descricao="Núcleo Técnico Desenvolve as competências técnicas do aluno em Programação Java por meio de trabalho em grupo, vivências corporativas, projetos e atividades. Núcleo Comportamental Desenvolve as competências sociocomportamentais e o perfil profissional do aluno por meio de atividades relacionadas ao autoconhecimento, propósito, carreira e mercado de trabalho."
+                        />
                     </div>
                     <div className="course">
-                        <CardCurso />
+                        <CardCurso
+                            partnerLogo="tc.svg"
+                            nomeCurso="Inteligência Artificial"
+                            partnerName="Fundação T&C"
+                            categoriaIco={<i className="bi bi-code-slash"></i>}
+                            banneCurso="IA.jpeg"
+                            duracao="100 horas"
+                            localidade="Remoto"
+                            conteudos="Inteligência artificial e conceitos bases"
+                            descricao="A IA refere-se a sistemas ou máquinas que imitam a inteligência humana"
+                        />
                     </div>
                     <div className="course">
-                        <CardCurso />
+                        <CardCurso
+                            partnerLogo="prime.png"
+                            nomeCurso="Inteligência emocional"
+                            partnerName="Prime cursos"
+                            categoriaIco={<i className="bi bi-person"></i>}
+                            banneCurso="inteligencia-emocional.jpg"
+                            duracao="20 horas"
+                            localidade="Remoto"
+                            conteudos="Como lidar com as emoções"
+                            descricao="A inteligência emocional está cada vez mais presente no mercado de trabalho. Portanto, nesse curso, você irá aprender a lidar com todas as realidades do mundo corporativo."
+                        />
                     </div>
                     <div className="course">
-                        <CardCurso />
+                        <CardCurso
+                            partnerLogo="bradesco.ico"
+                            nomeCurso="Responsabilidade Social e Sustentabilidade"
+                            partnerName="Fundação bradesco"
+                            categoriaIco={<i className="bi bi-graph-up"></i>}
+                            banneCurso="responsabilidade-social.jpg"
+                            duracao="15 horas"
+                            localidade="Remoto"
+                            conteudos="Principais artigos de responsabilidade social"
+                            descricao="A inteligência emocional está cada vez mais presente no mercado de trabalho. Portanto, nesse curso, você irá aprender a lidar com todas as realidades do mundo corporativo."
+                        />
                     </div>
                 </div>
             </div>
