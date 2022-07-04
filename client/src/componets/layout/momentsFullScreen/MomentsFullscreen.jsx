@@ -55,11 +55,35 @@ const MomentsFullscreen = props => {
                         <CommentBox />
                     </div>
                     <div className="users-comments-box">
-                        <Comment id={1} />
-                        <Comment id={2} />
-                        <Comment id={3} />
-                        <Comment id={4} />
-                        <Comment id={5} />
+                        <Comment id={1}
+                            comentario="GOSTO!, vou te mandar um curso Valentina, voçê vai amar."
+                            profile="gabriel.png"
+                            usuario="Gabriel Augusto"
+                            like="48"
+                        />
+
+                        <Comment id={2}
+                            comentario="Amei coração! um beijo e um pão de queijo"
+                            profile="adriana.jpg"
+                            usuario="Adriana Parravano"
+                            like="139"
+                        />
+
+                        <Comment id={3}
+                            comentario="Isso mesmo valentina, nada de braço curto
+                            amei❤💙"
+                            profile="jailson.png"
+                            usuario="Jailson Costa"
+                            like="245"
+                        />
+
+                        <Comment id={4}
+                            comentario="Valentina, pupila sempre muito focada, Beijo com afeto  🌹"
+                            profile="aurora.png"
+                            usuario="Aurora Seles"
+                            like="365"
+                        />
+
                     </div>
                 </div>
             </div>
