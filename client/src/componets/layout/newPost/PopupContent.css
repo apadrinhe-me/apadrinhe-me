@@ -57,12 +57,16 @@
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
+    align-items: center;
 }
 
 .PopupContent .buttons button {
-    border-radius: 20px;
+    height: 60px;
+    border-radius: 15px;
     padding: 6px;
     width: 140px;
+    border: 2px solid transparent;
+    transition: 0.2s;
 }
 
 .PopupContent .recomendacao {
@@ -104,7 +108,7 @@
     border-radius: 10px;
 }
 
-.PopupContent button:hover {
+.PopupContent .buttons button:hover {
     border: 2px solid white;
     transition: 0.2s;
     cursor: pointer;
@@ -121,16 +125,20 @@ option {
     width: 250px;
     height: 40px;
     font-size: 20px;
-    background: linear-gradient(45deg, #667BF2, #7630D9);
+    background: #7630D9;
     color: white;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 15px;
     align-self: center;
     margin-top: 20px;
+    border: 2px solid transparent;
+    transition: .2s;
 }
 
 .PopupContent .publicar:hover {
-    transition: 0.3s;
+    filter: saturate(25%);
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .profilename p {

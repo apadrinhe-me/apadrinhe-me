@@ -29,9 +29,9 @@ const PopupContent = props => {
             <label className="adcionarfoto" htmlFor="novacapa">Novo moments</label>
             <div className="buttons">
                 <button className="recomendacao">Recomendação</button>
-                <button className="doacaorapida">Doação Rápida</button>
-                <button className="doacaodebens">Doação de Bens</button>
-                <button className="apadrinhamento">Apadrinhamento</button>
+                <button className="doacaorapida">Apadrinhamento Financeiro</button>
+                <button className="doacaodebens">Apadrinhamento Material</button>
+                <button className="apadrinhamento">Apadrinhamento Educacional</button>
             </div>
             <button className="publicar">Publicar</button>
         </div >
