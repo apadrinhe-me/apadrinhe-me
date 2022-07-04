@@ -34,14 +34,14 @@ const Spotlights = () => {
                     distribuidora="PROA"
                 />
                 <SpotlightCourse
-                    banner="https://birchtree.nyc3.digitaloceanspaces.com/images/wwdc18/dev-dots.png"
-                    nome="Desenvolvimento Web"
-                    distribuidora="PROA"
+                    banner="https://www.primecursos.com.br/arquivos/images/ie/inteligencia-emocional.jpg"
+                    nome="Inteligência emocional"
+                    distribuidora="Prime Cursos"
                 />
                 <SpotlightCourse
-                    banner="https://birchtree.nyc3.digitaloceanspaces.com/images/wwdc18/dev-dots.png"
-                    nome="Desenvolvimento Web"
-                    distribuidora="PROA"
+                    banner="https://www.contabeis.com.br/assets/img/news/888f90fc18f73b618f8c9f2ff7011280.jpg"
+                    nome="Responsabilidade Social e Sustentabilidade"
+                    distribuidora="Fundação Bradesco"
                 />
             </div>
 

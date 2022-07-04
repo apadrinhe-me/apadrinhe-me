@@ -104,7 +104,6 @@
     justify-content: flex-start;
     overflow-y: auto;
     height: calc(100vh - 110px);
-    align-items: flex-start;
 }
 
 .nome-pagina {
@@ -134,6 +133,22 @@
 
 .drawer-close-btn {
     text-align: end;
+}
+
+.categoria-title{
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.partner{
+    display: flex;
+    gap: 10px;
+}
+
+.partner img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
 }
 
 @media (max-width: 840px) {

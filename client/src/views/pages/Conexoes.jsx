@@ -82,7 +82,7 @@ const Conexoes = () => {
 
                         {todasConec.map((conec, key) => {
                             return (
-                                <ListaConexao tipoConexao={tipoConexao} nome={conec.nome} aspiracao={conec.aspiracao} foto={conec.foto} />
+                                <ListaConexao key={key} tipoConexao={tipoConexao} nome={conec.nome} aspiracao={conec.aspiracao} foto={conec.foto} />
                             )
                         })}
 
@@ -91,7 +91,7 @@ const Conexoes = () => {
 
                         {conecSolicitadas.map((conec, key) => {
                             return (
-                                <ListaConexao tipoConexao={tipoConexao} nome={conec.nome} aspiracao={conec.aspiracao} foto={conec.foto} />
+                                <ListaConexao key={key} tipoConexao={tipoConexao} nome={conec.nome} aspiracao={conec.aspiracao} foto={conec.foto} />
                             )
                         })}
 
@@ -100,7 +100,7 @@ const Conexoes = () => {
 
                         {conecPendentes.map((conec, key) => {
                             return (
-                                <ListaConexao tipoConexao={tipoConexao} nome={conec.nome} aspiracao={conec.aspiracao} foto={conec.foto} />
+                                <ListaConexao key={key} tipoConexao={tipoConexao} nome={conec.nome} aspiracao={conec.aspiracao} foto={conec.foto} />
                             )
                         })}
 
