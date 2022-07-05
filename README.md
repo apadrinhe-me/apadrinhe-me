@@ -1,11 +1,11 @@
-<img src="https://user-images.githubusercontent.com/99970650/176962187-583c1a60-1c72-4064-93bb-481aa5b60564.svg"/>
-  
+<div align="center">
+<img src="https://user-images.githubusercontent.com/99822078/177240931-8f86e70a-5f1b-4107-a87e-db171433f688.svg" width="400px"/>
+</div>
 
-
-
-  
+##
+   
    <div align="center">
-  <p> Nossa plataforma visa, realizar a interação entre jovens talentosos que são impossibilitados de investir em educação, com possíveis apadrinhadores...</p>
+  <p>Nossa plataforma visa realizar a interação entre jovens talentosos que são impossibilitados de investir em educação, com possíveis apadrinhadores...</p>
 </div>
 
 ##
